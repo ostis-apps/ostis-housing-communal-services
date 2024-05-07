@@ -1,0 +1,4 @@
+concept_deep_biological_treatment_station
+	=> nrel_main_idtf:
+		[станция глубокой биологической очистки]
+		(* <- lang_ru;; *);;

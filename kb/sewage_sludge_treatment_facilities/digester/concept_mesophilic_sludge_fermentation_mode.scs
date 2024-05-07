@@ -1,0 +1,10 @@
+concept_mesophilic_sludge_fermentation_mode
+    => nrel_main_idft:
+        [мезофильный режим сбраживания осадка]
+        (* <- lang_ru;; *);
+    <= nrel_sc_text_translation: ...
+    (*
+        <- concept_temperature_value (* <- sc_node_class;; *);;
+            -> [(35 +- 5) °С]
+                (* <- lang_ru;; *);;
+    *);;

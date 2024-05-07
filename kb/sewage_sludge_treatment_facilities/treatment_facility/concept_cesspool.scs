@@ -1,0 +1,4 @@
+concept_cesspool
+	=> nrel_main_idtf:
+		[выгребная яма]
+		(* <- lang_ru;; *);;

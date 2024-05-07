@@ -1,0 +1,12 @@
+concept_artificial_aeration
+    => nrel_main_idft:
+        [искусственная аэрация]
+        (* <- lang_ru;; *);
+    => nrel_idtf:
+        [воздухообмен, обеспеченный оборудованием, разработанным человеком]
+        (* <- lang_ru;; *);
+    <= nrel_subdividing:
+    {
+        concept_pneumatic_aeration;
+        concept_mechanical_aeration
+    };;

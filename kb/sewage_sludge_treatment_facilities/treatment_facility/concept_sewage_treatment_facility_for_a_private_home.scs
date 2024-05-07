@@ -1,0 +1,17 @@
+concept_sewage_treatment_facility_for_a_private_home
+	=> nrel_main_idft:
+		[очистные сооружения для частного дома]
+		(* <- lang_ru;; *);
+	<= nrel_sc_text_translation: ...
+	    (*
+			<- concept_definition (* <- sc_node_class;; *);;
+				-> [очистные сооружения, которые применяются для очистки небольших сточных вод, производимых от одного участка]
+					(* <- lang_ru;; *);;
+	    *);
+	<= nrel_subdividing:
+	    {
+			concept_cesspool;
+			concept_storage_device;
+			concept_septic_tank;
+			concept_deep_biological_treatment_station
+	    };;

@@ -1,0 +1,14 @@
+concept_gas_holder
+    <= nrel_sc_text_translation: ...
+    (*
+        <- concept_definition;;
+            -> [резервуар для хранения газообразных веществ]
+                (* <- lang_ru;; *);;
+    *);
+    -> concept_gas_holder_stored_substance;
+    <= nrel_subdividing:
+    {
+        concept_dymanic_volume_gas_holder;
+        concept_static_volume_gas_holder
+        (* => nrel_main_idft: [газгольдер постоянного объёма] (* <- lang_ru;; *);; *)
+    };;

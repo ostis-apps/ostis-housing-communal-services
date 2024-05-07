@@ -1,0 +1,12 @@
+concept_sludge_compaction
+	<= nrel_sc_text_translation: ...
+	(*
+		<- concept_definition (* <- sc_node_class;; *);;
+			-> [процесс повышения концентрации сухого вещества в осадке путем удаления части жидкой фракции]
+				(* <- lang_ru;; *);;
+	*);
+	<= nrel_subdividing:
+	{
+		concept_flotation_sludge_compaction;
+		concept_dynamic_sludge_compaction
+	};;

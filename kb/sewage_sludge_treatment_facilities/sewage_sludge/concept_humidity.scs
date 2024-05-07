@@ -1,0 +1,15 @@
+concept_humidity
+	=> nrel_main_idtf:
+		[влажность]
+		(* <- lang_ru;; *);
+	<- concept_measurable_parameter
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf: [измеряемый параметр] (* <- lang_ru;; *);;
+	*);
+	<= nrel_sc_text_translation: ...
+	(*
+		<- concept_application_method (* <- sc_node_class;; *);;
+			-> [применение уплотнителей и сгустителей различных типов]
+				(* <- lang_ru;; *);;
+	*);;

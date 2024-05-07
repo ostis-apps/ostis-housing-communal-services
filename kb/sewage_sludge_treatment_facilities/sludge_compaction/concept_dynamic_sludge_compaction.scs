@@ -1,0 +1,7 @@
+concept_dynamic_sludge_compaction
+	=> nrel_main_idtf:
+		[динамическое уплотнение]
+		(* <- lang_ru;; *);
+	-> concept_neccessary_equipment_for_dymanic_sludge_compaction;
+	-> concept_flocculant_consumption;
+	-> concept_amount_of_backup_equipment_for_dymanic_sludge_compaction;;

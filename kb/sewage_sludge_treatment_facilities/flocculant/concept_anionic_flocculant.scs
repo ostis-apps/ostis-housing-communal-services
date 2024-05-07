@@ -1,0 +1,17 @@
+concept_anionic_flocculant
+	=> nrel_main_idtf:
+		[анионный флокулянт]
+		(* <- lang_ru;; *);
+	<= nrel_sc_text_translation: ...
+	(*
+		<- concept_definition (* <- sc_node_class;; *);;
+			-> [положительно заряженный флокулянт]
+				(* <- lang_ru;; *);;
+	*);
+	<= nrel_subdividing:
+	{
+		concept_acrylate
+		(* => nrel_main_idtf: [акрилат] (* <- lang_ru;; *);; *);
+		concept_sodium_polymethacrylate
+		(* => nrel_main_idtf: [полиметакрилат натрия и подобные ему] (* <- lang_ru;; *);; *)
+	};;

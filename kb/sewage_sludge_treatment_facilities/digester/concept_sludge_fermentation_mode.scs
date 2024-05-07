@@ -1,0 +1,15 @@
+concept_sludge_fermentation_mode
+    => nrel_main_idft:
+        [режим сбраживания осадков]
+        (* <- lang_ru;; *);
+    <= nrel_subdividing:
+    {
+       concept_mesophilic_sludge_fermentation_mode;
+       concept_thermophilic_sludge_fermentation_mode 
+    };
+    <= nrel_sc_text_translation: ...
+    (*
+        <- concept_selection_condition (* <- sc_node_class;; *);;
+            -> [учтение методов последующей обработки и утилизации осадков, а также санитарных требований]
+                (* <- lang_ru;; *);;
+    *);;

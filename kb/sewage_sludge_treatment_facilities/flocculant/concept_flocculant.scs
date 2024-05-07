@@ -1,0 +1,16 @@
+concept_flocculant
+	<= nrel_sc_text_translation: ...
+	(*
+		<- concept_definition (* <- sc_node_class;; *);;
+			-> [вещество, которое ускоряет слипание примесей и неустойчивых частиц в воде, интенсифицируя образование хлопьев, укрупняя их размеры]
+				(* <- lang_ru;; *);;
+		<- concept_benefit_of_use (* <- sc_node_class;; *);;
+			-> [флокулянт значительно улучшает и ускоряет процессы осаждения, сгущения, флотации, а также фильтрации и обезвоживания шлама в процессе осветления воды. при этом исключается или значительно уменьшается перенос загрязнений и шлама на трубопроводы осветленной воды, баки и на следующие этапы очистки]
+				(* <- lang_ru;; *);;
+	*);
+	<= nrel_subdividing:
+	{
+		concept_flocculant_of_natural_and_synthetic_origin;
+		concept_flocculant_depending_on_origin;
+		concept_flocculant_depending_on_charge_type
+	};;

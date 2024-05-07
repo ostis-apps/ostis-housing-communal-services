@@ -1,0 +1,17 @@
+concept_flocculant_of_natural_and_synthetic_origin
+	=> nrel_main_idtf:
+		[флокулянт природного и синтетического происхождения]
+		(* <- lang_ru;; *);
+	<= nrel_subdividing:
+	{
+		concept_cellulose_and_starch
+		(* => nrel_main_idtf: [целлюлоза, крахмал и их производные] (* <- lang_ru;; *);; *);
+		concept_polythelene
+		(* => nrel_main_idtf: [полиэтилен и его производные] (* <- lang_ru;; *);; *);
+		concept_polyacrilic
+		(* => nrel_main_idtf: [полиакрил] (* <- lang_ru;; *);; *);
+		concept_polyamide
+		(* => nrel_main_idtf: [полиамиды] (* <- lang_ru;; *);; *);
+		concept_polyamine
+		(* => nrel_main_idtf: [полиамины] (* <- lang_ru;; *);; *)
+	};;

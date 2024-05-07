@@ -1,0 +1,13 @@
+concept_thickener
+	<= nrel_sc_text_translation: ...
+	(*
+		<- concept_definition (* <- sc_node_class;; *);;
+			-> [устройство для осуществления процесса сгущения осадков]
+				(* <- lang_ru;; *);;	
+	*);
+	<= nrel_subdividing:
+	{
+		concept_belt_thickener;
+		concept_screw_thickener;
+		concept_disc_thickener
+	};;

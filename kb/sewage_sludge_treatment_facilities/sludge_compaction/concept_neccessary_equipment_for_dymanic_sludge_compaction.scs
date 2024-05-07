@@ -1,0 +1,10 @@
+concept_neccessary_equipment_for_dymanic_sludge_compaction
+	=> nrel_main_idtf:
+		[необходимое оборудование для динамического уплотнения]
+		(* <- lang_ru;; *);
+	<= nrel_sc_text_translation: ...
+	(*
+		<- concept_requirment (* <- sc_node_class;; *);;
+			-> [значение производительности следует принимать по рекомендациям производителей]
+				(* <- lang_ru;; *);;
+	*);;

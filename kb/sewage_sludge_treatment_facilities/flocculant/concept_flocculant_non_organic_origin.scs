@@ -1,0 +1,15 @@
+concept_flocculant_non_organic_origin
+	=> nrel_main_idtf:
+		[флокулянт неорганического происхождения]
+		(* <- lang_ru;; *);
+	<= nrel_subdividing:
+	{
+		concept_silicic_acid
+		(* => nrel_main_idtf: [кремниевая кислота] (* <- lang_ru;; *);; *);
+		concept_chalk
+		(* => nrel_main_idtf: [мел] (* <- lang_ru;; *);; *);
+		concept_clay
+		(* => nrel_main_idtf: [глина] (* <- lang_ru;; *);; *);
+		concept_powdered_activated_carbon
+		(* => nrel_main_idtf: [порошковый активированный уголь] (* <- lang_ru;; *);; *)
+	};;

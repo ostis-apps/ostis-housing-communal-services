@@ -1,0 +1,10 @@
+concept_belt_thickener
+	=> nrel_main_idtf:
+		[ленточный сгуститель]
+		(* <- lang_ru;; *);
+	<= nrel_sc_text_translation: ...
+	(*
+		<- concept_definition (* <- sc_node_class;; *);;
+			-> [аппарат непрерывного действия, работающий по принципу фильтрования под действие гравитационных сил]
+				(* <- lang_ru;; *);;
+	*);;
