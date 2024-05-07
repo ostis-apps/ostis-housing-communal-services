@@ -1,0 +1,75 @@
+subject_domain_of_mechanical_wastewater_treatment_facilities
+    => nrel_main_idtf:
+        [Предметная область сооружений механической очистки сточных вод]
+        (* <- lang_ru;;*);
+        <- subject_domain;
+        <- sc_node_struct;
+
+    -> rrel_maximum_studied_object_class:
+        concept_mechanical_wastewater_treatment_facility;
+
+    -> rrel_not_maximum_studied_object_class:
+        concept_wastewater_treatment_facility_by_straining;
+        concept_grid;
+        concept_sieve;
+        concept_drum_grid;
+        concept_strainer
+        (*
+              <- sc_node_class;;
+              => nrel_main_idtf: [процеживатель] (*<- lang_ru;;*);;
+        *);
+        concept_chopper
+        (*
+              <- sc_node_class;;
+              => nrel_main_idtf: [измельчитель] (*<- lang_ru;;*);;
+        *);
+        concept_waste;
+        concept_suspended_solids;
+        concept_sand_catcher;
+        concept_sewage_regulator
+        (*
+              <- sc_node_class;;
+              => nrel_main_idtf: [усреднитель] (*<- lang_ru;;*);;
+        *);
+        concept_wastewater_clarification_facility
+        (*
+              <- sc_node_class;;
+              => nrel_main_idtf: [сооружение осветления сточных вод] (*<- lang_ru;;*);;
+        *);
+        concept_sump
+        (*
+              <- sc_node_class;;
+              => nrel_main_idtf: [отстойник] (*<- lang_ru;;*);;
+        *);
+        concept_clarifier_rotter
+        (*
+              <- sc_node_class;;
+              => nrel_main_idtf: [осветлитель-перегниватель] (*<- lang_ru;;*);;
+        *);
+        concept_septic
+        (*
+              <- sc_node_class;;
+              => nrel_main_idtf: [септик] (*<- lang_ru;;*);;
+        *);
+        concept_hydrocyclone
+        (*
+              <- sc_node_class;;
+              => nrel_main_idtf: [гидроциклон] (*<- lang_ru;;*);;
+        *);
+        concept_centrifuge
+        (*
+              <- sc_node_class;;
+              => nrel_main_idtf: [центрифуга] (*<- lang_ru;;*);;
+        *);
+
+    -> rrel_explored_relation:
+        nrel_dehydration;
+        nrel_flushing;
+        nrel_grinding;
+        nrel_pressing;
+        nrel_clarification
+        (*
+              <- sc_node_norole_relation;;
+              => nrel_main_idtf: [осветление] (*<- lang_ru;;*);;
+        *);;
+                
