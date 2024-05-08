@@ -1,0 +1,124 @@
+subject_domain_of_biological_filters
+
+=> nrel_main_idtf:
+        [Предметная область биологических фильтров](* <- lang_ru;;*);
+
+-> rrel_maximum_studied_object_class:
+    concept_biological_filter
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[биологический фильтр](* <- lang_ru;; *);;
+		*);
+         
+-> rrel_not_maximum_studied_object_class:
+
+    concept_irrigated_biological_filter
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[орошаемый биологический фильтр](* <- lang_ru;; *);;
+		*);
+    concept_mineral_loaded_biological_filter
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[биологический фильтр с минеральной загрузкой](* <- lang_ru;; *);;
+		*);
+	concept_polymer_loaded_biological_filter
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[биологический фильтр с полимерной загрузкой](* <- lang_ru;; *);;
+		*);
+	concept_plastic_loading_biological_filter
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[биологический фильтр с пластмассовой загрузкой](* <- lang_ru;; *);;
+		*);
+    concept_rotary_biological_filter
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[ротационный биологический фильтр](* <- lang_ru;; *);;
+		*);
+	concept_flooded_biological_filter
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[затопленный биологический фильтр](* <- lang_ru;; *);;
+		*);	
+	concept_drip_biological_filter
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[капельный биологический фильтр](* <- lang_ru;; *);;
+		*);	
+	concept_highly_loaded_biological_filter
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[высоконагружаемый биологический фильтр](* <- lang_ru;; *);;
+		*);	
+	concept_tower_loaded_biological_filter
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[башенный биологический фильтр](* <- lang_ru;; *);;
+		*);
+	concept_drum_biological_filter
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[барабанный биологический фильтр](* <- lang_ru;; *);;
+		*);
+	concept_disk_biological_filter
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[дисковый биологический фильтр](* <- lang_ru;; *);;
+		*);
+	concept_dry_matter
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[сухое вещество](* <- lang_ru;; *);;
+		*);
+	
+	concept_biofilm
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf: [биопленка] (*<- lang_ru;;*);;		
+		*);
+	
+
+
+-> rrel_explored_relation:  
+	nrel_air_supply_method
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[способ подачи воздуха](* <- lang_ru;; *);;
+		*);
+	nrel_biofilm_moisture
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[влажность биопленки](* <- lang_ru;; *);;
+		*);
+	nrel_working_height
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[рабочая высота](* <- lang_ru;; *);;
+		*);
+	nrel_amount_of_excess_biofilm
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[количество избыточной биопленки](* <- lang_ru;; *);;
+		*);
+	nrel_design_surface_loading
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[расчетная поверхностная нагрузка](* <- lang_ru;; *);;
+		*);
+	nrel_amount_of_excess_biofilm
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[количество избыточной биопленки](* <- lang_ru;; *);;
+		*);
+	nrel_specific_air_flow
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[удельный расход воздуха](* <- lang_ru;; *);;
+		*);
+	nrel_volumetric_load
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[объемная нагрузка](* <- lang_ru;; *);;
+		*);;

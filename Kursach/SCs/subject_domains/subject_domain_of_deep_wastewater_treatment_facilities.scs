@@ -1,0 +1,96 @@
+subject_domain_of_deep_wastewater_treatment_facilities
+    => nrel_main_idtf:
+    [Предметная область сооружений глубокой очистки сточных вод]
+    (* <- lang_ru;;*);
+    <- subject_domain;
+    <- sc_node_struct;
+
+    -> rrel_maximum_studied_object_class:
+        concept_deep_wastewater_treatment_facility
+        (*
+            <- sc_node_class;;
+            => nrel_main_idtf:
+            [сооружение глубокой очистки сточных вод]
+            (* <- lang_ru;; *);;
+        *);
+    
+    -> rrel_not_maximum_studied_object_class:
+        concept_facility_removing_suspended_solids_and_phosphorus_compounds
+        (*
+            <- sc_node_class;;
+            => nrel_main_idtf:
+            [сооружение для удаления взвешенных веществ и соединений фосфора]
+            (* <- lang_ru;; *);;
+        *);
+        concept_facility_deep_oxidation_organic_and_nitrogen_compounds
+        (*
+            <- sc_node_class;;
+            => nrel_main_idtf:
+            [сооружение глубокого окисления органических соединений и соединений азота]
+            (* <- lang_ru;; *);;
+        *);
+        concept_specific_pollutants
+        (*
+            <- sc_node_class;;
+            => nrel_main_idtf:
+            [специфические загрязняющие вещества]
+            (* <- lang_ru;; *);;
+        *);
+        concept_microfilter
+        (*
+            <- sc_node_class;;
+            => nrel_main_idtf:
+            [микрофильтр]
+            (* <- lang_ru;; *);;
+        *);
+        concept_filter_material
+        (*
+            <- sc_node_class;;
+            => nrel_main_idtf:
+            [фильтрующий материал]
+            (* <- lang_ru;; *);;
+        *);
+        concept_soil_filtration_platform
+        (*
+            <- sc_node_class;;
+            => nrel_main_idtf:
+            [грунтовая фильтрационная площадка]
+            (* <- lang_ru;; *);;
+        *);
+    
+    -> rrel_explored_relation:
+        nrel_concentration_pollutants_wastewater
+        (*
+            <- sc_node_norole_relation;;
+            => nrel_main_idft:
+            [концентрация загрязняющих веществ в сточных водах]
+            (* <- lang_ru;; *);;
+        *);
+        nrel_wastewater_treatment_efficiency
+        (*
+            <- sc_node_norole_relation;;
+            => nrel_main_idft:
+            [эффективность очистки сточных вод]
+            (* <- lang_ru;; *);;
+        *);
+        nrel_parameter_soil_filtration_platform
+        (*
+            <- sc_node_norole_relation;;
+            => nrel_main_idft:
+            [параметр грунтовых фильтрационных площадок]
+            (* <- lang_ru;; *);;
+        *);
+        nrel_useful_area_soil_filtration_platform
+        (*
+            <- sc_node_norole_relation;;
+            => nrel_main_idft:
+            [полезная площадь фильтрационной площадки]
+            (* <- lang_ru;; *);;
+        *);
+        nrel_reserve_useful_area_soil_filtration_platform
+        (*
+            <- sc_node_norole_relation;;
+            => nrel_main_idft:
+            [резервная полезная площадь грунтовой фильтрационной площадки]
+            (* <- lang_ru;; *);;
+        *);;

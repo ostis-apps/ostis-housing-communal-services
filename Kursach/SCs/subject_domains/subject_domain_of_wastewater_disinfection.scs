@@ -1,0 +1,54 @@
+subject_domain_of_wastewater_disinfection
+    => nrel_main_idtf:
+    [Предметная область обеззараживания сточных вод]
+    (* <- lang_ru;;*);
+    <- subject_domain;
+    <- sc_node_struct;
+
+    -> rrel_maximum_studied_object_class:
+        concept_wastewater_disinfection
+        (*
+            <- sc_node_class;;
+            => nrel_main_idtf:
+            [обеззараживание сточных вод]
+            (* <- lang_ru;; *);;
+        *);
+
+    -> rrel_not_maximum_studied_object_class:
+        concept_uv_treatment
+        (*
+            <- sc_node_class;;
+            => nrel_main_idtf:
+            [обработка ультрафиолетовым излучением]
+            (* <- lang_ru;; *);;
+        *);
+        concept_ozonation
+        (*
+            <- sc_node_class;;
+            => nrel_main_idtf:
+            [озонирование]
+            (* <- lang_ru;; *);;
+        *);
+        concept_chlorination_with_chlorine
+        (*
+            <- sc_node_class;;
+            => nrel_main_idtf:
+            [хлорирование хлором]
+            (* <- lang_ru;; *);;
+        *);
+
+    -> rrel_explored_relation:
+        nrel_dose_of_active_chlorine
+        (*
+            <- sc_node_norole_relation;;
+            => nrel_main_idft:
+            [доза активного хлора]
+            (* <- lang_ru;; *);;
+        *);
+        nrel_ultraviolet_radiation_dose
+        (*
+            <- sc_node_norole_relation;;
+            => nrel_main_idft:
+            [доза ультрафиолетового облучения]
+            (* <- lang_ru;; *);;
+        *);;

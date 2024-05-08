@@ -1,0 +1,4 @@
+param_hydraulic_size
+    <- sc_node_class;
+    => nrel_main_idtf: [гидравлическая крупность] (* <- lang_ru;;*);
+    <-measurable_parameter;;

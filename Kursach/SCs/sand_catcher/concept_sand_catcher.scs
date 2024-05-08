@@ -1,0 +1,4 @@
+concept_sand_catcher
+    <- sc_node_class;
+    => nrel_main_idtf: [песколовки] (*<- lang_ru;;*);
+    <=nrel_basic_decomposition:concept_wastewater_treatment_station;;

@@ -1,0 +1,7 @@
+measurement_in_mg_dm3
+    <- sc_node_norole_relation;
+    => nrel_main_idtf: [измерение в мг/дм^3] (* <- lang_ru;;*);;
+
+concept_mg_dm3
+    <- sc_node_class;
+    => nrel_main_idtf: [мг/дм^3] (* <- lang_ru;;*);;

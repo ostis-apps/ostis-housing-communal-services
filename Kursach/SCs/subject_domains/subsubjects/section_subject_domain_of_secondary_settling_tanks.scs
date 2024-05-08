@@ -1,0 +1,88 @@
+section_subject_domain_of_secondary_settling_tanks
+
+    => nrel_main_idtf:
+    [Раздел. Предметная область вторичных отстойников]
+    (* <- lang_ru;;*);
+	<- section_subject_domain_of_wastewater_treatment_facilities;
+
+    -> rrel_key_sc_element: 
+	    concept_activated_sludge 
+            (* => nrel_main_idtf: [Активный ил] (* <- lang_ru;;*);;
+			   <-concept_sludge;;*);
+		concept_biofilm
+            (* => nrel_main_idtf: [Биопленка] (* <- lang_ru;;*);;*);
+		concept_secondary_settling_tank 
+            (* => nrel_main_idtf: [Вторичный отстойник] (* <- lang_ru;;*);;*);
+		concept_square
+            (* => nrel_main_idtf: [Площадь] (* <- lang_ru;;*);;*);
+		concept_wastewater
+            (* => nrel_main_idtf: [Сточная вода] (* <- lang_ru;;*);;*);
+		concept_vertical_secondary_settling_tank
+            (* => nrel_main_idtf: [Вертикальный вторичный отстойник] (* <- lang_ru;;*);;*);
+		concept_radial_secondary_settling_tank
+            (* => nrel_main_idtf: [Радиальный вторичный отстойник] (* <- lang_ru;;*);;*);
+        concept_horizontal_secondary_settling_tank 
+            (* => nrel_main_idtf: [Горизонтальный вторичный отстойник] (* <- lang_ru;;*);;*);
+		concept_brightener
+            (* => nrel_main_idtf: [Осветлитель] (* <- lang_ru;;*);;*);
+        nrel_station_productivity
+            (* => nrel_main_idtf: [Производительность станции] (* <- lang_ru;;*);;*);
+        nrel_layout
+            (* => nrel_main_idtf: [Компоновка] (* <- lang_ru;;*);;*);
+        nrel_hydraulic_load 
+            (* => nrel_main_idtf: [Гидравлическая нагрузка] (* <- lang_ru;;*);;*);
+        nrel_volume_utilization_factor
+            (* => nrel_main_idtf: [Коэффициент использования объема] (* <- lang_ru;;*);;*);
+        nrel_sludge_index 
+            (* => nrel_main_idtf: [Иловый индекс] (* <- lang_ru;;*);;*);
+		nrel_dose
+            (* => nrel_main_idtf: [Доза] (* <- lang_ru;;*);;*);
+		nrel_concentration 
+            (* => nrel_main_idtf: [Концентрация] (* <- lang_ru;;*);;*);
+		nrel_recirculation_flow 
+            (* => nrel_main_idtf: [Рециркуляционный расход] (* <- lang_ru;;*);;*);
+		nrel_sediment
+            (* => nrel_main_idtf: [Осадок] (* <- lang_ru;;*);;*);
+		nrel_humidity
+            (* => nrel_main_idtf: [Влажность] (* <- lang_ru;;*);;*);
+		lw4_patterns;
+
+    <- non_atomic_section;;
+
+section_subject_domain_of_secondary_settling_tanks
+    = [*
+        subject_domain_of_secondary_settling_tanks
+
+            => nrel_main_idtf:
+            [Предметная область вторичных отстойников]
+            (* <- lang_ru;;*);
+            <- subject_domain;
+            <- sc_node_struct;
+					
+            -> rrel_maximum_studied_object_class:
+                concept_secondary_settling_tank 
+                    (* => nrel_main_idtf: [Вторичный отстойник] (* <- lang_ru;;*);;*);
+
+            -> rrel_not_maximum_studied_object_class:
+                concept_activated_sludge;
+                concept_biofilm;
+				concept_secondary_settling_tank;
+				concept_wastewater;
+				concept_square;
+				concept_vertical_secondary_settling_tank;
+				concept_radial_secondary_settling_tank;
+				concept_horizontal_secondary_settling_tank;
+				concept_brightener;
+
+            -> rrel_explored_relation:
+                nrel_station_productivity;
+				nrel_layout;
+				nrel_hydraulic_load;
+				nrel_volume_utilization_factor;
+				nrel_sludge_index; 
+				nrel_dose;
+				nrel_concentration;
+				nrel_recirculation_flow; 
+				nrel_sediment;
+				nrel_humidity;;
+    *];;

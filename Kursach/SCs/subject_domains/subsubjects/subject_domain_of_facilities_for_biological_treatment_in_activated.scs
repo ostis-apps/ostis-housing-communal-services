@@ -1,0 +1,169 @@
+subject_domain_of_facilities_for_biological_treatment_in_activated_sludge_systems
+ => nrel_main_idtf:
+	[Предметная область сооружений cооружений для биологической очистки в системах с активным илом]
+	(* <- lang_ru;; *);
+	<- subject_domain;
+	<- sc_node_struct;
+	
+-> rrel_maximum_studied_object_class:
+	concept_facility_for_biological_treatment_in_activated_sludge_systems
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[Сооружение для биологической очистки в системах с активным илом] (* <- lang_ru;; *);;
+	*);
+-> rrel_not_maximum_studied_object_class:
+	concept_activated_sludge_system
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[система с активным илом] (* <- lang_ru;; *);;
+	*);
+	concept_admixture
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[примесь] (* <- lang_ru;; *);;
+	*);
+	concept_biochemical_decomposition
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[биохимическое разложение] (* <- lang_ru;; *);;
+	*);
+	concept_mixing_device
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[перемешивающее устройство] (* <- lang_ru;; *);;
+	*);
+	concept_removal_of_nitrogen_compounds
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[удаление соединений азота] (* <- lang_ru;; *);;
+	*);
+	concept_aerobic_condition
+	(*
+		<- sc_node_class;;
+		<=> concept_condition_with_oxygen;;
+		=> nrel_main_idtf:[аэробное условие] (* <- lang_ru;; *);;
+	*);
+	concept_aerobic_condition
+	(*
+		<- sc_node_class;;
+		<=> concept_condition_without_oxygen;;
+		=> nrel_main_idtf:[аноксидное условие] (* <- lang_ru;; *);;
+	*);
+	concept_activated_sludge_dose
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[доза активного ила] (* <- lang_ru;; *);;
+	*);
+	concept_aeration_tank
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[аэротенк] (* <- lang_ru;; *);;
+	*);
+	concept_pollutant
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[загрязняющее вещество] (* <- lang_ru;; *);;
+	*);
+	concept_denitrifier_volume
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[объем денитрификатора] (* <- lang_ru;; *);;
+	*);
+	oncept_denitrifier
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[денитрификатор] (* <- lang_ru;; *);;
+	*);
+	concept_volume_of_technological_facility
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[объем технологического сооружения] (* <- lang_ru;; *);;
+	*);
+	concept_volume_relation_of_deitrifier_and_tecnological_facility
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[отношение объемов денатрификатора и технологического сооружения] (* <- lang_ru;; *);;
+	*);
+	concept_nitrate_nitrogen_concentration
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[концентрация нитратного азота] (* <- lang_ru;; *);;
+	*);
+	concept_phosphorus_compounds_removal
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[удаление соединений фосфора] (* <- lang_ru;; *);;
+	*);
+	concept_way_for_removing_phosphorus_compounds
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[способ удаления соединений фосфора] (* <- lang_ru;; *);;
+	*);
+	concept_increase_in_activated_sludge
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idft: [прирост активного ила] (* <- lang_ru;; *);;
+	*);
+	concept_oxygen_demand_for_wastewater_treatment
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idft: [потребность в кислороде при очистке сточных вод] (* <- lang_ru;; *);;
+	*);
+	concept_oxygen_concentration
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idft: [концентрация кислорода] (* <- lang_ru;; *);;
+	*);
+	concept_aerator
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idft: [аэратор] (* <- lang_ru;; *);;
+	*);
+	concept_air_supply_equipment
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idft: [воздухоподающее оборудование] (* <- lang_ru;; *);;
+	*);
+	concept_COC
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idft: [ЦОК] (* <- lang_ru;; *);;
+	*);
+	concept_mixer
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idft: [мешалка] (* <- lang_ru;; *);;
+	*);
+	concept_SBR_reactor
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idft: [SBR-реактор] (* <- lang_ru;; *);;
+	*);
+	concept_liquid_layer_depth
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idft: [глубина слоя жидкости] (* <- lang_ru;; *);;
+	*);
+	concept_membrane_filter
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idft: [мембранный фильтр] (* <- lang_ru;; *);;
+	*);
+	
+-> rrel_explored_relation:
+	nrel_technological_scheme
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idft: [технологическая схема] (* <- lang_ru;; *);;
+	*);
+	nrel_method_for_removing_phosphorus_compounds
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idft: [метод удаления соединений фосфора] (* <- lang_ru;; *);;
+	*);
+	nrel_separation_of_sludge_mixture
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idft: [разделение иловой смеси] (* <- lang_ru;; *);;
+	*);;	
+	
