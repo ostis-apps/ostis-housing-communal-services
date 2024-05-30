@@ -1,0 +1,4 @@
+param_size
+    <- sc_node_class;
+    => nrel_main_idtf: [размер] (* <- lang_ru;;*);
+    <-measurable_parameter;;

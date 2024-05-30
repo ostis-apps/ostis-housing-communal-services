@@ -1,0 +1,9 @@
+concept_estimated_sediment_moisture
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[расчётная влажность осадка]
+    	(* <- lang_ru;; *);
+        
+    <-measurable_parameter;
+    => nrel_used_in: 
+        concept_flotation_installation;;

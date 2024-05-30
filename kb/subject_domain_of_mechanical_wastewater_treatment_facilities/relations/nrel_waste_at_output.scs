@@ -1,0 +1,14 @@
+nrel_waste_at_output
+    <- sc_node_norole_relation;
+    => nrel_main_idtf: [задержанные отбросы] (* <- lang_ru;;*);
+    <= nrel_sc_text_translation: ...
+	(*
+	    <-concept_definition (*<- sc_node_class;;*);;
+	    ->[Отбросы, которые задерживаются в сооружениях для обработки сточных вод процеживанием]
+		    (*
+		    <-lang_ru;;
+		    => nrel_format: format_html;;
+		    *);;
+    *);
+    => nrel_first_domain:concept_wastewater_treatment_facility_by_straining;
+    => nrel_second_domain:concept_waste;;

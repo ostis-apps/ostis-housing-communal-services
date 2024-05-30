@@ -1,0 +1,5 @@
+concept_drum_mesh_grid
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[сетчатая барабанная сетка]
+    	(* <- lang_ru;; *);;

@@ -1,0 +1,17 @@
+concept_facility_removing_suspended_solids_and_phosphorus_compounds
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[сооружение для удаления взвешенных веществ и соединений фосфора]
+    	(* <- lang_ru;; *);
+
+    <= nrel_subdividing:
+    {
+		concept_drum_mesh_grid;
+        concept_strainer;
+        concept_microfilter;
+        concept_filter;
+        concept_clarifier;
+        concept_membrane_separator;
+        concept_wastewater_oxygenation_plant;
+        concept_soil_filtration_platform
+    };;

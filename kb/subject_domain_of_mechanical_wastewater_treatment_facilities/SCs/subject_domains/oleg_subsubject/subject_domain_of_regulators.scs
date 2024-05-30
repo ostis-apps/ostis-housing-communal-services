@@ -1,0 +1,14 @@
+subject_domain_of_regulators
+    <- subject_domain;
+    <- sc_node_struct;
+
+    -> rrel_maximum_studied_object_class:
+        concept_sewage_regulator;
+    -> rrel_not_maximum_studied_object_class:
+        concept_sewage_regulator_flowing;
+        concept_sewage_regulator_multi_corridor;
+        concept_sewage_regulator_cyclic;
+        concept_sewage_flow_measuring_instruments;
+        concept_wastewater_quality_measuring_instruments;
+        concept_working_section_in_regulator;;
+        

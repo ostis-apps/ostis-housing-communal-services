@@ -1,0 +1,7 @@
+measurement_in_no_measure
+<- sc_node_norole_relation;
+    => nrel_main_idtf: [безразмерное измерение] (* <- lang_ru;;*);;
+
+concept_no_measure
+<- sc_node_class;
+    => nrel_main_idtf: [без единицы измерения] (* <- lang_ru;;*);;

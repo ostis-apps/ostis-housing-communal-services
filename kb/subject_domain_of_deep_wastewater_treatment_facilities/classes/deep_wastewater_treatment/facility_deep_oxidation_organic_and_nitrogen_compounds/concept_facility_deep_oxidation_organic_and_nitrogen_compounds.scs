@@ -1,0 +1,13 @@
+concept_facility_deep_oxidation_organic_and_nitrogen_compounds
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[сооружение глубокого окисления органических соединений и соединений азота]
+    	(* <- lang_ru;; *);
+
+    <= nrel_subdividing:
+    {
+		concept_biofilter;
+        concept_bioreactor;
+        concept_biopond;
+        concept_oxidizer_treatment_facilitie
+    };;

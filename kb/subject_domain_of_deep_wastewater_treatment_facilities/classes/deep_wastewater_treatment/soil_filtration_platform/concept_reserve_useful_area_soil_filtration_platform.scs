@@ -1,0 +1,17 @@
+concept_reserve_useful_area_soil_filtration_platform
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[резервная полезная площадь грунтовой фильтрационной площадки]
+    	(* <- lang_ru;; *);
+
+    => nrel_used_in: 
+        concept_useful_area_soil_filtration_platform;
+        
+    <= nrel_sc_text_translation: ...
+	(*
+		<- concept_requirment_for_value (* <- sc_node_class;; *);;
+		    -> [30 % – при гидравлической нагрузке qa < 0,10 м3/(м2·сут)]
+		    	(* <- lang_ru;; *);;
+            -> [20 % – при гидравлической нагрузке qa > 0,10 м3/(м2·сут)]
+		    	(* <- lang_ru;; *);;
+	*);;

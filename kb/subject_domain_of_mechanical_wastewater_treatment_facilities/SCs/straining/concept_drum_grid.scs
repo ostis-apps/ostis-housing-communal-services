@@ -1,0 +1,34 @@
+concept_drum_grid
+	<- sc_node_class;
+	=> nrel_main_idtf: [барабанная сетка] (*<- lang_ru;;*);;
+
+concept_sieve
+	<- sc_node_class;
+	=> nrel_main_idtf: [сито] (*<- lang_ru;;*);;
+
+concept_forbidden_substances_for_drum
+	<- sc_node_class;
+	=> nrel_main_idtf: [вещества, затрудняющие промывку барабанной сетки] (*<- lang_ru;;*);
+	->{
+		concept_resins;
+		concept_fats;
+		concept_oils;
+		concept_petroleum_products
+	};;
+
+concept_resins
+	<- sc_node_class;
+	=> nrel_main_idtf: [смолы] (*<- lang_ru;;*);;
+
+concept_fats
+	<- sc_node_class;
+	=> nrel_main_idtf: [жиры] (*<- lang_ru;;*);;
+
+concept_oils
+	<- sc_node_class;
+	=> nrel_main_idtf: [масла] (*<- lang_ru;;*);;
+
+concept_petroleum_products
+	<- sc_node_class;
+	=> nrel_main_idtf: [нефтепродукты] (*<- lang_ru;;*);;
+

@@ -1,0 +1,54 @@
+subject_domain_of_mechanical_wastewater_treatment_facilities
+    => nrel_main_idtf:
+        [Предметная область сооружений механической очистки сточных вод]
+        (* <- lang_ru;;*);
+        <- subject_domain;
+        <- sc_node_struct;
+
+    => nrel_private_subject_domain:
+	subject_domain_of_treatment_facility_by_straining
+	(*
+		=> nrel_main_idtf:[Предметная область сооружений для обработки сточных вод процеживанием](* <- lang_ru;; *);;
+	*);
+	subject_domain_of_sand_catcher
+	(*
+		=> nrel_main_idtf:[Предметная область песколовок](* <- lang_ru;; *);;
+	*);
+      subject_domain_of_regulators
+	(*
+		=> nrel_main_idtf:[Предметная область усреднителей](* <- lang_ru;; *);;
+	*);
+      subject_domain_of_clarification_facility
+	(*
+		=> nrel_main_idtf:[Предметная область сооружение осветления сточных вод](* <- lang_ru;; *);;
+	*);
+
+    -> rrel_maximum_studied_object_class:
+        concept_mechanical_wastewater_treatment_facility;
+
+    -> rrel_not_maximum_studied_object_class:
+        concept_wastewater_treatment_station;
+        concept_wastewater_treatment_facility_by_straining;
+        concept_waste;
+        concept_suspended_solids;
+        concept_sand_catcher;
+        concept_sewage_regulator;
+        concept_wastewater_clarification_facility;
+       
+
+
+    -> rrel_explored_relation:
+        nrel_waste_processing;
+        nrel_dehydration;
+        nrel_flushing;
+        nrel_grinding;
+        nrel_pressing;
+        nrel_entrance_sewage;
+        nrel_gap_to_volume;
+        nrel_sand_at_output;
+        nrel_sand_removal;
+        nrel_sewage_at_output;
+        nrel_sewage_in_facility;
+        nrel_waste_at_output;
+        nrel_entrance_sand;;
+                

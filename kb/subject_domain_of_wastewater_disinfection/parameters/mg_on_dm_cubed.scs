@@ -1,0 +1,11 @@
+concept_mg_on_dm_cubed
+	=> nrel_main_idtf:
+		[мг/(дм^3)]
+		(* <- lang_ru;; *);
+	-> concept_exact_value
+	(* => nrel_main_idtf: [точная величина] (* <- lang_ru;; *);; *);
+	<= nrel_unit: ...
+	(*
+		-> concept_fixed_unit_measurement
+		(* => nrel_main_idtf: [измерение с фиксированной единицей измерения] (* <- lang_ru;; *);; *);;
+	*);;

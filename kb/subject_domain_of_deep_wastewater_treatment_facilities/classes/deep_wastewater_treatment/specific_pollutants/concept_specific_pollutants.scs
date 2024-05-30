@@ -1,0 +1,11 @@
+concept_specific_pollutants
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[специфические загрязняющие вещества]
+    	(* <- lang_ru;; *);
+
+    <= nrel_subdividing:
+    {
+		concept_heavy_metal_salt;
+        concept_biodegradable_organic_compound
+    };;

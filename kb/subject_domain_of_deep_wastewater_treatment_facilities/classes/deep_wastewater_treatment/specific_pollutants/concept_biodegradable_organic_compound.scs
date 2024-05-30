@@ -1,0 +1,5 @@
+concept_biodegradable_organic_compound
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[биологически не разлагаемые органические соединения]
+    	(* <- lang_ru;; *);;

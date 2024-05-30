@@ -1,0 +1,5 @@
+concept_double_layer_filter
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[двухслойный фильтр]
+    	(* <- lang_ru;; *);;

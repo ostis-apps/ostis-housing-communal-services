@@ -1,0 +1,4 @@
+param_stay_time
+    <- sc_node_class;
+    => nrel_main_idtf: [время пребывания] (* <- lang_ru;;*);
+    <-measurable_parameter;;

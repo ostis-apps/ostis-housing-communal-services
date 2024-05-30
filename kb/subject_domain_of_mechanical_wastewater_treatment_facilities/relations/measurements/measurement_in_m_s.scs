@@ -1,0 +1,7 @@
+measurement_in_m_s
+<- sc_node_norole_relation;
+    => nrel_main_idtf: [измерение в м/с] (* <- lang_ru;;*);;
+
+concept_m_s
+<- sc_node_class;
+    => nrel_main_idtf: [м/с] (* <- lang_ru;;*);;

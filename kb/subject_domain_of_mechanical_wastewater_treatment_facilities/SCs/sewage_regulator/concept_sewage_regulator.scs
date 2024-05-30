@@ -1,0 +1,75 @@
+concept_sewage_regulator
+    <- sc_node_class;
+    => nrel_main_idtf: [усреднитель] (*<- lang_ru;;*);
+    <= nrel_sc_text_translation: ...
+		(*
+		    <-concept_definition (*<- sc_node_class;;*);;
+		    ->[Усреднители следует предусматривать при необходимости обеспечения
+                равномерного поступления сточных вод на очистные сооружения, а также для усреднения
+                концентраций загрязняющих веществ, содержащихся в сточных водах. При проведении
+                технико-экономических расчетов, связанных с устройством усреднителей, следует
+                рассматривать возможность использования емкостей приемных резервуаров КНС
+                для усреднения.]
+			    (*
+			    <-lang_ru;;
+			    => nrel_format: format_html;;
+			    *);;
+		    ->[Тип усреднителя следует выбирать в зависимости от режима изменения расхода сточных вод и концентраций загрязняющих веществ (залповые сбросы,
+                циклические, произвольные колебания), а также содержания взвешенных веществ. Следует предусматривать мероприятия по предотвращению осаждения взвешенных
+                веществ в усреднителе, а также загнивания сточных вод.]
+			    (*
+			    <-lang_ru;;
+			    => nrel_format: format_html;;
+			    *);;
+	    *);
+    <= nrel_subdividing:
+	{
+		concept_sewage_regulator_cyclic;
+		concept_sewage_regulator_flowing;
+		concept_sewage_regulator_multi_corridor
+	};
+    =>nrel_whole_part:concept_sewage_flow_measuring_instruments;
+    =>nrel_whole_part:concept_wastewater_quality_measuring_instruments;
+	=>nrel_whole_part:concept_working_section_in_regulator;;
+
+concept_sewage_regulator_cyclic
+    <- sc_node_class;
+    => nrel_main_idtf: [усреднитель циклического действия] (*<- lang_ru;;*);;
+
+concept_sewage_regulator_flowing
+    <- sc_node_class;
+    => nrel_main_idtf: [проточный усреднитель] (*<- lang_ru;;*);;
+
+concept_sewage_regulator_multi_corridor
+    <- sc_node_class;
+    => nrel_main_idtf: [многокоридорный усреднитель] (*<- lang_ru;;*);;
+
+concept_working_section_in_regulator
+    <- sc_node_class;
+    => nrel_main_idtf: [рабочая секция усреднителя] (*<- lang_ru;;*);;
+
+concept_sewage_flow_measuring_instruments
+    <- sc_node_class;
+    => nrel_main_idtf: [средство измерения расхода сточных вод] (*<- lang_ru;;*);
+    <= nrel_sc_text_translation: ...
+		(*
+		    <-concept_definition (*<- sc_node_class;;*);;
+		    ->[Используется в усреднителе при усреднении расхода.]
+			    (*
+			    <-lang_ru;;
+			    => nrel_format: format_html;;
+			    *);;
+	    *);;
+
+concept_wastewater_quality_measuring_instruments
+    <- sc_node_class;
+    => nrel_main_idtf: [средство измерения параметров качества сточных вод] (*<- lang_ru;;*);
+    <= nrel_sc_text_translation: ...
+		(*
+		    <-concept_definition (*<- sc_node_class;;*);;
+		    ->[Используется в усреднителе при усреднении концентраций загрязняющих веществ.]
+			    (*
+			    <-lang_ru;;
+			    => nrel_format: format_html;;
+			    *);;
+	    *);;

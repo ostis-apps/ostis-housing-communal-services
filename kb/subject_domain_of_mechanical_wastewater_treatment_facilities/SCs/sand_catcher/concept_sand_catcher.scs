@@ -1,0 +1,161 @@
+concept_sand_catcher
+    <- sc_node_class;
+    => nrel_main_idtf: [песколовка] (*<- lang_ru;;*);
+    <=nrel_whole_part:concept_wastewater_treatment_station;    
+    =>nrel_whole_part:concept_shutter;
+    =>nrel_whole_part:sand_pit_of_sand_catcher;
+
+    <= nrel_sc_text_translation: ...
+	    (*
+	        <-concept_definition (*<- sc_node_class;;*);;
+	            ->[Тип песколовки (горизонтальная, вертикальная, тангенциальная, аэрируемая)
+                    следует принимать с учетом производительности очистных сооружений, схемы очистки
+                    сточных вод и обработки их осадков, параметров очищаемой сточной воды.]
+	    	    (*<-lang_ru;;*);;
+                ->[До и после песколовки следует предусматривать затворы для их отключения
+                    на период минимального притока или ремонта.]
+	    	    (*<-lang_ru;;*);;
+                ->[Объем песковых приямков следует принимать не более двухсуточного объема
+                    выпадающего песка.]
+	    	    (*<-lang_ru;;*);;
+	    *);
+
+    <= nrel_subdividing:
+        {
+            concept_horizontal_sand_catcher;
+            concept_vertical_sand_catcher;
+            concept_tangential_sand_catcher;
+            concept_aerated_sand_catcher
+        };;
+
+concept_sand
+    <- sc_node_class;
+    => nrel_main_idtf: [песок] (*<- lang_ru;;*);
+    <=nrel_whole_part:concept_sewage;
+    <-concept_removed_substances;;
+
+concept_shutter
+    <- sc_node_class;
+    => nrel_main_idtf: [затвор] (*<- lang_ru;;*);;
+
+sand_pit_of_sand_catcher
+    <- sc_node_class;
+    => nrel_main_idtf: [приямок песколовки] (*<- lang_ru;;*);;
+
+concept_pit
+    <- sc_node_class;
+    => nrel_main_idtf: [приямок] (*<- lang_ru;;*);
+    =>nrel_whole_part:concept_wall;;
+
+concept_wall
+    <- sc_node_class;
+    => nrel_main_idtf: [стена] (*<- lang_ru;;*);;
+
+concept_horizont
+    <- sc_node_class;
+    => nrel_main_idtf: [горизонт] (*<- lang_ru;;*);;
+
+concept_aerated_sand_catcher
+    <- sc_node_class;
+    => nrel_main_idtf: [аерируемая песколовка] (*<- lang_ru;;*);
+    <= nrel_sc_text_translation: ...
+	    (*
+	        <-concept_definition (*<- sc_node_class;;*);;
+	            ->[Скорость воздуха в трубопроводах аэрируемых песколовок следует принимать не более
+                    20 м/с для предотвращения чрезмерного шумового воздействия.]
+	    	    (*<-lang_ru;;*);;
+	    *);
+    =>nrel_whole_part:concept_pipeline;;
+
+concept_horizontal_sand_catcher
+    <- sc_node_class;
+    => nrel_main_idtf: [горизонтальная песколовка] (*<- lang_ru;;*);;
+
+concept_vertical_sand_catcher
+    <- sc_node_class;
+    => nrel_main_idtf: [вертикальная песколовка] (*<- lang_ru;;*);;
+
+concept_tangential_sand_catcher
+    <- sc_node_class;
+    => nrel_main_idtf: [тангенциальная песколовка] (*<- lang_ru;;*);;
+
+concept_pipeline
+    <- sc_node_class;
+    => nrel_main_idtf: [трубопровод] (*<- lang_ru;;*);;
+    
+concept_facility_for_sand_processing
+    <- sc_node_class;
+    => nrel_main_idtf: [сооружение для обработки песка] (*<- lang_ru;;*);
+    <= nrel_sc_text_translation: ...
+	    (*
+	        <-concept_definition (*<- sc_node_class;;*);;
+	            ->[Сооружение, куда попадает песок после его извлечения из сточных вод на песколовках.]
+	    	    (*<-lang_ru;;*);;
+	    *);
+    <= nrel_subdividing:
+        {
+            concept_facility_for_sand_processing_by_dehydration_flushing;
+            concept_facility_for_sand_processing_by_dehydration
+        };;
+
+concept_facility_for_sand_processing_by_dehydration_flushing
+    <- sc_node_class;
+    => nrel_main_idtf: [сооружение для отмывки и обезвоживания песка] (*<- lang_ru;;*);
+    ->{
+        concept_sand_flusher;
+        concept_sand_classificator
+    };;
+
+concept_facility_for_sand_processing_by_dehydration
+    <- sc_node_class;
+    => nrel_main_idtf: [сооружение для обезвоживания песка] (*<- lang_ru;;*);
+    ->{
+        concept_sand_platform;
+        concept_sand_storage_bunker
+    };;
+
+concept_sand_flusher
+    <- sc_node_class;
+    => nrel_main_idtf: [пескопромыватель] (*<- lang_ru;;*);;
+
+concept_sand_classificator
+    <- sc_node_class;
+    => nrel_main_idtf: [классификатор песка] (*<- lang_ru;;*);;
+
+concept_sand_platform
+    <- sc_node_class;
+    => nrel_main_idtf: [песковая площадка] (*<- lang_ru;;*);
+    <= nrel_sc_text_translation: ...
+	    (*
+	        <-concept_definition (*<- sc_node_class;;*);;
+	            ->[При проектировании песковых площадок для подсушивания песка, поступающего
+                    из песколовок, необходимо предусматривать ограждающие валики высотой от 1 до 2 м.
+                    Нагрузку на площадку следует предусматривать не более 3 м3 на 1 м2 в год при условии
+                    периодического вывоза подсушенного песка в течение года.]
+	    	    (*<-lang_ru;;*);;
+            <-concept_definition (*<- sc_node_class;;*);;
+	            ->[Для съезда автотранспорта на песковые площадки следует устраивать пандус 
+                    с уклоном от 0,12 до 0,20.]
+	    	    (*<-lang_ru;;*);;
+	    *);;
+
+concept_sand_storage_bunker
+    <- sc_node_class;
+    => nrel_main_idtf: [накопитель-бункер для песка] (*<- lang_ru;;*);
+    <= nrel_sc_text_translation: ...
+	    (*
+	        <-concept_definition (*<- sc_node_class;;*);;
+	            ->[В накопителях слой напуска песка не должен превышать 3 м.]
+	    	    (*<-lang_ru;;*);;
+	    *);;
+
+concept_drainage_water
+    <- sc_node_class;
+    => nrel_main_idtf: [дренажная вода] (*<- lang_ru;;*);
+    <= nrel_sc_text_translation: ...
+	    (*
+	        <-concept_definition (*<- sc_node_class;;*);;
+	            ->[Дренажную воду из сооружений для отмывки и обезвоживания песка следует
+                    возвращать в поток очищаемых сточных вод перед песколовками.]
+	    	    (*<-lang_ru;;*);;
+	    *);;

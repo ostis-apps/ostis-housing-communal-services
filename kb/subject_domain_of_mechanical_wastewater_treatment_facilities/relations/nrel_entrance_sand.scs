@@ -1,0 +1,14 @@
+nrel_entrance_sand
+    <- sc_node_norole_relation;
+    => nrel_main_idtf: [песок на входе] (* <- lang_ru;;*);
+    <= nrel_sc_text_translation: ...
+	(*
+	    <-concept_definition (*<- sc_node_class;;*);;
+	    ->[песок, который подаётся на вход сооружению для обработки песка]
+		    (*
+		    <-lang_ru;;
+		    => nrel_format: format_html;;
+		    *);;
+    *);
+    => nrel_first_domain:concept_facility_for_sand_processing;
+    => nrel_second_domain:concept_sand;;

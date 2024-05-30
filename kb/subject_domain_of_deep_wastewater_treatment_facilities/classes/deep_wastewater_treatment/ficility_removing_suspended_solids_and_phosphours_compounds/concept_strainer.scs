@@ -1,0 +1,5 @@
+concept_strainer
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[сито]
+    	(* <- lang_ru;; *);;

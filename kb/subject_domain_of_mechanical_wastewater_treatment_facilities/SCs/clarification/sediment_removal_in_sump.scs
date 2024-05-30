@@ -1,0 +1,16 @@
+concept_methods_for_removing_sediment_from_sump_pit
+    <- sc_node_class;
+    => nrel_main_idtf: [способы удаления осадка из приямков отстойника] (*<- lang_ru;;*);
+    <= nrel_subdividing:
+        {
+            concept_gravity_flow_under_hydrostatic_pressure;
+            concept_pumps_for_sediment
+        };;
+
+concept_gravity_flow_under_hydrostatic_pressure
+    <- sc_node_class;
+    => nrel_main_idtf: [самотек под гидростатическим давлением] (*<- lang_ru;;*);;
+
+concept_pumps_for_sediment
+    <- sc_node_class;
+    => nrel_main_idtf: [насосы предназначенные для перекачки осадка] (*<- lang_ru;;*);;

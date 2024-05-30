@@ -1,0 +1,14 @@
+concept_sorbent
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[сорбент]
+    	(* <- lang_ru;; *);
+
+    <= nrel_sc_text_translation: ...
+	(*
+		<- concept_requirment (* <- sc_node_class;; *);;
+		    -> [следует принимать по рекомендациям
+                производителей в зависимости от состава загрязняющих веществ в сточных водах
+                и характеристик сорбентов]
+		    	(* <- lang_ru;; *);;
+	*);;

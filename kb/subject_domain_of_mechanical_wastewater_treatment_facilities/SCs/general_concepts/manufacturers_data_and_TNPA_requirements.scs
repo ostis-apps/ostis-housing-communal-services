@@ -1,0 +1,19 @@
+concept_manufacturers_data
+	<- sc_node_class;
+    => nrel_main_idtf: [данные производителя] (* <- lang_ru;;*);
+	<= nrel_sc_text_translation: ...
+		(*
+		    <-concept_definition (*<- sc_node_class;;*);;
+		        ->[Множество параметров, значения которых даны оборудованию по умолчанию производителем]
+			    (*<-lang_ru;;*);;
+		*);;
+
+concept_TNPA_requirements
+	<- sc_node_class;
+	=> nrel_main_idtf: [требования действующих ТНПА] (* <- lang_ru;;*);
+	<= nrel_sc_text_translation: ...
+		(*
+		    <-concept_definition (*<- sc_node_class;;*);;
+		        ->[Множество параметров, значения которых соответствуют требованиям действующих ТНПА]
+			    (*<-lang_ru;;*);;
+		*);;

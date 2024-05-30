@@ -1,0 +1,4 @@
+param_amount
+<- sc_node_class;
+    => nrel_main_idtf: [количество] (* <- lang_ru;;*);
+    <-measurable_parameter;;

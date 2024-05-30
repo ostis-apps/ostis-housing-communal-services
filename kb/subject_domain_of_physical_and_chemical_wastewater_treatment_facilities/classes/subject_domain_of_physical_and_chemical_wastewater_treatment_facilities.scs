@@ -1,0 +1,109 @@
+subject_domain_of_physical_and_chemical_wastewater_treatment_facilities
+    => nrel_main_idtf:
+    [Предметная область сооружений физико-химической очистки сточных вод]
+    (* <- lang_ru;;*);
+    <- subject_domain;
+    <- sc_node_struct;
+
+    -> rrel_maximum_studied_object_class:
+        concept_physical_and_chemical_wastewater_treatment_facility
+        (*
+            <- sc_node_class;;
+            => nrel_main_idtf:
+            [сооружение физико-химической очистки сточных вод]
+            (* <- lang_ru;; *);;
+        *);
+
+    -> rrel_not_maximum_studied_object_class:
+        concept_flotation_installation
+        (*
+            <- sc_node_class;;
+            => nrel_main_idtf:
+            [флотационная установка]
+            (* <- lang_ru;; *);;
+        *);
+        concept_wastewater_neutralization_facility
+        (*
+            <- sc_node_class;;
+            => nrel_main_idtf:
+            [сооружение нейтрализации сточных вод]
+            (* <- lang_ru;; *);;
+        *);
+        concept_wastewater_neutralization
+        (*
+            <- sc_node_class;;
+            => nrel_main_idtf:
+            [нейтрализация сточных вод]
+            (* <- lang_ru;; *);;
+        *);
+        concept_neutralization_acidic_wastewater
+        (*
+            <- sc_node_class;;
+            => nrel_main_idtf:
+            [нейтрализация кислых сточных вод]
+            (* <- lang_ru;; *);;
+        *);
+        concept_neutralization_alkaline_wastewater
+        (*
+            <- sc_node_class;;
+            => nrel_main_idtf:
+            [нейтрализация сточных вод]
+            (* <- lang_ru;; *);;
+        *);
+        concept_biogenic_replenishment
+        (*
+            <- sc_node_class;;
+            => nrel_main_idtf:
+            [биогенная подпитка]
+            (* <- lang_ru;; *);;
+        *);
+        concept_nutritional_supplement
+        (*
+            <- sc_node_class;;
+            => nrel_main_idtf:
+            [биогенная добавка]
+            (* <- lang_ru;; *);;
+        *);
+        concept_wastewater_sorption_treatment_facility
+        (*
+            <- sc_node_class;;
+            => nrel_main_idtf:
+            [сооружение сорбционной очистки сточных вод]
+            (* <- lang_ru;; *);;
+        *);
+        concept_wastewater_sorption_treatment
+        (*
+            <- sc_node_class;;
+            => nrel_main_idtf:
+            [сорбционная очистки сточных вод]
+            (* <- lang_ru;; *);;
+        *);
+        concept_sorbent
+        (*
+            <- sc_node_class;;
+            => nrel_main_idtf:
+            [сорбент]
+            (* <- lang_ru;; *);;
+        *);
+        concept_ion_exchange_treatment_of_industrial_wastewater
+        (*
+            <- sc_node_class;;
+            => nrel_main_idtf:
+            [ионообменная очистка промышленных сточных вод]
+            (* <- lang_ru;; *);;
+        *);
+
+        concept_estimated_sediment_moisture
+        (*
+            <- sc_node_class;;
+            => nrel_main_idft:
+            [расчётная влажность осадка]
+            (* <- lang_ru;; *);;
+        *);
+        concept_dose_reagents
+        (*
+            <- sc_node_class;;
+            => nrel_main_idft:
+            [доза реагентов]
+            (* <- lang_ru;; *);;
+        *);;

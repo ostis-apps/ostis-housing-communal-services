@@ -1,0 +1,4 @@
+concept_waste
+    <- sc_node_class;
+    => nrel_main_idtf: [отбросы] (* <- lang_ru;;*);
+    <-concept_removed_substances;;

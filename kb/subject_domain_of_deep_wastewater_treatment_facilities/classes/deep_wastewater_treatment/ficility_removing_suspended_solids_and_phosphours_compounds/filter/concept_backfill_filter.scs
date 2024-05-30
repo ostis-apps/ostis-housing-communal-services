@@ -1,0 +1,5 @@
+concept_backfill_filter
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[засыпной фильтр]
+    	(* <- lang_ru;; *);;

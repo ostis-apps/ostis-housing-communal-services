@@ -1,0 +1,19 @@
+nrel_gap_to_volume
+<- sc_node_norole_relation;
+=> nrel_main_idtf: [отношение объема задерживаемых отбросов к ширине прозоров решетки] 
+    (*  <- lang_ru;;
+        => nrel_format: format_html;;
+    *);
+<= nrel_sc_text_translation: ...
+	(*
+	    <-concept_definition (*<- sc_node_class;;*);;
+	    ->[При определении объема задерживаемых отбросов на очистных сооружениях
+        следует учитывать его уменьшение за счет удаления отбросов на КНС, при подаче
+        сточных вод на очистные сооружения с КНС, оборудованных решетками.]
+		    (*
+		    <-lang_ru;;
+		    => nrel_format: format_html;;
+		    *);;
+    *);
+=> nrel_first_domain:param_gap_width;
+=> nrel_second_domain:param_waste_volume;;

@@ -1,0 +1,5 @@
+concept_biofilter
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[биофильтр]
+    	(* <- lang_ru;; *);;

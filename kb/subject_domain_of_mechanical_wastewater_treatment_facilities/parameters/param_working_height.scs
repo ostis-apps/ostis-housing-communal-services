@@ -1,0 +1,4 @@
+param_working_depth
+    <- sc_node_class;
+    => nrel_main_idtf: [рабочая глубина] (* <- lang_ru;;*);
+    <-measurable_parameter;;

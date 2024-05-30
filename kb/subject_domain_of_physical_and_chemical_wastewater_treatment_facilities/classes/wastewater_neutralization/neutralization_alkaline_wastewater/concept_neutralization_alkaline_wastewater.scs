@@ -1,0 +1,12 @@
+concept_neutralization_alkaline_wastewater
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[нейтрализация щелочных сточных вод]
+    	(* <- lang_ru;; *);
+    
+    <= nrel_sc_text_translation: ...
+	(*
+        <- concept_note (* <- sc_node_class;; *);;
+            -> [рекомендуется применять техническую серную кислоту]
+                (*<- lang_ru;; *);;
+	*);;
