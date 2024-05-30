@@ -1,0 +1,7 @@
+concept_natural_aeration
+    => nrel_main_idft:
+        [естественная аэрация]
+        (* <- lang_ru;; *);
+    => nrel_idtf:
+        [организованный естественный воздухообмен]
+        (* <- lang_ru;; *);;

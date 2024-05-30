@@ -1,0 +1,12 @@
+concept_sewage_sludge_treatment_facility
+    <= nrel_subdividing:
+    {
+		concept_digester;
+		concept_sludge_bed
+    };
+    <= nrel_sc_text_translation: ...
+	(*
+	    <- concept_definition (* <- sc_node_class;; *);;
+		->[Комплекс инженерных устройств, предназначенных для приёма сточных вод в области их образования, транспортировки, очистки, обеззараживания и выпуска в окружающую среду]
+			(* <- lang_ru;; *);;	
+	*);;

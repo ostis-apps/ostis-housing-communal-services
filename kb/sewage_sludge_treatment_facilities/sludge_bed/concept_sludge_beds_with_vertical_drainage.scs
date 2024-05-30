@@ -1,0 +1,61 @@
+concept_sludge_beds_with_vertical_drainage
+    => nrel_main_idft:
+        [иловая площадка с вертикальным дренажем]
+        (* <- lang_ru;; *);
+
+    <= nrel_sc_text_translation: ...
+    (*
+        <- concept_design_requirment;;
+            -> [ограждающие стенки фильтрационного колодца следует выполнять из металлических сеток]
+                (* <- lang_ru;; *);;
+            -> [параметры ограждающей сетки следует принимать, исходя из обеспечения прочности конструкции при режиме фильтрации и при выгрузке осадка из иловой площадки]
+                (* <- lang_ru;; *);;
+    *);
+
+    -> param_sludge_bed_with_vertical_drainage_distance_between_wells
+    (*
+        <- sc_node_class;;
+        => nrel_main_idft:
+            [расстояние между дренажными вертикальными колодцами иловой площадки с вертикальным дренажем]
+            (* <- lang_ru;; *);;
+    *);
+
+    -> param_sludge_bed_with_vertical_drainage_vertical_wells_height
+    (*
+        <- sc_node_class;;
+        => nrel_main_idft:
+            [высота дренажных вертикальных колодцев иловой площадки с вертикальным дренажем]
+            (* <- lang_ru;; *);;
+    *);
+
+    -> param_sludge_bed_with_vertical_drainage_barrier_roller_and_etc_height
+    (*
+        <- sc_node_class;;
+        => nrel_main_idft:
+            [высота оградительных валиков и насыпей для дорог иловой площадки с вертикальным дренажем]
+            (* <- lang_ru;; *);;
+    *);
+
+    -> param_sludge_bed_with_vertical_drainage_working_depth
+    (*
+        <- sc_node_class;;
+        => nrel_main_idft:
+            [рабочая глубина иловой площадки с вертикальным дренажем]
+            (* <- lang_ru;; *);;
+    *);
+
+    -> param_sludge_bed_with_vertical_drainage_filter_media_grain_diameter
+    (*
+        <- sc_node_class;;
+        => nrel_main_idft:
+            [диаметр зерен фильтрующей загрузки иловой площадки с вертикальным дренажем]
+            (* <- lang_ru;; *);;
+    *);
+
+    -> param_sludge_bed_with_vertical_drainage_filter_media_layer_width
+    (*
+        <- sc_node_class;;
+        => nrel_main_idft:
+            [ширина слоя фильтрующей загрузки у стенки колодца иловой площадки с вертикальным дренажем]
+            (* <- lang_ru;; *);;
+    *);;

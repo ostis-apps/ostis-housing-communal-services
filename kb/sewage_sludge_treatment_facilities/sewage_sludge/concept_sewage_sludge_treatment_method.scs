@@ -1,0 +1,10 @@
+concept_sewage_sludge_treatment_method
+	=> nrel_main_idtf:
+		[метод очистки осадка сточных вод]
+		(* <- lang_ru;; *);
+	<= nrel_sc_text_translation: ...
+	(*
+		<- concept_requirment (* <- sc_node_class;; *);;
+			-> [учет обработки дополнительных объемов сточных вод и загрязняющих веществ, образующихся в технологических процессах обработки осадков]
+				(* <- lang_ru;; *);;
+	*);;

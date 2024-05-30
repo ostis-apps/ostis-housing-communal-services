@@ -1,0 +1,17 @@
+concept_cationic_flocculant
+	=> nrel_main_idtf:
+		[катионный флокулянт]
+		(* <- lang_ru;; *);
+	<= nrel_sc_text_translation: ...
+	(*
+		<- concept_definition (* <- sc_node_class;; *);;
+			-> [отрицательно заряженный флокулянт]
+				(* <- lang_ru;; *);;
+	*);
+	<= nrel_subdividing:
+	{
+		concept_acrylamide_copolymers
+		(* => nrel_main_idtf: [сополимеры акриламида] (* <- lang_ru;; *);; *);
+		concept_cationic_monomer
+		(* => nrel_main_idtf: [катионный мономер] (* <- lang_ru;; *);; *)
+	};;

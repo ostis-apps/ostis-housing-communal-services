@@ -1,0 +1,12 @@
+concept_gravity_seal_conical_shape
+    => nrel_main_idft:
+        [гравитационный илоуплотнитель конической формы]
+        (* <- lang_ru;; *);
+    
+    -> param_grav_conical_seal_bottom_slope
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idft:
+			[уклон дна гравитационного илоупотнителя конической формы]
+			(* <- lang_ru;; *);;
+	*);;

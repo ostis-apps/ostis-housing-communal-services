@@ -1,0 +1,12 @@
+concept_aeration
+    => nrel_idtf:
+        [проветривание]
+        (* <- lang_ru;; *);
+    => nrel_idtf:
+        [насыщение воздухом, кислородом]
+        (* <- lang_ru;; *);
+    <= nrel_subdividing:
+    {
+        concept_natural_aeration;
+        concept_artificial_aeration
+    };;

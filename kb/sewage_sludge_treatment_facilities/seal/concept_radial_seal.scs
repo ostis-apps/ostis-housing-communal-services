@@ -1,0 +1,12 @@
+concept_radial_seal
+    => nrel_main_idft:
+        [радиальный уплотнитель]
+        (* <- lang_ru;; *);
+
+    -> param_rad_seal_sludge_load
+    (*
+        <- sc_node_class;;
+        => nrel_main_idft:
+            [нагрузка по сухому веществу ила, осадка или их смеси на радиальный илоуплотнитель]
+            (* <- lang_ru;; *);;
+    *);;

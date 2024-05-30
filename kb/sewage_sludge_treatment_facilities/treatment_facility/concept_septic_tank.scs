@@ -1,0 +1,4 @@
+concept_septic_tank
+	=> nrel_main_idtf:
+		[септик]
+		(* <- lang_ru;; *);;

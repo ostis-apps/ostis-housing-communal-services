@@ -1,0 +1,4 @@
+concept_storage_device
+	=> nrel_main_idtf:
+		[накопитель]
+		(* <- lang_ru;; *);;

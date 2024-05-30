@@ -1,0 +1,9 @@
+concept_sludge_bed_on_natural_foundation
+    => nrel_main_idft: 
+        [иловые площадки на естественном основании]
+        (* <- lang_ru;; *);
+    <= nrel_subdividing:
+    {
+        concept_sludge_beds_on_a_natural_basis_with_drainage;
+        concept_sludge_beds_on_a_natural_basis_without_drainage
+    };;

@@ -1,0 +1,37 @@
+concept_sludge_compaction_bed
+    => nrel_main_idft:
+        [иловая площадка-уплотнитель]
+        (* <- lang_ru;; *);
+    
+    <= nrel_sc_text_translation: ...
+    (*
+        <- concept_design_requirment;;
+            -> [наличие устройства пандусов для возможности механизированной уборки высушенного осадка]
+                (* <- lang_ru;; *);;
+            -> [для выпуска иловой воды, выделяющейся при отстаивании осадка, вдоль продольных стен следует предусматривать отверстия, перекрываемые шиберами]
+                (* <- lang_ru;; *);;
+    *);
+
+    -> param_sludge_compaction_bed_map_width
+    (*
+        <- sc_node_class;;
+        => nrel_main_idft:
+            [ширина карт иловой площадки-уплотнителя]
+            (* <- lang_ru;; *);;
+    *);
+
+    -> param_sludge_compaction_bed_distance_between_sludge_water_outlets
+    (*
+        <- sc_node_class;;
+        => nrel_main_idft:
+            [расстояние между выпусками иловой воды иловой площадки-уплотнителя]
+            (* <- lang_ru;; *);;
+    *);
+
+    -> param_sludge_compaction_bed_working_depth
+    (*
+        <- sc_node_class;;
+        => nrel_main_idft:
+            [рабочая глубиная иловой площадки-уплотнителя]
+            (* <- lang_ru;; *);;
+    *);;

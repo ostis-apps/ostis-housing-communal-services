@@ -1,0 +1,4 @@
+concept_storm_water_treatment_facility
+	=> nrel_main_idtf:
+		[ливневые очистные сооружения]
+		(* <- lang_ru;; *);;

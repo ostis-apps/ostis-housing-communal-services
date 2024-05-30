@@ -1,0 +1,40 @@
+concept_sewage_sludge
+	<= nrel_sc_text_translation: ...
+	(*
+		<- concept_requirment (* <- sc_node_class;; *);;
+			->[осадок сточных вод должен подвергаться обработке, обеспечивающей возможность их использования или размещения в соответствии с требованиями законодательства об обращении с отходами]
+				(* <- lang_ru;; *);;
+	*);
+	-> concept_sewage_sludge_treatment_method;
+	-> concept_humidity;
+	<= nrel_subdividing:
+	{
+		concept_excess_active_sludge
+		(*
+			=> nrel_main_idtf: [избыточный активный ил] (* <- lang_ru;; *);;
+		*);
+		concept_mixture_of_raw_sludge_and_excess_activated_sludge
+		(*
+			=> nrel_main_idft: [смесь сырого осадка и избыточного активного ила, сброженного осадка] (* <- lang_ru;; *);;
+		*);
+		concept_raw_sludge
+		(*
+			=> nrel_main_idft: [сырой осадок] (* <- lang_ru;; *);;
+		*);
+		concept_mixture_of_primary_settling_tank_sludge_and_uncompacted_sludge
+		(*
+			=> nrel_main_idft: [смесь осадка первичных отстойников и неуплотненного ила] (* <- lang_ru;; *);;
+		*);
+		concept_mixture_of_sludge_and_active_compacted_sludge
+		(*
+			=> nrel_main_idft: [смесь осадка и активного уплотненного ила] (* <- lang_ru;; *);;
+		*)
+	};
+
+	-> param_sewage_sludge_concentration
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idft:
+			[концентрация осадка сточных вод]
+			(* <- lang_ru;; *);;
+	*);;

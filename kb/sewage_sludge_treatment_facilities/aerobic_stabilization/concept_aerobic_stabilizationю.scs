@@ -1,0 +1,49 @@
+concept_aerobic_stabilization
+    <= nrel_sc_text_translation: ...
+    (*
+        <- concept_definition;;
+            -> [аэрация избыточного активного ила или смеси его с осадком из первичных отстойников в сооружениях, аналогичных аэротенкам]
+                (* <- lang_ru;; *);;
+        <- concept_method (* <- sc_node_class;; *);;
+            -> [совместная стабилизация с биологической очисткой сточных вод]
+                (* <- lang_ru;; *);;
+            -> [раздельная стабилизация без и с подогревом]
+                (* <- lang_ru;; *);;
+            -> [компостирование обезвоженного осадка в автотермичном режиме]
+                (* <- lang_ru;; *);;
+        <- concept_requirment;;
+            -> [выбор метода аэробной стабилизации осадка следует производить в зависимости от количества образующегося осадка, энергопотребления, методов конечной утилизации]
+                (* <- lang_ru;; *);;
+    *);
+
+    -> param_aerobic_stabilization_aeration_duration
+    (*
+        <- sc_node_class;;
+        => nrel_main_idft:
+            [длительность аэрации при аэробной стабилизации]
+            (* <- lang_ru;; *);;
+    *);
+
+    -> param_aerobic_stabilization_air_flow
+    (*
+        <- sc_node_class;;
+        => nrel_main_idft:
+            [длительность аэрации при аэробной стабилизации]
+            (* <- lang_ru;; *);;
+    *);
+
+    -> param_aerobic_stabilization_sludge_concentration
+    (*
+        <- sc_node_class;;
+        => nrel_main_idft:
+            [концентрация осадка при аэробной стабилизации]
+            (* <- lang_ru;; *);;
+    *);
+
+    -> param_aerobic_stabilization_aeration_intensity
+    (*
+        <- sc_node_class;;
+        => nrel_main_idft:
+            [интенсивность аэрации при аэробной стабилизации]
+            (* <- lang_ru;; *);;
+    *);;

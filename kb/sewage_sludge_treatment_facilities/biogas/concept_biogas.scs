@@ -1,0 +1,7 @@
+concept_biogas
+    <= nrel_sc_text_translation: ...
+    (*
+        <- concept_definition;;
+            -> [газ, получаемый водородным или метановым брожением биомассы]
+                (* <- lang_ru;; *);;
+    *);;

@@ -1,0 +1,15 @@
+concept_cation_anionic_flocculants
+	=> nrel_main_idtf:
+		[катионный-анионный флокулянт]
+		(* <- lang_ru;; *);
+	<= nrel_sc_text_translation: ...
+	(*
+		<- concept_definition (* <- sc_node_class;; *);;
+			-> [амфотерные, ведут себя как анионные, катионные и нейтральные, в зависимости от среды]
+				(* <- lang_ru;; *);;
+	*);
+	<= nrel_subdividing:
+	{
+		concept_protein_compounds
+		(* => nrel_main_idtf: [белковые соединения] (* <- lang_ru;; *);; *)
+	};;

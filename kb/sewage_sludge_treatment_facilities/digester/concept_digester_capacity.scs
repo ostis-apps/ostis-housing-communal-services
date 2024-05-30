@@ -1,0 +1,11 @@
+concept_digester_capacity
+    => nrel_main_idft:
+        [вместимость метантенка]
+        (* <- lang_ru;; *);
+    <- concept_measurable_parameter;
+    <= nrel_sc_text_translation: ...
+    (*
+        <- concept_requirment;;
+            -> [значение определяется в зависимости от фактической влажности осадка по суточной дозе загрузки, с учетом продолжительности сбраживания]
+                (* <- lang_ru;; *);;
+    *);;

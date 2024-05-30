@@ -1,0 +1,10 @@
+concept_gravity_seal
+    => nrel_main_idtf: 
+        [гравитационный уплотнитель] 
+        (* <- lang_ru;; *);
+
+    <= nrel_subdividing:
+    {
+        concept_gravity_seal_pyramid_shape;
+        concept_gravity_seal_conical_shape
+    };;

@@ -1,0 +1,16 @@
+concept_moisture_content_of_sludge_after_compaction
+	=> nrel_main_idtf:
+		[влажность осадка после уплотнения]
+		(* <- lang_ru;; *);
+	<- concept_measurable_parameter;
+	-> concept_percent;
+	<= nrel_sc_text_translation: ...
+	(*
+		<- concept_requirment (* <- sc_node_class;; *);;
+			-> [значение должно быть от 98 до 97 для избыточного активного ила]
+				(* <- lang_ru;; *);;
+			-> [значение должно быть от 96 до 94 для смеси сырого осадка и избыточного активного ила, сброженного осадка]
+				(* <- lang_ru;; *);;
+			-> [значение должно быть от от 95 до 90 для сырого осадка]
+				(* <- lang_ru;; *);;
+	*);;

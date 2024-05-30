@@ -1,0 +1,13 @@
+concept_city_wastewater_treatment_facility
+	=> nrel_main_idtf:
+		[городские очистные сооружения]
+		(* <- lang_ru;; *);
+    <= nrel_sc_text_translation: ...
+    (*
+		<- concept_definition (* <- sc_node_class;; *);;
+			-> [самые крупные очистные сооружения из всех, которые применяются в крупных мегаполисах и городах]
+				(* 
+					<- lang_ru;;
+					=> nrel_format: format_html;;  
+				*);;
+    *);;	
