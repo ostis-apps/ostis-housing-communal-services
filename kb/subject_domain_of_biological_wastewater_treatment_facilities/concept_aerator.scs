@@ -26,8 +26,6 @@ concept_aerator
 		на перемешивание и снижение степени использования кислорода воздуха из-за увеличения вязкости, плотности иловой смеси и дозы ила.]
 			(*<-lang_ru;;*);;
 		*);
-<- rrel_not_maximum_studied_object_class:
-	subject_domain_of_facilities_for_biological_treatment_in_activated_sludge_systems;
 	
 <= nrel_subdividing:
     {

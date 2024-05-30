@@ -8,6 +8,4 @@ concept_biological_method_for_removing_phosphorus_compounds
 	от 0,50 до 0,75 ч при максимальном часовом расходе сточных вод с учетом расхода циркуляционного
 	потока активного ила]
 			(*<-lang_ru;;*);;
-		*);
-<- rrel_not_maximum_studied_object_class:
-	subject_domain_of_facilities_for_biological_treatment_in_activated_sludge_systems;;
+		*);;

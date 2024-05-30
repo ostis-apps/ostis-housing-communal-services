@@ -8,8 +8,4 @@ concept_pond_with_artificial_aeration
 			<-lang_ru;;
 			=> nrel_format: format_html;;
 			*);;
-		*);
-		
--> concept_biological_pond;
-<- rrel_not_maximum_studied_object_class:
-	subject_domain_of_biological_ponds;;
+		*);;

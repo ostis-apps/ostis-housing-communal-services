@@ -135,135 +135,130 @@ subject_domain_of_facilities_for_biological_treatment_in_activated_sludge_system
 	concept_reagent_precipitation_method
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft: [метод осаждения реагентами] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [метод осаждения реагентами] (* <- lang_ru;; *);;
 	*);
 	concept_biological_method_for_removing_phosphorus_compounds
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft: [биологический метод удаления соединений фосфора] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [биологический метод удаления соединений фосфора] (* <- lang_ru;; *);;
 	*);
 	concept_combined_method_for_removing_phosphorus_compounds
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft: [комбинированный метод удаления соединений фосфора] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [комбинированный метод удаления соединений фосфора] (* <- lang_ru;; *);;
 	*);
 	concept_increase_in_activated_sludge
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft: [прирост активного ила] (* <- lang_ru;; *);;
-	*);
-	concept_dose_of_reagents
-	(*
-		<- sc_node_class;;
-		=> nrel_main_idft: [доза реагентов] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [прирост активного ила] (* <- lang_ru;; *);;
 	*);
 	concept_oxygen_demand_for_wastewater_treatment
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft: [потребность в кислороде при очистке сточных вод] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [потребность в кислороде при очистке сточных вод] (* <- lang_ru;; *);;
 	*);
 	concept_oxygen_concentration
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft: [концентрация кислорода] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [концентрация кислорода] (* <- lang_ru;; *);;
 	*);
 	concept_aerator
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft: [аэратор] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [аэратор] (* <- lang_ru;; *);;
 	*);
 	concept_mechanical_aerator
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft: [механический аэратор] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [механический аэратор] (* <- lang_ru;; *);;
 	*);
 	concept_pneumomechanical_aerator
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft: [пневмомеханический аэратор] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [пневмомеханический аэратор] (* <- lang_ru;; *);;
 	*);
 	concept_jet_aerator
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft: [струйный аэратор] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [струйный аэратор] (* <- lang_ru;; *);;
 	*);
 	concept_pneumatic_aerator
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft: [пневматический аэратор] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [пневматический аэратор] (* <- lang_ru;; *);;
 	*);
 	concept_air_supply_equipment
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft: [воздухоподающее оборудование] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [воздухоподающее оборудование] (* <- lang_ru;; *);;
 	*);
 	concept_blower
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft: [воздуховка] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [воздуховка] (* <- lang_ru;; *);;
 	*);
 	concept_gas_blower
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft: [газодуховка] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [газодуховка] (* <- lang_ru;; *);;
 	*);
 	concept_supercharger
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft: [нагнетатель] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [нагнетатель] (* <- lang_ru;; *);;
 	*);
 	concept_airlift
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft: [эрлифт] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [эрлифт] (* <- lang_ru;; *);;
 	*);
 	concept_activate_sludge_recycling
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft: [рециркуляция активного ила] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [рециркуляция активного ила] (* <- lang_ru;; *);;
 	*);
 	concept_consumption
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft: [расход] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [расход] (* <- lang_ru;; *);;
 	*);
 	concept_COC
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft: [ЦОК] (* <- lang_ru;; *);;
-		=> nrel_main_idft: [Circulating oxidative channel] (* <- lang_eng;; *);;
+		=> nrel_main_idtf: [ЦОК] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [Circulating oxidative channel] (* <- lang_eng;; *);;
 	*);
 	concept_mixer
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft: [мешалка] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [мешалка] (* <- lang_ru;; *);;
 	*);
 	concept_SBR_reactor
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft: [SBR-реактор] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [SBR-реактор] (* <- lang_ru;; *);;
 	*);
 	concept_membrane_filter
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft: [мембранный фильтр] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [мембранный фильтр] (* <- lang_ru;; *);;
 	*);
 	
 -> rrel_explored_relation:
 	nrel_technological_scheme
 	(*
 		<- sc_node_norole_relation;;
-		=> nrel_main_idft: [технологическая схема*] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [технологическая схема*] (* <- lang_ru;; *);;
 	*);
 	nrel_separation_of_sludge_mixture
 	(*
 		<- sc_node_norole_relation;;
-		=> nrel_main_idft: [разделение иловой смеси*] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [разделение иловой смеси*] (* <- lang_ru;; *);;
 	*);
 	nrel_use
 	(*
 		<- sc_node_norole_relation;;
-		=> nrel_main_idft: [применение*] (* <- lang_ru;; *);;
+		=> nrel_main_idtf: [применение*] (* <- lang_ru;; *);;
 		=> nrel_idtf: [использование*] (* <- lang_ru;; *);;
 	*);;
 	
