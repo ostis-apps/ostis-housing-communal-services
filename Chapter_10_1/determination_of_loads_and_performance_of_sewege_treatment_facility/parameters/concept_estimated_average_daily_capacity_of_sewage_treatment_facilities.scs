@@ -1,0 +1,15 @@
+concept_estimated_average_daily_capacity_of_sewage_treatment_facilities
+    => nrel_main_idtf:
+        [расчетная среднесуточная производительность канализационных очистных сооружений]
+        (* <- lang_ru;; *);
+    <-measurable_parameter;
+                
+    <= nrel_sc_text_translation: ...
+    (*
+        <- concept_requirment (* <- sc_node_class;; *);;
+
+            -> [следует определять как суммарный среднесуточный расход хозяйственнобытовых и производственных сточных вод]
+                (* <- lang_ru;; *);;
+    *);
+
+    <=sc_node_class;;

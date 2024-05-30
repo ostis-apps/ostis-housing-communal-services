@@ -1,0 +1,15 @@
+concept_estimated_wastewater_flow_rate
+    => nrel_main_idtf:
+        [расчётный расход сточных вод]
+        (* <- lang_ru;; *);
+    <-measurable_parameter;
+
+    <= nrel_sc_text_translation: ...
+    (*
+        <- concept_requirment (* <- sc_node_class;; *);;
+
+            -> [необходимо определять по суммарному графику притока как при подаче их насосами,
+                так и при самотечном поступлении]
+                (* <- lang_ru;; *);;
+    *);
+    <=sc_node_class;;
