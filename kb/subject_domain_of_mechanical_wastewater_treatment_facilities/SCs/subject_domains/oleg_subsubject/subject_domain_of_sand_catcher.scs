@@ -5,6 +5,7 @@ subject_domain_of_sand_catcher
     -> rrel_maximum_studied_object_class:
         concept_sand_catcher;
     -> rrel_not_maximum_studied_object_class:
+        case_sand_catcher_in_station;
         concept_shutter;
         sand_pit_of_sand_catcher;
         concept_aerated_sand_catcher;

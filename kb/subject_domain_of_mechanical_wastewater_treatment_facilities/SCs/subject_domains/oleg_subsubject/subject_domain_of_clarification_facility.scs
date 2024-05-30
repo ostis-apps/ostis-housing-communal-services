@@ -3,28 +3,29 @@ subject_domain_of_clarification_facility
     <- sc_node_struct;
 
     -> rrel_maximum_studied_object_class:
-        concept_wastewater_clarification_facility;
+      concept_wastewater_clarification_facility;
     -> rrel_not_maximum_studied_object_class:
-        concept_sump;
-        concept_primary_sump;
-        concept_secondary_sump;
-        concept_primary_sump_vertical;
-        concept_primary_sump_horizontal;
-        concept_primary_sump_radial;
-        concept_primary_sump_two_tier;
-        concept_chopper;
-        concept_clarifier_rotter
-        (*
-              <- sc_node_class;;
-              => nrel_main_idtf: [осветлитель-перегниватель] (*<- lang_ru;;*);;
-        *);
-        concept_septic
-        (*
-              <- sc_node_class;;
-              => nrel_main_idtf: [септик] (*<- lang_ru;;*);;
-        *);
-        concept_hydrocyclone
-        (*
-              <- sc_node_class;;
-              => nrel_main_idtf: [гидроциклон] (*<- lang_ru;;*);;
-        *);;
+      case_primary_sump_absence;
+      concept_sump;
+      concept_primary_sump;
+      concept_secondary_sump;
+      concept_primary_sump_vertical;
+      concept_primary_sump_horizontal;
+      concept_primary_sump_radial;
+      concept_primary_sump_two_tier;
+      concept_chopper;
+      concept_clarifier_rotter
+      (*
+            <- sc_node_class;;
+            => nrel_main_idtf: [осветлитель-перегниватель] (*<- lang_ru;;*);;
+      *);
+      concept_septic
+      (*
+            <- sc_node_class;;
+            => nrel_main_idtf: [септик] (*<- lang_ru;;*);;
+      *);
+      concept_hydrocyclone
+      (*
+            <- sc_node_class;;
+            => nrel_main_idtf: [гидроциклон] (*<- lang_ru;;*);;
+      *);;

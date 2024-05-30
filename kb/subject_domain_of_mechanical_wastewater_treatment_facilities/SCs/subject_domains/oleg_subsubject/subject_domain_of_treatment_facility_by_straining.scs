@@ -5,6 +5,12 @@ subject_domain_of_treatment_facility_by_straining
     -> rrel_maximum_studied_object_class:
         concept_wastewater_treatment_facility_by_straining;
     -> rrel_not_maximum_studied_object_class:
+        condition_for_number_of_spare_wastewater_treatment_facility_by_straining;
+        case_absence_of_manufacturers_data_in_drum_grid;
+        case_absence_of_manufacturers_data_in_sieve;
+        case_absence_of_manufacturers_data_in_grid;
+        case_absence_of_manufacturers_data_in_mechanical_wastewater_treatment_facility;
+        parameters_of_output_waste_in_grid;
         concept_working_wastewater_treatment_facility_by_straining;
         concept_spare_wastewater_treatment_facility_by_straining;
         concept_grid;
