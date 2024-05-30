@@ -1,0 +1,10 @@
+concept_mechanical_wastewater_treatment
+    <- sc_node_class;
+    => nrel_main_idtf:
+        [механическая очистка сточных вод]
+        (* <- lang_ru;; *);
+
+    <= nrel_subdividing:
+    {
+        concept_separate_mechanical_treatment_of_wastewater
+    };;
