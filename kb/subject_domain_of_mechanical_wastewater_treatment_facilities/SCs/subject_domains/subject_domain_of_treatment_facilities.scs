@@ -1,0 +1,21 @@
+subject_domain_of_treatment_facilities
+    => nrel_main_idtf:
+        [Предметная область очистных сооружений]
+        (* <- lang_ru;;*);
+    <- subject_domain;
+    <- sc_node_struct;
+    => nrel_private_subject_domain:      
+           subject_domain_of_mechanical_wastewater_treatment_facilities;
+           subject_domain_of_sewage_sludge_treatment_facilities;
+           subject_domain_of_determination_of_loads_and_performance_of_sewege_treatment_facility;
+           subject_domain_of_biological_wastewater_treatment_facility;
+           subject_domain_of_physical_and_chemical_wastewater_treatment_facilities;
+           subject_domain_of_wastewater_disinfection;
+           subject_domain_of_deep_wastewater_treatment_facilities;
+    -> rrel_maximum_studied_object_class:
+        concept_treatment_facility
+            (* 
+                  <- sc_node_class;;
+                  => nrel_main_idtf: [очистное сооружение] (* <- lang_ru;;*);;
+            *);;
+    

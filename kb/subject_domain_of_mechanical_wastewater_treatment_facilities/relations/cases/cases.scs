@@ -1,0 +1,31 @@
+condition_for_number_of_spare_wastewater_treatment_facility_by_straining
+	<- sc_node_class;
+	=> nrel_main_idtf: [условие для количества резервных единиц сооружения для обработки сточных вод процеживанием] (*<- lang_ru;;*);;
+
+case_absence_of_manufacturers_data_in_drum_grid
+    <- sc_node_class;
+	=> nrel_main_idtf: [параметры барабанной сетки при отсутствии данных производителя] (*<- lang_ru;;*);;
+
+case_absence_of_manufacturers_data_in_sieve
+    <- sc_node_class;
+	=> nrel_main_idtf: [параметры сита при отсутствии данных производителя] (*<- lang_ru;;*);;
+
+case_absence_of_manufacturers_data_in_grid
+    <- sc_node_class;
+	=> nrel_main_idtf: [параметры сетки с прозорами до 6 мм при отсутствии данных производителя] (*<- lang_ru;;*);;
+
+case_absence_of_manufacturers_data_in_mechanical_wastewater_treatment_facility
+    <- sc_node_class;
+	=> nrel_main_idtf: [гидравлическая крупность примесей производственных сточных вод при отсутствии данных производителя] (*<- lang_ru;;*);;
+
+parameters_of_output_waste_in_grid
+    <- sc_node_class;
+	=> nrel_main_idtf: [параметры отбросов снимаемых с решеток] (*<- lang_ru;;*);;
+
+case_sand_catcher_in_station
+    <- sc_node_class;
+	=> nrel_main_idtf: [условие нахождения песколовки в составе очистных сооружений] (*<- lang_ru;;*);;
+
+case_primary_sump_absence
+    <- sc_node_class;
+	=> nrel_main_idtf: [параметры станции при отсутствии первичного отстойника ] (*<- lang_ru;;*);;
