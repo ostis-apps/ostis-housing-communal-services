@@ -14,15 +14,9 @@ concept_biological_filter
 	concept_bottom_washing_device;
 
 =>nrel_subsystem:
-	concept_distribution_system
-	(*
-		=>nrel_calculation_paramter:concept_maximum_water_flow(*=>nrel_parameter_into_account:concept_recirculation_ratio;;*);;
-	*);
-	concept_drainage_system
-	(*
-		=>nrel_calculation_paramter:concept_maximum_water_flow(*=>nrel_parameter_into_account:concept_recirculation_ratio;;*);;
-	*);
-=>nrel_placement:[следует размещать открыто вне зданий и в помещениях (отапливаемых или неотапливаемых), что должно быть обосновано теплотехническим расчетом с учетом опыта эксплуатации сооружений, работающих в аналогичных условиях.]
+	concept_distribution_system;
+	concept_drainage_system;
+=>nrel_replacement:[следует размещать открыто вне зданий и в помещениях (отапливаемых или неотапливаемых), что должно быть обосновано теплотехническим расчетом с учетом опыта эксплуатации сооружений, работающих в аналогичных условиях.]
 (*	
 	<- lang_ru;;
 	=>nrel_taken_into_account_parameter:
@@ -47,7 +41,7 @@ concept_biological_filter
 	=>nrel_way:[через окна]
 	(*	
 		<- lang_ru;;
-		=>nrel_placement:[равномерно по периметру в пределах междудонного пространства](*<- lang_ru;;*);;
+		=>nrel_replacement:[равномерно по периметру в пределах междудонного пространства](*<- lang_ru;;*);;
 		=>nrel_comment:[необходимы оборудуемыми устройства,позволяющие закрывать окна наглухо](*<- lang_ru;;*);;
 	*);;
 *);

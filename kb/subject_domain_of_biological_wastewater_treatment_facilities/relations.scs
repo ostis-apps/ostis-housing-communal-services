@@ -324,7 +324,8 @@ nrel_recirculation_ratio
 	<- concept_definition(*<-sc_node_class;;*);;
 	-> [параметр, который определяет степень возвращения очищенной воды на сооружения станции очистки сточных вод для разбавления или поддержания определенного расхода.] (*<- lang_ru;;*);;
 *);
-=>nrel_first_domain:concept_biological_wastewater_treatment_facility;;
+=>nrel_first_domain:concept_biological_wastewater_treatment_facility;
+=>nrel_second_domain:concept_recirculation_ratio;;
 
 
 nrel_test_for_loading_material

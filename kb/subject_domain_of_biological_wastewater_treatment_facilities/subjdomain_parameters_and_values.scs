@@ -4,48 +4,60 @@ subjdomain_parameters_and_values
 	(*
 		<- sc_node_class;;
 		=> nrel_main_idtf:[диаметр](* <- lang_ru;; *);;
+		<-concept_parameter;;
 	*);
 	concept_temperature
 	(*
 		<- sc_node_class;;
 		=> nrel_main_idtf:[температура](* <- lang_ru;; *);;
+		<-concept_parameter;;
 	*);
+	
 	concept_weigth
 	(*
 		<- sc_node_class;;
 		=> nrel_main_idtf:[масса](* <- lang_ru;; *);;
+		<-concept_parameter;;
 	*);
+
 	concept_pressure_whistand
 	(*
 		<- sc_node_class;;
 		=> nrel_main_idtf:[давление](* <- lang_ru;; *);;
+		<-concept_parameter;;
 	*);
 	concept_concentration
 	(*
 		<- sc_node_class;;
 		=> nrel_main_idtf:[концентрация](* <- lang_ru;; *);;
+		<-concept_parameter;;
 	*);
 	concept_surface_area
 	(*
 		<- sc_node_class;;
 		=> nrel_main_idtf:[площадь поверхности](* <- lang_ru;; *);;
+		<-concept_parameter;;
 	*);
     	concept_count_of_times
 	(*
 		<- sc_node_class;;
 		=> nrel_main_idtf:[количество раз](* <- lang_ru;; *);;
+		<-concept_parameter;;
 	*);
 
 	concept_count_of_cycles
 	(*
 		<- sc_node_class;;
 		=> nrel_main_idtf:[количество циклов](* <- lang_ru;; *);;
+		<-concept_parameter;;
 	*);
         concept_count_of_days
     	(*
 		<- sc_node_class;;
 		=> nrel_main_idtf:[количество дней](* <- lang_ru;; *);;
+		<-concept_parameter;;
 	*);
+	<-concept_parameter;
 	concept_slope
     	(*
 		<- sc_node_class;;
@@ -55,16 +67,25 @@ subjdomain_parameters_and_values
     	(*
 		<- sc_node_class;;
 		=> nrel_main_idtf:[длина](* <- lang_ru;; *);;
+		<-concept_parameter;;
 	*);
 	concept_width
     	(*
 		<- sc_node_class;;
 		=> nrel_main_idtf:[ширина](* <- lang_ru;; *);;
+		<-concept_parameter;;
 	*);
 	concept_distance
     	(*
 		<- sc_node_class;;
 		=> nrel_main_idtf:[дистанция](* <- lang_ru;; *);;
+		<-concept_parameter;;
+	*);
+
+	concept_parameter
+    	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[параметр](* <- lang_ru;; *);;
 	*);
 
 ->rrel_explored_relation:

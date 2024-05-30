@@ -1,5 +1,5 @@
 concept_mineral_loaded_biological_filter
-=>nrel_loading_material:concept_mineral_loading;
+=>nrel_loading_material:concept_mineral_loading_material;
 =>nrel_degree_of_purification:
 	concept_complete_treatment;
 	concept_partial_treatment;
