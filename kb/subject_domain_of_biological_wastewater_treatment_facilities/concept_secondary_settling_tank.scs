@@ -1,0 +1,57 @@
+concept_secondary_settling_tank
+<= nrel_sc_text_translation: ...
+	(*
+	    <-concept_definition 
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf: [определение] (* <- lang_ru;;*);;
+		*);;
+	    ->[Сооружение, входящее в состав линии биологической очистки]
+		    (*<-lang_ru;;*);;
+		<-concept_notation;;
+		<- ...
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf: [примечание] (* <- lang_ru;;*);;
+		*);;
+		->[Тип вторичного отстойника ( <sc_element sys_idtf="concept_vertical_secondary_settling_tank">вертикальный</sc_element>,
+		  <sc_element sys_idtf="concept_vertical_secondary_settling_tank">радиальный</sc_element>,
+          <sc_element sys_idtf="concept_vertical_secondary_settling_tank">горизонтальный</sc_element>) необходимо выбирать
+          с учетом <sc_element sys_idtf="nrel_station_productivity">производительности станции</sc_element>, 
+          <sc_element sys_idtf="nrel_layout">компоновки</sc_element> сооружений, количества эксплуатируемых единиц,
+          конфигурации и рельефа площадки, геологических условий, уровня грунтовых вод и т. п.]
+		  (*
+			<-lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		->[Вторичные отстойники после биофильтров и аэротенков следует рассчитывать по <sc_element sys_idtf="nrel_hydraulic_load">гидравлической нагрузке</sc_element> на поверхность 
+		   отстойника с учетом <sc_element sys_idtf="nrel_volume_utilization_factor">коэффициента использования объема</sc_element> сооружения, 
+		   <sc_element sys_idtf="nrel_sludge_index">илового индекса</sc_element>, <sc_element sys_idtf="nrel_dose">дозы</sc_element> ила и 
+		   <sc_element sys_idtf="concept_concentration">концентрации</sc_element> выносимой 
+		   <sc_element sys_idtf="concept_biofilm">биопленки</sc_element>] 
+		   (*
+			<-lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		->[При определении <sc_element sys_idtf="concept_square">площади</sc_element> отстойников после биофильтров необходимо учитывать
+		      <sc_element sys_idtf="nrel_recirculation_flow">рециркуляционный расход</sc_element>]
+			  (*
+			<-lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+		->[При расчетах содержание <sc_element sys_idtf="concept_active_sludge">активного ила/sc_element> на выходе из 
+		   <sc_element sys_idtf="concept_secondary_settling_tank">отстойников</sc_element> должно приниматься не более
+           чем допустимое содержание взвешенных веществ в очищенной <sc_element sys_idtf="nconcept_wastewater">сточной воде/sc_element>]
+		   (*
+			<-lang_ru;;
+			=> nrel_format: format_html;;
+			*);;
+	*);
+	
+<= nrel_subdividing:
+    {
+		concept_vertical_secondary_settling_tank;
+		concept_radial_secondary_settling_tank;
+		concept_horizontal_secondary_settling_tank
+	};
+<-concept_biological_wastewater_treatment_facilities (*=> nrel_main_idtf: [Сооружения биологической очистки сточных вод] (* <- lang_ru;;*);;*);;

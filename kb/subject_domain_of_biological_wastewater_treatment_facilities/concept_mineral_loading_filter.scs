@@ -1,0 +1,14 @@
+concept_mineral_loaded_biological_filter
+=>nrel_loading_material:concept_mineral_loading;
+=>nrel_degree_of_purification:
+	concept_complete_treatment;
+	concept_partial_treatment;
+
+->concept_drip_biological_filter;
+->concept_highly_loaded_biological_filter;
+->concept_tower_biological_filter;
+
+=>nrel_contaminator:
+	concept_biodegradable_substance;
+	concept_nitrifying_substance;;
+

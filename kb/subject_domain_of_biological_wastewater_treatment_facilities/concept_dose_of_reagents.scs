@@ -1,0 +1,11 @@
+concept_dose_of_reagents
+<= nrel_sc_text_translation: ...
+	(*
+	    <- concept_notation;;
+		<- [Для предотвращения угнетающего воздействия на микроорганизмы активного ила реагентов их дозы не должны превышать
+		для сульфата железа (II) — 25 мг/дм3 и для сульфата железа (III) — 15 мг/дм3 в пересчете на Fе2Оз; 
+		для сульфата алюминия — 18 мг/дм3 в пересчете на Al2O3.]
+			(*<-lang_ru;;*);;
+		*);
+<- rrel_not_maximum_studied_object_class:
+	subject_domain_of_facilities_for_biological_treatment_in_activated_sludge_systems;;

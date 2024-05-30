@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GWF version="2.0">
+    <staticSector>
+        <node type="node/const/perm/relation" idtf="nrel_use" shapeColor="0" id="1313441846848" parent="0" left="0" top="0" right="55" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="368.465" y="346.058" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/group" idtf="concept_biological_wastewater_cleaning" shapeColor="0" id="1313441847888" parent="0" left="0" top="0" right="239" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="307.054" y="276.763" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/group" idtf="concept_activated_sludge_system" shapeColor="0" id="1313441845808" parent="0" left="0" top="0" right="195" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="308.51" y="412.651" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <pair type="pair/const/-/perm/orient" idtf="" shapeColor="0" id="1313441569568" parent="0" id_b="1313441845808" id_e="1313441847888" b_x="308.51" b_y="412.651" e_x="307.054" e_y="276.763" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/const/pos/perm/orient/membership" idtf="" shapeColor="0" id="1313441569808" parent="0" id_b="1313441846848" id_e="1313441569568" b_x="368.465" b_y="346.058" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.477827">
+            <points/>
+        </pair>
+    </staticSector>
+</GWF>

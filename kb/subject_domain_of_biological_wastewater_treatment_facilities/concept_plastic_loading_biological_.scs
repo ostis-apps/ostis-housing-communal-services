@@ -1,0 +1,12 @@
+concept_plastic_loading_biological_filter
+=>nrel_degree_of_purification:
+concept_complete_treatment;
+concept_partial_treatment;
+=>nrel_contaminator:
+    concept_nitrifying_substance;
+    concept_biodegradable_substance;
+=>nrel_recirculation_ratio:[учитывается при <sc_elementsys_idtf="concept_BOC5">БПК5</sc_element> более 170 мг/дм3]
+(*
+		<- lang_ru;;
+		=>nrel_format:format_html;;
+*);;

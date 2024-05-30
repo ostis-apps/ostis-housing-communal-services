@@ -1,0 +1,72 @@
+concept_biological_filter
+->concept_irrigated_biological_filter;
+->concept_rotary_biological_filter;
+->concept_flooded_biological_filter;
+
+=>nrel_contaminator:
+	concept_organic_impurity;
+	[соединения азота](*<- lang_ru;;*);
+
+=>nrel_component:
+	concept_emptying_device(*=>nrel_application:[на случай кратковременного прекращения подачи сточной воды зимой];;*);
+	concept_bottom_washing_device;
+	concept_device_of_lower_supporting_layer;
+	concept_bottom_washing_device;
+
+=>nrel_subsystem:
+	concept_distribution_system
+	(*
+		=>nrel_calculation_paramter:concept_maximum_water_flow(*=>nrel_parameter_into_account:concept_recirculation_ratio;;*);;
+	*);
+	concept_drainage_system
+	(*
+		=>nrel_calculation_paramter:concept_maximum_water_flow(*=>nrel_parameter_into_account:concept_recirculation_ratio;;*);;
+	*);
+=>nrel_placement:[следует размещать открыто вне зданий и в помещениях (отапливаемых или неотапливаемых), что должно быть обосновано теплотехническим расчетом с учетом опыта эксплуатации сооружений, работающих в аналогичных условиях.]
+(*	
+	<- lang_ru;;
+	=>nrel_taken_into_account_parameter:
+		[производительность станции очистки](*<- lang_ru;;*);
+		[режим притока сточных вод](*<- lang_ru;;*);
+		[температура сточных вод в зимний период](*<- lang_ru;;*);;
+*);
+
+=>nrel_number_of_sections: ...
+(*
+	<-sc_node_class
+	(*
+		<-concept_count_of_sections;;
+		=>nrel_no_less:2(*<-concept_number;;*);;
+	*);;
+	=>nrel_comment:[все секции должны быть рабочими];;
+*);
+=>nrel_wastewater_distribution:[следует осуществлять с помощью устройств различной конструкции.](*<- lang_ru;;*);
+=>nrel_natural_aeration: ...
+(*
+	<-sc_node_class;;
+	=>nrel_way:[через окна]
+	(*	
+		<- lang_ru;;
+		=>nrel_placement:[равномерно по периметру в пределах междудонного пространства](*<- lang_ru;;*);;
+		=>nrel_comment:[необходимы оборудуемыми устройства,позволяющие закрывать окна наглухо](*<- lang_ru;;*);;
+	*);;
+*);
+=>nrel_test_for_loading_material: ...
+(*
+	<-sc_node_class;;
+	=>nrel_comment:[После испытаний <sc_element sys_idtf="concept_loading_material">загрузочный материал</sc_element> не должен иметь заметных повреждений и его масса не должна уменьшаться более чем на 10 % от первоначальной массы]
+	(*
+		<- lang_ru;;
+		=>nrel_format:format_html;;
+	*);;
+*);
+=>nrel_loading_material: 
+	concept_durable_rock_pebbles;
+	concept_crushed_stone;
+	concept_expanded_clay;
+
+=>nrel_recirculation_ratio:[следует определять исходя из концентрации смеси, подаваемой на фильтр в пределах указанных ограничений]
+(*
+	=>nrel_comment:[В случае возможного прекращения притока сточных вод на биофильтр необходимо предусматривать рециркуляцию во избежание высыхания поверхности загрузки.](*<- lang_ru;;*);;
+*);;
+

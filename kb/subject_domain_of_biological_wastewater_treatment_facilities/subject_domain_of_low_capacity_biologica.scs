@@ -1,0 +1,86 @@
+subject_domain_of_low_capacity_biological_wastewater_treatment_facilities
+->rrel_maximum_studied_object_class:
+	concept_low_capacity_biological_wastewater_treatment_facility
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[сооружение биологической очистки сточных вод малой производительности](* <- lang_ru;; *);;
+	*);
+->rrel_not_maximum_studied_object_class:
+	concept_filter_field
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[поле фильтрации](* <- lang_ru;; *);;
+	*);
+	concept_underground_filtration_field
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[поле подземной фильтрации](* <- lang_ru;; *);;
+	*);
+	concept_filter_well
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[фильтрующий колодец](* <- lang_ru;; *);;
+	*);
+	concept_drainage_device
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[устройство дренажа](* <- lang_ru;; *);;
+	*);
+	concept_filtering_fields_map
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[карта полей фильтрации](* <- lang_ru;; *);;
+	*);
+	concept_backup_card
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[запасная карта полей фильтрации](* <- lang_ru;; *);;
+	*);
+	concept_working_area
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[рабочая площадь](* <- lang_ru;; *);;
+	*);
+	concept_effective_area
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[эффективная площадь](* <- lang_ru;; *);;
+	*);
+	concept_wastewater_freezing
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[намораживание сточных вод](* <- lang_ru;; *);;
+	*);
+	concept_receiving_waterhouse
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[водоток приёмник](* <- lang_ru;; *);;
+	*);
+	concept_bottom
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[днище](* <- lang_ru;; *);;
+	*);
+	concept_hole
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[отверстие](* <- lang_ru;; *);;
+	*);
+	
+->rrel_explored_relation:
+	
+	nrel_layer
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[слой*](* <- lang_ru;; *);;
+	*);
+	nrel_reduction_factor
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[понижающий коэффициент*](* <- lang_ru;; *);;
+	*);
+	nrel_adjacent
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[смежность*](* <- lang_ru;; *);;
+	*);;

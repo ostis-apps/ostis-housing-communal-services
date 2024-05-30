@@ -1,0 +1,128 @@
+subjdomain_parameters_and_values
+-> rrel_not_maximum_studied_object_class:
+    concept_diameter
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[диаметр](* <- lang_ru;; *);;
+	*);
+	concept_temperature
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[температура](* <- lang_ru;; *);;
+	*);
+	concept_weigth
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[масса](* <- lang_ru;; *);;
+	*);
+	concept_pressure_whistand
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[давление](* <- lang_ru;; *);;
+	*);
+	concept_concentration
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[концентрация](* <- lang_ru;; *);;
+	*);
+	concept_surface_area
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[площадь поверхности](* <- lang_ru;; *);;
+	*);
+    	concept_count_of_times
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[количество раз](* <- lang_ru;; *);;
+	*);
+
+	concept_count_of_cycles
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[количество циклов](* <- lang_ru;; *);;
+	*);
+        concept_count_of_days
+    	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[количество дней](* <- lang_ru;; *);;
+	*);
+	concept_slope
+    	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[уклон](* <- lang_ru;; *);;
+	*);
+	concept_length
+    	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[длина](* <- lang_ru;; *);;
+	*);
+	concept_width
+    	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[ширина](* <- lang_ru;; *);;
+	*);
+	concept_distance
+    	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[дистанция](* <- lang_ru;; *);;
+	*);
+
+->rrel_explored_relation:
+    	nrel_multiplicity
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[кратность*](* <- lang_ru;; *);;
+	*);
+	=>nrel_second_domain:number;
+
+	nrel_min_value
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[минимальное значение*](* <- lang_ru;; *);;
+	*);
+
+	nrel_max_value
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[максимальное значение*](* <- lang_ru;; *);;
+	*);
+	nrel_correaltion
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[соотношение*](* <- lang_ru;; *);;
+	*);
+	nrel_more
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[больше*](* <- lang_ru;; *);;
+	*);
+	nrel_volume
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[объем*](* <- lang_ru;; *);;
+	*);
+    	nrel_parameter_taken_into_account
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[учитываемый параметр*](* <- lang_ru;; *);;
+	*);
+	nrel_acceptable_parameter
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[допустимый параметр*](* <- lang_ru;; *);;
+	*);
+    	nrel_order
+    	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[порядок*](* <- lang_ru;; *);;
+	*);
+	nrel_area
+    	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[площадь*](* <- lang_ru;; *);;
+	*);
+	nrel_duration
+    	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[продолжительность*](* <- lang_ru;; *);;
+	*);;

@@ -1,0 +1,8 @@
+concept_drip_biological_filter
+=>nrel_recirculation_ratio:[учитывается при <sc_element sys_idtf="concept_BOC5">БПК5</sc_element> более 150 мг/дм3]
+(*
+    <- lang_ru;;
+    =>nrel_format:format_html;;
+*);
+=>nrel_air_supply_method:concept_natural_aeration;;
+

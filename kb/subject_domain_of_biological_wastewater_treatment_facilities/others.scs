@@ -1,0 +1,158 @@
+subject_domain_of_semantic_neighborhoods
+-> rrel_not_maximum_studied_object_class:
+	concept_durable_rock_pebbles
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[галька прочных горных пород](* <- lang_ru;; *);;
+	*);
+	concept_crushed_stone
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[щебень](* <- lang_ru;; *);;
+	*);
+	concept_expanded_clay
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[керамзит](* <- lang_ru;; *);;
+	*);
+	concept_plastic
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[пластик](* <- lang_ru;; *);;
+	*);
+	concept_solution
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[раствор](* <- lang_ru;; *);;
+	*);
+	->concept_hydrochlolic_acid_solution;
+	->concept_sodium_sulfate_solution;
+
+	concept_hydrochlolic_acid_solution
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[раствор соляной кислоты](* <- lang_ru;; *);;
+	*);
+	concept_sodium_sulfate_solution
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[раствор сульфата натрия](* <- lang_ru;; *);;
+	*);
+	concept_impregnation
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[пропитка](* <- lang_ru;; *);;
+	*);
+	concept_system
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[система](* <- lang_ru;; *);;
+	*);
+	->concept_distribution_system;
+	->concept_drainage_system;
+	concept_boiling
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[кипячение](* <- lang_ru;; *);;
+	*);
+	concept_frost_resistance_test
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[испытание на морозостойкость](* <- lang_ru;; *);;
+	*);
+	concept_relief
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[рельеф](* <- lang_ru;; *);;
+	*);
+	->concept_calm_terrain;
+	->concept_slight_relief;
+
+	concept_soil_material
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[материал грунта](* <- lang_ru;; *);;
+	*);
+	->concept_sand(*=>nrel_reduction_factor:0.55(*<-number;;*);;*);
+	->concept_sandy_loam(*=>nrel_reduction_factor:0.45(*<-number;;*);;*);
+	->concept_light_loam(*=>nrel_reduction_factor:0.45(*<-number;;*);;*);
+
+	concept_transportation
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[транспортировка](* <- lang_ru;; *);;
+	*);
+
+-> rrel_explored_relation:  
+	nrel_can_whistand: ...
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[может выдерживать*](* <- lang_ru;; *);;
+	*);
+	nrel_necessary_component
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[необходимый компонент*](* <- lang_ru;; *);;
+	*);
+	nrel_component
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[компонент*](* <- lang_ru;; *);;
+	*);
+	nrel_solution
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[раствор*](* <- lang_ru;; *);;
+	*);
+	=>nrel_second_domain:concept_solution;
+	nrel_subsystem
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[подсистема*](* <- lang_ru;; *);;
+	*);
+
+	nrel_replacement
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[размещение*](* <- lang_ru;; *);;
+	*);
+	nrel_way
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[способ*](* <- lang_ru;; *);;
+	*);
+	nrel_definition_of_parameters
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[определение параметров*](* <- lang_ru;; *);;
+	*);
+	nrel_example
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[пример*](* <- lang_ru;; *);;
+	*);
+	nrel_characteristic
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[характеристика*](* <- lang_ru;; *);;
+	*);
+	nrel_condition_of_application
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[условие применения*](* <- lang_ru;; *);;
+	*);
+	nrel_operation
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[операция*](* <- lang_ru;; *);;
+	*);
+	rrel_starting_point
+	(*
+		<- sc_node_role_relation;;
+		=> nrel_main_idtf:[начальная точка'](* <- lang_ru;; *);;
+	*);
+	rrel_final_destination
+	(*
+		<- sc_node_role_relation;;
+		=> nrel_main_idtf:[конечная точка'](* <- lang_ru;; *);;
+	*);;

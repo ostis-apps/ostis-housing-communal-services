@@ -1,0 +1,130 @@
+	concept_filter_field
+	<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [земельный участок, предназначенный для биологической очистки сточных вод путем их фильтрации через почвенные горизонты.] (*<- lang_ru;;*);;
+	*);;
+	concept_underground_filtration_field
+	<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [система подземных канав и оросительных труб, предназначенная для доочистки сточных вод, выходящих из септика, перед их попаданием в грунт] (*<- lang_ru;;*);;
+	*);;
+	concept_filter_well
+	<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [сооружение, которое используется для приема и обработки сточных вод, прошедших предварительную очистку в септике.] (*<- lang_ru;;*);;
+	*);;
+	concept_drainage_device
+	<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [ система искусственно созданных каналов, труб и других приспособлений, предназначенных для организованного отвода грунтовых и поверхностных вод с участка.] (*<- lang_ru;;*);;
+	*);;
+
+	concept_filtering_fields_map
+	<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [графическое представление системы полей фильтрации, которая используется для биологической очистки сточных вод] (*<- lang_ru;;*);;
+	*);;
+
+	concept_backup_card
+	<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [дополнительный участок, предназначенный для отвода сточных вод в сезонные периоды, когда основная площадь поля фильтрации может быть загружена из-за увеличения объема сточных вод] (*<- lang_ru;;*);;
+	*);;
+
+	concept_working_area
+	<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [основная площадь, предназначенная для биологической очистки сточных вод путем их фильтрации через почвенные горизонты] (*<- lang_ru;;*);;
+	*);
+	<=nrel_area:concept_filter_field;;
+
+	concept_effective_area
+	<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [расчетная площадь, необходимая для обеспечения полной биологической очистки сточных вод путем их фильтрации через почвенные горизонты] (*<- lang_ru;;*);;
+	*);
+	<=nrel_area:concept_filter_field;;
+
+	concept_wastewater_freezing
+	<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [процесс замораживания сточных вод в зимний период для их временного хранения и последующей очистки] (*<- lang_ru;;*);;
+	*);
+	<=nrel_operation:concept_filter_field;;
+
+	concept_receiving_waterhouse
+	<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [водный объект, в который осуществляется сброс очищенных сточных вод] (*<- lang_ru;;*);;
+	*);;
+	concept_bottom
+	<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [нижняя часть конструкции, которая обеспечивает её устойчивость] (*<- lang_ru;;*);;
+	*);
+	<=nrel_component:concept_drainage_device;
+	<=nrel_component:concept_filter_well;;
+	
+	concept_hole
+	<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [специально созданное отверстие, предназначенное для отвода воды из системы дренажа] (*<- lang_ru;;*);;
+	*);
+	<=nrel_component:concept_drainage_device;;
+
+	nrel_layer
+	=>nrel_domain:...
+	(*
+		<- sc_node_class;;
+		<=nrel_union:...
+		(*
+			<- sc_node_tuple;;
+			->concept_bottom;;
+			->concept_soil_material;;
+		*);;
+	*);
+	=>nrel_first_domain:concept_bottom;
+	=>nrel_second_domain:concept_soil_material;;
+	nrel_adjacent
+	<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [находящиеся рядом друг с другом, соседние или непосредственно примыкающие друг к другу(отверстия)] (*<- lang_ru;;*);;
+	*);
+	=>nrel_domain:...
+	(*
+		<- sc_node_class;;
+		<=nrel_union:...
+		(*
+			<- sc_node_tuple;;
+			->concept_hole;;
+			->concept_hole;;
+		*);;
+	*);
+	=>nrel_first_domain:concept_hole;
+	=>nrel_second_domain:concept_hole;;
+	nrel_reduction_factor
+	=>nrel_domain:...
+	(*
+		<- sc_node_class;;
+		<=nrel_union:...
+		(*
+			<- sc_node_tuple;;
+			->concept_soil_material;;
+			->number;;
+		*);;
+	*);
+	=>nrel_first_domain:concept_soil_material;
+	=>nrel_second_domain:number;;

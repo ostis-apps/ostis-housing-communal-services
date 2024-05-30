@@ -1,0 +1,156 @@
+concept_low_capacity_biological_wastewater_treatment_facility
+=>nrel_cleaning_object:
+	[поселок];
+	[зона отдыха];
+	[фермерское хозяйство];
+	[отдельно расположенное мероприятие];
+	[массив индивидуальных застроек];
+=>nrel_comment:[следует использовать установки заводского изготовления по СТБ EN 12566-3 или другим ТНПА, а также методы и сооружения биологической очистки сточных вод в условиях, близких к естественным];
+->concept_filter_field;
+->concept_underground_filtration_field;
+->concept_filter_well;
+->[фильтрующая траншея];
+->[песчано-гравийный фильтр];
+->[вентрилируемая площадка подземной фильтрации];
+->[биологический пруд];
+->[грунтово-растительная площадка];;
+
+concept_filter_field
+=>nrel_placement:
+	concept_sand
+	(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[песок](* <- lang_ru;; *);;
+	*);
+	concept_sandy_loam
+	(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[супесь](* <- lang_ru;; *);;
+	*);
+	concept_light_loam
+	(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[легкий суглинок](* <- lang_ru;; *);;
+	*);
+	=>nrel_reduction_factor:0.3(*<-number;;*);
+
+=>nrel_placement:[Запрещено размещение полей фильтрации на территориях, граничащих с местами выклинивания водоносных горизонтов, а также при наличии трещиноватых пород и карстов, не перекрытых водоупорным слоем.](* <- lang_ru;; *);
+=>nrel_hydraulic_load:[Следует принимать на основании данных опыта эксплуатации полей фильтрации, находящихся в аналогичных условиях.](* <- lang_ru;; *);
+=>nrel_component:
+	concept_drainage_device;
+	concept_filtering_fields_map;
+	concept_filter_well;
+	concept_backup_card;
+	concept_receiving_waterhouse;
+
+=>nrel_component: ...
+	(*	
+		<-sc_node_class;;
+		<-concept_filtering_fields_map;;
+		=>nrel_area: ...
+			(*
+				<-sc_node_class;;
+				=>nrel_parameter_taken_into_account:
+					concept_relief;
+					concept_working_area;
+					[способ обработки почвы](* <- lang_ru;; *);;
+			*);;
+	*);
+	
+=>nrel_component: ...
+(*
+	<-sc_node_class
+	(*
+		<-concept_backup_card;;
+		=>nrel_area: ...
+			(*
+				<-sc_node_class;;
+				=>nrel_comment:[должна быть обоснована в каждом отдельном случае и не должна превышать <sc_element sys_idtf="concept_effective_area">полезную площадь</sc_element> полей фильтрации более чем на 20 %](*=>nrel_format:html_format;;<- lang_ru;;*);;
+
+			*);;
+	*);;
+	
+*);
+=>nrel_component: ...
+(*
+	<-sc_node_class
+	(*
+		<-concept_filter_well;;
+		=>nrel_application:[очистка осветленных на септиках сточных вод при <sc_element sys_idtf="concept_waste_water_flow">расходах</sc_element> до 1,0 м3 /сут в <sc_element sys_idtf="concept_sand">песчаных</sc_element> и <sc_element sys_idtf="concept_sandy_loam">супесчаных</sc_element> грунтах.](*=>nrel_format:html_format;;<- lang_ru;;*);;
+		=>component:[перфорированные стенки](* <- lang_ru;; *);;
+	*);;
+	
+*);
+=>nrel_component: ...
+(*
+	<-sc_node_class;;
+	<-concept_drainage_device;;
+	=>nrel_condition_of_application:
+		[залегании грунтовых вод на глубине менее 1,5 м от поверхности карт независимо от характера грунта](* <- lang_ru;; *);
+		[при большей глубине залегания грунтовых вод – при неблагоприятных фильтрационных свойствах грунтов, когда одни осушительные канавы без устройства закрытого дренажа не обеспечивают необходимого понижения уровня грунтовых вод.](* <- lang_ru;; *);;
+	=>nrel_component: ...
+	(*
+		<-sc_node_class;;
+		<-concept_bottom;;
+		=>nrel_layer:[гравий]
+		(*
+			=>nrel_order:1(*<-number;;*);;
+		*);;
+		=>nrel_layer:concept_sand
+		(*
+			=>nrel_order:2(*<-number;;*);;
+			=>nrel_height: ...
+			(*
+				<-sc_node_class;;
+				<-concept_200_mmeters;;
+			*);;
+		*);;
+	*);;
+	=>nrel_acceptable_parameter: ...
+	(*
+		<-sc_node_class;;
+		<-concept_loading_height;;
+		=>nrel_max_value:concept_1_meter;;
+	*);;
+	=>nrel_comment:[<sc_element sys_idtf="concept_bottom">Днища</sc_element> и стенки фильтрующих колодцев следует снаружи обсыпать слоем щебня или гравия с крупностью зерен от 40 до 60 мм](*=>nrel_format:html_format;;<- lang_ru;;*);;
+	=>nrel_component:[труба]
+	(*
+		=>nrel_acceptable_parameter: ...
+		(*
+			<-sc_node_class;;
+			<-concept_diameter;;
+			<-concept_100_mmeters;;
+		*);;
+		=>nnrel_application:[вентиляция];;
+		=>nrel_placement:[Верх вентиляционной трубы должен быть расположен над поверхностью земли на высоте не менее 0,7 м.](* <- lang_ru;; *);;
+	*);;
+	=>nrel_component:[флюгарка];;
+*);;
+
+concept_underground_filtration_field
+=>nrel_application: ...
+(*
+	<-sc_node_class;;
+	=>nrel_degree_of_purification:concept_complete_treatment;;
+	=>nrel_condition_of_application: ...
+	(*
+		->sc_node_class;;
+		=>nrel_waste_water_flow: ...
+		(*
+			<-sc_node_class;;
+			=>nrel_max_value:concept_1_m3_day;;
+		*);;
+		=>nrel_placement:
+			concept_sand;
+			concept_sandy_loam;;
+	*);;
+*);
+=>nrel_component:
+	[септик](* <- lang_ru;; *);
+	[дозирующая камера];
+	[распределительные трубопроводы](* <- lang_ru;; *);
+	[оросительная сеть](* <- lang_ru;; *);;
+
+
+
+

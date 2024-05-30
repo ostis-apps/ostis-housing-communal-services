@@ -1,0 +1,236 @@
+subject_domain_of_biological_wastewater_treatment_facility
+=> nrel_main_idtf:
+    [Предметная область сооружений биологической очистки сточных вод](* <- lang_ru;;*);
+	<- subject_domain;
+	<- sc_node_struct;
+
+=> nrel_private_subject_domain:
+	subject_domain_of_biological_filters;
+	subject_domain_of_low_capacity_biological_wastewater_treatment_facilities
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[Предметная область сооружений биологической очистки сточных вод малой производительности](* <- lang_ru;; *);;
+	*);
+
+-> rrel_maximum_studied_object_class:
+	concept_biological_wastewater_treatment_facility 
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[сооружение биологической очистки сточных вод](* <- lang_ru;; *);;
+	*);
+
+-> rrel_not_maximum_studied_object_class:
+    	concept_biological_filter;
+	concept_degree_of_purification 
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[степень очистки](* <- lang_ru;; *);;
+	*);
+	concept_BOC5 
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[БПК5](* <- lang_ru;; *);;
+	*);
+	concept_hydraulic_load 
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[гидравлическая нагрузка](* <- lang_ru;; *);;
+	*);
+	concept_loading_material 
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[загрузочный материал](* <- lang_ru;; *);;
+	*);
+	concept_loading_height 
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[высота загрузки](* <- lang_ru;; *);;
+	*);
+	concept_COH
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[ХПК](* <- lang_ru;; *);;
+	*);
+	concept_waste_water_flow
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[расход сточных вод](* <- lang_ru;; *);;
+	*);
+	concept_organic_impurity
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[органическая примесь](* <- lang_ru;; *);;
+	*);  
+	concept_inorganic_impurity
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[неорганическая примесь](* <- lang_ru;; *);;
+	*); 
+	concept_denitrifying_substance
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[денитрифицируемое вещество](* <- lang_ru;; *);;
+	*); 
+	concept_nitrifying_substance
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[нитрифицируемое вещество](* <- lang_ru;; *);;
+	*); 
+	concept_biodegradable_substance
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[биоразлагаемое вещество](* <- lang_ru;; *);;
+	*);
+	concept_complete_treatment
+		(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[полная очистка](* <- lang_ru;; *);;
+	*);
+	concept_partial_treatment
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[частичная очистка](* <- lang_ru;; *);;
+	*);
+	concept_aerofilter
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[аэрофильтр](* <- lang_ru;; *);;
+	*);
+	concept_artificial_aeration
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[искусственная аэрация](* <- lang_ru;; *);;
+	*);
+	concept_natural_aeration
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[естественная аэрация](* <- lang_ru;; *);;
+	*);
+	concept_mineral_loading_material
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf: [минеральный загрузочный материал] (*<- lang_ru;;*);;
+	*);
+	concept_polymer_loading_material
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf: [полимерный загрузочный материал] (*<- lang_ru;;*);;		
+	*);
+	concept_contaminator
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf: [загрязнитель] (*<- lang_ru;;*);;		
+	*);
+	concept_removed_BOC5
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf: [удаленный БПК5] (*<- lang_ru;;*);;		
+	*);
+	concept_total_nitrogen
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf: [общий азот] (*<- lang_ru;;*);;		
+	*);
+	concept_specific_air_flow
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf: [удельный расход воздуха] (*<- lang_ru;;*);;	
+	*);
+	concept_loading
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[загрузка](* <- lang_ru;; *);;
+	*);
+	concept_loading_material_size
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[размер материала](* <- lang_ru;; *);;
+	*);
+	concept_recirculation_ratio
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[коэффициент рециркуляции сточных вод](* <- lang_ru;; *);;
+	*);
+
+-> rrel_explored_relation:  
+	nrel_degree_of_purification
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[степень очистки*](* <- lang_ru;; *);;
+	*);
+	nrel_loading_material
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[загрузочный материал*](* <- lang_ru;; *);;
+	*);
+	nrel_loading_height
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[высота загрузки*](* <- lang_ru;; *);;
+	*);
+	nrel_hydraulic_load
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[гидравлическая нагрузка*](* <- lang_ru;; *);;
+	*);
+	nrel_BOC5
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[БПК5*](* <- lang_ru;; *);;
+	*);
+	nrel_COH
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[ХПК*](* <- lang_ru;; *);;
+	*);
+	nrel_waste_water_flow
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[расход сточных вод*](* <- lang_ru;; *);;
+	*);
+	nrel_contaminator
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf: [загрязнитель*] (*<- lang_ru;;*);;		
+	*);
+	nrel_wastewater_distribution
+	(*
+				<- sc_node_norole_relation;;
+				=> nrel_main_idtf:[распределние сточных вод*](* <- lang_ru;; *);;
+	*);
+	nrel_number_of_sections
+	(*
+				<- sc_node_norole_relation;;
+				=> nrel_main_idtf:[число секций*](* <- lang_ru;; *);;
+	*);
+	nrel_natural_aeration
+	(*
+				<- sc_node_norole_relation;;
+				=> nrel_main_idtf:[естественная аэрация*](* <- lang_ru;; *);;
+	*);
+	nrel_material_size
+	(*
+				<- sc_node_norole_relation;;
+				=> nrel_main_idtf:[размер материала*](* <- lang_ru;; *);;
+	*);
+	nrel_loading
+	(*
+				<- sc_node_norole_relation;;
+				=> nrel_main_idtf:[загрузка*](* <- lang_ru;; *);;
+	*);
+	nrel_test_for_loading_material
+	(*
+				<- sc_node_norole_relation;;
+				=> nrel_main_idtf:[испытание для загрузочного материала*](* <- lang_ru;; *);;
+	*);
+	nrel_recirculation_ratio
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:[коэффициент рециркуляции сточных вод*](* <- lang_ru;; *);;
+	*);
+	nrel_specific_air_flow
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf: [удельный расход воздуха*] (*<- lang_ru;;*);;
+	*);;
+

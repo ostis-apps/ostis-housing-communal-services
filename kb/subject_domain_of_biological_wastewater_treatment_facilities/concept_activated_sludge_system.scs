@@ -1,0 +1,23 @@
+concept_activated_sludge_system
+<= nrel_sc_text_translation: ...
+	(*
+	    <- concept_notation;;
+		-> [Выбор технологической схемы, состава и типа сооружений следует производить с учетом: концентрации соединений азота в исходной сточной воде; 
+		отношения концентрации органических веществ, подверженных биохимическому разложению, оцениваемой по БПК5, к концентрации соединений азота БПК5/N; 
+		требуемой степени очистки; расхода сточных вод и неравномерности их поступления на очистные сооружения; технико-экономических требований] 
+		(*
+		<- lang_ru;;
+		=> nrel_format: format_html;;
+		*);;
+	*);
+
+<- rrel_maximum_studied_object_class:
+	subject_domain_of_facilities_for_biological_treatment_in_activated_sludge_systems;
+
+<= nrel_subdividing:
+    {
+		concept_flow_bioreactor;
+		concept_cyclic_bioreactor;
+		concept_aeration_tank
+		
+	};;
