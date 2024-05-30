@@ -204,8 +204,8 @@ concept_biofilm
 		<- concept_definition(*<- sc_node_class;;*);;
 	    -> [слой микроорганизмов, который образуется на поверхности загрузочного материала внутри биофильтра.] (*<- lang_ru;;*);;
 	*);
-=> nrel_purpose: [используется для эффективной очистки воды или воздуха от загрязняющих веществ путем биологического разложения](*<- lang_ru;;*);
-=> nrel_compound: [состоит из микроорганизмов, таких как бактерии, грибы и простейшие водоросли](*<- lang_ru;;*);;
+=> nrel_application: [используется для эффективной очистки воды или воздуха от загрязняющих веществ путем биологического разложения](*<- lang_ru;;*);
+=> nrel_component: [состоит из микроорганизмов, таких как бактерии, грибы и простейшие водоросли](*<- lang_ru;;*);;
 
 
 concept_mineral_loading_material
@@ -214,7 +214,7 @@ concept_mineral_loading_material
 		<- concept_definition(*<- sc_node_class;;*);;
 	    -> [материал, обычно неорганический, который используется в качестве поддерживающей структуры внутри биофильтра.] (*<- lang_ru;;*);;
 	*);
-=> nrel_possible_component: ...
+=> nrel_component: ...
 	(*
 		<- sc_tuple_class;;
 		->[керамзит] (*<- lang_ru;;*);;
@@ -230,7 +230,7 @@ concept_polymer_loading_material
 		<- concept_definition(*<- sc_node_class;;*);;
 	    -> [материал из полимеров, который используется в качестве носителя для биопленки и поддержания поверхности для адсорбции и размножения бактерий и других микроорганизмов внутри биофильтра.] (*<- lang_ru;;*);;
 	*);
-=> nrel_possible_component: ...
+=> nrel_component: ...
 (*
 	<- sc_tuple_class;;
 	->[пластиковые шарики] (*<- lang_ru;;*);;
@@ -253,6 +253,7 @@ concept_volumetric_load
 
 
 concept_recirculation_ratio
+<-concept_parameter;
 <=nrel_sc_text_translation: ...
 (*
 	<- concept_definition(*<-sc_node_class;;*);;
@@ -265,7 +266,7 @@ concept_loading
 		<- concept_definition(*<- sc_node_class;;*);;
 	    -> [абстрактное понятие,которое включает в себя материал и высоту загрузки биологического фильтра] (*<- lang_ru;;*);;
 	*);
-=>nrel_parameter:
+=>nrel_parameter_taken_into_account:
     concept_loading_material;
     concept_loading_height;;
 
@@ -275,6 +276,7 @@ concept_loading_material_size
 		<- concept_definition(*<- sc_node_class;;*);;
 	    -> [размер частиц загрузочного материала] (*<- lang_ru;;*);;
 	*);
+<-concept_parameter;
 => nrel_units:[милиметры] (*<- lang_ru;;*);;
 
 concept_emptying_device
@@ -321,6 +323,7 @@ concept_bulk_density
 		<- concept_definition(*<- sc_node_class;;*);;
 	    -> [Отношение массы гранулированных или порошкообразных материалов к объему, который они занимают, включая пространство между частицами.] (*<- lang_ru;;*);;
 	*); 
+<-concept_parameter;
 => nrel_units:[кг/м3] (*<- lang_ru;;*);;
 concept_filter_disk
 <=nrel_sc_text_translation: ...
@@ -328,7 +331,7 @@ concept_filter_disk
 		<- concept_definition(*<- sc_node_class;;*);;
 	    -> [Основной элемент конструкции дискового фильтра, используемого для механической очистки воды.] (*<- lang_ru;;*);;
 	*); 
-=>nrel_parameter:
+=>nrel_parameter_taken_into_account:
 	concept_diameter;
 	concept_disk_insight;
 	concept_disk_material;

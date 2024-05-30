@@ -4,7 +4,7 @@ concept_rotary_biological_filter
 =>nrel_contaminator:
 	concept_biodegradable_substance;
 	concept_nitrifying_substance;
-=>nrel_volume:[следует принимать исходя из времени пребывания сточных вод не менее 1 ч при максимальном <sc_element sys_idtf="concept_waste_water_flow>расходе</sc_element> или в зависимости от <sc_element sys_idtf="concept_hydraulic_load>гидравлической нагрузки</sc_element>  – 4 л на 1 м2 поверхности носителя]
+=>nrel_volume:[следует принимать исходя из времени пребывания сточных вод не менее 1 ч при максимальном <sc_element sys_idtf="concept_waste_water_flow">расходе</sc_element> или в зависимости от <sc_element sys_idtf="concept_hydraulic_load">гидравлической нагрузки</sc_element>  – 4 л на 1 м2 поверхности носителя]
 (*
 		<- lang_ru;;
 		=>nrel_format:format_html;;
@@ -34,7 +34,7 @@ concept_rotary_biological_filter
 		=>nrel_placement:[под устройством перекрытия];;
 	*);
 =>nrel_comment:	
-	[При проектировании ротационных биофильтров следует предусматривать предварительную механическую очистку сточных вод, а также вторичное отстаивание для задержания <sc_element sys_idtf="concept_biofilm">БПК5</sc_element>биопленки</sc_element>]
+	[При проектировании ротационных биофильтров следует предусматривать предварительную механическую очистку сточных вод, а также вторичное отстаивание для задержания <sc_element sys_idtf="concept_biofilm">биопленки</sc_element>]
 	(*
 		<- lang_ru;;
 		=>nrel_format:format_html;;

@@ -14,14 +14,8 @@ concept_biological_filter
 	concept_bottom_washing_device;
 
 =>nrel_subsystem:
-	concept_distribution_system
-	(*
-		=>nrel_calculation_paramter:concept_maximum_water_flow(*=>nrel_parameter_into_account:concept_recirculation_ratio;;*);;
-	*);
-	concept_drainage_system
-	(*
-		=>nrel_calculation_paramter:concept_maximum_water_flow(*=>nrel_parameter_into_account:concept_recirculation_ratio;;*);;
-	*);
+	concept_distribution_system;
+	concept_drainage_system;
 =>nrel_placement:[следует размещать открыто вне зданий и в помещениях (отапливаемых или неотапливаемых), что должно быть обосновано теплотехническим расчетом с учетом опыта эксплуатации сооружений, работающих в аналогичных условиях.]
 (*	
 	<- lang_ru;;

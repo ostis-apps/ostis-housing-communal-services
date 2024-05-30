@@ -52,7 +52,7 @@ subject_domain_of_biological_filters
 			<- sc_node_class;;
 			=> nrel_main_idtf:[высоконагружаемый биологический фильтр](* <- lang_ru;; *);;
 		*);	
-	concept_tower_loaded_biological_filter 
+	concept_tower_biological_filter 
 		(*
 			<- sc_node_class;;
 			=> nrel_main_idtf:[башенный биологический фильтр](* <- lang_ru;; *);;
@@ -106,11 +106,6 @@ subject_domain_of_biological_filters
 		(*
 			<- sc_node_class;;
 			=> nrel_main_idtf:[расчетная поверхностная нагрузка](* <- lang_ru;; *);;
-		*);
-	concept_amount_of_excess_biofilm
-		(*
-			<- sc_node_class;;
-			=> nrel_main_idtf:[количество избыточной биопленки](* <- lang_ru;; *);;
 		*);
 	concept_specific_air_flow
 		(*
@@ -172,62 +167,52 @@ subject_domain_of_biological_filters
 	nrel_air_supply_method
 		(*
 			<- sc_node_norole_relation;;
-			=> nrel_main_idtf:[способ подачи воздуха](* <- lang_ru;; *);;
+			=> nrel_main_idtf:[способ подачи воздуха*](* <- lang_ru;; *);;
 		*);
 	nrel_biofilm_mosture
 		(*
 			<- sc_node_norole_relation;;
-			=> nrel_main_idtf:[влажность биопленки](* <- lang_ru;; *);;
+			=> nrel_main_idtf:[влажность биопленки*](* <- lang_ru;; *);;
 		*);
 	nrel_working_height
 		(*
 			<- sc_node_norole_relation;;
-			=> nrel_main_idtf:[рабочая высота](* <- lang_ru;; *);;
+			=> nrel_main_idtf:[рабочая высота*](* <- lang_ru;; *);;
 		*);
 	nrel_amount_of_excess_biofilm
 		(*
 			<- sc_node_norole_relation;;
-			=> nrel_main_idtf:[количество избыточной биопленки](* <- lang_ru;; *);;
+			=> nrel_main_idtf:[количество избыточной биопленки*](* <- lang_ru;; *);;
 		*);
 	nrel_design_surface_loading
 		(*
 			<- sc_node_norole_relation;;
-			=> nrel_main_idtf:[расчетная поверхностная нагрузка](* <- lang_ru;; *);;
-		*);
-	nrel_amount_of_excess_biofilm
-		(*
-			<- sc_node_norole_relation;;
-			=> nrel_main_idtf:[количество избыточной биопленки](* <- lang_ru;; *);;
-		*);
-	nrel_specific_air_flow
-		(*
-			<- sc_node_norole_relation;;
-			=> nrel_main_idtf:[удельный расход воздуха](* <- lang_ru;; *);;
+			=> nrel_main_idtf:[расчетная поверхностная нагрузка*](* <- lang_ru;; *);;
 		*);
 	nrel_disk_insight
 		(*
 					<- sc_node_norole_relation;;
-					=> nrel_main_idtf:[прозор между дисками](* <- lang_ru;; *);;
+					=> nrel_main_idtf:[прозор между дисками*](* <- lang_ru;; *);;
 		*);
 	nrel_disk_material
 		(*
 					<- sc_node_norole_relation;;
-					=> nrel_main_idtf:[материал диска](* <- lang_ru;; *);;
+					=> nrel_main_idtf:[материал диска*](* <- lang_ru;; *);;
 		*);
 	nrel_filter_disk
 		(*
 					<- sc_node_norole_relation;;
-					=> nrel_main_idtf:[диск](* <- lang_ru;; *);;
+					=> nrel_main_idtf:[диск*](* <- lang_ru;; *);;
 		*);
 	nrel_disk_rotation_drive
 		(*
 					<- sc_node_norole_relation;;
-					=> nrel_main_idtf:[привод вращения диска](* <- lang_ru;; *);;
+					=> nrel_main_idtf:[привод вращения диска*](* <- lang_ru;; *);;
 		*);
 	nrel_volumetric_load
 		(*
 			<- sc_node_norole_relation;;
-			=> nrel_main_idtf:[объемная нагрузка](* <- lang_ru;; *);;
+			=> nrel_main_idtf:[объемная нагрузка*](* <- lang_ru;; *);;
 		*);;
 
 
