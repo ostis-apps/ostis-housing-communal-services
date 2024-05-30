@@ -1,0 +1,11 @@
+concept_wastewater_neutralization
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[нейтрализация сточных вод]
+    	(* <- lang_ru;; *);
+
+    <= nrel_subdividing:
+    {
+		concept_neutralization_acidic_wastewater;
+        concept_neutralization_alkaline_wastewater
+    };;

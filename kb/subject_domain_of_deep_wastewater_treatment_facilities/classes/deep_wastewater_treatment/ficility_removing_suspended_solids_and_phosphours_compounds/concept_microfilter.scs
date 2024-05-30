@@ -1,7 +1,7 @@
-concept_facility_removing_suspended_solids_and_phosphorus_compounds
+concept_microfilter
     <- sc_node_class;
     => nrel_main_idtf:
-    	[сооружение для удаления взвешенных веществ и соединений фосфора]
+    	[микрофильтр]
     	(* <- lang_ru;; *);
 
     <= nrel_sc_text_translation: ...

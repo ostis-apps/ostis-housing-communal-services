@@ -6,7 +6,7 @@ concept_facility_removing_suspended_solids_and_phosphorus_compounds
 
     <= nrel_subdividing:
     {
-		concept_drum_mesh_grid;
+	concept_drum_mesh_grid;
         concept_strainer;
         concept_microfilter;
         concept_filter;

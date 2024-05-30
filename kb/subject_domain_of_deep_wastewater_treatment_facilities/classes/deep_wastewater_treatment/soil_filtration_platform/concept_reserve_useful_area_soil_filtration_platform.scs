@@ -6,7 +6,7 @@ concept_reserve_useful_area_soil_filtration_platform
 
     => nrel_used_in: 
         concept_useful_area_soil_filtration_platform;
-        
+		
     <= nrel_sc_text_translation: ...
 	(*
 		<- concept_requirment_for_value (* <- sc_node_class;; *);;
