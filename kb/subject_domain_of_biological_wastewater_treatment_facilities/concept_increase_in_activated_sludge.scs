@@ -1,0 +1,16 @@
+concept_increase_in_activated_sludge
+<= nrel_sc_text_translation: ...
+	(*
+	    <- concept_notation;;
+		<- [сумма прироста активного ила, получаемого в процессе биологической деструкции органических веществ и 
+		прироста активного ила, получаемого в процессах удаления фосфора]
+			(*<-lang_ru;;*);;
+		<- [Прирост активного ила, полученный в процессе <sc_element sys_idtf="concept_biological_method_for_removing_phosphorus_compounds">биологического удаления фосфора</sc_element>,
+		следует принимать исходя из удельного прироста 3 кг активного ила на 1 кг удаляемого фосфора.]
+			(*
+			<-lang_ru;;
+			=> nrel_format: format_html;;
+			*);; 
+		*);
+<- rrel_not_maximum_studied_object_class:
+	subject_domain_of_facilities_for_biological_treatment_in_activated_sludge_systems;;

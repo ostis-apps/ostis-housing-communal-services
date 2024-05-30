@@ -1,0 +1,146 @@
+subject_domain_of_biological_ponds
+
+=> nrel_main_idtf:
+    [Предметная область биологических прудов](* <- lang_ru;;*);
+	<- subject_domain;
+	<- sc_node_struct;
+	
+-> rrel_maximum_studied_object_class:
+	concept_biological_pond
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[биологический пруд] (* <- lang_ru;; *);;
+	*);
+
+-> rrel_not_maximum_studied_object_class:
+	concept_pond_with_artificial_aeration
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[пруд с искусственной аэрацией] (* <- lang_ru;; *);;
+	*);
+	concept_pond_with_natural_aeration
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[пруд с естественной аэрацией] (* <- lang_ru;; *);;
+	*);
+	concept_content_of_suspended_metter
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[содержание взвешенных веществ] (* <- lang_ru;; *);;
+	*);
+	concept_suspended_matter
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[взвешенное вещество] (* <- lang_ru;; *);;
+	*);
+	concept_aeration
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[аэрация] (* <- lang_ru;; *);;
+	*);
+	concept_natural_aeration
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[естественная аэрация] (* <- lang_ru;; *);;
+	*);
+	concept_artificial_aeration
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[искусственная аэрация] (* <- lang_ru;; *);;
+	*);
+	concept_lattice
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[решетка] (* <- lang_ru;; *);;
+	*);
+	concept_settling_of_purified_water
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[отстаивание очищенной воды] (* <- lang_ru;; *);;
+	*);
+	concept_low_filtration_soil
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[слабофильтрующий грунт] (* <- lang_ru;; *);;
+	*);
+	concept_section
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[секция] (* <- lang_ru;; *);;
+	*);
+	concept_step
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[ступень] (* <- lang_ru;; *);;
+	*);
+	concept_length_to_width_ratio
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[отношение длины к ширине] (* <- lang_ru;; *);;
+	*);
+	concept_water_speed
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[скорость движения воды] (* <- lang_ru;; *);;
+	*);
+	concept_bypass_pipe
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[перепускная труба] (* <- lang_ru;; *);;
+	*);
+	concept_tray_mark
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[отметка лотка] (* <- lang_ru;; *);;
+	*);
+	concept_assembly_device
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[сборное устройство] (* <- lang_ru;; *);;
+	*);
+	concept_distance_from_water_level
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[расстояние от уровня воды] (* <- lang_ru;; *);;
+	*);
+	concept_quantity
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[количество](* <- lang_ru;; *);;
+	*);
+	concept_length_pond_with_natural_aeration
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[длина пруда с естественной аэрацией](* <- lang_ru;; *);;
+	*);
+	concept_width_pond_with_natural_aeration
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[ширина пруда с естественной аэрацией](* <- lang_ru;; *);;
+	*);
+	concept_direction
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[направление](* <- lang_ru;; *);;
+	*);
+	
+-> rrel_explored_relation:
+	nrel_milligram_per_litre_measurement
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:
+		[измерение в миллиграммах на литр*] (* <- lang_ru;; *);;
+	*);
+	nrel_water_movement_direction
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:
+		[направление движения воды*] (* <- lang_ru;; *);;
+	*);
+	nrel_milligram_per_cubic_decimeter_measurement
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:
+		[измерение в миллиграммах на дециметр кубический*] (* <- lang_ru;; *);;
+	*);;
+	

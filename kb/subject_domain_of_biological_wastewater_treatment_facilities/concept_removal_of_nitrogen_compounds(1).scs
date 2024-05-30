@@ -1,0 +1,15 @@
+concept_removal_of_nitrogen_compounds
+<= nrel_sc_text_translation: ...
+	(*
+	    <- note;;
+		-> [Для обеспечения <sc_element sys_idtf="concept_denitrification">денитрификации</sc_element> следует предусматривать рециркуляцию в зоны с 
+		<sc_element sys_idtf="concept_anoxide_condition">аноксидными условиями</sc_element> иловой смеси и (или) возвратного ила,
+		содержащих нитраты, полученные в аэробных зонах, либо периодическое чередование <sc_element sys_idtf="concept_aerobic_condition">аэробных</sc_element> и 
+			<sc_element sys_idtf="concept_anoxide_condition">аноксидных условий</sc_element>] 
+			(*
+				<-lang_ru;;
+				=>nrel_format: format_html;;
+			*);;
+	*);
+<- rrel_not_maximum_studied_object_class:
+	subject_domain_of_facilities_for_biological_treatment_in_activated_sludge_systems;;

@@ -1,0 +1,4 @@
+concept_highly_loaded_biological_filter
+=>nrel_air_supply_method:
+	concept_natural_aeration;
+	concept_artificial_aeration;;

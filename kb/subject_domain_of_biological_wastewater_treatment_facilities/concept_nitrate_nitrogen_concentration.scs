@@ -1,0 +1,9 @@
+concept_nitrate_nitrogen_concentration
+<= nrel_sc_text_translation: ...
+	(*
+	    <- concept_notation;;
+		<- [Концентрацию нитратного азота, подлежащего удалению, следует рассчитывать по балансовому уравнению, исходя из требований к степени очистки сточной воды.]
+			(*<-lang_ru;;*);;
+		*);
+<- rrel_not_maximum_studied_object_class:
+	subject_domain_of_facilities_for_biological_treatment_in_activated_sludge_systems;;

@@ -1,0 +1,31 @@
+concept_COC
+<= nrel_sc_text_translation: ...
+	(*
+	    <- concept_notation;;
+		<- [Циркуляционные окислительные каналы (ЦОК) следует предусматривать для биологической очистки сточных вод с активным илом с предварительным отстаиванием и 
+		 без предварительного отстаивания сточной воды. Необходимость предварительного отстаивания определяется 
+		 технологическими расчетами в зависимости от цели очистки сточной воды.]
+			(*<-lang_ru;;*);;
+		<- [При использовании ЦОК для очистки сточных вод с целью деструкции органических веществ следует принимать среднюю скорость окисления по  
+			<sc_element sys_idtf="concept_BOC5">БПК5</sc_element> равной 4 мг/(г*ч), прирост
+			активного ила — 0,27 кг на 1 кг удаленного <sc_element sys_idtf="concept_BOC5">БПК5</sc_element>, удельный расход кислорода — 0,85 мг на 1 мг удаленного 
+			<sc_element sys_idtf="concept_BOC5">БПК5</sc_element>.]
+			(*
+			<-lang_ru;;
+			=> nrel_format: format_html;;
+			*);; 
+		<- [При использовании ЦОК для <sc_element sys_idtf="concept_nitrification">нитрификации</sc_element>
+		и <sc_element sys_idtf="concept_denitrification">денитрификации</sc_element> для определения размеров ЦОК следует принимать показатели, относящиеся к параллельной 
+		<sc_element sys_idtf="concept_denitrification">денитрификации</sc_element>]
+			(*
+			<-lang_ru;;
+			=> nrel_format: format_html;;
+			*);; 
+		<- [Для ЦОК следует принимать форму канала в плане подковообразной, прямоугольной или овальной. Для оптимизации потока следует рассматривать необходимость
+			устройства в каналах внутренних струенаправляющих перегородок]
+			(*<-lang_ru;;*);;
+		*);
+<- rrel_not_maximum_studied_object_class:
+	subject_domain_of_facilities_for_biological_treatment_in_activated_sludge_systems;
+
+=>nrel_part: concept_mixer;;

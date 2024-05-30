@@ -1,0 +1,17 @@
+concept_square
+	=> nrel_main_idtf: 
+		[м^2] 
+		(* <-lang_ru;;*);
+	<-concept_exact_value
+	(* 
+		<- sc_node_class;;
+	    => nrel_main_idtf: [точная величина] (* <-lang_ru;;*);;
+	*);
+	<=nrel_unit: ...
+	(*
+		<- concept_fixed_unit_measurement
+		(*
+			<- sc_node_class;;
+	   		=> nrel_main_idtf: [измерение с фиксированной единицей измерения] (* <-lang_ru;;*);;
+		*);;
+	*);;

@@ -1,0 +1,69 @@
+concept_biological_wastewater_treatment_facility
+=>nrel_contaminator:
+	concept_nitrifying_substance;
+	concept_biodegradable_substance;
+	concept_organic_impurity;
+	concept_inorganic_impurity;
+=>nrel_characteristic:
+	[тип сооружения]
+	(*
+		 <- lang_ru;;
+		=>nrel_parameter_taken_into_account:
+			concept_contaminator
+				(*
+					=> nrel_example:
+						[соединения фосфора](* <- lang_ru;;*);
+						[специфические примеси](* <- lang_ru;;*);
+						concept_nitrifying_substance;
+						concept_denitrifying_substance;
+						concept_substance_susceptible_to_denitrification;;
+				*);
+			[концентрация примеси] (* <- lang_ru;;*);
+			[состав примеси] (* <- lang_ru;;*);
+			concept_degree_of_purification;
+			concept_waste_water_flow;
+			concept_uneven_flow_of_wastewater;
+			[технико-экономических требования](*<- lang_ru;;*);; 	
+	*);
+    [технологическая схема очистки]
+	(*
+		 <- lang_ru;;
+		=>nrel_parameter_taken_into_account:
+			concept_contaminator
+				(*
+					=> nrel_example:
+						[соединения фосфора](* <- lang_ru;;*);
+						[специфические примеси](* <- lang_ru;;*);
+						concept_nitrifying_substance;
+						concept_denitrifying_substance;
+						concept_substance_susceptible_to_denitrification;;
+				*);
+			[концентрация примеси] (* <- lang_ru;;*);
+			[состав примеси] (* <- lang_ru;;*);
+			concept_degree_of_purification;
+			concept_waste_water_flow;
+			concept_uneven_flow_of_wastewater;
+			[технико-экономических требования](*<- lang_ru;;*);; 	
+	*);
+    [состав сооружения]
+	(*
+		<- lang_ru;;
+		=>nrel_parameter_taken_into_account:
+			concept_contaminator
+				(*
+					=> nrel_example:
+						[соединения фосфора](* <- lang_ru;;*);
+						[специфические примеси](* <- lang_ru;;*);
+						concept_nitrifying_substance;
+						concept_denitrifying_substance;
+						concept_substance_susceptible_to_denitrification;;
+				*);
+			[концентрация примеси] (* <- lang_ru;;*);
+			[состав примеси] (* <- lang_ru;;*);
+			concept_degree_of_purification;
+			concept_waste_water_flow;
+			concept_uneven_flow_of_wastewater;
+			[технико-экономических требования](*<- lang_ru;;*);; 	
+	*);
+					
+=>nrel_definition_of_parameters:[следует производить на основании данных технологических изысканий, данных эксплуатации объектов-аналогов, результатов научных исследований, параметров, приведенных в настоящих строительных нормах, которые могут быть использованы для расчета сооружений для очистки хозяйственно-бытовых сточных вод, а также производственных сточных вод, близких к ним по составу загрязняющих веществ.](*<- lang_ru;;*);;

@@ -1,0 +1,358 @@
+concept_degree_of_purification
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [уровень удаления загрязнений из сточных вод в процессе их обработки.] (*<- lang_ru;;*);;
+	*);
+->concept_complete_treatment;
+->concept_partial_treatment;;
+
+concept_COH
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [показатель содержания органических веществ в воде.] (*<- lang_ru;;*);;
+	*);
+<-concept_parameter;
+=> nrel_units:[мг/л] (*<- lang_ru;;*);;
+
+concept_waste_water_flow
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [максимальный расход стоков, пропускать который должны все установленные в сети сооружения в течение всего своего расчётного периода действия.] (*<- lang_ru;;*);;
+	*);
+<-concept_parameter;
+=> nrel_units:[м3] (*<- lang_ru;;*);;
+
+concept_complete_treatment
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [достижение высокого уровня удаления загрязнений и органических веществ из сточных вод, что делает их безопасными для возвращения в окружающую среду или повторного использования.] (*<- lang_ru;;*);;
+	*);;
+
+concept_partial_treatment
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [процесс удаления только определенных типов загрязнений или органических веществ из сточных вод, не достигая полного удаления всех видов загрязнений.] (*<- lang_ru;;*);;
+	*);;
+
+concept_contaminator
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [вещество или частица, которые присутствуют в сточных водах и могут быть нежелательными или опасными для конечного использования.] (*<- lang_ru;;*);;
+	*);
+->concept_substance_susceptible_to_denitrification;
+->concept_substance_susceptible_to_nitrification;
+->concept_substance_susceptible_to_biochemical_decomposition;
+->concept_inorganic_impurity;
+->concept_organic_impurity;;
+
+concept_substance_susceptible_to_denitrification
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [соединение,претерпевающее процесс восстановления нитритов и нитратов до свободного азота, который выделяется в атмосферу.] (*<- lang_ru;;*);;
+	*);;
+
+concept_substance_susceptible_to_nitrification
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [соединение,претерпевающее биохимический процесс окисления аммиака и его солей в соли азотной кислоты (нитраты) под влиянием почвенных бактерий.] (*<- lang_ru;;*);;
+	*);;
+ 
+concept_substance_susceptible_to_biochemical_decomposition
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [сложное вещество,подверженное разрушению в результате деятельности живых организмов] (*<- lang_ru;;*);;
+	*);;
+
+concept_inorganic_impurity
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [примесь, не содержащая в своей основе углерод, а также некоторые углеродсодержащие соединения, которые традиционно относят к неорганическим.] (*<- lang_ru;;*);;
+	*);;
+
+concept_organic_impurity
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [примесь, в состав которой входят атомы углерода, связанные с атомами других химических элементов.] (*<- lang_ru;;*);;
+	*);;
+
+concept_removed_BOC5
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [уровень биохимического потребления кислорода (БПК5), который был удален из сточных вод в результате процесса очистки.] (*<- lang_ru;;*);;
+	*);
+<-concept_parameter;
+=> nrel_units:[кг] (*<- lang_ru;;*);;
+
+concept_total_nitrogen
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [суммарное содержание различных форм азота в воде.] (*<- lang_ru;;*);;
+	*);
+<-concept_parameter;
+=> nrel_units:[мг/л] (*<- lang_ru;;*);;
+
+concept_dry_matter
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [масса остаточных веществ, которая остается после удаления воды.] (*<- lang_ru;;*);;
+	*);
+<-concept_parameter;
+=> nrel_units:
+[%];
+[г/л] (*<- lang_ru;;*);;
+
+concept_BOC5
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [показатель окисления очищенной воды за пять суток.] (*<- lang_ru;;*);;
+	*);
+<-concept_parameter;
+=> nrel_units:[мг/л] (*<- lang_ru;;*);;
+
+concept_hydraulic_load
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [объем сточных вод, протекающий в интервал времени, отнесенный к единице поверхности или объема очистных сооружений.] (*<- lang_ru;;*);;
+	*);
+<-concept_parameter;
+=> nrel_units:[м3/(м2*сут)] (*<- lang_ru;;*);;
+
+concept_working_height
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [расстояние от поверхности фильтрующего материала до верхнего уровня жидкости или газа в биофильтре.] (*<- lang_ru;;*);;
+	*);
+<-concept_parameter;
+=> nrel_units:[м] (*<- lang_ru;;*);;
+
+concept_loading_height
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [расстояние от дна биофильтра до верхнего уровня загрузочного материала внутри него.] (*<- lang_ru;;*);;
+	*);
+<-concept_parameter;
+=> nrel_units:[м] (*<- lang_ru;;*);;
+
+concept_loading_material
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [материал, который используется внутри биофильтра для обеспечения поверхности, на которой микроорганизмы могут жить и активно обрабатывать загрязнения.] (*<- lang_ru;;*);;
+	*);
+=>nrel_parameter:
+	concept_loading_material_size;
+->concept_mineral_loading_material;
+->concept_polymer_loading_material;;
+
+concept_design_surface_loading
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [количество загрязняющих веществ, которые могут быть обработаны на единицу поверхности биофильтра за единицу времени.] (*<- lang_ru;;*);;
+	*);
+<-concept_parameter;
+=> nrel_units:[г/(м2 ·сут)] (*<- lang_ru;;*);;
+
+concept_specific_air_flow
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [количество воздуха, которое проходит через единицу площади поверхности биологического фильтра за единицу времени.] (*<- lang_ru;;*);;
+	*);
+<-concept_parameter;
+=> nrel_units:[м3/м3c] (*<- lang_ru;;*);;
+
+concept_biofilm_moisture
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [процентное содержание воды в биологическом слое (биопленке), который находится на поверхности загрузочного материала внутри биофильтра.] (*<- lang_ru;;*);;
+	*);
+<-concept_parameter;
+=> nrel_units:[%];;
+
+concept_amount_of_excess_biofilm
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [разность фактической массы биологического слоя, который превышает оптимальные уровни для эффективной очистки сточных вод,с оптимальной массой для конкретных условий очистки.] (*<- lang_ru;;*);;
+	*);
+<-concept_parameter;
+=> nrel_units:[кг] (*<- lang_ru;;*);;
+
+concept_biofilm
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [слой микроорганизмов, который образуется на поверхности загрузочного материала внутри биофильтра.] (*<- lang_ru;;*);;
+	*);
+=> nrel_purpose: [используется для эффективной очистки воды или воздуха от загрязняющих веществ путем биологического разложения](*<- lang_ru;;*);
+=> nrel_compound: [состоит из микроорганизмов, таких как бактерии, грибы и простейшие водоросли](*<- lang_ru;;*);;
+
+
+concept_mineral_loading_material
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [материал, обычно неорганический, который используется в качестве поддерживающей структуры внутри биофильтра.] (*<- lang_ru;;*);;
+	*);
+=> nrel_possible_component: ...
+	(*
+		<- sc_tuple_class;;
+		->[керамзит] (*<- lang_ru;;*);;
+		->[песок] (*<- lang_ru;;*);;
+		->[гравий] (*<- lang_ru;;*);;
+		->[пористые керамические гранулы] (*<- lang_ru;;*);;
+	*);;
+
+
+concept_polymer_loading_material
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [материал из полимеров, который используется в качестве носителя для биопленки и поддержания поверхности для адсорбции и размножения бактерий и других микроорганизмов внутри биофильтра.] (*<- lang_ru;;*);;
+	*);
+=> nrel_possible_component: ...
+(*
+	<- sc_tuple_class;;
+	->[пластиковые шарики] (*<- lang_ru;;*);;
+	->[пластиковые нити] (*<- lang_ru;;*);;
+	->[полиэтиленовые гранулы] (*<- lang_ru;;*);;
+*);;
+
+concept_air_supply_method
+->concept_artificial_aeration;
+->concept_natural_aeration;;	
+
+concept_volumetric_load
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [количество загрязнений, которые поступают в биофильтр за определенный период времени, выраженное в единицах загрязнений на объем биофильтра.] (*<- lang_ru;;*);;
+	*);
+<-concept_parameter;
+=> nrel_units:[кг/(м3·сут).] (*<- lang_ru;;*);;
+
+
+concept_recirculation_ratio
+<=nrel_sc_text_translation: ...
+(*
+	<- concept_definition(*<-sc_node_class;;*);;
+	-> [параметр, который определяет степень возвращения очищенной воды на сооружения станции очистки сточных вод для разбавления или поддержания определенного расхода.] (*<- lang_ru;;*);;
+*);;
+
+concept_loading
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [абстрактное понятие,которое включает в себя материал и высоту загрузки биологического фильтра] (*<- lang_ru;;*);;
+	*);
+=>nrel_parameter:
+    concept_loading_material;
+    concept_loading_height;;
+
+concept_loading_material_size
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [размер частиц загрузочного материала] (*<- lang_ru;;*);;
+	*);
+=> nrel_units:[милиметры] (*<- lang_ru;;*);;
+
+concept_emptying_device
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [система, которая обеспечивает выведение рабочей среды из фильтра] (*<- lang_ru;;*);;
+	*);;
+
+concept_bottom_washing_device
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [система, которая обеспечивает очистку нижней части фильтра от накопившихся загрязнений.] (*<- lang_ru;;*);;
+	*);
+=>nrel_component:
+	concept_distribution_system;
+	concept_drainage_system;;
+
+concept_distribution_system
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [Cеть трубопроводов и отверстий, расположенных на днище фильтра. Через них подается вода для промывки] (*<- lang_ru;;*);;
+	*);;
+concept_drainage_system
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [Трубопровод нижнего дренажа, служащий для отвода промывной воды и регенерационного раствора из фильтра.] (*<- lang_ru;;*);;
+	*);;
+concept_device_of_lower_supporting_layer
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [Часть фильтровальной установки, которая обеспечивает равномерное распределение воды на днище фильтра и предотвращает вымывание фильтрующего материала] (*<- lang_ru;;*);;
+	*);
+=>nrel_component:
+	concept_distribution_system;;
+
+concept_bulk_density
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [Отношение массы гранулированных или порошкообразных материалов к объему, который они занимают, включая пространство между частицами.] (*<- lang_ru;;*);;
+	*); 
+=> nrel_units:[кг/м3] (*<- lang_ru;;*);;
+concept_filter_disk
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [Основной элемент конструкции дискового фильтра, используемого для механической очистки воды.] (*<- lang_ru;;*);;
+	*); 
+=>nrel_parameter:
+	concept_diameter;
+	concept_disk_insight;
+	concept_disk_material;
+	concept_surface_area;
+	concept_filter_disk_rotation_drive;;
+
+concept_disk_material
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [Материал диска в дисковом фильтре] (*<- lang_ru;;*);;
+	*);;
+
+concept_filter_disk_rotation_drive
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [Механизм, который обеспечивает вращение дисков в дисковом фильтре] (*<- lang_ru;;*);;
+	*);;
+
+concept_disk_insight
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [Представляют собой отверстия или каналы, которые образуются при плотном прижатии дисков друг к другу. Эти прозоры служат для прохождения воды через фильтрующую поверхность дисков и обеспечивают механическую очистку воды от твердых примесей.] (*<- lang_ru;;*);;
+	*); 
+=> nrel_units:[милиметры] (*<- lang_ru;;*);;

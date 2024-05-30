@@ -1,0 +1,5 @@
+concept_activated_sludge_tank
+=> nrel_whole_part: concept_activated_sludge_system;
+<= nrel_whole_part: concept_activated_sludge;;
+
+	

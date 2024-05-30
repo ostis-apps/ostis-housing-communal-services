@@ -1,0 +1,10 @@
+concept_pollutant
+<= nrel_sc_text_translation: ...
+	(*
+	    <- concept_notation;;
+		-> [Концентрацию загрязняющих веществ в поступающей на аэротенки сточной воде следует принимать с учетом
+		ее снижения на предыдущих стадиях очистки. При этом следует учитывать 
+		концентрации загрязняющих веществ, содержащихся в возвратных потоках от сооружений по обработке осадка.] (*<-lang_ru;;*);;
+	*);
+<- rrel_not_maximum_studied_object_class:
+	subject_domain_of_facilities_for_biological_treatment_in_activated_sludge_systems;;

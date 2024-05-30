@@ -1,0 +1,4 @@
+concept_direction
+<= nrel_idtf: [устремление в определенную сторону (налево, направо и т.д.)];
+<- rrel_not_maximum_studied_object_class:
+	subject_domain_of_bilogical_ponds;;

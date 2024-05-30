@@ -1,0 +1,400 @@
+nrel_degree_of_purification
+<=nrel_sc_text_translation: ...
+(*
+	<- concept_definition(*<- sc_node_class;;*);;
+	-> [уровень удаления загрязнений из сточных вод в процессе их обработки.] (*<- lang_ru;;*);;
+*);
+=>nrel_domain:...
+(*
+	<- sc_node_class;;
+	<=nrel_union:...
+	(*
+		<- sc_node_tuple;;
+		->concept_biological_wastewater_treatment_facility;;
+		->concept_degree_of_purification;;
+	*);;
+*);
+=>nrel_first_domain:concept_biological_wastewater_treatment_facility;
+=>nrel_second_domain:concept_degree_of_purification;;
+
+		
+nrel_loading_material
+<=nrel_sc_text_translation: ...
+(*
+	<- concept_definition(*<-sc_node_class;;*);;
+	-> [материал, который используется внутри биофильтра для обеспечения поверхности, на которой микроорганизмы могут жить и активно обрабатывать загрязнения.] (*<- lang_ru;;*);;
+*);
+=>nrel_domain:...
+(*
+	<- sc_node_class;;
+	<=nrel_union:...
+	(*
+		<- sc_node_tuple;;
+		->concept_biological_wastewater_treatment_facility;;
+		->concept_loading_material;;
+	*);;
+*);
+=>nrel_first_domain:concept_biological_wastewater_treatment_facility;
+=>nrel_second_domain:concept_loading_material;;
+
+
+nrel_loading_height
+<=nrel_sc_text_translation: ...
+(*
+	<- concept_definition(*<-sc_node_class;;*);;
+	-> [расстояние от дна биофильтра до верхнего уровня загрузочного материала внутри него.] (*<- lang_ru;;*);;
+*);
+=>nrel_domain:...
+(*
+	<- sc_node_class;;
+	<=nrel_union:...
+	(*
+		<- sc_node_tuple;;
+		->concept_biological_wastewater_treatment_facility;;
+		->concept_loading_height;;
+	*);;
+*);
+=>nrel_first_domain:concept_biological_wastewater_treatment_facility;
+=>nrel_second_domain:concept_loading_height;;
+
+
+
+nrel_hydraulic_load
+<=nrel_sc_text_translation: ...
+(*
+	<- concept_definition(*<-sc_node_class;;*);;
+	-> [объем сточных вод, протекающий в интервал времени, отнесенный к единице поверхности или объема очистных сооружений.] (*<- lang_ru;;*);;
+*);
+=>nrel_domain:...
+(*
+	<- sc_node_class;;
+	<=nrel_union:...
+	(*
+		<- sc_node_tuple;;
+		->concept_biological_wastewater_treatment_facility;;
+		->concept_hydraulic_load;;
+	*);;
+*);
+=>nrel_first_domain:concept_biological_wastewater_treatment_facility;
+=>nrel_second_domain:concept_hydraulic_load;;
+
+
+nrel_BOC5
+<=nrel_sc_text_translation: ...
+(*
+	<- concept_definition(*<-sc_node_class;;*);;
+	-> [показатель окисления очищенной воды за пять суток.] (*<- lang_ru;;*);;
+*);
+=>nrel_domain:...
+(*
+	<- sc_node_class;;
+	<=nrel_union:...
+	(*
+		<- sc_node_tuple;;
+		->concept_biological_wastewater_treatment_facility;;
+		->concept_BOC5;;
+	*);;
+*);
+=>nrel_first_domain:concept_biological_wastewater_treatment_facility;
+=>nrel_second_domain:concept_BOC5;;
+
+nrel_COH
+<=nrel_sc_text_translation: ...
+(*
+	<- concept_definition(*<-sc_node_class;;*);;
+	-> [показатель содержания органических веществ в воде.] (*<- lang_ru;;*);;
+*);
+=>nrel_domain:...
+(*
+	<- sc_node_class;;
+	<=nrel_union:...
+	(*
+		<- sc_node_tuple;;
+		->concept_biological_wastewater_treatment_facility;;
+		->concept_COH;;
+	*);;
+*);
+=>nrel_first_domain:concept_biological_wastewater_treatment_facility;
+=>nrel_second_domain:concept_COH;;
+
+nrel_waste_water_flow
+<=nrel_sc_text_translation: ...
+(*
+	<- concept_definition(*<-sc_node_class;;*);;
+	-> [максимальный расход стоков, пропускать который должны все установленные в сети сооружения в течение всего своего расчётного периода действия.] (*<- lang_ru;;*);;
+*);
+=>nrel_domain:...
+(*
+	<- sc_node_class;;
+	<=nrel_union:...
+	(*
+		<- sc_node_tuple;;
+		->concept_biological_wastewater_treatment_facility;;
+		->concept_waste_water_flow;;
+	*);;
+*);
+=>nrel_first_domain:concept_biological_wastewater_treatment_facility;
+=>nrel_second_domain:concept_waste_water_flow;;
+
+
+nrel_contaminator
+<=nrel_sc_text_translation: ...
+(*
+	<- concept_definition(*<-sc_node_class;;*);;
+	-> [вещество или частица, которые присутствуют в сточных водах и могут быть нежелательными или опасными для конечного использования.] (*<- lang_ru;;*);;
+*);
+=>nrel_domain:...
+(*
+	<- sc_node_class;;
+	<=nrel_union:...
+	(*
+		<- sc_node_tuple;;
+		->concept_biological_wastewater_treatment_facility;;
+		->concept_contaminator;;
+	*);;
+*);
+=>nrel_first_domain:concept_biological_wastewater_treatment_facility;
+=>nrel_second_domain:concept_contaminator;;
+
+
+nrel_specific_air_flow
+<=nrel_sc_text_translation: ...
+(*
+	<- concept_definition(*<-sc_node_class;;*);;
+	-> [количество воздуха, которое проходит через единицу площади поверхности биологического фильтра за единицу времени.] (*<- lang_ru;;*);;
+*);
+=>nrel_domain:...
+(*
+	<- sc_node_class;;
+	<=nrel_union:...
+	(*
+		<- sc_node_tuple;;
+		->concept_biological_wastewater_treatment_facility;;
+		->concept_specific_air_flow;;
+	*);;
+*);
+=>nrel_first_domain:concept_biological_wastewater_treatment_facility;
+=>nrel_second_domain:concept_specific_air_flow;;
+
+
+
+nrel_air_supply_method
+=>nrel_domain:...
+(*
+	<- sc_node_class;;
+	<=nrel_union:...
+	(*
+		<- sc_node_tuple;;
+		->concept_biological_filter;;
+		->concept_air_supply_method;;
+	*);;
+*);
+=>nrel_first_domain:concept_biological_filter;
+=>nrel_second_domain:concept_air_supply_method;;
+
+
+nrel_biofilm_mosture
+<=nrel_sc_text_translation: ...
+(*
+	<- concept_definition(*<-sc_node_class;;*);;
+	-> [процентное содержание воды в биологическом слое (биопленке), который находится на поверхности загрузочного материала внутри биофильтра.] (*<- lang_ru;;*);;
+*);
+=>nrel_domain:...
+(*
+	<- sc_node_class;;
+	<=nrel_union:...
+	(*
+		<- sc_node_tuple;;
+		->concept_biological_filter;;
+		->concept_biofilm_moisture;;
+	*);;
+*);
+=>nrel_first_domain:concept_biological_filter;
+=>nrel_second_domain:concept_biofilm_moisture;;
+
+
+nrel_working_height
+<=nrel_sc_text_translation: ...
+(*
+	<- concept_definition(*<-sc_node_class;;*);;
+	-> [расстояние от поверхности фильтрующего материала до верхнего уровня жидкости или газа в биофильтре.] (*<- lang_ru;;*);;
+*);
+=>nrel_domain:...
+(*
+	<- sc_node_class;;
+	<=nrel_union:...
+	(*
+		<- sc_node_tuple;;
+		->concept_biological_filter;;
+		->concept_working_height;;
+	*);;
+*);
+=>nrel_first_domain:concept_biological_filter;
+=>nrel_second_domain:concept_working_height;;
+
+
+nrel_design_surface_loading
+<=nrel_sc_text_translation: ...
+(*
+	<- concept_definition(*<-sc_node_class;;*);;
+	-> [количество загрязняющих веществ, которые могут быть обработаны на единицу поверхности биофильтра за единицу времени.] (*<- lang_ru;;*);;
+*);
+=>nrel_domain:...
+(*
+	<- sc_node_class;;
+	<=nrel_union:...
+	(*
+		<- sc_node_tuple;;
+		->concept_biological_filter;;
+		->concept_design_surface_loading;;
+	*);;
+*);
+=>nrel_first_domain:concept_biological_filter;
+=>nrel_second_domain:concept_design_surface_loading;;
+
+
+nrel_amount_of_excess_biofilm
+<=nrel_sc_text_translation: ...
+(*
+	<- concept_definition(*<-sc_node_class;;*);;
+	-> [разность фактической массы биологического слоя, который превышает оптимальные уровни для эффективной очистки сточных вод,с оптимальной массой для конкретных условий очистки.] (*<- lang_ru;;*);;
+*);
+=>nrel_domain:...
+(*
+	<- sc_node_class;;
+	<=nrel_union:...
+	(*
+		<- sc_node_tuple;;
+		->concept_biological_filter;;
+		->concept_amount_of_excess_biofilm;;
+	*);;
+*);
+=>nrel_first_domain:concept_biological_filter;
+=>nrel_second_domain:concept_amount_of_excess_biofilm;;
+
+nrel_specific_air_flow
+<=nrel_sc_text_translation: ...
+(*
+	<- concept_definition(*<-sc_node_class;;*);;
+	-> [количество воздуха, которое проходит через единицу площади поверхности биологического фильтра за единицу времени.] (*<- lang_ru;;*);;
+*);
+=>nrel_domain:...
+(*
+	<- sc_node_class;;
+	<=nrel_union:...
+	(*
+		<- sc_node_tuple;;
+		->concept_biological_filter;;
+		->concept_specific_air_flow;;
+	*);;
+*);
+=>nrel_first_domain:concept_biological_filter;
+=>nrel_second_domain:concept_specific_air_flow;;
+
+nrel_volumetric_load
+<=nrel_sc_text_translation: ...
+(*
+	<- concept_definition(*<-sc_node_class;;*);;
+	-> [количество загрязнений, которые поступают в биофильтр за определенный период времени, выраженное в единицах загрязнений на объем биофильтра.] (*<- lang_ru;;*);;
+*);
+=>nrel_domain:...
+(*
+	<- sc_node_class;;
+	<=nrel_union:...
+	(*
+		<- sc_node_tuple;;
+		->concept_biological_filter;;
+		->concept_volumetric_load;;
+	*);;
+*);
+=>nrel_first_domain:concept_biological_filter;
+=>nrel_second_domain:concept_volumetric_load;;
+
+nrel_wastewater_distribution
+<=nrel_sc_text_translation: ...
+(*
+	<- concept_definition(*<-sc_node_class;;*);;
+	-> [процесс равномерного распределения и транспортировки сточных вод от источников их образования к сооружениям для очистки и дальнейшего использования или сброса] (*<- lang_ru;;*);;
+*);
+=>nrel_first_domain:concept_biological_wastewater_treatment_facility;;
+
+nrel_recirculation_ratio
+<=nrel_sc_text_translation: ...
+(*
+	<- concept_definition(*<-sc_node_class;;*);;
+	-> [параметр, который определяет степень возвращения очищенной воды на сооружения станции очистки сточных вод для разбавления или поддержания определенного расхода.] (*<- lang_ru;;*);;
+*);
+=>nrel_first_domain:concept_biological_wastewater_treatment_facility;;
+
+
+nrel_test_for_loading_material
+<=nrel_sc_text_translation: ...
+(*
+	<- concept_definition(*<-sc_node_class;;*);;
+	-> [комплекс мероприятий по оценке его характеристик и свойств в процессе эксплуатации] (*<- lang_ru;;*);;
+*);
+=>nrel_first_domain:concept_biological_wastewater_treatment_facility;;
+
+nrel_loading
+<=nrel_sc_text_translation: ...
+(*
+	<- concept_definition(*<-sc_node_class;;*);;
+	-> [абстрактное понятие,которое включает в себя материал и высоту загрузки биологического фильтра] (*<- lang_ru;;*);;
+*);
+=>nrel_first_domain:concept_biological_wastewater_treatment_facility;
+=>nrel_second_domain:concept_loading;;
+
+nrel_number_of_sections
+=>nrel_first_domain:concept_biological_wastewater_treatment_facility;
+=>nrel_second_domain:number;;
+
+nrel_material_size
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [размер частиц загрузочного материала] (*<- lang_ru;;*);;
+	*);
+=>nrel_first_domain:concept_loading_material;
+=>nrel_second_domain:concept_material_size;;
+
+nrel_natural_aeration
+=>nrel_first_domain:concept_biological_wastewater_treatment_facility;
+=>nrel_second_domain:concept_natural_aeration;;
+
+nrel_disk_insight
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [Представляют собой отверстия или каналы, которые образуются при плотном прижатии дисков друг к другу. Эти прозоры служат для прохождения воды через фильтрующую поверхность дисков и обеспечивают механическую очистку воды от твердых примесей.] (*<- lang_ru;;*);;
+	*); 
+=>nrel_first_domain:concept_filter_disk;
+=>nrel_second_domain:concept_disk_insight;;
+
+nrel_disk_material
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [Материал диска в дисковом фильтре] (*<- lang_ru;;*);;
+	*); 
+=>nrel_first_domain:concept_filter_disk;
+=>nrel_second_domain:concept_disk_material;;
+
+nrel_filter_disk
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [Основной элемент конструкции дискового фильтра, используемого для механической очистки воды.] (*<- lang_ru;;*);;
+	*); 
+=>nrel_first_domain:concept_biological_filter;
+=>nrel_second_domain:concept_filter_disk;;
+
+nrel_disk_rotation_drive
+<=nrel_sc_text_translation: ...
+	(*
+		<- concept_definition(*<- sc_node_class;;*);;
+	    -> [Механизм, который обеспечивает вращение дисков в дисковом фильтре] (*<- lang_ru;;*);;
+	*); 
+=>nrel_first_domain:concept_filter_disk;
+=>nrel_second_domain:concept_filter_disk_rotation_drive;;
+
+

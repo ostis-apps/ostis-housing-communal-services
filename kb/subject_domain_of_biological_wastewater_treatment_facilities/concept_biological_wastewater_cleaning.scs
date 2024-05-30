@@ -1,0 +1,15 @@
+concept_biological_wastewater_cleaning
+	
+<- rrel_not_maximum_studied_object_class:
+	subject_domain_of_facilities_for_biological_treatment_in_activated_sludge_systems;
+
+<= nrel_subdividing:
+    {
+		concept_complete_wastewater_cleaning_of_biodegradable_substances;
+		concept_partial_wastewater_cleaning_of_biodegradable_substances;
+		concept_nitrification;
+		concept_denitrification;
+		concept_removal_of_phosphorus_compounds;
+		concept_purification_from_specific_impurities
+		
+	};;
