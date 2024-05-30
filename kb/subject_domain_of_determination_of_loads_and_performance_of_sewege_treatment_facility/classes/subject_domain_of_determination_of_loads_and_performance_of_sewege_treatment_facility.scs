@@ -1,0 +1,59 @@
+subject_domain_of_determination_of_loads_and_performance_of_sewege_treatment_facility
+	=> nrel_main_idtf:
+		[Предметная область определения нагрузок и производительности канализационных очистных сооружений]
+		(* <- lang_ru;; *);
+		<- subject_domain;
+		<- sc_node_struct;
+		
+	-> rrel_maximum_studied_object_class:
+		concept_determination_of_loads_and_performance_of_sewege_treatment_facility
+		(*
+			<- sc_node_class;;
+			=> nrel_main_idtf:[определение нагрузок и производительности канализационных очистных сооружений] (* <- lang_ru;; *);;
+		*);
+		
+	-> rrel_not_maximum_studied_object_class:
+    
+        concept_treatment_facility;
+		concept_wastewater;
+		concept_industrial_wastewater;
+		concept_domestic_wastewater;
+		concept_mechanical_treatment;
+		concept_mechanical_wastewater_treatment;
+		concept_separate_mechanical_treatment_of_wastewater;
+		concept_biological_treatment;
+		concept_biological_wastewater_treatment;
+		concept_biological_treatment_facility;
+		concept_combined_biological_treatment_of_wastewater;
+		concept_combined_biological_treatment_of_industrial_wastewater;
+		concept_combined_biological_treatment_of_domestic_wastewater;
+		concept_treatment_facility_site;
+		concept_design_of_treatment_facility;
+       	concept_reconstruction_of_existing_treatment_facilities;
+		concept_wastewater_composition_indicators;
+		concept_average_daily_consumption_of_industrial_wastewater;
+		concept_estimated_wastewater_flow_rate;
+		concept_estimated_maximum_flow_rate_of_industrial_wastewater;
+		concept_estimated_average_daily_capacity_of_sewage_treatment_facilities;
+		concept_suspended_solids;
+		concept_total_content_of_organic_pollutants_in_water;
+		concept_nutrient_availability;
+		concept_degree_of_wastewater_treatment;
+		concept_calculation_of_industrial_wastewater_sludge_treatment_facilities;
+		concept_calculation_of_industrial_wastewater_treatment_facilities;
+		concept_concentration_of_pollutants_in_wastewater;
+		concept_concentration_of_pollutants_in_domestic_wastewater;
+		concept_concentration_of_pollutants_in_industrial_wastewater;
+		concept_utility_composition;
+		concept_auxiliary_composition;
+		concept_utility_area;
+		concept_auxiliary_area;
+		concept_laboratory_composition;
+		concept_laboratory_area;
+		concept_indicators_characterizing_content_of_pollutants;
+        
+	-> rrel_explored_relation:  
+	
+		nrel_used_for;;
+        	
+			

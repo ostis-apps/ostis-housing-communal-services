@@ -1,0 +1,7 @@
+concept_suspended_solids
+    <- sc_node_class;
+    => nrel_main_idtf:
+        [взвешенные вещества]
+        (* <- lang_ru;; *);;
+
+    

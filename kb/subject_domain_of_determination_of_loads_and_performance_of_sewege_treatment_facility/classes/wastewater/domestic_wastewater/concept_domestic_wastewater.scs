@@ -1,0 +1,5 @@
+concept_domestic_wastewater
+    <- sc_node_class;
+    => nrel_main_idtf:
+        [хозяйственно-бытовые сточные воды]
+        (* <- lang_ru;; *);;

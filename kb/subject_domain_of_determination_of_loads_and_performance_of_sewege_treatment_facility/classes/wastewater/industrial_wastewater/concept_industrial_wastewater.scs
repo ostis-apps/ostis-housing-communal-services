@@ -1,0 +1,5 @@
+concept_industrial_wastewater
+    <- sc_node_class;
+    => nrel_main_idtf:
+        [производственные сточные воды]
+        (* <- lang_ru;; *);;

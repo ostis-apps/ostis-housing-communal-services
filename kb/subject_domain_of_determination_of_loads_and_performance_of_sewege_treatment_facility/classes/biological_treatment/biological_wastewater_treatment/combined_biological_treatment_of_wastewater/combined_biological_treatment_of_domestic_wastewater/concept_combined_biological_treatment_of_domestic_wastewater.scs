@@ -1,0 +1,5 @@
+concept_combined_biological_treatment_of_domestic_wastewater
+    <- sc_node_class;
+    => nrel_main_idtf:
+        [совместная биологическая очистка хозяйственно-бытовых сточных вод]
+        (* <- lang_ru;; *);;

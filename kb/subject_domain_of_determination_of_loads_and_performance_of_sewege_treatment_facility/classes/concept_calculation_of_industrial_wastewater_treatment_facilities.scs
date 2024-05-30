@@ -1,0 +1,14 @@
+concept_calculation_of_industrial_wastewater_treatment_facilities
+    <- sc_node_class;
+    => nrel_main_idtf:
+        [расчет сооружений для очистки производственных сточных вод]
+        (* <- lang_ru;; *);
+    
+    <= nrel_sc_text_translation: ...
+    (*
+        <- concept_requirment (* <- sc_node_class;; *);;
+
+            -> [следует выполнять на основании данных научно-исследовательских организаций и
+                опыта эксплуатации объектов-аналогов с учетом требований настоящих строительных норм и действующих ТНПА]
+                (* <- lang_ru;; *);;
+    *);;
