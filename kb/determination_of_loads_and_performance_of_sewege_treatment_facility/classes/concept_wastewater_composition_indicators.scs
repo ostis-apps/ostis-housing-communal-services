@@ -1,5 +1,0 @@
-concept_wastewater_composition_indicators
-    <- sc_node_class;
-    => nrel_main_idtf:
-        [показатели состава сточных вод]
-        (* <- lang_ru;; *);;
