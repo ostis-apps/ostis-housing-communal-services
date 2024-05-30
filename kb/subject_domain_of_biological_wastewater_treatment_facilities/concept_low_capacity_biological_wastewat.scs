@@ -16,7 +16,7 @@ concept_low_capacity_biological_wastewater_treatment_facility
 ->[грунтово-растительная площадка];;
 
 concept_filter_field
-=>nrel_placement:
+=>nrel_replacement:
 	concept_sand
 	(*
 			<- sc_node_class;;
@@ -34,7 +34,7 @@ concept_filter_field
 	*);
 	=>nrel_reduction_factor:0.3(*<-number;;*);
 
-=>nrel_placement:[Запрещено размещение полей фильтрации на территориях, граничащих с местами выклинивания водоносных горизонтов, а также при наличии трещиноватых пород и карстов, не перекрытых водоупорным слоем.](* <- lang_ru;; *);
+=>nrel_replacement:[Запрещено размещение полей фильтрации на территориях, граничащих с местами выклинивания водоносных горизонтов, а также при наличии трещиноватых пород и карстов, не перекрытых водоупорным слоем.](* <- lang_ru;; *);
 =>nrel_hydraulic_load:[Следует принимать на основании данных опыта эксплуатации полей фильтрации, находящихся в аналогичных условиях.](* <- lang_ru;; *);
 =>nrel_component:
 	concept_drainage_device;
@@ -122,7 +122,7 @@ concept_filter_field
 			<-concept_100_mmeters;;
 		*);;
 		=>nnrel_application:[вентиляция];;
-		=>nrel_placement:[Верх вентиляционной трубы должен быть расположен над поверхностью земли на высоте не менее 0,7 м.](* <- lang_ru;; *);;
+		=>nrel_replacement:[Верх вентиляционной трубы должен быть расположен над поверхностью земли на высоте не менее 0,7 м.](* <- lang_ru;; *);;
 	*);;
 	=>nrel_component:[флюгарка];;
 *);;
@@ -140,7 +140,7 @@ concept_underground_filtration_field
 			<-sc_node_class;;
 			=>nrel_max_value:concept_1_m3_day;;
 		*);;
-		=>nrel_placement:
+		=>nrel_replacement:
 			concept_sand;
 			concept_sandy_loam;;
 	*);;
