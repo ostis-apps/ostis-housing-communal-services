@@ -1,7 +1,4 @@
 concept_square
-	=> nrel_main_idtf: 
-		[м^2] 
-		(* <-lang_ru;;*);
 	<-concept_exact_value
 	(* 
 		<- sc_node_class;;

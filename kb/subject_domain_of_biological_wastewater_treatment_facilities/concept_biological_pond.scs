@@ -26,9 +26,6 @@ concept_biological_pond
 			=> nrel_format: format_html;;
 			*);;
 	*);
-
-<- rrel_maximum_studied_object_class:
-	subject_domain_of_bilogical_ponds;
 	
 -> concept_pond_with_artificial_aeration;
 -> concept_pond_with_natural_aeration;;

@@ -12,6 +12,4 @@ concept_oxygen_demand_for_wastewater_treatment
 		<- [Потребность в кислороде для очистки сточной воды в SBR-реакторе следует определять как сумму расхода кислорода на деструкцию органических веществ
 		и нитрификацию с учетом снижения потребности в кислороде за счет окисления органических веществ при денитрификации.]
 			(*<-lang_ru;;*);;
-		*);
-<- rrel_not_maximum_studied_object_class:
-	subject_domain_of_facilities_for_biological_treatment_in_activated_sludge_systems;;
+		*);;

@@ -9,6 +9,4 @@ concept_air_supply_equipment
 		<- [При организации циркуляции возвратного ила и иловой смеси в анаэробную емкость и денитрификаторы следует предусматривать
 		мероприятия по минимизации содержания растворенного кислорода в указанных циркуляционных потоках]
 			(*<-lang_ru;;*);;
-		*);
-<- rrel_not_maximum_studied_object_class:
-	subject_domain_of_facilities_for_biological_treatment_in_activated_sludge_systems;;
+		*);;

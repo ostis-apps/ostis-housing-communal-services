@@ -7,26 +7,24 @@ section_subject_domain_of_secondary_settling_tanks
 
     -> rrel_key_sc_element: 
 	    concept_activated_sludge 
-            (* => nrel_main_idtf: [Активный ил] (* <- lang_ru;;*);;
+            (* => nrel_main_idtf: [активный ил] (* <- lang_ru;;*);;
 			   <-concept_sludge;;*);
-		concept_biofilm
-            (* => nrel_main_idtf: [Биопленка] (* <- lang_ru;;*);;*);
+		concept_biofilm;
 		concept_secondary_settling_tank 
-            (* => nrel_main_idtf: [Вторичный отстойник] (* <- lang_ru;;*);;*);
+            (* => nrel_main_idtf: [вторичный отстойник] (* <- lang_ru;;*);;*);
 		concept_square
-            (* => nrel_main_idtf: [Площадь] (* <- lang_ru;;*);;*);
-		concept_wastewater
-            (* => nrel_main_idtf: [Сточная вода] (* <- lang_ru;;*);;*);
+            (* => nrel_main_idtf: [площадь] (* <- lang_ru;;*);;*);
+		concept_wastewater;
 		concept_vertical_secondary_settling_tank
-            (* => nrel_main_idtf: [Вертикальный вторичный отстойник] (* <- lang_ru;;*);;*);
+            (* => nrel_main_idtf: [вертикальный вторичный отстойник] (* <- lang_ru;;*);;*);
 		concept_radial_secondary_settling_tank
-            (* => nrel_main_idtf: [Радиальный вторичный отстойник] (* <- lang_ru;;*);;*);
+            (* => nrel_main_idtf: [радиальный вторичный отстойник] (* <- lang_ru;;*);;*);
         concept_horizontal_secondary_settling_tank 
-            (* => nrel_main_idtf: [Горизонтальный вторичный отстойник] (* <- lang_ru;;*);;*);
+            (* => nrel_main_idtf: [горизонтальный вторичный отстойник] (* <- lang_ru;;*);;*);
 		concept_brightener
-            (* => nrel_main_idtf: [Осветлитель] (* <- lang_ru;;*);;*);
+            (* => nrel_main_idtf: [осветлитель] (* <- lang_ru;;*);;*);
 		concept_sludge_index 
-            (* => nrel_main_idtf: [Иловый индекс] (* <- lang_ru;;*);;*);
+            (* => nrel_main_idtf: [иловый индекс] (* <- lang_ru;;*);;*);
 		lw4_patterns;
 
     <- non_atomic_section;;
@@ -43,18 +41,18 @@ section_subject_domain_of_secondary_settling_tanks
 					
             -> rrel_maximum_studied_object_class:
                 concept_secondary_settling_tank 
-                    (* => nrel_main_idtf: [Вторичный отстойник] (* <- lang_ru;;*);;*);
+                    (* => nrel_main_idtf: [вторичный отстойник] (* <- lang_ru;;*);;*);
 
             -> rrel_not_maximum_studied_object_class:
                 concept_activated_sludge;
                 concept_biofilm;
-				concept_secondary_settling_tank;
-				concept_wastewater;
-				concept_sludge_index; 
-				concept_square;
-				concept_vertical_secondary_settling_tank;
-				concept_radial_secondary_settling_tank;
-				concept_horizontal_secondary_settling_tank;
-				concept_brightener;;
+		concept_secondary_settling_tank;
+		concept_wastewater;
+		concept_sludge_index; 
+		concept_square;
+		concept_vertical_secondary_settling_tank;
+		concept_radial_secondary_settling_tank;
+		concept_horizontal_secondary_settling_tank;
+		concept_brightener;;
 
     *];;

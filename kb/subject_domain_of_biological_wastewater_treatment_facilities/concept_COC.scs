@@ -25,7 +25,5 @@ concept_COC
 			устройства в каналах внутренних струенаправляющих перегородок]
 			(*<-lang_ru;;*);;
 		*);
-<- rrel_not_maximum_studied_object_class:
-	subject_domain_of_facilities_for_biological_treatment_in_activated_sludge_systems;
 
-=>nrel_part: concept_mixer;;
+=>nrel_whole_part: concept_mixer;;

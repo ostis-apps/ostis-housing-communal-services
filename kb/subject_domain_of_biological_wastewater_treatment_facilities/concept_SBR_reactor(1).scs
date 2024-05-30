@@ -12,6 +12,4 @@ concept_SBR_reactor
 		перед биологической очисткой и резервуаров-накопителей для очищенной воды следует устанавливать на основании оценки неравномерности 
 		поступления сточных вод на очистку и условий отведения очищенных сточных вод.]
 			(*<-lang_ru;;*);;
-		*);
-<- rrel_not_maximum_studied_object_class:
-	subject_domain_of_facilities_for_biological_treatment_in_activated_sludge_systems;;
+		*);;

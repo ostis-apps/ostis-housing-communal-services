@@ -9,6 +9,4 @@ concept_mechanical_aerator
 			(*<-lang_ru;;*);;
 		<- [Длину аэратора необходимо принимать не менее ширины канала по дну и не более ширины канала по зеркалу воды, количество аэраторов — не менее двух.]
 			(*<-lang_ru;;*);;
-		*);
-<- rrel_not_maximum_studied_object_class:
-	subject_domain_of_facilities_for_biological_treatment_in_activated_sludge_systems;;
+		*);;

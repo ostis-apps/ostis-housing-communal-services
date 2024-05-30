@@ -13,6 +13,4 @@ concept_mixing_device
 				<-lang_ru;;
 				=> nrel_format: format_html;;
 			*);; 
-	*);
-<- rrel_not_maximum_studied_object_class:
-	subject_domain_of_facilities_for_biological_treatment_in_activated_sludge_systems;;
+	*);;

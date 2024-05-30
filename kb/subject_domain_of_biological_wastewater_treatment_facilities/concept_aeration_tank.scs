@@ -23,6 +23,4 @@ concept_aeration_tank
 			выпуска воды из воздухораспределительной системы]
 			(*<-lang_ru;;*);;
 
-	*);
-<- rrel_not_maximum_studied_object_class:
-	subject_domain_of_facilities_for_biological_treatment_in_activated_sludge_systems;;
+	*);;

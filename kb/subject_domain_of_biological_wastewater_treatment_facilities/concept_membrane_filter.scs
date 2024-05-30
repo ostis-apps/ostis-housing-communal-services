@@ -15,6 +15,4 @@ concept_membrane_filter
 			(*<-lang_ru;;*);;
 		<- [Дозу ила в сооружениях биологической очистки при разделении иловой смеси на мембранных фильтрах следует принимать по данным производителей мембран]
 			(*<-lang_ru;;*);;
-		*);
-<- rrel_not_maximum_studied_object_class:
-	subject_domain_of_facilities_for_biological_treatment_in_activated_sludge_systems;;
+		*);;
