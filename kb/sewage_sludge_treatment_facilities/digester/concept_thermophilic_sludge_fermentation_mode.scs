@@ -1,5 +1,5 @@
 concept_mesophilic_sludge_fermentation_mode
-    => nrel_main_idft:
+    => nrel_main_idtf:
         [мезофильный режим сбраживания осадка]
         (* <- lang_ru;; *);
     <= nrel_sc_text_translation: ...

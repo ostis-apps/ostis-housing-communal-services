@@ -23,7 +23,7 @@ concept_sludge_digestion
     -> param_gas_mass
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [масса газа после сбраживания]
             (* <- lang_ru;; *);;
     *);
@@ -31,7 +31,7 @@ concept_sludge_digestion
     -> param_gas_density
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [плотность газа после сбраживания]
             (* <- lang_ru;; *);;
     *);
@@ -39,7 +39,7 @@ concept_sludge_digestion
     -> param_heat_combustion
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [теплота сгорания после сбраживания]
             (* <- lang_ru;; *);;
     *);;

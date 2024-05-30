@@ -1,5 +1,5 @@
 concept_sludge_beds_with_settling_and_surface_sludge_water_drainage
-    => nrel_main_idft:
+    => nrel_main_idtf:
         [иловая площадка с отстаиванием и поверхностным отводом иловой воды]
         (* <- lang_ru;; *);
     

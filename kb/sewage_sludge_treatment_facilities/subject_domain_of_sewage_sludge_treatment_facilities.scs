@@ -151,7 +151,7 @@ subject_domain_of_sewage_sludge_treatment_facilities
 	param_temperature
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft:
+		=> nrel_main_idtf:
 		[температура]
 		(* <- lang_ru;; *);;
 	*);
@@ -160,49 +160,49 @@ subject_domain_of_sewage_sludge_treatment_facilities
 	nrel_compaction_method
 	(*
 		<- sc_node_norole_relation;;
-		=> nrel_main_idft:
+		=> nrel_main_idtf:
 		[метод уплотнения]
 		(* <- lang_ru;; *);;
 	*);
 	nrel_thickening_method
 	(*
 		<- sc_node_norole_relation;;
-		=> nrel_main_idft:
+		=> nrel_main_idtf:
 		[метод сгущения]
 		(* <- lang_ru;; *);;
 	*);
 	nrel_disinfection_method
 	(*
 		<- sc_node_norole_relation;;
-		=> nrel_main_idft:
+		=> nrel_main_idtf:
 		[метод обеззараживания]
 		(* <- lang_ru;; *);;
 	*);
 	nrel_fermentation_method
 	(*
 		<- sc_node_norole_relation;;
-		=> nrel_main_idft:
+		=> nrel_main_idtf:
 		[метод сбраживания]
 		(* <- lang_ru;; *);;
 	*);
 	nrel_type_of_seal
 	(*
 		<- sc_node_norole_relation;;
-		=> nrel_main_idft:
+		=> nrel_main_idtf:
 		[вид уплотнителя]
 		(* <- lang_ru;; *);;
 	*);
 	nrel_type_of_thickener
 	(*
 		<- sc_node_norole_relation;;
-		=> nrel_main_idft:
+		=> nrel_main_idtf:
 		[вид сгустителя]
 		(* <- lang_ru;; *);;
 	*);
 	nrel_compaction_duration_to_sludge_concentration
 	(*
 		<- sc_node_norole_relation;;
-		=> nrel_main_idft:
+		=> nrel_main_idtf:
 			[отношение длительности уплотенния к концентрации осадка]
 			(* <- lang_ru;; *);;
 	*);;

@@ -43,7 +43,7 @@ concept_sludge_disinfection
     -> param_sludge_disinfection_sludge_pH
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [значение pH осадка после обеззараживания]
             (* <- lang_ru;; *);;
     *);;

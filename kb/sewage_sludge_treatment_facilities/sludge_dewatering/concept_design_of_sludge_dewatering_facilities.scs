@@ -1,5 +1,5 @@
 concept_design_of_sludge_dewatering_facilities
-    => nrel_main_idft:
+    => nrel_main_idtf:
         [проектирование сооружений обезвоживания осадков]
         (* <- lang_ru;; *);
     <= nrel_sc_text_translation: ...

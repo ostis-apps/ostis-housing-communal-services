@@ -1,5 +1,5 @@
 concept_natural_aeration
-    => nrel_main_idft:
+    => nrel_main_idtf:
         [естественная аэрация]
         (* <- lang_ru;; *);
     => nrel_idtf:

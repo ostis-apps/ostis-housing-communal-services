@@ -1,5 +1,5 @@
 concept_sludge_bed_on_natural_foundation
-    => nrel_main_idft: 
+    => nrel_main_idtf: 
         [иловые площадки на естественном основании]
         (* <- lang_ru;; *);
     <= nrel_subdividing:

@@ -4,12 +4,28 @@ concept_flocculant_organic_origin
 		(* <- lang_ru;; *);
 	<= nrel_subdividing:
 	{
-		concept_extracts
-		(* => nrel_main_idtf: [экстракты из водорослей и из семян растений] (* <- lang_ru;; *);; *);
-		concept_yeast
-		(* => nrel_main_idtf: [дрожжи] (* <- lang_ru;; *);; *);
-		concept_cellulose_substances
-		(* => nrel_main_idtf: [вещества из целлюлозы] (* <- lang_ru;; *);; *);
+		concept_extracts;
+		concept_yeast;
+		concept_cellulose_substances;
 		concept_certain_types_of_resin
-		(* => nrel_main_idtf: [определенные типы смол] (* <- lang_ru;; *);; *)
 	};;
+
+concept_extracts
+	=> nrel_main_idtf: 
+		[экстракты из водорослей и из семян растений] 
+		(* <- lang_ru;; *);;
+
+concept_yeast
+	=> nrel_main_idtf: 
+		[дрожжи] 
+		(* <- lang_ru;; *);;
+
+concept_cellulose_substances
+	=> nrel_main_idtf: 
+		[вещества из целлюлозы] 
+		(* <- lang_ru;; *);;
+
+concept_certain_types_of_resin
+	=> nrel_main_idtf: 
+		[определенные типы смол] 
+		(* <- lang_ru;; *);;

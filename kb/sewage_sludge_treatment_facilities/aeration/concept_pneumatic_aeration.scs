@@ -1,5 +1,5 @@
 concept_pneumatic_aeration
-    => nrel_main_idft:
+    => nrel_main_idtf:
         [пневматическая аэрация]
         (* <- lang_ru;; *);
     => nrel_idtf:

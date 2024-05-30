@@ -1,5 +1,5 @@
 concept_facilities_for_thermal_treatment_of_sludge
-    => nrel_main_idft:
+    => nrel_main_idtf:
         [сооружения для термической обработки осадка]
         (* <- lang_ru;; *);
     

@@ -57,7 +57,7 @@ concept_sludge_bed
     -> param_sludge_bed_map_amount
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [количество карт иловой площадки]
             (* <- lang_ru;; *);;
     *);
@@ -65,7 +65,7 @@ concept_sludge_bed
     -> param_sludge_bed_map_working_depth
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [рабочая глубина иловой площадки]
             (* <- lang_ru;; *);;
     *);
@@ -73,7 +73,7 @@ concept_sludge_bed
     -> param_sludge_bed_barrier_rollers_height
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [высота оградительных валиков иловой площадки]
             (* <- lang_ru;; *);;
     *);
@@ -81,7 +81,7 @@ concept_sludge_bed
     -> param_sludge_bed_top_rollers_width_without_mechanisms
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [высота оградительных валиков без механизмов иловой площадки]
             (* <- lang_ru;; *);;
     *);
@@ -89,7 +89,7 @@ concept_sludge_bed
     -> param_sludge_bed_top_rollers_width_with_mechanisms
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [высота оградительных валиков c механизмами иловой площадки]
             (* <- lang_ru;; *);;
     *);
@@ -97,7 +97,7 @@ concept_sludge_bed
     -> param_sludge_bed_bottom_slope_of_components
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [уклон дна разводящих труб или лотков иловой площадки]
             (* <- lang_ru;; *);;
     *);
@@ -105,7 +105,7 @@ concept_sludge_bed
     -> param_sludge_bed_additional_pollutants_weighed_material
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [дополнительное количество загрязняющих веществ по взвешенным веществам иловой площадки]
             (* <- lang_ru;; *);;
     *);
@@ -113,7 +113,7 @@ concept_sludge_bed
     -> param_sludge_bed_additional_pollutants_bpk5
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [дополнительное количество загрязняющих веществ по БПК5 иловой площадки]
             (* <- lang_ru;; *);;
     *);;

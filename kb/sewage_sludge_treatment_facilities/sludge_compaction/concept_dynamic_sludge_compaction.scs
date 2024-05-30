@@ -13,7 +13,7 @@ concept_dynamic_sludge_compaction
 	-> param_compaction_flocculant_consuption_for_centrifuge
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft:
+		=> nrel_main_idtf:
 			[расход флокулянта при динамическом уплотнении для центрифуги]
 			(* <- lang_ru;; *);;
 	*);
@@ -21,7 +21,7 @@ concept_dynamic_sludge_compaction
 	-> param_compaction_flocculant_consuption_for_not_centrifuge
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft:
+		=> nrel_main_idtf:
 			[расход флокулянта при динамическом уплотнении для барабанных, дисковых, шнековых, ленточных уплотнителей]
 			(* <- lang_ru;; *);;
 	*);;

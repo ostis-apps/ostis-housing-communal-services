@@ -1,5 +1,5 @@
 concept_sludge_fermentation_mode
-    => nrel_main_idft:
+    => nrel_main_idtf:
         [режим сбраживания осадков]
         (* <- lang_ru;; *);
     <= nrel_subdividing:

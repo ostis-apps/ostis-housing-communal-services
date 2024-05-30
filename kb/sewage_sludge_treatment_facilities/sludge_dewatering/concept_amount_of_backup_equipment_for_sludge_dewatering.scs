@@ -1,5 +1,5 @@
 concept_amount_of_backup_equipment_for_sludge_dewatering
-    => nrel_main_idft:
+    => nrel_main_idtf:
         [количество резервного оборудования для обезвоживания осадка]
         (* <- lang_ru;; *);
     <- concept_measurable_parameter;

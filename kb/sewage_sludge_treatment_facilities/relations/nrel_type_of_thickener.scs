@@ -5,13 +5,13 @@ nrel_type_of_thickener
 
     <- concept_unary_relation
     (*
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [унарное отношение]
             (* <- lang_ru;; *);;
     *);
     <- concept_oriented_relation
     (*
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [ориентированное отношение]
             (* <- lang_ru;; *);;
     *);

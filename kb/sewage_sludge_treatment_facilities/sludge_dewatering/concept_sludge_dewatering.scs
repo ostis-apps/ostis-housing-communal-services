@@ -36,7 +36,7 @@ concept_sludge_dewatering
     -> param_sludge_dewatering_flocculant_dose
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [расход флокулянта при обезвоживании осадков]
             (* <- lang_ru;; *);;
     *);
@@ -44,7 +44,7 @@ concept_sludge_dewatering
     -> param_dehydrated_excess_active_sludge_humidity
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [влажность обезвоженного избыточного активного ила при обезвоживании осадков]
             (* <- lang_ru;; *);;
     *);
@@ -52,7 +52,7 @@ concept_sludge_dewatering
     -> param_dehydrated_raw_sludge_humidity
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [влажность обезвоженного сырого осадка при обезвоживании осадков]
             (* <- lang_ru;; *);;
     *);;
