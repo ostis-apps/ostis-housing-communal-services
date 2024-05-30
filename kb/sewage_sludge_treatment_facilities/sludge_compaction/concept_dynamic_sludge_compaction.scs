@@ -2,6 +2,26 @@ concept_dynamic_sludge_compaction
 	=> nrel_main_idtf:
 		[динамическое уплотнение]
 		(* <- lang_ru;; *);
-	-> concept_neccessary_equipment_for_dymanic_sludge_compaction;
-	-> concept_flocculant_consumption;
-	-> concept_amount_of_backup_equipment_for_dymanic_sludge_compaction;;
+
+	<= nrel_sc_text_translation:...
+	(*
+		-> concept_requirment;;
+			<- [количество резервного оборудования следует принимать: при количестве рабочих единиц до трех – одну единицу, от четырех и более – две единицы.]
+				(* <- lang_ru;; *);;
+	*);
+
+	-> param_compaction_flocculant_consuption_for_centrifuge
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idft:
+			[расход флокулянта при динамическом уплотнении для центрифуги]
+			(* <- lang_ru;; *);;
+	*);
+
+	-> param_compaction_flocculant_consuption_for_not_centrifuge
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idft:
+			[расход флокулянта при динамическом уплотнении для барабанных, дисковых, шнековых, ленточных уплотнителей]
+			(* <- lang_ru;; *);;
+	*);;

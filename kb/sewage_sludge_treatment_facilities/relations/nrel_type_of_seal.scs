@@ -1,0 +1,10 @@
+nrel_type_of_seal
+    => nrel_idtf:
+        [вид уплотнителя, который используется на очистном сооружении]
+        (* <- lang_ru;; *);
+
+    <- concept_unary_relation;
+    <- concept_oriented_relation;
+
+    => nrel_first_domain: concept_treatment_facility;
+    => nrel_second_domain: concept_seal;;

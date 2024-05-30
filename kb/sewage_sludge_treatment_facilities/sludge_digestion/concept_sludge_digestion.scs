@@ -18,4 +18,28 @@ concept_sludge_digestion
                 (* <- lang_ru;; *);;
             -> [относительно низкие эксплуатационные затраты]
                 (* <- lang_ru;; *);;
+    *);
+
+    -> param_gas_mass
+    (*
+        <- sc_node_class;;
+        => nrel_main_idft:
+            [масса газа после сбраживания]
+            (* <- lang_ru;; *);;
+    *);
+
+    -> param_gas_density
+    (*
+        <- sc_node_class;;
+        => nrel_main_idft:
+            [плотность газа после сбраживания]
+            (* <- lang_ru;; *);;
+    *);
+
+    -> param_heat_combustion
+    (*
+        <- sc_node_class;;
+        => nrel_main_idft:
+            [теплота сгорания после сбраживания]
+            (* <- lang_ru;; *);;
     *);;

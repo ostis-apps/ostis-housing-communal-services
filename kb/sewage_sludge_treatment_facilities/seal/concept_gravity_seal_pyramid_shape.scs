@@ -1,0 +1,12 @@
+concept_gravity_seal_pyramid_shape
+    => nrel_main_idft:
+        [гравитационный илоуплотнитель пирамидальной формы]
+        (* <- lang_ru;; *);
+    
+    -> param_grav_pyramid_seal_bottom_slope
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idft:
+			[уклон дна гравитационного илоупотнителя пирамидальной формы]
+			(* <- lang_ru;; *);;
+	*);;

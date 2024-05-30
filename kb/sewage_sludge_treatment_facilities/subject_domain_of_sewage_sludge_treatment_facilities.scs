@@ -148,6 +148,13 @@ subject_domain_of_sewage_sludge_treatment_facilities
 		[термическая сушка осадка]
 		(* <- lang_ru;; *);;
 	*);
+	param_temperature
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idft:
+		[температура]
+		(* <- lang_ru;; *);;
+	*);
 
     -> rrel_explored_relation:
 	nrel_compaction_method
@@ -157,7 +164,7 @@ subject_domain_of_sewage_sludge_treatment_facilities
 		[метод уплотнения]
 		(* <- lang_ru;; *);;
 	*);
-	nrel_compaction_method
+	nrel_thickening_method
 	(*
 		<- sc_node_norole_relation;;
 		=> nrel_main_idft:
@@ -191,6 +198,13 @@ subject_domain_of_sewage_sludge_treatment_facilities
 		=> nrel_main_idft:
 		[вид сгустителя]
 		(* <- lang_ru;; *);;
+	*);
+	nrel_compaction_duration_to_sludge_concentration
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idft:
+			[отношение длительности уплотенния к концентрации осадка]
+			(* <- lang_ru;; *);;
 	*);;
 
 

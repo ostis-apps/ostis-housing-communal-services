@@ -1,0 +1,93 @@
+concept_sludge_beds_with_settling_and_surface_sludge_water_drainage
+    => nrel_main_idft:
+        [иловая площадка с отстаиванием и поверхностным отводом иловой воды]
+        (* <- lang_ru;; *);
+    
+    <= nrel_sc_text_translation: ...
+    (*
+        <- concept_design_requirment;;
+            -> [напуски осадка: при четырех картах в каскаде – на две первые карты; при семи-восьми картах в каскаде – на три-четыре первые карты]
+                (* <- lang_ru;; *);;
+            -> [перепуски иловой воды между картами – в шахматном порядке]
+                (* <- lang_ru;; *);;
+    *);
+
+    -> param_sludge_bed_wsasswd_cascades_amount
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:
+            [количество каскадов иловой площадки с отстаиванием и поверхностным отводом иловой воды]
+            (* <- lang_ru;; *);;
+    *);
+
+    -> param_sludge_bed_wsasswd_cascade_map_amount
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:
+            [количество карт в каскаде иловой площадки с отстаиванием и поверхностным отводом иловой воды]
+            (* <- lang_ru;; *);;
+    *);
+
+    -> param_sludge_bed_wsasswd_map_usefull_area
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:
+            [полезная площадь карты иловой площадки с отстаиванием и поверхностным отводом иловой воды]
+            (* <- lang_ru;; *);;
+    *);
+
+    -> param_sludge_bed_wsasswd_terrain_slope
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:
+            [уклон местности иловой площадки с отстаиванием и поверхностным отводом иловой воды]
+            (* <- lang_ru;; *);;
+    *);
+
+    -> param_sludge_bed_wsasswd_map_width
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:
+            [ширина карты иловой площадки с отстаиванием и поверхностным отводом иловой воды]
+            (* <- lang_ru;; *);;
+    *);
+
+    -> param_sludge_bed_wsasswd_map_length
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:
+            [длина карты иловой площадки с отстаиванием и поверхностным отводом иловой воды]
+            (* <- lang_ru;; *);;
+    *);
+
+    -> param_sludge_bed_wsasswd_map_width_to_map_length
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:
+            [отношение длины и ширины карты иловой площадки с отстаиванием и поверхностным отводом иловой воды]
+            (* <- lang_ru;; *);;
+    *);
+
+    -> param_sludge_bed_wsasswd_protect_rollers_height_and_embankments_for_road
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:
+            [высота оградительных валиков и насыпей для дорог карты иловой площадки с отстаиванием и поверхностным отводом иловой воды]
+            (* <- lang_ru;; *);;
+    *);
+
+    -> param_sludge_bed_wsasswd_map_working_depth
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:
+            [рабочая глубина карты иловой площадки с отстаиванием и поверхностным отводом иловой воды]
+            (* <- lang_ru;; *);;
+    *);
+
+    -> param_sludge_bed_wsasswd_silt_water_amount
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:
+            [количество иловой воды иловой площадки с отстаиванием и поверхностным отводом иловой воды]
+            (* <- lang_ru;; *);;
+    *);;

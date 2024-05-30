@@ -14,7 +14,36 @@ concept_aerobic_stabilization
         <- concept_requirment;;
             -> [выбор метода аэробной стабилизации осадка следует производить в зависимости от количества образующегося осадка, энергопотребления, методов конечной утилизации]
                 (* <- lang_ru;; *);;
-            -> [Расход воздуха на аэробную стабилизацию следует принимать от 1 до 2 м^3 /ч на 1 м3 вместимости стабилизатора в зависимости от концентрации осадка соответственно от 99,5 % до 97,5 %. При этом интенсивность аэрации следует принимать не менее 6 м^3 /(м^2·ч)]
-                (* <- lang_ru;; *);;
     *);
-    -> concept_aeration_duration;;
+
+    -> param_aerobic_stabilization_aeration_duration
+    (*
+        <- sc_node_class;;
+        => nrel_main_idft:
+            [длительность аэрации при аэробной стабилизации]
+            (* <- lang_ru;; *);;
+    *);
+
+    -> param_aerobic_stabilization_air_flow
+    (*
+        <- sc_node_class;;
+        => nrel_main_idft:
+            [длительность аэрации при аэробной стабилизации]
+            (* <- lang_ru;; *);;
+    *);
+
+    -> param_aerobic_stabilization_sludge_concentration
+    (*
+        <- sc_node_class;;
+        => nrel_main_idft:
+            [концентрация осадка при аэробной стабилизации]
+            (* <- lang_ru;; *);;
+    *);
+
+    -> param_aerobic_stabilization_aeration_intensity
+    (*
+        <- sc_node_class;;
+        => nrel_main_idft:
+            [интенсивность аэрации при аэробной стабилизации]
+            (* <- lang_ru;; *);;
+    *);;

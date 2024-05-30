@@ -29,4 +29,12 @@ concept_sewage_sludge
 		(*
 			=> nrel_main_idft: [смесь осадка и активного уплотненного ила] (* <- lang_ru;; *);;
 		*)
-	};;
+	};
+
+	-> param_sewage_sludge_concentration
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idft:
+			[концентрация осадка сточных вод]
+			(* <- lang_ru;; *);;
+	*);;

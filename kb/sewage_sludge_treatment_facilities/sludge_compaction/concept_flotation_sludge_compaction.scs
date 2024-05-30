@@ -2,19 +2,51 @@ concept_flotation_sludge_compaction
 	=> nrel_main_idtf: 
 		[флотационное уплотнение]
 		(* <- lang_ru;; *);
-	<= nrel_sc_text_translation: ...
+
+	-> param_flotation_compaction_sludge_load
 	(*
-		<- concept_condition_for_calculating_structures (* <- sc_node_class;; *);;
-			-> [нагрузка по сухому веществу ила – от 3,0 до 10,0 кг/(м^2·ч)]
-				(* <- lang_ru;; *);;
-			-> [гидравлическая нагрузка – от 1,0 до 7,5 кг/(м^2 ·ч)]
-				(* <- lang_ru;; *);;
-			-> [продолжительность пребывания иловой смеси в напорном баке – от 2 до 4 мин]
-				(* <- lang_ru;; *);;
-			-> [концентрация уплотненного ила – от 4 % до 6 % по сухому веществу]
-				(* <- lang_ru;; *);;
-			-> [удельный расход воздуха – из расчета 5 дм3 воздуха на 1 кг сухого вещества ила]
-				(* <- lang_ru;; *);;
-			-> [соотношение расходов рабочей жидкости и иловой смеси – в пределах от 1,5:1,0 до 3,0:1,0]
-				(* <- lang_ru;; *);;
+		<- sc_node_class;;
+		=> nrel_main_idft:
+			[нагрузка по сухому веществу ила при флотационном уплотнении]
+			(* <- lang_ru;; *);;
+	*);
+
+	-> param_flotation_compaction_hydraulic_load
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idft:
+			[гидравлическая нагрузка при флотационном уплотнении]
+			(* <- lang_ru;; *);;
+	*);
+
+	-> param_sludge_residence_time_in_the_pressure_tank
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idft:
+			[родолжительность пребывания иловой смеси в напорном баке при флотационном уплотнении]
+			(* <- lang_ru;; *);;
+	*);
+
+	-> param_flotation_compaction_compacted_sludge_concentration
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idft:
+			[концентрация уплотненного ила при флотационном уплотнении]
+			(* <- lang_ru;; *);;
+	*);
+
+	-> param_flotation_compaction_unit_air_flow
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idft:
+			[удельный расход воздуха при флотационном уплотнении]
+			(* <- lang_ru;; *);;
+	*);
+
+	-> param_working_fluid_consumption_to_sludge_mixture
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idft:
+			[соотношение расходов рабочей жидкости и иловой смеси при флотационном уплотнении]
+			(* <- lang_ru;; *);;
 	*);;
