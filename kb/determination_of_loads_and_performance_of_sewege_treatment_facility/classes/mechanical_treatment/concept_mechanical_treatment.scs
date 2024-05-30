@@ -1,0 +1,10 @@
+concept_mechanical_treatment
+    <- sc_node_class;
+    => nrel_main_idtf:
+        [механическая очистка]
+        (* <- lang_ru;; *);
+
+    <= nrel_subdividing:
+    {
+        concept_mechanical_wastewater_treatment
+    };;

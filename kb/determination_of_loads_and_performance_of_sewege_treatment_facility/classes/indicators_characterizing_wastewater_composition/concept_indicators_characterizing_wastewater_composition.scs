@@ -1,0 +1,13 @@
+concept_indicators_characterizing_wastewater_composition
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[показатели, характеризующие состав сточных вод]
+    	(* <- lang_ru;; *);
+
+    <= nrel_subdividing:
+    {
+	concept_suspended_solids;
+        concept_nitrogen_compounds;
+        concept_phosphorus_compounds;
+        concept_temperature
+    };;

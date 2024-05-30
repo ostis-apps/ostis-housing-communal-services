@@ -1,0 +1,6 @@
+concept_concentration_of_pollutants_in_domestic_wastewater
+    => nrel_main_idtf:
+        [концентрация загрязняющих веществ в хозяйственно-бытовых сточных водах]
+        (* <- lang_ru;; *);
+    <-measurable_parameter;
+    <=sc_node_class;;
