@@ -1,0 +1,17 @@
+concept_wastewater_sorption_treatment
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[сорбционная очистки сточных вод]
+    	(* <- lang_ru;; *);
+
+    => nrel_used_in: 
+        concept_wastewater_sorption_treatment_facility;
+
+    <= nrel_sc_text_translation: ...
+	(*
+		<- concept_requirment (* <- sc_node_class;; *);;
+		    -> [следует применять углеродные сорбенты
+                (в том числе активированный уголь), минеральные (в том числе цеолиты) и органические
+                сорбенты в виде порошков, гранул и волокон]
+		    	(* <- lang_ru;; *);;
+	*);;

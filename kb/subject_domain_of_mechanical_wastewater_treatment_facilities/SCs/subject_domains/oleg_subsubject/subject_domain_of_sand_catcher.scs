@@ -1,0 +1,24 @@
+subject_domain_of_sand_catcher
+    <- subject_domain;
+    <- sc_node_struct;
+
+    -> rrel_maximum_studied_object_class:
+        concept_sand_catcher;
+    -> rrel_not_maximum_studied_object_class:
+        concept_shutter;
+        sand_pit_of_sand_catcher;
+        concept_aerated_sand_catcher;
+        concept_horizontal_sand_catcher;
+        concept_vertical_sand_catcher;
+        concept_tangential_sand_catcher;
+        concept_pipeline;
+        concept_facility_for_sand_processing;
+        concept_facility_for_sand_processing_by_dehydration_flushing;
+        concept_facility_for_sand_processing_by_dehydration;
+        concept_sand_flusher;
+        concept_sand_classificator;
+        concept_sand_platform;
+        concept_sand_storage_bunker;
+        concept_drainage_water;
+        concept_sand;;
+        

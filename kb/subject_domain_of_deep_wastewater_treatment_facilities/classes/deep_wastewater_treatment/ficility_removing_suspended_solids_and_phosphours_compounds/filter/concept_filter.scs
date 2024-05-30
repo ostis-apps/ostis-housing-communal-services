@@ -1,0 +1,12 @@
+concept_filter
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[фильтр]
+    	(* <- lang_ru;; *);
+
+    <= nrel_subdividing:
+    {
+		concept_single_layer_filter;
+        concept_double_layer_filter;
+        concept_backfill_filter
+    };;

@@ -1,0 +1,92 @@
+concept_sump
+    <- sc_node_class;
+    => nrel_main_idtf: [отстойник] (*<- lang_ru;;*);
+    =>nrel_whole_part:pit_of_sump;
+    <= nrel_subdividing:
+        {
+            concept_primary_sump;
+            concept_secondary_sump
+        };;
+
+concept_secondary_sump
+    <- sc_node_class;
+    => nrel_main_idtf: [вторичный отстойник] (*<- lang_ru;;*);;
+
+concept_primary_sump
+    <- sc_node_class;
+    => nrel_main_idtf: [первичный отстойник] (*<- lang_ru;;*);
+    <= nrel_subdividing:
+        {
+            concept_primary_sump_vertical;
+            concept_primary_sump_horizontal;
+            concept_primary_sump_radial;
+            concept_primary_sump_two_tier
+        };
+    =>nrel_whole_part:pit_of_primary_sump;
+    <= nrel_sc_text_translation: ...
+		(*
+		    <-explanation (*<- sc_node_class;;*);;
+		    ->[Тип первичного отстойника следует принимать с учетом технологической схемы очистки сточных вод
+                и обработки их осадка, производительности, очередности строительства, рельефа
+                площадки, геологических условий, уровня грунтовых вод.]
+			    (*
+			    <-lang_ru;;	
+			    => nrel_format: format_html;;
+			    *);;
+            ->[При применении на очистной станции анаэробного сбраживания для стабилизации осадка, как правило, следует
+                предусматривать использование первичных отстойников для осветления сточных вод.]
+			    (*
+			    <-lang_ru;;	
+			    => nrel_format: format_html;;
+			    *);;
+            ->[Концентрацию взвешенных веществ в сточной воде, подаваемой на сооружения
+                биологической очистки с удалением азота и фосфора, со стабилизацией ила, следует
+                определять в соответствии с технологическими требованиями процесса биологической очистки.]
+			    (*
+			    <-lang_ru;;	
+			    => nrel_format: format_html;;
+			    *);;
+		*);;
+
+concept_anaerobic_digestion
+    <- sc_node_class;
+    => nrel_main_idtf: [анаэробное сбраживание] (*<- lang_ru;;*);;
+
+pit_of_primary_sump
+    <- sc_node_class;
+    => nrel_main_idtf: [приямок первичного отстойника] (*<- lang_ru;;*);;
+
+concept_primary_sump_vertical
+    <- sc_node_class;
+    => nrel_main_idtf: [вертикальный отстойник] (*<- lang_ru;;*);
+    =>nrel_whole_part:pit_of_sump_vertical;
+    =>nrel_whole_part:central_pipe_of_sum_vertical;;
+
+concept_primary_sump_horizontal
+    <- sc_node_class;
+    => nrel_main_idtf: [горизонтальный отстойник] (*<- lang_ru;;*);
+    =>nrel_whole_part:pit_of_sump_horizontal;
+    <= nrel_sc_text_translation: ...
+	    (*
+	        <-concept_definition (*<- sc_node_class;;*);;
+	            ->[Отношение длины к ширине горизонтальных отстойников прямоугольной формы
+                    должно быть не менее 3:1.]
+	    	    (*<-lang_ru;;*);;
+	    *);;
+
+concept_primary_sump_radial
+    <- sc_node_class;
+    => nrel_main_idtf: [радиальный отстойник] (*<- lang_ru;;*);
+    =>nrel_whole_part:pit_of_sump_radial;
+    <= nrel_subdividing:
+        {
+            concept_primary_sump_vertical;
+            concept_primary_sump_horizontal;
+            concept_primary_sump_radial;
+            concept_primary_sump_two_tier
+        };;
+
+concept_primary_sump_two_tier
+    <- sc_node_class;
+    => nrel_main_idtf: [двухъярусный отстойник] (*<- lang_ru;;*);
+    =>nrel_whole_part:pit_of_sump_two_tier;;

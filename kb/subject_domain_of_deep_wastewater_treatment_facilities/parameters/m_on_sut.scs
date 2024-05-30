@@ -1,0 +1,11 @@
+param_m_on_sut
+	=> nrel_main_idtf:
+		[м/сут]
+		(* <- lang_ru;; *);
+	-> concept_exact_value
+	(* => nrel_main_idtf: [точная величина] (* <- lang_ru;; *);; *);
+	<= nrel_unit: ...
+	(*
+		-> concept_fixed_unit_measurement
+		(* => nrel_main_idtf: [измерение с фиксированной единицей измерения] (* <- lang_ru;; *);; *);;
+	*);;

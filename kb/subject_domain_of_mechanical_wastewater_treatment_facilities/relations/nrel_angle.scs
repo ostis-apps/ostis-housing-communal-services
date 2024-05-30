@@ -1,0 +1,14 @@
+nrel_angle
+    <- sc_node_norole_relation;
+    => nrel_main_idtf: [угол между] (* <- lang_ru;;*);
+    <= nrel_sc_text_translation: ...
+	(*
+	    <-concept_definition (*<- sc_node_class;;*);;
+	    ->[угол между двумя объектами]
+		    (*
+		    <-lang_ru;;
+		    => nrel_format: format_html;;
+		    *);;
+    *);
+    => nrel_first_domain:sc_node_class;
+    => nrel_second_domain:sc_node_class;;

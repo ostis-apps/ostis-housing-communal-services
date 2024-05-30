@@ -1,0 +1,15 @@
+concept_removed_substances
+    <- sc_node_class;
+            => nrel_main_idtf: [удаляемое вещество] 
+            (*
+                <- lang_ru;;
+            *);
+    <= nrel_sc_text_translation: ...
+    	(*
+    	    <-concept_definition (*<- sc_node_class;;*);;
+            ->[Те вещества, которые удаляются из сточной воды в сооружении очистки сточных вод]
+    		    (*
+    		    <-lang_ru;;
+    		    => nrel_format: format_html;;
+    		    *);;            
+        *);;

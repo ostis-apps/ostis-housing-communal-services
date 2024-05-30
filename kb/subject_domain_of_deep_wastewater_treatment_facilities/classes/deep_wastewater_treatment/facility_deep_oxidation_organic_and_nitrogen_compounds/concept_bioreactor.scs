@@ -1,0 +1,5 @@
+concept_bioreactor
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[биореактор]
+    	(* <- lang_ru;; *);;

@@ -1,0 +1,32 @@
+concept_grid_building
+    <- sc_node_class;
+            => nrel_main_idtf: [здание решеток очистных сооружений] 
+            (*
+                <- lang_ru;;
+            *);
+    <= nrel_sc_text_translation: ...
+    	(*
+    	    <-concept_definition (*<- sc_node_class;;*);;
+            ->[Пол здания решеток должен быть расположен не менее чем на 0,5 м выше
+                расчетного уровня сточной воды в каналах. Решетки следует устанавливать в каналах
+                перед песколовками. Следует предусматривать возможность перекрытия подводящих
+                и отводящих каналов для каждой решетки.]
+    		    (*
+    		    <-lang_ru;;
+    		    => nrel_format: format_html;;
+    		    *);;
+            ->[Потери напора в решетках следует принимать по данным производителей или
+                по расчету.]
+    		    (*
+    		    <-lang_ru;;
+    		    => nrel_format: format_html;;
+    		    *);;
+        *);
+    =>nrel_whole_part:
+        {
+            concept_support_equipment;
+            concept_lifting_equipment;
+            concept_press_equipment;
+            concept_grid;
+            concept_drum_grid
+        };;

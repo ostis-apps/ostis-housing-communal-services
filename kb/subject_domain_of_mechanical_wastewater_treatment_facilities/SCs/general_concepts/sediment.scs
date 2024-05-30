@@ -1,0 +1,3 @@
+concept_sediment
+    <- sc_node_class;
+    => nrel_main_idtf: [осадок] (* <- lang_ru;;*);;

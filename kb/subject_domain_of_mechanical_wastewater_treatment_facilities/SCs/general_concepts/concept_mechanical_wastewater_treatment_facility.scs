@@ -1,0 +1,23 @@
+concept_mechanical_wastewater_treatment_facility
+    <- sc_node_class;
+    => nrel_main_idtf: [сооружение механической очистки сточных вод] (* <- lang_ru;;*);
+    <= nrel_subdividing:
+        {
+            concept_wastewater_treatment_facility_by_straining;
+            concept_sand_catcher;
+            concept_wastewater_clarification_facility;
+            concept_sump;
+            concept_hydrocyclone;
+            concept_centrifuge
+        };
+    <= nrel_sc_text_translation: ...
+	    (*
+	        <-concept_definition (*<- sc_node_class;;*);;
+	            ->[Выбор сооружений механической очистки следует осуществлять на основании требуемой степени очистки, 
+                принимаемых методов обработки осадка, надежности действия и степени его влияния на последующие сооружения.]
+	    	    (*<-lang_ru;;*);;
+            <-concept_definition (*<- sc_node_class;;*);;
+	            ->[Расчет сооружений необходимо производить на максимальный часовой расход сточных вод.]
+	    	    (*<-lang_ru;;*);;
+	    *);
+    =>nrel_inclusion:concept_treatment_facility;;

@@ -1,0 +1,4 @@
+param_overload
+    <- sc_node_class;
+    => nrel_main_idtf: [перегрузка] (* <- lang_ru;;*);
+    <-measurable_parameter;;

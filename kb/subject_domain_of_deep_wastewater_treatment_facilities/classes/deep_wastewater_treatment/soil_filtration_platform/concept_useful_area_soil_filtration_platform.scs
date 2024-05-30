@@ -1,0 +1,19 @@
+concept_useful_area_soil_filtration_platform
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[полезная площадь фильтрационной площадки]
+    	(* <- lang_ru;; *);
+
+    <= nrel_sc_text_translation: ...
+	(*
+		<- concept_definition (* <- sc_node_class;; *);;
+		    -> [определяется
+                по среднесуточному расходу очищаемых сточных вод и гидравлической нагрузке,
+                определяемой на основании данных фильтрационных параметров грунтов оснований]
+		    	(* <- lang_ru;; *);;
+	*);
+
+    <= nrel_subdividing:
+    {
+		concept_reserve_useful_area_soil_filtration_platform
+    };;

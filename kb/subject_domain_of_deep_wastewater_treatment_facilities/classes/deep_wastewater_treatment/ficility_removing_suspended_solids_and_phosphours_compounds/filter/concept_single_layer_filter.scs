@@ -1,0 +1,5 @@
+concept_single_layer_filter
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[однослойный фильтр]
+    	(* <- lang_ru;; *);;

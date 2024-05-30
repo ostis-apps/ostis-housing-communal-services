@@ -1,0 +1,7 @@
+measurement_in_l_hum_year
+<- sc_node_norole_relation;
+    => nrel_main_idtf: [измерение в литрах на человек-год] (* <- lang_ru;;*);;
+
+concept_mm_l_hum_year
+<- sc_node_class;
+    => nrel_main_idtf: [л/(чел*год)] (* <- lang_ru;;*);;

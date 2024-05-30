@@ -1,0 +1,44 @@
+concept_wastewater_treatment_facility_by_straining
+	<- sc_node_class;
+	=> nrel_main_idtf: [сооружение для обработки сточных вод процеживанием] (*<- lang_ru;;*);
+
+	<= nrel_sc_text_translation: ...
+		(*
+		    <-concept_definition (*<- sc_node_class;;*);;
+		    ->[В составе станций очистки сточных вод следует предусматривать оборудование для задержания грубодисперсных примесей, в том числе <sc_element sys_idtf="concept_grid">решетки</sc_element>, 
+				<sc_element sys_idtf="concept_sieve">сита</sc_element>, <sc_element sys_idtf="concept_drum_grid">сетки</sc_element>, <sc_element sys_idtf="concept_strainer">процеживатели</sc_element>, <sc_element sys_idtf="concept_chopper">измельчители</sc_element>, 
+				за исключением случаев подачи сточных вод на станцию очистки с КНС, которые оснащены решетками с прозорами до 6 мм, с удалением задержанных отбросов.]
+			    (*
+			    <-lang_ru;;	
+			    => nrel_format: format_html;;
+			    *);;
+		    ->[Количество единиц оборудования для процеживания следует принимать
+				по данным производителей с учетом расчетного расхода сточных вод, при отсутствии
+				таких данных – по расчету требуемой площади рабочего сечения <sc_element sys_idtf="concept_grid">решетки</sc_element>.]
+			    (*
+			    <-lang_ru;;
+			    => nrel_format: format_html;;
+			    *);;
+		*);
+	<= nrel_subdividing:
+	    {
+			concept_working_wastewater_treatment_facility_by_straining;
+			concept_spare_wastewater_treatment_facility_by_straining
+		};
+	<= nrel_subdividing:
+        {
+            concept_grid;
+            concept_drum_grid;
+            concept_sieve;
+            concept_strainer;
+			concept_chopper
+        };
+	<=nrel_whole_part:concept_wastewater_treatment_station;;
+
+concept_working_wastewater_treatment_facility_by_straining
+	<- sc_node_class;
+	=> nrel_main_idtf: [рабочая единица оборудования для обработки сточных вод процеживанием] (*<- lang_ru;;*);;
+
+concept_spare_wastewater_treatment_facility_by_straining
+	<- sc_node_class;
+	=> nrel_main_idtf: [резервная единица оборудования для обработки сточных вод процеживанием] (*<- lang_ru;;*);;

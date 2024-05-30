@@ -1,0 +1,4 @@
+param_BPK5_reduction
+    <- sc_node_class;
+    => nrel_main_idtf: [снижение БПК5] (* <- lang_ru;;*);
+    <-measurable_parameter;;

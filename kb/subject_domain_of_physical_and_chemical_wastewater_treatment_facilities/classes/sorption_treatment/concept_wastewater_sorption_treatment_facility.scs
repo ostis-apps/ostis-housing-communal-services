@@ -1,0 +1,13 @@
+concept_wastewater_sorption_treatment_facility
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[сооружение сорбционной очистки сточных вод]
+    	(* <- lang_ru;; *);
+
+    <= nrel_sc_text_translation: ...
+	(*
+		<- concept_requirment (* <- sc_node_class;; *);;
+		    -> [следует предусматривать для удаления растворенных органических загрязняющих веществ и тяжелых
+                металлов]
+		    	(* <- lang_ru;; *);;
+	*);;

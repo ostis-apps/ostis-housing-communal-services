@@ -1,0 +1,4 @@
+param_air_change_rate
+<- sc_node_class;
+    => nrel_main_idtf: [кратность обмена воздуха] (* <- lang_ru;;*);
+    <-measurable_parameter;;

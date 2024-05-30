@@ -1,0 +1,5 @@
+concept_biopond
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[биологический пруд]
+    	(* <- lang_ru;; *);;

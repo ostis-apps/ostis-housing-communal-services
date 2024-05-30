@@ -1,0 +1,27 @@
+concept_concentration_pollutants_wastewater
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[концентрация загрязняющих веществ в сточных водах]
+    	(* <- lang_ru;; *);
+
+    <-measurable_parameter;
+
+    => nrel_used_in: 
+        concept_soil_filtration_platform;
+
+    -> concept_mg_on_dm_cubed;
+    <= nrel_sc_text_translation: ...
+	(*
+		<- concept_requirment (* <- sc_node_class;; *);;
+		    -> [20 – в среднем за инфильтрационный цикл]
+		    	(* <- lang_ru;; *);;
+        <- concept_requirment (* <- sc_node_class;; *);;
+		    -> [50 – в поступающих сточных водах в течение периода, не превышающего 3 сут]
+		    	(* <- lang_ru;; *);;
+        <- concept_requirment (* <- sc_node_class;; *);;
+		    -> [по БПК5 – 20]
+		    	(* <- lang_ru;; *);;
+        <- concept_requirment (* <- sc_node_class;; *);;
+		    -> [по общему железу – 3,0]
+		    	(* <- lang_ru;; *);;
+	*);;

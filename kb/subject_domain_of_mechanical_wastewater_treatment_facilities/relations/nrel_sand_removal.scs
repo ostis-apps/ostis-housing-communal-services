@@ -1,0 +1,21 @@
+nrel_sand_removal
+    <- sc_node_norole_relation;
+    => nrel_main_idtf: [удаление задержанного песка из песколовки] (*<- lang_ru;;*);
+    <= nrel_sc_text_translation: ...
+		(*
+		    <-concept_definition (*<- sc_node_class;;*);;
+		    ->[Выгрузку задержанного песка из песколовок необходимо производить не реже 1 раза
+                в сутки.]
+			    (*
+			    <-lang_ru;;
+			    => nrel_format: format_html;;
+			    *);;
+	    *);
+	<= nrel_subdividing:
+	{
+		nrel_sand_mechanical_removal;
+		nrel_sand_hydromechanical_removal;
+		nrel_sand_manual_removal
+	};
+    => nrel_first_domain:concept_sand_catcher;
+    => nrel_second_domain:concept_sand;;

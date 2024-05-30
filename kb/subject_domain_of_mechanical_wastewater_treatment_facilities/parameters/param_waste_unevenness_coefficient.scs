@@ -1,0 +1,4 @@
+param_waste_unevenness_coefficient
+<- sc_node_class;
+    => nrel_main_idtf: [коэффициент часовой неравномерности поступления отбросов] (* <- lang_ru;;*);
+    <-measurable_parameter;;

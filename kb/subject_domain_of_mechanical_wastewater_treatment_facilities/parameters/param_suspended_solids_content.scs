@@ -1,0 +1,5 @@
+param_suspended_solids_content
+    <- sc_node_class;
+    => nrel_main_idtf: [содержание взвешенных веществ] (* <- lang_ru;;*);
+    => nrel_main_idtf: [концентрация взвешенных веществ] (* <- lang_ru;;*);
+    <-measurable_parameter;;

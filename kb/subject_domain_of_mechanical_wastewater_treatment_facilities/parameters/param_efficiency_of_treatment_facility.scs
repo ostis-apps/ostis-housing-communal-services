@@ -1,0 +1,4 @@
+param_efficiency_of_treatment_facility
+    <- sc_node_class;
+    => nrel_main_idtf: [производительность очистного сооружения] (* <- lang_ru;;*);
+    <-measurable_parameter;;

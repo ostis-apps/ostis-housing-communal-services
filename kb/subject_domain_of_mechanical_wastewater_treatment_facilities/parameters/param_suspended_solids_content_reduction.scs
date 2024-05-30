@@ -1,0 +1,4 @@
+param_suspended_solids_content_reduction
+    <- sc_node_class;
+    => nrel_main_idtf: [снижение содержания взвешенных веществ] (* <- lang_ru;;*);
+    <-measurable_parameter;;

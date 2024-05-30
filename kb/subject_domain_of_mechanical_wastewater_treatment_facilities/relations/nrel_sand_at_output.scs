@@ -1,0 +1,14 @@
+nrel_sand_at_output
+    <- sc_node_norole_relation;
+    => nrel_main_idtf: [песок на выходе] (* <- lang_ru;;*);
+    <= nrel_sc_text_translation: ...
+	(*
+	    <-concept_definition (*<- sc_node_class;;*);;
+	    ->[песок, который задерживается на песколовках]
+		    (*
+		    <-lang_ru;;
+		    => nrel_format: format_html;;
+		    *);;
+    *);
+    => nrel_first_domain:concept_sand_catcher;
+    => nrel_second_domain:concept_sand;;

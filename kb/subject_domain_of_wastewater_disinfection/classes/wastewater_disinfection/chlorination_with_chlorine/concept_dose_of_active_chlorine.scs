@@ -1,0 +1,25 @@
+concept_dose_of_active_chlorine
+    <- sc_node_class;
+    => nrel_main_idtf:
+        [доза активного хлора]
+        (* <- lang_ru;; *);
+    <-measurable_parameter;
+
+    => nrel_used_in: 
+        concept_chlorination_with_chlorine;
+
+    -> concept_mg_on_dm_cubed;
+    <= nrel_sc_text_translation: ...
+	(*
+        <- concept_requirment (* <- sc_node_class;; *);;
+		    -> [проектирование хлорного хозяйства и электролизных установок следует 
+            производить в соответствии с требованиями ТНПА по проектированию сооружений водоподготовки]
+		    	(* <- lang_ru;; *);;
+
+		<- concept_requirment_for_value (* <- sc_node_class;; *);;
+		    -> [значение 10 после механической очистки]
+		    	(* <- lang_ru;; *);;
+			-> [значение 3 после биологической, физико-химической и глубокой очистки]
+		    	(* <- lang_ru;; *);;
+        
+	*);;

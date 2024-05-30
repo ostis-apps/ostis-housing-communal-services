@@ -1,0 +1,4 @@
+param_density
+<- sc_node_class;
+    => nrel_main_idtf: [плотность] (* <- lang_ru;;*);
+    <-measurable_parameter;;

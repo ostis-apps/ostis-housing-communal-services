@@ -1,0 +1,26 @@
+concept_wastewater_treatment_efficiency
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[эффективность очистки сточных вод]
+    	(* <- lang_ru;; *);
+
+    <-measurable_parameter;
+
+    => nrel_used_in: 
+        concept_soil_filtration_platform;
+
+    <= nrel_sc_text_translation: ...
+	(*
+		<- concept_requirment (* <- sc_node_class;; *);;
+		    -> [снижение содержания органических веществ по БПК5 – до 90 %]
+		    	(* <- lang_ru;; *);;
+        <- concept_requirment (* <- sc_node_class;; *);;
+		    -> [снижение концентрации взвешенных веществ – до 3 мг/дм3]
+		    	(* <- lang_ru;; *);;
+        <- concept_requirment (* <- sc_node_class;; *);;
+		    -> [снижение содержания ПАВ – до 60 %]
+		    	(* <- lang_ru;; *);;
+        <- concept_requirment (* <- sc_node_class;; *);;
+		    -> [– снижение содержания нефтепродуктов – до 90 %]
+		    	(* <- lang_ru;; *);;
+	*);;

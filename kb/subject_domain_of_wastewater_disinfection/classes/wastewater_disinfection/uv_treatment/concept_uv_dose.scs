@@ -1,0 +1,17 @@
+concept_uv_dose
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[доза ультрафиолетового облучения]
+    	(* <- lang_ru;; *);
+	<-measurable_parameter;
+
+	=> nrel_used_in: 
+        concept_uv_treatment;
+	
+    <= nrel_sc_text_translation: ...
+	(*
+		<- concept_requirment (* <- sc_node_class;; *);;
+		    -> [следует устанавливать исходя из параметров обрабатываемой 
+				сточной воды, но должна составлять не менее 30]
+		    	(* <- lang_ru;; *);;	
+	*);;

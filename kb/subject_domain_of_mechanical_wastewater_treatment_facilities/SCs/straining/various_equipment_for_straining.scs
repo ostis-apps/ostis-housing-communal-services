@@ -1,0 +1,45 @@
+concept_support_equipment
+	<- sc_node_class;
+	=> nrel_main_idtf: [вспомогательное оборудование] (* <- lang_ru;;*);;
+
+concept_lifting_equipment
+	<- sc_node_class;
+	=> nrel_main_idtf: [грузоподъемное оборудование] (* <- lang_ru;;*);
+	<= nrel_sc_text_translation: ...
+		(*
+		    <-concept_definition (*<- sc_node_class;;*);;
+		        ->[Для перемещения контейнеров подъемно-транспортное оборудование должно быть
+	            оснащено электроприводом.]
+			    (*<-lang_ru;;*);;
+		*);;
+
+concept_press_equipment
+	<- sc_node_class;
+	=> nrel_main_idtf: [оборудование для механического уплотнения] (* <- lang_ru;;*);
+	<= nrel_sc_text_translation: ...
+		(*
+		    <-concept_definition (*<- sc_node_class;;*);;
+		        ->[Предназначены для предварительного отжима задержанных отбросов и их уплотнения]
+			    (*<-lang_ru;;*);;
+		*);
+	<= nrel_subdividing:
+	    {
+	        concept_plunger_press;
+	        concept_screw_press
+	    };;
+
+concept_plunger_press
+	<- sc_node_class;
+	=> nrel_main_idtf: [поршневой пресс] (* <- lang_ru;;*);;
+
+concept_screw_press
+	<- sc_node_class;
+	=> nrel_main_idtf: [шнековый пресс] (* <- lang_ru;;*);;
+
+concept_supply_dust
+	<- sc_node_class;
+	=> nrel_main_idtf: [подводящий канал для вод] (* <- lang_ru;;*);;
+
+concept_exhaust_dust
+	<- sc_node_class;
+	=> nrel_main_idtf: [отводящий канал для вод] (* <- lang_ru;;*);;

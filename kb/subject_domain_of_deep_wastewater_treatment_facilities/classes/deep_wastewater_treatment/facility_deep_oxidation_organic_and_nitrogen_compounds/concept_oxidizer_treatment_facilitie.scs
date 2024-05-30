@@ -1,0 +1,5 @@
+concept_oxidizer_treatment_facilitie
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[установка обработки окислителями]
+    	(* <- lang_ru;; *);;

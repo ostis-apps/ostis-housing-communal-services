@@ -1,0 +1,5 @@
+concept_wastewater_oxygenation_plant
+    <- sc_node_class;
+    => nrel_main_idtf:
+    	[сооружение для насыщения сточных вод кислородом]
+    	(* <- lang_ru;; *);;
