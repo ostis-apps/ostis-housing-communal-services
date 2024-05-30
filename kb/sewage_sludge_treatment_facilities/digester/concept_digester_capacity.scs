@@ -1,5 +1,5 @@
 concept_digester_capacity
-    => nrel_main_idft:
+    => nrel_main_idtf:
         [вместимость метантенка]
         (* <- lang_ru;; *);
     <- concept_measurable_parameter;

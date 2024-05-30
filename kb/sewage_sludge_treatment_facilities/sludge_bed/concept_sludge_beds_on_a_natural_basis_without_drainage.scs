@@ -1,5 +1,5 @@
 concept_sludge_beds_on_a_natural_basis_without_drainage
-    => nrel_main_idft:
+    => nrel_main_idtf:
         [иловые площадки на естественном основании без дренажа]
         (* <- lang_ru;; *);
     <= nrel_sc_text_translation: ...

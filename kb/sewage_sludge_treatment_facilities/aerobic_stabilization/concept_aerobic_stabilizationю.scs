@@ -19,7 +19,7 @@ concept_aerobic_stabilization
     -> param_aerobic_stabilization_aeration_duration
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [длительность аэрации при аэробной стабилизации]
             (* <- lang_ru;; *);;
     *);
@@ -27,7 +27,7 @@ concept_aerobic_stabilization
     -> param_aerobic_stabilization_air_flow
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [длительность аэрации при аэробной стабилизации]
             (* <- lang_ru;; *);;
     *);
@@ -35,7 +35,7 @@ concept_aerobic_stabilization
     -> param_aerobic_stabilization_sludge_concentration
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [концентрация осадка при аэробной стабилизации]
             (* <- lang_ru;; *);;
     *);
@@ -43,7 +43,7 @@ concept_aerobic_stabilization
     -> param_aerobic_stabilization_aeration_intensity
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [интенсивность аэрации при аэробной стабилизации]
             (* <- lang_ru;; *);;
     *);;

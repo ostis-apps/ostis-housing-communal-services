@@ -1,5 +1,5 @@
 concept_facilities_for_thermal_treatment_of_sludge_design
-    => nrel_main_idft:
+    => nrel_main_idtf:
         [проектирование сооружений для термической обработки осадка]
         (* <- lang_ru;; *);
     

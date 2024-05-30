@@ -10,10 +10,22 @@ concept_nonionic_flocculant
 	*);
 	<= nrel_subdividing:
 	{
-		concept_polyvinyl_alcohol
-		(* => nrel_main_idtf: [поливиниловый спирт] (* <- lang_ru;; *);; *);
-		concept_polyoxyethylene
-		(* => nrel_main_idtf: [полиоксиэтилен] (* <- lang_ru;; *);; *);
+		concept_polyvinyl_alcohol;
+		concept_polyoxyethylene;
 		concept_polyacrylamide
-		(* => nrel_main_idtf: [полиакриламид] (* <- lang_ru;; *);; *)
 	};;
+
+concept_polyvinyl_alcohol
+	=> nrel_main_idtf: 
+		[поливиниловый спирт] 
+		(* <- lang_ru;; *);;
+
+concept_polyoxyethylene
+	=> nrel_main_idtf: 
+		[полиоксиэтилен] 
+		(* <- lang_ru;; *);;
+
+concept_polyacrylamide
+	=> nrel_main_idtf: 
+		[полиакриламид] 
+		(* <- lang_ru;; *);;

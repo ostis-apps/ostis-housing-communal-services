@@ -10,5 +10,9 @@ concept_gas_holder
     {
         concept_dymanic_volume_gas_holder;
         concept_static_volume_gas_holder
-        (* => nrel_main_idft: [газгольдер постоянного объёма] (* <- lang_ru;; *);; *)
     };;
+
+concept_static_volume_gas_holder
+    => nrel_main_idft: 
+        [газгольдер постоянного объёма] 
+        (* <- lang_ru;; *);;

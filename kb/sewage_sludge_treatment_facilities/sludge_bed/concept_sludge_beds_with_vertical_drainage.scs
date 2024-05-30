@@ -1,5 +1,5 @@
 concept_sludge_beds_with_vertical_drainage
-    => nrel_main_idft:
+    => nrel_main_idtf:
         [иловая площадка с вертикальным дренажем]
         (* <- lang_ru;; *);
 
@@ -15,7 +15,7 @@ concept_sludge_beds_with_vertical_drainage
     -> param_sludge_bed_with_vertical_drainage_distance_between_wells
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [расстояние между дренажными вертикальными колодцами иловой площадки с вертикальным дренажем]
             (* <- lang_ru;; *);;
     *);
@@ -23,7 +23,7 @@ concept_sludge_beds_with_vertical_drainage
     -> param_sludge_bed_with_vertical_drainage_vertical_wells_height
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [высота дренажных вертикальных колодцев иловой площадки с вертикальным дренажем]
             (* <- lang_ru;; *);;
     *);
@@ -31,7 +31,7 @@ concept_sludge_beds_with_vertical_drainage
     -> param_sludge_bed_with_vertical_drainage_barrier_roller_and_etc_height
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [высота оградительных валиков и насыпей для дорог иловой площадки с вертикальным дренажем]
             (* <- lang_ru;; *);;
     *);
@@ -39,7 +39,7 @@ concept_sludge_beds_with_vertical_drainage
     -> param_sludge_bed_with_vertical_drainage_working_depth
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [рабочая глубина иловой площадки с вертикальным дренажем]
             (* <- lang_ru;; *);;
     *);
@@ -47,7 +47,7 @@ concept_sludge_beds_with_vertical_drainage
     -> param_sludge_bed_with_vertical_drainage_filter_media_grain_diameter
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [диаметр зерен фильтрующей загрузки иловой площадки с вертикальным дренажем]
             (* <- lang_ru;; *);;
     *);
@@ -55,7 +55,7 @@ concept_sludge_beds_with_vertical_drainage
     -> param_sludge_bed_with_vertical_drainage_filter_media_layer_width
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [ширина слоя фильтрующей загрузки у стенки колодца иловой площадки с вертикальным дренажем]
             (* <- lang_ru;; *);;
     *);;

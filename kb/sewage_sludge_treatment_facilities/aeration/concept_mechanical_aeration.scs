@@ -1,5 +1,5 @@
 concept_mechanical_aeration
-    => nrel_main_idft:
+    => nrel_main_idtf:
         [механическая аэрация]
         (* <- lang_ru;; *);
     => nrel_idtf:

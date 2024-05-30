@@ -1,5 +1,5 @@
 concept_sludge_compaction_bed
-    => nrel_main_idft:
+    => nrel_main_idtf:
         [иловая площадка-уплотнитель]
         (* <- lang_ru;; *);
     
@@ -15,7 +15,7 @@ concept_sludge_compaction_bed
     -> param_sludge_compaction_bed_map_width
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [ширина карт иловой площадки-уплотнителя]
             (* <- lang_ru;; *);;
     *);
@@ -23,7 +23,7 @@ concept_sludge_compaction_bed
     -> param_sludge_compaction_bed_distance_between_sludge_water_outlets
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [расстояние между выпусками иловой воды иловой площадки-уплотнителя]
             (* <- lang_ru;; *);;
     *);
@@ -31,7 +31,7 @@ concept_sludge_compaction_bed
     -> param_sludge_compaction_bed_working_depth
     (*
         <- sc_node_class;;
-        => nrel_main_idft:
+        => nrel_main_idtf:
             [рабочая глубиная иловой площадки-уплотнителя]
             (* <- lang_ru;; *);;
     *);;

@@ -1,5 +1,5 @@
 concept_sewage_treatment_facility_for_a_private_home
-	=> nrel_main_idft:
+	=> nrel_main_idtf:
 		[очистные сооружения для частного дома]
 		(* <- lang_ru;; *);
 	<= nrel_sc_text_translation: ...

@@ -22,22 +22,15 @@ concept_seal
 	<= nrel_subdividing:
 	{
 		concept_gravity_seal;
-		concept_flotation_seal
-		(* => nrel_main_idtf: [флотационный уплотнитель] (* <- lang_ru;; *);; *);
-		concept_mechanical_seal
-		(* => nrel_main_idtf: [механический уплотнитель] (* <- lang_ru;; *);; *);
+		concept_flotation_seal;
+		concept_mechanical_seal;
 		concept_radial_seal;
-		concept_drum_seal
-		(* => nrel_main_idtf: [барабанный уплотнитель] (* <- lang_ru;; *);; *);
-		concept_disc_seal
-		(* => nrel_main_idtf: [дисковый уплотнитель] (* <- lang_ru;; *);; *);
-		concept_screw_seal
-		(* => nrel_main_idtf: [шнековый уплотнитель] (* <- lang_ru;; *);; *);
+		concept_drum_seal;
+		concept_disc_seal;
+		concept_screw_seal;
 		concept_tape_seal
-		(* => nrel_main_idtf: [ленточный уплотнитель] (* <- lang_ru;; *);; *)
 	};
-	-> concept_design_of_radial_and_gravity_seals;
-	-> concept_sludge_dry_matter_load;
+	
 	-> concept_moisture_content_of_sludge_after_compaction;
 	
 	-> param_compaction_duration
@@ -79,3 +72,33 @@ concept_seal
 			[влажность осадка после уплотнения]
 			(* <- lang_ru;; *);;
 	*);;
+
+concept_flotation_seal
+	=> nrel_main_idtf: 
+		[флотационный уплотнитель] 
+		(* <- lang_ru;; *);;
+
+concept_mechanical_seal
+	=> nrel_main_idtf: 
+		[механический уплотнитель] 
+		(* <- lang_ru;; *);;
+
+concept_drum_seal
+	=> nrel_main_idtf: 
+		[барабанный уплотнитель] 
+		(* <- lang_ru;; *);;
+
+concept_disc_seal
+	=> nrel_main_idtf: 
+		[дисковый уплотнитель] 
+		(* <- lang_ru;; *);;
+
+concept_screw_seal
+	=> nrel_main_idtf: 
+		[шнековый уплотнитель] 
+		(* <- lang_ru;; *);;
+
+concept_tape_seal
+	=> nrel_main_idtf: 
+		[ленточный уплотнитель] 
+		(* <- lang_ru;; *);;

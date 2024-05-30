@@ -6,7 +6,7 @@ concept_flotation_sludge_compaction
 	-> param_flotation_compaction_sludge_load
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft:
+		=> nrel_main_idtf:
 			[нагрузка по сухому веществу ила при флотационном уплотнении]
 			(* <- lang_ru;; *);;
 	*);
@@ -14,7 +14,7 @@ concept_flotation_sludge_compaction
 	-> param_flotation_compaction_hydraulic_load
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft:
+		=> nrel_main_idtf:
 			[гидравлическая нагрузка при флотационном уплотнении]
 			(* <- lang_ru;; *);;
 	*);
@@ -22,7 +22,7 @@ concept_flotation_sludge_compaction
 	-> param_sludge_residence_time_in_the_pressure_tank
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft:
+		=> nrel_main_idtf:
 			[родолжительность пребывания иловой смеси в напорном баке при флотационном уплотнении]
 			(* <- lang_ru;; *);;
 	*);
@@ -30,7 +30,7 @@ concept_flotation_sludge_compaction
 	-> param_flotation_compaction_compacted_sludge_concentration
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft:
+		=> nrel_main_idtf:
 			[концентрация уплотненного ила при флотационном уплотнении]
 			(* <- lang_ru;; *);;
 	*);
@@ -38,7 +38,7 @@ concept_flotation_sludge_compaction
 	-> param_flotation_compaction_unit_air_flow
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft:
+		=> nrel_main_idtf:
 			[удельный расход воздуха при флотационном уплотнении]
 			(* <- lang_ru;; *);;
 	*);
@@ -46,7 +46,7 @@ concept_flotation_sludge_compaction
 	-> param_working_fluid_consumption_to_sludge_mixture
 	(*
 		<- sc_node_class;;
-		=> nrel_main_idft:
+		=> nrel_main_idtf:
 			[соотношение расходов рабочей жидкости и иловой смеси при флотационном уплотнении]
 			(* <- lang_ru;; *);;
 	*);;
