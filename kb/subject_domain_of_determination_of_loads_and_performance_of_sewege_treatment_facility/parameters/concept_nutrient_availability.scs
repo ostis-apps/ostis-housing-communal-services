@@ -1,0 +1,6 @@
+concept_nutrient_availability
+    => nrel_main_idtf:
+        [наличие биогенных элементов]
+        (* <- lang_ru;; *);
+    <-measurable_parameter;
+    <- sc_node_class;;

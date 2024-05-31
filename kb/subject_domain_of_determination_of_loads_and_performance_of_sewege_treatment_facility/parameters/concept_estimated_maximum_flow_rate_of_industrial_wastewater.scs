@@ -1,0 +1,16 @@
+concept_estimated_maximum_flow_rate_of_industrial_wastewater
+    => nrel_main_idtf:
+        [расчетный максимальный расход производственных сточных вод]
+        (* <- lang_ru;; *);
+    <-measurable_parameter;
+
+    <= nrel_sc_text_translation: ...
+    (*
+        <- concept_requirment (* <- sc_node_class;; *);;
+
+            -> [следует определять с учётом коэффициента неравномерности притока производственных сточных вод,
+                определяемого на основе технологических данных]
+                (* <- lang_ru;; *);;
+    *);
+    
+    <=sc_node_class;;

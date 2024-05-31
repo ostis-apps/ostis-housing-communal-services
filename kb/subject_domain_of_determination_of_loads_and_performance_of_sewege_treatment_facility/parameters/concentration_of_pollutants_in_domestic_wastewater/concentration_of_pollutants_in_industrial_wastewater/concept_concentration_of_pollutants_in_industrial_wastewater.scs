@@ -1,0 +1,6 @@
+concept_concentration_of_pollutants_in_industrial_wastewater
+    => nrel_main_idtf:
+        [концентрация загрязняющих веществ в производственных сточных водах]
+        (* <- lang_ru;; *);
+    <-measurable_parameter;
+    <- sc_node_class;;

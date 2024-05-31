@@ -1,0 +1,14 @@
+concept_average_daily_consumption_of_industrial_wastewater
+    <- sc_node_class;
+    => nrel_main_idtf:
+        [среднесуточный расход производственных сточных вод]
+        (* <- lang_ru;; *);
+    <-measurable_parameter;
+
+    <= nrel_sc_text_translation: ...
+    (*
+        <- concept_requirment (* <- sc_node_class;; *);;
+
+            -> [следует определять на основании технологических данных конкретного предприятия либо объектах-аналогах]
+                (* <- lang_ru;; *);;
+    *);;

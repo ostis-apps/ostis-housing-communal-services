@@ -1,0 +1,14 @@
+concept_concentration_of_pollutants_in_domestic_wastewater
+    => nrel_main_idtf:
+        [концентрация загрязняющих веществ в хозяйственно-бытовых сточных водах]
+        (* <- lang_ru;; *);
+    <-measurable_parameter;
+    <= nrel_sc_text_translation: ...
+    (*
+        <- concept_requirment (* <- sc_node_class;; *);;
+
+            -> [концентрацию загрязняющих веществ в хозяйственно-бытовых сточных водах следует определять исходя из
+                количества загрязняющих веществ, вносимых одним человеком в сточные воды и удельного водопотребления]
+                (* <- lang_ru;; *);;
+    *);
+    <- sc_node_class;;

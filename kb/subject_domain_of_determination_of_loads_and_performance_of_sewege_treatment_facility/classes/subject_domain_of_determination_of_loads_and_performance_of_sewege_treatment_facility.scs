@@ -14,7 +14,7 @@ subject_domain_of_determination_of_loads_and_performance_of_sewege_treatment_fac
 		
 	-> rrel_not_maximum_studied_object_class:
     
-        concept_treatment_facility;
+        	concept_treatment_facility;
 		concept_wastewater;
 		concept_industrial_wastewater;
 		concept_domestic_wastewater;
@@ -29,7 +29,7 @@ subject_domain_of_determination_of_loads_and_performance_of_sewege_treatment_fac
 		concept_combined_biological_treatment_of_domestic_wastewater;
 		concept_treatment_facility_site;
 		concept_design_of_treatment_facility;
-       	concept_reconstruction_of_existing_treatment_facilities;
+       		concept_reconstruction_of_existing_treatment_facilities;
 		concept_wastewater_composition_indicators;
 		concept_average_daily_consumption_of_industrial_wastewater;
 		concept_estimated_wastewater_flow_rate;
