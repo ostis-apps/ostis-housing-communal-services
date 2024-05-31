@@ -1,0 +1,6 @@
+concept_total_content_of_organic_pollutants_in_water
+    => nrel_main_idtf:
+        [суммарное содержание в воде органических загрязняющих веществ]
+        (* <- lang_ru;; *);
+    <-measurable_parameter;
+    <- sc_node_class;;

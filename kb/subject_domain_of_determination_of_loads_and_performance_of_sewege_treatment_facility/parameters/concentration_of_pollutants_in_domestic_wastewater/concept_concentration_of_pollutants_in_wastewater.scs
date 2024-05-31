@@ -1,0 +1,20 @@
+concept_concentration_of_pollutants_in_wastewater
+    => nrel_main_idtf:
+        [концентрация загрязняющих веществ в сточных водах]
+        (* <- lang_ru;; *);
+    <-measurable_parameter;
+    <= nrel_subdividing:
+    {
+        concept_concentration_of_pollutants_in_domestic_wastewater;
+        concept_concentration_of_pollutants_in_industrial_wastewater
+    };
+    
+    <= nrel_sc_text_translation: ...
+    (*
+        <- concept_requirment (* <- sc_node_class;; *);;
+
+            -> [концентрацию загрязняющих веществ в сточных водах следует определять исходя из
+                содержания загрязняющих веществ в указанных видах сточных вод с учетом перемешивания]
+                (* <- lang_ru;; *);;
+    *);
+    <- sc_node_class;;
