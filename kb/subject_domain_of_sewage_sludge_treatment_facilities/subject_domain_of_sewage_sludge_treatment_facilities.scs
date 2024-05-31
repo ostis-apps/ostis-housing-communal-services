@@ -1,0 +1,210 @@
+subject_domain_of_sewage_sludge_treatment_facilities
+    => nrel_main_idtf:
+	[Предметная область сооружений для обработки осадков сточных вод]
+	(* <- lang_ru;; *);
+	<- subject_domain;
+	<- sc_node_struct;
+	
+    -> rrel_maximum_studied_object_class:
+	concept_sewage_sludge_treatment_facility
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:
+		[сооружение для обработки осадков сточных вод]
+		(* <- lang_ru;; *);;
+	*);
+    
+    -> rrel_not_maximum_studied_object_class:
+	concept_treatment_facility
+ 	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:
+		[очистное сооружение]
+		(* <- lang_ru;; *);;
+	*);
+	concept_sewage_sludge
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:
+		[осадок сточных вод]
+		(* <- lang_ru;; *);;
+	*);
+	concept_seal
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:
+		[уплотнитель]
+		(* <- lang_ru;; *);;
+	*);
+	concept_sludge_compaction
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:
+		[уплотнение осадка]
+		(* <- lang_ru;; *);;
+	*);
+	concept_thickener
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:
+		[сгуститель]
+		(* <- lang_ru;; *);;
+	*);
+	concept_sludge_thickening
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:
+		[сгущение осадка]
+		(* <- lang_ru;; *);;
+	*);
+	concept_flocculant
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:
+		[флокулянт]
+		(* <- lang_ru;; *);;
+	*);
+	concept_digester
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:
+		[метантенк]
+		(* <- lang_ru;; *);;
+	*);
+	concept_sludge_digestion
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:
+		[сбраживание осадков]
+		(* <- lang_ru;; *);;
+	*);
+	concept_biogas
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:
+		[биогаз]
+		(* <- lang_ru;; *);;
+	*);
+	concept_gas_holder
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:
+		[газгольдер]
+		(* <- lang_ru;; *);;
+	*);
+	concept_aerobic_stabilization
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:
+		[аэробная стабилизация]
+		(* <- lang_ru;; *);;
+	*);
+	concept_aeration
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:
+		[аэрация]
+		(* <- lang_ru;; *);;
+	*);
+	concept_sludge_dewatering
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:
+		[обезвоживание осадков]
+		(* <- lang_ru;; *);;
+	*);
+	concept_sludge_bed
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:
+		[иловая площадка]
+		(* <- lang_ru;; *);;
+	*);
+	concept_sludge_disinfection
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:
+		[обеззараживание осадка]
+		(* <- lang_ru;; *);;
+	*);
+	concept_sludge_composting
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:
+		[компостирование осадка]
+		(* <- lang_ru;; *);;
+	*);
+	concept_sludge_heat_treatment
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:
+		[термическая обработка осадка]
+		(* <- lang_ru;; *);;
+	*);
+	concept_sludge_thermal_drying
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:
+		[термическая сушка осадка]
+		(* <- lang_ru;; *);;
+	*);
+	param_temperature
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:
+		[температура]
+		(* <- lang_ru;; *);;
+	*);
+
+    -> rrel_explored_relation:
+	nrel_compaction_method
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:
+		[метод уплотнения]
+		(* <- lang_ru;; *);;
+	*);
+	nrel_thickening_method
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:
+		[метод сгущения]
+		(* <- lang_ru;; *);;
+	*);
+	nrel_disinfection_method
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:
+		[метод обеззараживания]
+		(* <- lang_ru;; *);;
+	*);
+	nrel_fermentation_method
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:
+		[метод сбраживания]
+		(* <- lang_ru;; *);;
+	*);
+	nrel_type_of_seal
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:
+		[вид уплотнителя]
+		(* <- lang_ru;; *);;
+	*);
+	nrel_type_of_thickener
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:
+		[вид сгустителя]
+		(* <- lang_ru;; *);;
+	*);
+	nrel_compaction_duration_to_sludge_concentration
+	(*
+		<- sc_node_norole_relation;;
+		=> nrel_main_idtf:
+			[отношение длительности уплотенния к концентрации осадка]
+			(* <- lang_ru;; *);;
+	*);;
+
+
