@@ -1,239 +1,524 @@
 subject_domain_of_biological_wastewater_treatment_facility
 => nrel_main_idtf:
-    [Предметная область сооружений биологической очистки сточных вод](* <- lang_ru;;*);
+	[Предметная область сооружений биологической очистки сточных вод] (* <- lang_ru;; *);
 	<- subject_domain;
-	<- sc_node_struct;
+	<- sc_node_structure;
 
 => nrel_private_subject_domain:
-	subject_domain_of_biological_filters;
-	subject_domain_of_low_capacity_biological_wastewater_treatment_facilities
-	(*
-		<- sc_node_class;;
-		=> nrel_main_idtf:[Предметная область сооружений биологической очистки сточных вод малой производительности](* <- lang_ru;; *);;
+	subject_domain_of_biological_filters (*
+		=> nrel_main_idtf:[Предметная область биофильтров](* <- lang_ru;; *);;
 	*);
-	subject_domain_of_facilities_for_biological_treatment_in_activated_sludge_systems;
-	subject_domain_of_biological_ponds;
-	subject_domain_of_secondary_settling_tanks;
+	subject_domain_of_facilities_for_biological_treatment_in_activated_sludge_systems (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[Предметная область сооружений биологической очистки с активным илом](* <- lang_ru;; *);;
+	*);
+	subject_domain_of_secondary_settling_tanks (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[Предметная область вторичных отстойников](* <- lang_ru;; *);;
+	*);
+	subject_domain_of_facilities_for_treatment_in_natural_conditions (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[Предметная область сооружений очистки в естественных условиях](* <- lang_ru;; *);;
+	*);
+	subject_domain_of_biological_ponds (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[Предметная область биологических прудов](* <- lang_ru;; *);;
+	*);
+	subject_domain_of_factory_made_biological_treatment_facilities (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[Предметная область сооружений биологической очистки заводского изготовления](* <- lang_ru;; *);;
+	*);
 
 -> rrel_maximum_studied_object_class:
-	concept_biological_wastewater_treatment_facility 
-	(*
+	concept_biological_wastewater_treatment_facility (*
 		<- sc_node_class;;
 		=> nrel_main_idtf:[сооружение биологической очистки сточных вод](* <- lang_ru;; *);;
 	*);
 
 -> rrel_not_maximum_studied_object_class:
-    	concept_biological_filter;
-	concept_degree_of_purification 
-	(*
+	concept_biological_treatment_facility (*
 		<- sc_node_class;;
-		=> nrel_main_idtf:[степень очистки](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[сооружения биологической очистки](* <- lang_ru;; *);;
 	*);
-	concept_BOC5 
-	(*
+	concept_trickling_filter (*
 		<- sc_node_class;;
-		=> nrel_main_idtf:[БПК5](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[биофильтры](* <- lang_ru;; *);;
 	*);
-	concept_hydraulic_load 
-	(*
+	concept_activated_sludge_facility (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[сооружения биологической очистки активным илом](* <- lang_ru;; *);;
+	*);
+	concept_secondary_settling_tank (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[вторичные отстойники](* <- lang_ru;; *);;
+	*);
+	concept_factory_made_biological_treatment_facility (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[сооружения биологической очистки заводского изготовления](* <- lang_ru;; *);;
+	*);
+	concept_filtration_facility (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[фильтрация](* <- lang_ru;; *);;
+	*);
+	concept_biological_pond (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[биологические пруды](* <- lang_ru;; *);;
+	*);
+	concept_soil_treatment_facility (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[сооружения для очистки сточных вод в грунте](* <- lang_ru;; *);;
+	*);
+	concept_soil_vegetation_area (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[грунтово-растительные площадки](* <- lang_ru;; *);;
+	*);
+	concept_filtering_well (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[фильтрующие колодцы](* <- lang_ru;; *);;
+	*);
+	concept_infiltration_field (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[поля фильтрации](* <- lang_ru;; *);;
+	*);
+	concept_aerated_pond (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[аэрируемые пруды](* <- lang_ru;; *);;
+	*);
+	concept_oxidation_ditch (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[окислительные каналы](* <- lang_ru;; *);;
+	*);
+	concept_sbr_reactor (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[реакторы последовательного действия (SBR-реакторы)](* <- lang_ru;; *);;
+	*);
+	concept_aerobic_process (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[аэробный процесс](* <- lang_ru;; *);;
+	*);
+	concept_aerobic_process (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[аэробный процесс](* <- lang_ru;; *);;
+	*);
+	concept_explored_relation (*
 		<- sc_node_class;;
 		=> nrel_main_idtf:[гидравлическая нагрузка](* <- lang_ru;; *);;
 	*);
-	concept_loading_material 
-	(*
+	concept_anoxic_process (*
 		<- sc_node_class;;
-		=> nrel_main_idtf:[загрузочный материал](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[аноксидный процесс](* <- lang_ru;; *);;
 	*);
-	concept_loading_height 
-	(*
+	concept_nitrification (*
 		<- sc_node_class;;
-		=> nrel_main_idtf:[высота загрузки](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[нитрификация](* <- lang_ru;; *);;
 	*);
-	concept_COH
-	(*
+	concept_denitrification (*
 		<- sc_node_class;;
-		=> nrel_main_idtf:[ХПК](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[денитрификация](* <- lang_ru;; *);;
 	*);
-	concept_waste_water_flow
-	(*
+	concept_biofilm (*
 		<- sc_node_class;;
-		=> nrel_main_idtf:[расход сточных вод](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[биопленка](* <- lang_ru;; *);;
 	*);
-	concept_organic_impurity
-	(*
+	concept_activated_sludge (*
 		<- sc_node_class;;
-		=> nrel_main_idtf:[органическая примесь](* <- lang_ru;; *);;
-	*);  
-	concept_inorganic_impurity
-	(*
+		=> nrel_main_idtf:[активный ил](* <- lang_ru;; *);;
+	*);
+	concept_filamentous_sludge_bulking (*
 		<- sc_node_class;;
-		=> nrel_main_idtf:[неорганическая примесь](* <- lang_ru;; *);;
-	*); 
-	concept_denitrifying_substance
-	(*
+		=> nrel_main_idtf:[вспухание активного ила](* <- lang_ru;; *);;
+	*);
+	concept_pollutant_load (*
 		<- sc_node_class;;
-		=> nrel_main_idtf:[денитрифицируемое вещество](* <- lang_ru;; *);;
-	*); 
-	concept_nitrifying_substance
-	(*
+		=> nrel_main_idtf:[нагрузка по загрязняющим веществам](* <- lang_ru;; *);;
+	*);
+	concept_dissolved_oxygen_concentration (*
 		<- sc_node_class;;
-		=> nrel_main_idtf:[нитрифицируемое вещество](* <- lang_ru;; *);;
-	*); 
-	concept_biodegradable_substance
-	(*
+		=> nrel_main_idtf:[концентрация растворенного кислорода](* <- lang_ru;; *);;
+	*);
+	concept_sludge_dose (*
 		<- sc_node_class;;
-		=> nrel_main_idtf:[биоразлагаемое вещество](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[доза ила](* <- lang_ru;; *);;
 	*);
-	concept_complete_treatment
-		(*
+        concept_sludge_age (*
 		<- sc_node_class;;
-		=> nrel_main_idtf:[полная очистка](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[возраст ила](* <- lang_ru;; *);;
 	*);
-	concept_partial_treatment
-	(*
+        concept_sludge_index (*
 		<- sc_node_class;;
-		=> nrel_main_idtf:[частичная очистка](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[иловый индекс](* <- lang_ru;; *);;
 	*);
-	concept_aerofilter
-	(*
+        concept_temperature (*
 		<- sc_node_class;;
-		=> nrel_main_idtf:[аэрофильтр](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[температура](* <- lang_ru;; *);;
 	*);
-	concept_artificial_aeration
-	(*
+        concept_redox_potential (*
 		<- sc_node_class;;
-		=> nrel_main_idtf:[искусственная аэрация](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[окислительно-восстановительный потенциал](* <- lang_ru;; *);;
 	*);
-	concept_natural_aeration
-	(*
+	concept_air_flow_rate (*
 		<- sc_node_class;;
-		=> nrel_main_idtf:[естественная аэрация](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[расход воздуха](* <- lang_ru;; *);;
 	*);
-	concept_mineral_loading_material
-	(*
+	concept_suspended_solids_content (*
 		<- sc_node_class;;
-		=> nrel_main_idtf: [минеральный загрузочный материал] (*<- lang_ru;;*);;
+		=> nrel_main_idtf:[содержание взвешенных веществ](* <- lang_ru;; *);;
 	*);
-	concept_polymer_loading_material
-	(*
+	concept_bod5 (*
 		<- sc_node_class;;
-		=> nrel_main_idtf: [полимерный загрузочный материал] (*<- lang_ru;;*);;		
+		=> nrel_main_idtf:[биохимическое потребление кислорода (БПК5)](* <- lang_ru;; *);;
 	*);
-	concept_contaminator
-	(*
+	concept_cod (*
 		<- sc_node_class;;
-		=> nrel_main_idtf: [загрязнитель] (*<- lang_ru;;*);;		
+		=> nrel_main_idtf:[химическое потребление кислорода (ХПК)](* <- lang_ru;; *);;
 	*);
-	concept_removed_BOC5
-	(*
+	concept_nitrogen_content (*
 		<- sc_node_class;;
-		=> nrel_main_idtf: [удаленный БПК5] (*<- lang_ru;;*);;		
+		=> nrel_main_idtf:[содержание азота](* <- lang_ru;; *);;
 	*);
-	concept_total_nitrogen
-	(*
+	concept_phosphorus_content (*
 		<- sc_node_class;;
-		=> nrel_main_idtf: [общий азот] (*<- lang_ru;;*);;		
+		=> nrel_main_idtf:[содержание фосфора](* <- lang_ru;; *);;
 	*);
-	concept_specific_air_flow
-	(*
+	concept_aerobic_conditions (*
 		<- sc_node_class;;
-		=> nrel_main_idtf: [удельный расход воздуха] (*<- lang_ru;;*);;	
+		=> nrel_main_idtf:[аэробные условия](* <- lang_ru;; *);;
 	*);
-	concept_loading
-	(*
+	concept_anaerobic_conditions (*
 		<- sc_node_class;;
-		=> nrel_main_idtf:[загрузка](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[анаэробные условия](* <- lang_ru;; *);;
 	*);
-	concept_loading_material_size
-	(*
+	concept_anoxic_conditions (*
 		<- sc_node_class;;
-		=> nrel_main_idtf:[размер материала](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[аноксидные условия](* <- lang_ru;; *);;
 	*);
-	concept_recirculation_ratio
-	(*
+	concept_phase_duration (*
 		<- sc_node_class;;
-		=> nrel_main_idtf:[коэффициент рециркуляции сточных вод](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[продолжительность фазы](* <- lang_ru;; *);;
 	*);
-
--> rrel_explored_relation:  
-	nrel_degree_of_purification
-	(*
-		<- sc_node_norole_relation;;
-		=> nrel_main_idtf:[степень очистки*](* <- lang_ru;; *);;
+	concept_settling_time (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[продолжительность отстаивания](* <- lang_ru;; *);;
 	*);
-	nrel_loading_material
-	(*
-		<- sc_node_norole_relation;;
-		=> nrel_main_idtf:[загрузочный материал*](* <- lang_ru;; *);;
+	concept_preliminary_clarification (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[предварительное осветление](* <- lang_ru;; *);;
 	*);
-	nrel_loading_height
-	(*
-		<- sc_node_norole_relation;;
-		=> nrel_main_idtf:[высота загрузки*](* <- lang_ru;; *);;
+	concept_sludge_level (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[уровень осадка](* <- lang_ru;; *);;
 	*);
-	nrel_hydraulic_load
-	(*
-		<- sc_node_norole_relation;;
-		=> nrel_main_idtf:[гидравлическая нагрузка*](* <- lang_ru;; *);;
+	concept_sludge_removal_frequency (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[периодичность удаления осадка](* <- lang_ru;; *);;
 	*);
-	nrel_BOC5
-	(*
-		<- sc_node_norole_relation;;
-		=> nrel_main_idtf:[БПК5*](* <- lang_ru;; *);;
+	concept_filter_media_flushing (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[промывка загрузки](* <- lang_ru;; *);;
 	*);
-	nrel_COH
-	(*
-		<- sc_node_norole_relation;;
-		=> nrel_main_idtf:[ХПК*](* <- lang_ru;; *);;
+-> rrel_explored_relation:
+	rrel_has_washout_prevention_measure (*
+		<- sc_node_non_role_relation;;
+		=> nrel_main_idtf:[мера по предотвращению выноса*](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[washout prevention measure*](* <- lang_en;; *);;
+		<- rrel_explored_relation:
+		    subject_domain_of_biological_wastewater_treatment_facility;;
+		<= nrel_inclusion:
+		    rrel_membership;;
+		=> nrel_definitional_domain:
+		    ...
+		    (*
+		        <= nrel_set_union: {
+		            concept_biological_treatment_facility;
+		            concept_trickling_filter
+		        };;
+		    *);;
+		=> nrel_first_domain:
+		    concept_biological_treatment_facility;;
+		=> nrel_second_domain:
+		    concept_measure;;
+		=> nrel_definition:
+		    [Мера, направленная на предотвращение выноса биопленки или фильтрующей загрузки из биофильтра с потоком сточной воды.]
+		    (* <- lang_ru;; *);;
 	*);
-	nrel_waste_water_flow
-	(*
-		<- sc_node_norole_relation;;
-		=> nrel_main_idtf:[расход сточных вод*](* <- lang_ru;; *);;
+	
+	rrel_has_biofilm_overgrowth_prevention_measure (*
+		<- sc_node_non_role_relation;;
+		=> nrel_main_idtf:[мера по предотвращению чрезмерного обрастания*](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[biofilm overgrowth prevention measure*](* <- lang_en;; *);;
+		<- rrel_explored_relation:
+		    subject_domain_of_biological_wastewater_treatment_facility;;
+		<= nrel_inclusion:
+		    rrel_membership;;
+		=> nrel_definitional_domain:
+		    ...
+		    (*
+		        <= nrel_set_union: {
+		            concept_trickling_filter;
+		            concept_biological_treatment_facility
+		        };;
+		    *);;
+		=> nrel_first_domain:
+		    concept_trickling_filter;;
+		=> nrel_second_domain:
+		    concept_biofilm;;
+		=> nrel_definition:
+		    [Мера, предотвращающая избыточное накопление биопленки, приводящее к закупорке загрузочного материала и снижению эффективности очистки.]
+		    (* <- lang_ru;; *);;
 	*);
-	nrel_contaminator
-	(*
-		<- sc_node_norole_relation;;
-		=> nrel_main_idtf: [загрязнитель*] (*<- lang_ru;;*);;		
+	
+	rrel_has_silting_prevention_measure (*
+		<- sc_node_non_role_relation;;
+		=> nrel_main_idtf:[мера по предотвращению заиливания*](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[silting prevention measure*](* <- lang_en;; *);;
+		<- rrel_explored_relation:
+		    subject_domain_of_biological_wastewater_treatment_facility;;
+		<= nrel_inclusion:
+		    rrel_membership;;
+		=> nrel_definitional_domain:
+		    ...
+		    (*
+		        <= nrel_set_union: {
+		            concept_secondary_settling_tank;
+		            concept_biological_treatment_facility;
+		            concept_filtration_facility
+		        };;
+		    *);;
+		=> nrel_first_domain:
+		    concept_secondary_settling_tank;;
+		=> nrel_second_domain:
+		    concept_activated_sludge;;
+		=> nrel_definition:
+		    [Комплекс мероприятий, предотвращающих накопление осадка в отстойниках и фильтрах, обеспечивающий сохранение проектной производительности сооружений.]
+		    (* <- lang_ru;; *);;
 	*);
-	nrel_wastewater_distribution
-	(*
-				<- sc_node_norole_relation;;
-				=> nrel_main_idtf:[распределние сточных вод*](* <- lang_ru;; *);;
+	
+	rrel_has_freezing_prevention_measure (*
+		<- sc_node_non_role_relation;;
+		=> nrel_main_idtf:[мера по предотвращению обмерзания*](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[freezing prevention measure*](* <- lang_en;; *);;
+		<- rrel_explored_relation:
+		    subject_domain_of_biological_wastewater_treatment_facility;;
+		<= nrel_inclusion:
+		    rrel_membership;;
+		=> nrel_definitional_domain:
+		    ...
+		    (*
+		        <= nrel_set_union: {
+		            concept_trickling_filter;
+		            concept_biological_pond;
+		            concept_aerated_pond
+		        };;
+		    *);;
+		=> nrel_first_domain:
+		    concept_trickling_filter;;
+		=> nrel_second_domain:
+		    concept_temperature;;
+		=> nrel_definition:
+		    [Меры теплоизоляции и поддержания технологического режима, обеспечивающие работоспособность сооружений в холодный период года.]
+		    (* <- lang_ru;; *);;
 	*);
-	nrel_number_of_sections
-	(*
-				<- sc_node_norole_relation;;
-				=> nrel_main_idtf:[число секций*](* <- lang_ru;; *);;
+	
+	rrel_is_used_for_nitrification (*
+		<- sc_node_non_role_relation;;
+		=> nrel_main_idtf:[используется для нитрификации*](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[is used for nitrification*](* <- lang_en;; *);;
+		<- rrel_explored_relation:
+		    subject_domain_of_biological_wastewater_treatment_facility;;
+		<= nrel_inclusion:
+		    rrel_membership;;
+		=> nrel_definitional_domain:
+		    ...
+		    (*
+		        <= nrel_set_union: {
+		            concept_activated_sludge_facility;
+		            concept_trickling_filter;
+		            concept_sbr_reactor
+		        };;
+		    *);;
+		=> nrel_first_domain:
+		    concept_activated_sludge_facility;;
+		=> nrel_second_domain:
+		    concept_nitrification;;
+		=> nrel_definition:
+		    [Характеристика сооружения, указывающая на его способность обеспечивать процесс окисления аммонийного азота до нитратов в аэробных условиях.]
+		    (* <- lang_ru;; *);;
 	*);
-	nrel_natural_aeration
-	(*
-				<- sc_node_norole_relation;;
-				=> nrel_main_idtf:[естественная аэрация*](* <- lang_ru;; *);;
+	
+	rrel_is_used_for_denitrification (*
+		<- sc_node_non_role_relation;;
+		=> nrel_main_idtf:[используется для денитрификации*](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[is used for denitrification*](* <- lang_en;; *);;
+		<- rrel_explored_relation:
+		    subject_domain_of_biological_wastewater_treatment_facility;;
+		<= nrel_inclusion:
+		    rrel_membership;;
+		=> nrel_definitional_domain:
+		    ...
+		    (*
+		        <= nrel_set_union: {
+		            concept_activated_sludge_facility;
+		            concept_oxidation_ditch;
+		            concept_sbr_reactor
+		        };;
+		    *);;
+		=> nrel_first_domain:
+		    concept_activated_sludge_facility;;
+		=> nrel_second_domain:
+		    concept_denitrification;;
+		=> nrel_definition:
+		    [Способность сооружения обеспечивать восстановление нитратов до молекулярного азота в аноксидных условиях.]
+		    (* <- lang_ru;; *);;
 	*);
-	nrel_material_size
-	(*
-				<- sc_node_norole_relation;;
-				=> nrel_main_idtf:[размер материала*](* <- lang_ru;; *);;
+	
+	rrel_is_used_for_phosphorus_removal (*
+		<- sc_node_non_role_relation;;
+		=> nrel_main_idtf:[используется для удаления фосфора*](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[is used for phosphorus removal*](* <- lang_en;; *);;
+		<- rrel_explored_relation:
+		    subject_domain_of_biological_wastewater_treatment_facility;;
+		<= nrel_inclusion:
+		    rrel_membership;;
+		=> nrel_definitional_domain:
+		    ...
+		    (*
+		        <= nrel_set_union: {
+		            concept_activated_sludge_facility;
+		            concept_sbr_reactor
+		        };;
+		    *);;
+		=> nrel_first_domain:
+		    concept_activated_sludge_facility;;
+		=> nrel_second_domain:
+		    concept_phosphorus_content;;
+		=> nrel_definition:
+		    [Способность сооружения обеспечивать биологическое или физико-химическое удаление соединений фосфора из сточных вод.]
+		    (* <- lang_ru;; *);;
 	*);
-	nrel_loading
-	(*
-				<- sc_node_norole_relation;;
-				=> nrel_main_idtf:[загрузка*](* <- lang_ru;; *);;
+	
+	rrel_has_oxygen_input_limitation_in_denitrificator (*
+		<- sc_node_non_role_relation;;
+		=> nrel_main_idtf:[ограничение поступления кислорода в денитрификатор*](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[oxygen input limitation in denitrificator*](* <- lang_en;; *);;
+		<- rrel_explored_relation:
+		    subject_domain_of_biological_wastewater_treatment_facility;;
+		<= nrel_inclusion:
+		    rrel_membership;;
+		=> nrel_definitional_domain:
+		    ...
+		    (*
+		        <= nrel_set_union: {
+		            concept_activated_sludge_facility;
+		            concept_anoxic_conditions
+		        };;
+		    *);;
+		=> nrel_first_domain:
+		    concept_activated_sludge_facility;;
+		=> nrel_second_domain:
+		    concept_dissolved_oxygen_concentration;;
+		=> nrel_definition:
+		    [Условие поддержания низкой концентрации растворенного кислорода (аноксидных условий) для эффективной работы денитрификаторов.]
+		    (* <- lang_ru;; *);;
 	*);
-	nrel_test_for_loading_material
-	(*
-				<- sc_node_norole_relation;;
-				=> nrel_main_idtf:[испытание для загрузочного материала*](* <- lang_ru;; *);;
+	
+	rrel_has_sludge_recirculation_rate (*
+		<- sc_node_non_role_relation;;
+		=> nrel_main_idtf:[степень рециркуляции активного ила*](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[activated sludge recirculation rate*](* <- lang_en;; *);;
+		<- rrel_explored_relation:
+		    subject_domain_of_biological_wastewater_treatment_facility;;
+		<= nrel_inclusion:
+		    rrel_membership;;
+		=> nrel_definitional_domain:
+		    ...
+		    (*
+		        <= nrel_set_union: {
+		            concept_activated_sludge_facility;
+		            concept_secondary_settling_tank
+		        };;
+		    *);;
+		=> nrel_first_domain:
+		    concept_activated_sludge_facility;;
+		=> nrel_second_domain:
+		    concept_activated_sludge;;
+		=> nrel_definition:
+		    [Отношение расхода возвратного активного ила из вторичного отстойника к расходу поступающей сточной воды.]
+		    (* <- lang_ru;; *);;
 	*);
-	nrel_recirculation_ratio
-	(*
-		<- sc_node_norole_relation;;
-		=> nrel_main_idtf:[коэффициент рециркуляции сточных вод*](* <- lang_ru;; *);;
+	
+	rrel_has_mixture_recirculation_rate (*
+		<- sc_node_non_role_relation;;
+		=> nrel_main_idtf:[степень рециркуляции иловой смеси*](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[mixed liquor recirculation rate*](* <- lang_en;; *);;
+		<- rrel_explored_relation:
+		    subject_domain_of_biological_wastewater_treatment_facility;;
+		<= nrel_inclusion:
+		    rrel_membership;;
+		=> nrel_definitional_domain:
+		    ...
+		    (*
+		        <= nrel_set_union: {
+		            concept_activated_sludge_facility;
+		            concept_nitrification;
+		            concept_denitrification
+		        };;
+		    *);;
+		=> nrel_first_domain:
+		    concept_activated_sludge_facility;;
+		=> nrel_second_domain:
+		    concept_activated_sludge;;
+		=> nrel_definition:
+		    [Отношение потока иловой смеси, рециркулируемой из нитрификационной зоны в денитрификационную, к расходу поступающей сточной воды.]
+		    (* <- lang_ru;; *);;
 	*);
-	nrel_specific_air_flow
-	(*
-		<- sc_node_norole_relation;;
-		=> nrel_main_idtf: [удельный расход воздуха*] (*<- lang_ru;;*);;
+	
+	rrel_is_subject_to_monitoring_at_points_K7_to_K23 (*
+		<- sc_node_non_role_relation;;
+		=> nrel_main_idtf:[является точкой наблюдений К7 - К23*](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[is subject to monitoring at points K7 to K23*](* <- lang_en;; *);;
+		<- rrel_explored_relation:
+		    subject_domain_of_biological_wastewater_treatment_facility;;
+		<= nrel_inclusion:
+		    rrel_membership;;
+		=> nrel_definitional_domain:
+		    ...
+		    (*
+		        <= nrel_set_union: {
+		            concept_activated_sludge_facility;
+		            concept_trickling_filter;
+		            concept_secondary_settling_tank
+		        };;
+		    *);;
+		=> nrel_first_domain:
+		    concept_activated_sludge_facility;;
+		=> nrel_second_domain:
+		    concept_biological_wastewater_treatment_facility;;
+		=> nrel_definition:
+		    [Отнесение технологического элемента или параметра к перечню контрольных точек наблюдений в соответствии с графиком производственного экологического контроля.]
+		    (* <- lang_ru;; *);;
+	*);
+	
+	rrel_has_manufacturer_declared_parameters (*
+		<- sc_node_non_role_relation;;
+		=> nrel_main_idtf:[имеет параметры, заявленные изготовителем*](* <- lang_ru;; *);;
+		=> nrel_main_idtf:[has manufacturer declared parameters*](* <- lang_en;; *);;
+		<- rrel_explored_relation:
+		    subject_domain_of_biological_wastewater_treatment_facility;;
+		<= nrel_inclusion:
+		    rrel_membership;;
+		=> nrel_definitional_domain:
+		    ...
+		    (*
+		        <= nrel_set_union: {
+		            concept_factory_made_biological_treatment_facility
+		        };;
+		    *);;
+		=> nrel_first_domain:
+		    concept_factory_made_biological_treatment_facility;;
+		=> nrel_second_domain:
+		    concept_biological_wastewater_treatment_facility;;
+		=> nrel_definition:
+		    [Наличие у сооружения заводского изготовления паспортных значений производительности, допустимых нагрузок и эффективности очистки, установленных предприятием-изготовителем.]
+		    (* <- lang_ru;; *);;
 	*);;
 
