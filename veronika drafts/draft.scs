@@ -1,0 +1,175 @@
+concept_grease_trap
+  => nrel_main_idtf:
+    [жироуловитель] (* <- lang_ru;; *);
+  <- sc_node_class;
+  => nrel_designed_for:
+      concept_clarifying;
+      concept_removing;;
+
+concept_oop_class
+=> nrel_main_idtf:
+   [класс в ООП]
+   (*
+      <- lang_ru;;
+   *);
+=> nrel_main_idtf:
+   [class in OOP]
+   (*
+      <- lang_en;;
+   *);
+<- rrel_explored_concept:
+   subject_domain_of_object_modeling_intelligent_systems;
+<= nrel_inclusion:
+   concept_abstract_data_type;
+=> nrel_inclusion:
+   concept_abstract_class;
+   concept_interface_class;
+-> rrel_example:
+   class_A; 
+=> nrel_definition:
+  [Класс в ООП — это абстрактный тип данных, шаблон, по которому создаются объекты, определяющий их структуру (свойства) и поведение (методы).]
+   (*
+       <- lang_ru;;
+   *);;
+
+
+concept_physical_and_chemical_treatment_facility
+=> nrel_main_idtf:
+   [очистное сооружение физико-химической очистки]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_treatment_facility;
+-> rrel_example:
+   flotation_unit;
+   coagulation_settling_tank;
+   sorption_filter;
+=> nrel_definition:
+   [Очистное сооружение физико-химической очистки — это инженерный объект, в котором удаление загрязнений из воды (сточной, природной или технологической) осуществляется преимущественно физическими и химическими методами: коагуляцией, флотацией, сорбцией, экстракцией, ионным обменом, электрохимической обработкой и др.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_process
+=> nrel_main_idtf:
+   [процесс]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+=> nrel_inclusion:
+    concept_treatment;
+    concept_neutralization;
+    concept_coagulation;
+    concept_flocculation;
+    concept_oxidation;
+    concept_reduction;
+    concept_flotation;
+    concept_coalescence;
+    concept_sorption;
+    concept_extraction;
+    concept_evaporation;
+    concept_ion_exchange;
+=> nrel_definition:
+   [Процесс - это ...]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_treatment
+=> nrel_main_idtf:
+   [очистка]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_treatment_facility;
+-> rrel_example:
+   flotation_unit;
+   coagulation_settling_tank;
+   sorption_filter;
+=> nrel_definition:
+   [Очистка - это процесс извлечения загрязняющих веществ из объекта очистки.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_wastewater
+=> nrel_main_idtf:
+   [сточные воды]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_liquid_waste;
+=> nrel_inclusion:
+   concept_domestic_wastewater;
+   concept_industrial_wastewater;
+   concept_surface_runoff;
+-> rrel_example:
+   sewage_from_residential_building;
+   effluent_from_chemical_plant;
+   stormwater_from_highway;
+=> nrel_definition:
+   [Сточные воды — это воды, загрязнённые в результате хозяйственной и производственной деятельности человека или атмосферными осадками, стекающими с территорий населённых пунктов и промышленных площадок, требующие отведения и очистки перед сбросом в водные объекты или повторного использования.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_reagent
+=> nrel_main_idtf:
+   [реагент]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_chemical_substance;
+-> rrel_example:
+   aluminum_sulfate;
+   ferric_chloride;
+   polyacrylamide;
+   activated_carbon;
+=> nrel_definition:
+   [Реагент — это химическое вещество, которое добавляют в воду (сточную, природную или технологическую) для осуществления процессов коагуляции, флокуляции, осаждения, нейтрализации, окисления, восстановления или других целевых превращений загрязнителей.]
+   (*
+       <- lang_ru;;
+   *);
+;
+
+concept_solution
+=> nrel_main_idtf:
+   [раствор]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_homogeneous_mixture;
+-> rrel_example:
+   aqueous_solution;
+   saline_solution;
+   coagulant_solution;
+   alkaline_solution;
+=> nrel_definition:
+   [Раствор — это однородная система переменного состава, состоящая из двух или более компонентов — растворителя и растворённых веществ, находящихся в молекулярно-дисперсном состоянии.]
+   (*
+       <- lang_ru;;
+   *);
+;
