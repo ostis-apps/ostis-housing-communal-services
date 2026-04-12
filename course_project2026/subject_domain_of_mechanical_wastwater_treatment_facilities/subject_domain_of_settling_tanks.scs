@@ -1,0 +1,161 @@
+subject_domain_of_settling_tanks
+
+=> nrel_main_idtf:
+    [Предметная область отстойников] (* <- lang_ru;; *);
+<- subject_domain;
+<- sc_node_structure;
+
+-> rrel_maximum_studied_object_class:
+    concept_settling_tank
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[отстойник] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[settling tank] (* <- lang_en;; *);;
+        => rrel_has_parameter: concept_sludge_volume;;
+        => rrel_has_parameter: concept_sludge_moisture;;
+        => rrel_has_parameter: concept_sludge_chemical_composition;;
+        => rrel_has_parameter: concept_suspended_solids_in_effluent;;
+        => rrel_has_parameter: concept_bod5_in_effluent;;
+        => rrel_has_parameter: concept_settling_duration;;
+        <= nrel_inclusion: concept_mechanical_wastewater_treatment_facility;;
+        <= nrel_subdividing: concept_primary_settling_tank; concept_two_tier_settling_tank;;
+    *);
+
+-> rrel_not_maximum_studied_object_class:
+
+    concept_primary_settling_tank
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[первичный отстойник] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[primary settling tank] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Первичные отстойники предназначены для предварительного осветления сточных вод поступающих на биологическую или физико-химическую очистку.] (* <- lang_ru;; *);;
+                -> [При эксплуатации в нормальном режиме в вертикальных отстойниках при времени пребывания сточной воды 1,5 ч достигается снижение содержания взвешенных веществ до 40 процентов в радиальных и горизонтальных до 50 процентов.] (* <- lang_ru;; *);;
+                -> [Обеспечивать равномерное распределение сточной воды между отстойниками.] (* <- lang_ru;; *);;
+                -> [Очищать лотки и каналы подводящие воду к отстойникам от отложений осадка и отбросов удалять плавающие примеси.] (* <- lang_ru;; *);;
+                -> [Контролировать эффект осветления сточной воды и предупреждать вынос осадка.] (* <- lang_ru;; *);;
+                -> [Обеспечивать удаление осадка из отстойников не реже 2 раз в сутки.] (* <- lang_ru;; *);;
+            *);;
+        <= nrel_subdividing:
+        {
+concept_vertical_settling_tank; 
+concept_radial_settling_tank; 
+concept_horizontal_settling_tank
+};;
+    *);
+
+    concept_two_tier_settling_tank
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[двухъярусный отстойник] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[two tier settling tank] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Двухъярусные отстойники предназначены для предварительного осветления сточных вод с одновременным сбраживанием осадка.] (* <- lang_ru;; *);;
+                -> [Производить выпуск осадка по мере накопления но не реже чем 1 раз в 3 месяца.] (* <- lang_ru;; *);;
+                -> [Предотвращать образование на поверхности сточной воды в отстойнике плотной корки и вспенивания сбраживаемого осадка.] (* <- lang_ru;; *);;
+                -> [Для проведения работ по техническому обслуживанию двухъярусный отстойник опорожняется не реже 1 раза в 4 года.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_vertical_settling_tank
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[вертикальный отстойник] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[vertical settling tank] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Вертикальный отстойник - отстойник с вертикальным движением воды в котором осадок опускается на дно под действием силы тяжести.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_radial_settling_tank
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[радиальный отстойник] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[radial settling tank] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Радиальный отстойник - отстойник с радиальным движением воды от центра к периферии обеспечивающий высокую эффективность осветления.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_horizontal_settling_tank
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[горизонтальный отстойник] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[horizontal settling tank] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Горизонтальный отстойник - отстойник с горизонтальным движением воды в котором взвешенные вещества выпадают в осадок при движении потока от входного устройства к выходному.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_raw_sludge
+    (*
+        <- concept_sludge;;
+        => nrel_main_idtf:[сырой осадок] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[raw sludge] (* <- lang_en;; *);;
+    *);
+
+    concept_digested_sludge
+    (*
+        <- concept_sludge;;
+        => nrel_main_idtf:[сброженный осадок] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[digested sludge] (* <- lang_en;; *);;
+    *);
+
+    concept_floating_impurities
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[плавающие примеси] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[floating impurities] (* <- lang_en;; *);;
+    *);
+
+    concept_sludge_scraper
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[илоскреб] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[sludge scraper] (* <- lang_en;; *);;
+    *);
+
+    concept_sludge_chamber
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[иловая камера] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[sludge chamber] (* <- lang_en;; *);;
+    *);
+
+// Показатели
+concept_sludge_volume
+(*
+    <- concept_indicator;;
+    <= nrel_inclusion: concept_indicator;;
+    => nrel_main_idtf:[объем осадка] (* <- lang_ru;; *);;
+    => nrel_main_idtf:[sludge volume] (* <- lang_en;; *);;
+    => rrel_has_unit:[м³] (* <- lang_ru;; *);;
+*);
+
+concept_sludge_moisture
+(*
+    <- concept_indicator;;
+    <= nrel_inclusion: concept_indicator;;
+    => nrel_main_idtf:[влажность осадка] (* <- lang_ru;; *);;
+    => nrel_main_idtf:[sludge moisture] (* <- lang_en;; *);;
+    => rrel_has_unit:[%] (* <- lang_ru;; *);;
+*);
+
+concept_settling_duration
+(*
+    <- concept_indicator;;
+    <= nrel_inclusion: concept_indicator;;
+    => nrel_main_idtf:[продолжительность отстаивания] (* <- lang_ru;; *);;
+    => nrel_main_idtf:[settling duration] (* <- lang_en;; *);;
+    => rrel_has_unit:[ч] (* <- lang_ru;; *);;
+*);;

@@ -1,0 +1,190 @@
+subject_domain_of_sludge_treatment_facilities
+
+=> nrel_main_idtf:
+    [Предметная область сооружений обработки осадка] (* <- lang_ru;; *);
+<- subject_domain;
+<- sc_node_structure;
+
+-> rrel_maximum_studied_object_class:
+    concept_sludge_treatment_facility
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[сооружение обработки осадка] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[sludge treatment facility] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Сооружения обработки осадков сточных вод применяются с целью их уплотнения стабилизации обеззараживания кондиционирования обезвоживания сушки термического разложения органических веществ осадка.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+-> rrel_not_maximum_studied_object_class:
+
+    concept_sludge_thickener
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[илоуплотнитель] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[sludge thickener] (* <- lang_en;; *);;
+    *);
+
+    concept_digester
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[метантенк] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[digester] (* <- lang_en;; *);;
+    *);
+
+    concept_aerobic_stabilizer
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[аэробный стабилизатор] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[aerobic stabilizer] (* <- lang_en;; *);;
+    *);
+
+  
+    concept_composting_platform
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[площадка компостирования] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[composting platform] (* <- lang_en;; *);;
+    *);
+
+    concept_mechanical_dewatering_equipment
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[оборудование для механического обезвоживания] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[mechanical dewatering equipment] (* <- lang_en;; *);;
+        <= nrel_subdividing: concept_centrifuge; concept_filter_press; concept_vacuum_filter;;
+    *);
+
+    concept_centrifuge
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[центрифуга] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[centrifuge] (* <- lang_en;; *);;
+    *);
+
+    concept_filter_press
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[фильтр-пресс] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[filter press] (* <- lang_en;; *);;
+        <= nrel_subdividing: concept_belt_filter_press; concept_chamber_filter_press; concept_screw_filter_press;;
+    *);
+
+    concept_belt_filter_press
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[ленточный фильтр-пресс] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[belt filter press] (* <- lang_en;; *);;
+    *);
+
+    concept_chamber_filter_press
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[камерный фильтр-пресс] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[chamber filter press] (* <- lang_en;; *);;
+    *);
+
+    concept_screw_filter_press
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[шнековый фильтр-пресс] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[screw filter press] (* <- lang_en;; *);;
+    *);
+
+    concept_vacuum_filter
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[вакуум-фильтр] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[vacuum filter] (* <- lang_en;; *);;
+    *);
+
+    concept_hydraulic_press
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[гидравлический пресс] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[hydraulic press] (* <- lang_en;; *);;
+    *);
+
+    concept_sludge_drying_facility
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[установка для сушки осадка] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[sludge drying facility] (* <- lang_en;; *);;
+    *);
+
+    concept_sludge_incineration_facility
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[установка для сжигания осадка] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[sludge incineration facility] (* <- lang_en;; *);;
+    *);
+
+    concept_sludge_disinfection
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[обеззараживание осадка] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[sludge disinfection] (* <- lang_en;; *);;
+        <= nrel_subdividing: concept_thermal_disinfection; concept_chemical_disinfection; concept_composting_disinfection;;
+    *);
+
+    concept_thermal_disinfection
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[термическое обеззараживание] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[thermal disinfection] (* <- lang_en;; *);;
+    *);
+
+    concept_chemical_disinfection
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[химическое обеззараживание] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[chemical disinfection] (* <- lang_en;; *);;
+    *);
+
+    concept_composting_disinfection
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[обеззараживание компостированием] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[composting disinfection] (* <- lang_en;; *);;
+    *);
+
+    concept_biogas
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[биогаз] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[biogas] (* <- lang_en;; *);;
+    *);
+
+  
+    concept_lime
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[известь] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[lime] (* <- lang_en;; *);;
+    *);
+
+    concept_flocculant
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[флокулянт] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[flocculant] (* <- lang_en;; *);;
+    *);
+
+    concept_coagulant
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[коагулянт] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[coagulant] (* <- lang_en;; *);;
+    *);
+
+ 
+    concept_ash
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[зола] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[ash] (* <- lang_en;; *);;
+    *);;
+
+

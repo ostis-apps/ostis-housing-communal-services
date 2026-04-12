@@ -1,0 +1,214 @@
+subject_domain_of_mechanical_wastewater_treatment_facility
+=> nrel_main_idtf:
+  [Предметная область сооружений механической очистки сточных вод] (* <- lang_ru;; *);
+  <- subject_domain;
+  <- sc_node_structure;
+  
+  => nrel_private_subject_domain:
+ subject_domain_of_sifters;
+  subject_domain_of_sand_catchers;
+  subject_domain_of_settling_tanks;
+  subject_domain_of_septic_tanks;
+  subject_domain_of_oil_traps;
+  subject_domain_of_grease_traps;
+  subject_domain_of_filters;
+  subject_domain_of_hydrocyclones;
+  
+-> rrel_maximum_studied_object_class:
+  concept_mechanical_wastewater_treatment_facility(*
+    <- sc_node_class;;
+    => nrel_main_idtf:[сооружение механической очистки сточных вод](* <- lang_ru;; *);;
+  *);
+
+-> rrel_not_maximum_studied_object_class:
+  concept_screen;
+  concept_sieve;
+  concept_sand_catcher;
+  concept_primary_settling_tank;
+  concept_two_tier_settling_tank;
+  concept_septic_tank;
+  concept_oil_trap;
+  concept_grease_trap;
+  concept_filter;
+  concept_hydrocyclone;
+
+  
+  concept_mechanical_treatment_process
+(*
+    <- sc_node_class;;
+    => nrel_main_idtf:[процесс механической очистки сточных вод] (* <- lang_ru;; *);;
+    <= nrel_inclusion: concept_mechanical_wastewater_treatment_facility;;
+    <= nrel_sc_text_translation: ...
+        (*
+            <- concept_definition (*<- sc_node_class;;*);;
+            -> [Процесс механической очистки сточных вод — совокупность операций по удалению грубодисперсных и минеральных примесей из сточных вод.] (* <- lang_ru;; *);;
+        *);;
+*);
+
+concept_screening
+(*
+    <- sc_node_class;;
+    => nrel_main_idtf:[процеживание] (* <- lang_ru;; *);;
+    <= nrel_inclusion: concept_mechanical_treatment_process;;
+    <= nrel_sc_text_translation: ...
+        (*
+            <- concept_definition (*<- sc_node_class;;*);;
+            -> [Процеживание — процесс задержания грубодисперсных примесей из сточных вод на решетках и ситах.] (* <- lang_ru;; *);;
+        *);;
+*);
+
+concept_settling
+(*
+    <- sc_node_class;;
+    => nrel_main_idtf:[отстаивание] (* <- lang_ru;; *);;
+    <= nrel_inclusion: concept_mechanical_treatment_process;;
+    <= nrel_sc_text_translation: ...
+        (*
+            <- concept_definition (*<- sc_node_class;;*);;
+            -> [Отстаивание — процесс осветления сточных вод с выделением взвешенных веществ под действием гравитационных сил.] (* <- lang_ru;; *);;
+        *);;
+*);
+
+concept_filtration
+(*
+    <- sc_node_class;;
+    => nrel_main_idtf:[фильтрование] (* <- lang_ru;; *);;
+    <= nrel_inclusion: concept_mechanical_treatment_process;;
+    <= nrel_sc_text_translation: ...
+        (*
+            <- concept_definition (*<- sc_node_class;;*);;
+            -> [Фильтрование — процесс доочистки сточных вод при пропускании через фильтрующую загрузку.] (* <- lang_ru;; *);;
+        *);;
+*);
+
+concept_centrifugal_separation
+(*
+    <- sc_node_class;;
+    => nrel_main_idtf:[обработка в поле центробежных сил] (* <- lang_ru;; *);;
+    <= nrel_inclusion: concept_mechanical_treatment_process;;
+    <= nrel_sc_text_translation: ...
+        (*
+            <- concept_definition (*<- sc_node_class;;*);;
+            -> [Обработка в поле центробежных сил — процесс разделения суспензий и эмульсий в гидроциклонах под действием центробежных сил.] (* <- lang_ru;; *);;
+        *);;
+*);
+
+
+concept_sludge_volume (*
+	<- concept_indicator;;
+	<= nrel_inclusion: concept_indicator;;
+	=> nrel_main_idtf:[объем осадка](* <- lang_ru;; *);;
+	=> rrel_has_unit:[м³](* <- lang_ru;; *);;
+*);
+
+concept_sludge_moisture (*
+	<- concept_indicator;;
+	<= nrel_inclusion: concept_indicator;;
+	=> nrel_main_idtf:[влажность осадка](* <- lang_ru;; *);;
+	=> rrel_has_unit:[%](* <- lang_ru;; *);;
+*);
+
+concept_sludge_density (*
+	<- concept_indicator;;
+	<= nrel_inclusion: concept_indicator;;
+	=> nrel_main_idtf:[плотность осадка](* <- lang_ru;; *);;
+	=> rrel_has_unit:[кг/м³](* <- lang_ru;; *);;
+*);
+
+concept_sludge_ash_content (*
+	<- concept_indicator;;
+	<= nrel_inclusion: concept_indicator;;
+	=> nrel_main_idtf:[зольность осадка](* <- lang_ru;; *);;
+	=> rrel_has_unit:[%](* <- lang_ru;; *);;
+*);
+
+concept_sludge_chemical_composition (*
+	<- concept_indicator;;
+	<= nrel_inclusion: concept_indicator;;
+	=> nrel_main_idtf:[химический состав осадка](* <- lang_ru;; *);;
+*);
+
+// ----- ВОДА (общие показатели) -----
+concept_suspended_solids_in_effluent (*
+	<- concept_indicator;;
+	<= nrel_inclusion: concept_indicator;;
+	=> nrel_main_idtf:[содержание взвешенных веществ в осветленной воде](* <- lang_ru;; *);;
+	=> rrel_has_unit:[мг/дм³](* <- lang_ru;; *);;
+*);
+
+concept_bod5_in_effluent (*
+	<- concept_indicator;;
+	<= nrel_inclusion: concept_indicator;;
+	=> nrel_main_idtf:[БПК5 в осветленной воде](* <- lang_ru;; *);;
+	=> rrel_has_unit:[мгО₂/дм³](* <- lang_ru;; *);;
+*);
+
+concept_settling_duration (*
+	<- concept_indicator;;
+	<= nrel_inclusion: concept_indicator;;
+	=> nrel_main_idtf:[продолжительность отстаивания](* <- lang_ru;; *);;
+	=> rrel_has_unit:[ч](* <- lang_ru;; *);;
+*);
+
+concept_sludge_level (*
+	<- concept_indicator;;
+	<= nrel_inclusion: concept_indicator;;
+	=> nrel_main_idtf:[уровень осадка](* <- lang_ru;; *);;
+	=> rrel_has_unit:[м](* <- lang_ru;; *);;
+*);
+
+
+  concept_settling_facility
+  (*
+  <- sc_node_class;;
+    => nrel_main_idtf:[сооружения для отстаивания](* <- lang_ru;; *);;
+    <= nrel_subdividing:
+  concept_sand_catcher;
+  concept_settling_tank;
+  concept_septic_tank;
+  concept_oil_trap;
+  concept_grease_trap;;
+   *);
+   
+  -> rrel_explored_relation:
+  
+rrel_uses_screening
+ (*
+    <- sc_node_non_role_relation;;
+    => nrel_main_idtf:[использует процеживание*](* <- lang_ru;; *);;
+    => nrel_first_domain: concept_sifters;;
+    => nrel_second_domain: concept_screening;;
+    => nrel_definition:
+        [Решетки и сита используют процесс процеживания для задержания грубодисперсных примесей.]
+        (* <- lang_ru;; *);;
+*);
+rrel_uses_settling
+ (*
+    <- sc_node_non_role_relation;;
+    => nrel_main_idtf:[использует отстаивание*](* <- lang_ru;; *);;
+    => nrel_first_domain: concept_settling_facility;;
+    => nrel_second_domain: concept_settling;;
+    => nrel_definition:
+        [Песколовки, отстойники (первичные, двухъярусные) , септики, нефтеловушки, жироловители используют процесс отстаивания для осветления сточных вод и выделения осадка.]
+        (* <- lang_ru;; *);;
+*);
+rrel_uses_filtration
+ (*
+    <- sc_node_non_role_relation;;
+    => nrel_main_idtf:[использует фильтрование*](* <- lang_ru;; *);;
+    => nrel_first_domain: concept_mechanical_filter;;
+    => nrel_second_domain: concept_filtration;;
+    => nrel_definition:
+        [Фильтры используют процесс фильтрования для доочистки сточных вод и задержания специфических примесей.]
+        (* <- lang_ru;; *);;
+*);
+rrel_uses_centrifugal_separation
+ (*
+    <- sc_node_non_role_relation;;
+    => nrel_main_idtf:[использует обработку в поле центробежных сил*](* <- lang_ru;; *);;
+    => nrel_first_domain: concept_hydrocyclone;;
+    => nrel_second_domain: concept_centrifugal_separation;;
+    => nrel_definition:
+        [Гидроциклоны используют обработку в поле центробежных сил для разделения суспензий и эмульсий.]
+        (* <- lang_ru;; *);;
+*);;

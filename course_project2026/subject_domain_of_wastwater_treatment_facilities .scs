@@ -1,0 +1,401 @@
+subject_domain_of_wastewater_treatment_facilities
+<- subject_domain;
+<- sc_node_structure;
+=> nrel_main_idtf:
+	[Предметная область очистных сооружений сточных вод] (* <- lang_ru;; *);
+
+// Частные предметные области (дочерние)
+=> nrel_private_subject_domain:
+	
+	subject_domain_of_mechanical_wastewater_treatment_facility;
+	subject_domain_of_biological_wastewater_treatment_facility;
+	subject_domain_of_physicochemical_wastewater_treatment_facility;
+	subject_domain_of_sludge_treatment_facilities;
+	
+-> rrel_maximum_studied_object_class:
+	concept_wastewater_treatment_facility (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[очистное сооружение сточных вод](* <- lang_ru;; *);;
+*);
+
+-> rrel_maximum_studied_object_class:
+    concept_wastewater_treatment_facility
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[очистное сооружение сточных вод] (* <- lang_ru;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Очистные сооружения сточных вод представляют собой комплекс гидротехнических сооружений и устройств, предназначенный для очистки сточных вод и обработки осадка.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+-> rrel_not_maximum_studied_object_class:
+    
+    concept_wastewater
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[сточные воды] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[wastewater] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Сточные воды — воды, отводимые с территории населенных пунктов и промышленных предприятий после использования.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_treated_wastewater
+    (*
+        <- concept_wastewater;;
+        => nrel_main_idtf:[очищенные сточные воды] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[treated wastewater] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Очищенные сточные воды — сточные воды, прошедшие очистку на очистных сооружениях и сбрасываемые в окружающую среду.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_pipeline
+(*
+    <- sc_node_class;;
+    => nrel_main_idtf:[трубопровод] (* <- lang_ru;; *);;
+    => nrel_main_idtf:[pipeline] (* <- lang_en;; *);;
+    <= nrel_sc_text_translation: ...
+        (*
+            <- concept_definition (*<- sc_node_class;;*);;
+            -> [Трубопровод - инженерное сооружение для транспортировки жидкостей газов и сыпучих материалов.] (* <- lang_ru;; *);;
+        *);;
+    <= nrel_subdividing: concept_supply_pipeline; concept_outlet_pipeline; concept_sludge_pipeline; concept_gas_pipeline; concept_air_pipeline;;
+*);
+
+concept_supply_pipeline
+(*
+    <- sc_node_class;;
+    => nrel_main_idtf:[подводящий трубопровод] (* <- lang_ru;; *);;
+    => nrel_main_idtf:[supply pipeline] (* <- lang_en;; *);;
+    <= nrel_sc_text_translation: ...
+        (*
+            <- concept_definition (*<- sc_node_class;;*);;
+            -> [Подводящий трубопровод - трубопровод для подачи сточных вод на очистные сооружения.] (* <- lang_ru;; *);;
+        *);;
+*);
+
+concept_outlet_pipeline
+(*
+    <- sc_node_class;;
+    => nrel_main_idtf:[отводящий трубопровод] (* <- lang_ru;; *);;
+    => nrel_main_idtf:[outlet pipeline] (* <- lang_en;; *);;
+    <= nrel_sc_text_translation: ...
+        (*
+            <- concept_definition (*<- sc_node_class;;*);;
+            -> [Отводящий трубопровод - трубопровод для отвода очищенной воды.] (* <- lang_ru;; *);;
+        *);;
+*);
+    concept_pollutant
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[загрязняющее вещество] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[pollutant] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Загрязняющие вещества — компоненты сточных вод, подлежащие удалению в процессе очистки.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+
+concept_suspended_solids (*
+	<- concept_pollutant;;
+	=> nrel_main_idtf:[взвешенные вещества](* <- lang_ru;; *);;
+*);
+
+
+concept_sand (*
+	<- concept_pollutant;;
+	=> nrel_main_idtf:[песок](* <- lang_ru;; *);;
+*);
+
+
+
+concept_surfactants (*
+	<- concept_pollutant;;
+	=> nrel_main_idtf:[СПАВ](* <- lang_ru;; *);;
+*);
+
+concept_grease (*
+	<- concept_pollutant;;
+	=> nrel_main_idtf:[жиры](* <- lang_ru;; *);;
+*);
+
+
+concept_heavy_metals (*
+	<- concept_pollutant;;
+	=> nrel_main_idtf:[тяжелые металлы](* <- lang_ru;; *);;
+*);
+
+
+concept_bod5 (*
+	<- concept_pollutant;;
+	=> nrel_main_idtf:[БПК5](* <- lang_ru;; *);;
+*);
+
+concept_cod (*
+	<- concept_pollutant;;
+	=> nrel_main_idtf:[ХПК](* <- lang_ru;; *);;
+*);
+
+concept_phosphorus (*
+	<- concept_pollutant;;
+	=> nrel_main_idtf:[фосфор общий](* <- lang_ru;; *);;
+*);
+
+concept_nitrogen (*
+	<- concept_pollutant;;
+	=> nrel_main_idtf:[азот общий](* <- lang_ru;; *);;
+*);
+
+concept_ammonium (*
+	<- concept_pollutant;;
+	=> nrel_main_idtf:[аммоний-ионы](* <- lang_ru;; *);;
+*);
+
+concept_nitrites (*
+	<- concept_pollutant;;
+	=> nrel_main_idtf:[нитрит-ионы](* <- lang_ru;; *);;
+*);
+
+concept_nitrates (*
+	<- concept_pollutant;;
+	=> nrel_main_idtf:[нитрат-ионы](* <- lang_ru;; *);;
+*);
+
+concept_coliform_bacteria (*
+	<- concept_pollutant;;
+	=> nrel_main_idtf:[общие колиформные бактерии](* <- lang_ru;; *);;
+*);
+
+
+concept_coliphages (*
+	<- concept_pollutant;;
+	=> nrel_main_idtf:[колифаги](* <- lang_ru;; *);;
+*);
+
+concept_sludge
+(*
+    <- sc_node_class;;
+    => nrel_main_idtf:[осадок сточных вод] (* <- lang_ru;; *);;
+    => nrel_main_idtf:[sludge] (* <- lang_en;; *);;
+    <= nrel_sc_text_translation: ...
+        (*
+            <- concept_definition (*<- sc_node_class;;*);;
+            -> [Осадок сточных вод — твёрдая фракция, образующаяся в процессе очистки сточных вод на различных этапах.] (* <- lang_ru;; *);;
+        *);;
+*);
+
+concept_technological_process (*
+    <- sc_node_class;;
+    => nrel_main_idtf:[технологический процесс](* <- lang_ru;; *);;
+*);
+
+concept_mechanical_treatment_process (*
+    <- concept_technological_process;;
+    => nrel_main_idtf:[процесс механической очистки сточных вод](* <- lang_ru;; *);;
+    <= nrel_inclusion: concept_mechanical_treatment_facility;;
+*);
+
+concept_biological_treatment_process (*
+    <- concept_technological_process;;
+    => nrel_main_idtf:[процесс биологической очистки сточных вод](* <- lang_ru;; *);;
+    <= nrel_inclusion: concept_biological_treatment_facility;;
+*);
+
+concept_physicochemical_treatment_process (*
+    <- concept_technological_process;;
+    => nrel_main_idtf:[процесс физико-химической очистки сточных вод](* <- lang_ru;; *);;
+    <= nrel_inclusion: concept_physicochemical_treatment_facility;;
+*);
+
+concept_sludge_treatment_process (*
+    <- concept_technological_process;;
+    => nrel_main_idtf:[процесс обработки осадка](* <- lang_ru;; *);;
+    <= nrel_inclusion: concept_sludge_treatment_facility;;
+*);
+
+concept_indicator (*
+	<- sc_node_class;;
+	=> nrel_main_idtf:[показатель технологического режима работы очистных сооружений механической очистки](* <- lang_ru;; *);;
+*);
+
+
+concept_temperature (*
+	<- concept_physical_parameter;;
+	=> nrel_main_idtf:[температура](* <- lang_ru;; *);;
+	=> nrel_has_unit:[°C](* <- lang_ru;; *);;
+	<= nrel_inclusion: concept_indicator;;
+*);
+
+
+// (переиспользуются в механической, биологической и физико-химической очистке)
+
+concept_indicator (*
+	<- sc_node_class;;
+	=> nrel_main_idtf:[показатель технологического режима](* <- lang_ru;; *);;
+*);
+
+
+// Используется: песколовки, биофильтры, фильтры, биологические пруды
+
+
+concept_hydraulic_load (*
+	<- concept_indicator;;
+	<= nrel_inclusion: concept_indicator;;
+	=> nrel_main_idtf:[гидравлическая нагрузка](* <- lang_ru;; *);;
+	=> rrel_has_unit:[м³/(м²·ч)](* <- lang_ru;; *);;
+*);
+
+
+// Используется: первичные отстойники, двухъярусные отстойники, септики,
+//                фильтры, гидроциклоны, биофильтры, вторичные отстойники,
+//                биологические пруды
+
+concept_suspended_solids_in_effluent (*
+	<- concept_indicator;;
+	<= nrel_inclusion: concept_indicator;;
+	=> nrel_main_idtf:[содержание взвешенных веществ в осветленной воде](* <- lang_ru;; *);;
+	=> rrel_has_unit:[мг/дм³](* <- lang_ru;; *);;
+*);
+
+// Используется: первичные отстойники, двухъярусные отстойники, фильтры,
+//                биофильтры, биологические пруды
+
+concept_bod5_in_effluent (*
+	<- concept_indicator;;
+	<= nrel_inclusion: concept_indicator;;
+	=> nrel_main_idtf:[БПК5 в осветленной воде](* <- lang_ru;; *);;
+	=> rrel_has_unit:[мгО₂/дм³](* <- lang_ru;; *);;
+*);
+
+
+concept_sludge_level (*
+	<- concept_indicator;;
+	<= nrel_inclusion: concept_indicator;;
+	=> nrel_main_idtf:[уровень осадка](* <- lang_ru;; *);;
+	=> rrel_has_unit:[м](* <- lang_ru;; *);;
+*);
+
+
+concept_filtration_rate (*
+	<- concept_indicator;;
+	<= nrel_inclusion: concept_indicator;;
+	=> nrel_main_idtf:[скорость фильтрования](* <- lang_ru;; *);;
+	=> rrel_has_unit:[м/ч](* <- lang_ru;; *);;
+*);
+
+
+concept_pressure_loss (*
+	<- concept_indicator;;
+	<= nrel_inclusion: concept_indicator;;
+	=> nrel_main_idtf:[потери напора](* <- lang_ru;; *);;
+	=> rrel_has_unit:[м](* <- lang_ru;; *);;
+*);
+
+concept_wash_water_volume (*
+	<- concept_indicator;;
+	<= nrel_inclusion: concept_indicator;;
+	=> nrel_main_idtf:[объем промывной воды](* <- lang_ru;; *);;
+	=> rrel_has_unit:[м³](* <- lang_ru;; *);;
+*);
+
+
+concept_operating_mode (*
+    <- sc_node_class;;
+    => nrel_main_idtf:[режим эксплуатации](* <- lang_ru;; *);;
+    => nrel_main_idtf:[operating mode](* <- lang_en;; *);;
+*);
+
+concept_sludge_removal_mode (*
+    <- concept_operating_mode;;
+    => nrel_main_idtf:[режим удаления осадка](* <- lang_ru;; *);;
+    <= nrel_inclusion: concept_operating_mode;;
+*);
+
+concept_backwash_mode (*
+    <- concept_operating_mode;;
+    => nrel_main_idtf:[режим промывки](* <- lang_ru;; *);;
+    <= nrel_inclusion: concept_operating_mode;;
+*);
+
+concept_aeration_mode (*
+    <- concept_operating_mode;;
+    => nrel_main_idtf:[режим аэрации](* <- lang_ru;; *);;
+    <= nrel_inclusion: concept_operating_mode;;
+*);
+
+
+-> rrel_explored_relation:
+
+rrel_contains_pollutant (*
+	<- sc_node_non_role_relation;;
+	=> nrel_main_idtf:[содержит загрязняющее вещество](* <- lang_ru;; *);;
+	=> nrel_first_domain: concept_wastewater;;
+	=> nrel_second_domain: concept_pollutant;;
+*);
+
+rrel_has_parameter (*
+	<- sc_node_non_role_relation;;
+	=> nrel_main_idtf:[характеризуется показателем](* <- lang_ru;; *);;
+	=> nrel_first_domain: concept_wastewater;;
+	=> nrel_second_domain: concept_indicator;;
+*);
+
+rrel_is_treated_by (*
+	<- sc_node_non_role_relation;;
+	=> nrel_main_idtf:[очищается на сооружении](* <- lang_ru;; *);;
+	=> nrel_first_domain: concept_wastewater;;
+	=> nrel_second_domain: concept_wastewater_treatment_facility;;
+*);
+
+rrel_discharged_to (*
+	<- sc_node_non_role_relation;;
+	=> nrel_main_idtf:[сбрасывается в](* <- lang_ru;; *);;
+	=> nrel_first_domain: concept_treated_wastewater;;
+	=> nrel_second_domain: concept_environment;;
+*);
+
+rrel_removes_substance (*
+	<- sc_node_non_role_relation;;
+	=> nrel_main_idtf:[удаляет вещество](* <- lang_ru;; *);;
+	=> nrel_first_domain: concept_wastewater_treatment_facility;;
+	=> nrel_second_domain: concept_pollutant;;
+*);
+
+rrel_produces_sludge (*
+	<- sc_node_non_role_relation;;
+	=> nrel_main_idtf:[образует осадок](* <- lang_ru;; *);;
+	=> nrel_first_domain: concept_wastewater_treatment_facility;;
+	=> nrel_second_domain: concept_sludge;;
+*);
+
+
+rrel_has_operating_mode (*
+	<- sc_node_non_role_relation;;
+	=> nrel_main_idtf:[имеет режим эксплуатации](* <- lang_ru;; *);;
+	=> nrel_first_domain: concept_wastewater_treatment_facility;;
+	=> nrel_second_domain: concept_operating_mode;;
+*);
+
+rrel_requires_monitoring (*
+	<- sc_node_non_role_relation;;
+	=> nrel_main_idtf:[требует контроля](* <- lang_ru;; *);;
+	=> nrel_first_domain: concept_wastewater_treatment_facility;;
+	=> nrel_second_domain: concept_indicator;;
+*);
+
+rrel_has_unit (*
+	<- sc_node_non_role_relation;;
+	=> nrel_main_idtf:[имеет единицу измерения](* <- lang_ru;; *);;
+	=> nrel_first_domain: concept_indicator;;
+	=> nrel_second_domain: sc_node_class;;
+*);;
+
