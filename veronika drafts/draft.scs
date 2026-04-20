@@ -29,6 +29,8 @@ concept_technological_process
 <- rrel_explored_concept:
    subject_domain_of_treatment_facilities;
 => nrel_inclusion:
+    concept_chemical_process;
+    concept_physical_process;
     concept_treatment;
     concept_neutralization;
     concept_coagulation;
@@ -113,12 +115,11 @@ concept_reagent
    [Реагент — это химическое вещество, которое добавляют в воду (сточную, природную или технологическую) для осуществления процессов коагуляции, флокуляции, осаждения, нейтрализации, окисления, восстановления или других целевых превращений загрязнителей.]
    (*
        <- lang_ru;;
-   *);
-;
+   *);;
 
-concept_solution
+concept_chemical_solution
 => nrel_main_idtf:
-   [раствор]
+   [химический раствор]
    (*
       <- lang_ru;;
    *);
@@ -133,10 +134,10 @@ concept_solution
    coagulant_solution;
    alkaline_solution;
 => nrel_definition:
-   [Раствор — это однородная система переменного состава, состоящая из двух или более компонентов — растворителя и растворённых веществ, находящихся в молекулярно-дисперсном состоянии.]
+   [Химический раствор — это однородная система переменного состава, состоящая из двух или более компонентов — растворителя и растворённых веществ, находящихся в молекулярно-дисперсном состоянии.]
    (*
        <- lang_ru;;
-   *);
+   *);;
 
 concept_neutralization
 => nrel_main_idtf:
@@ -147,8 +148,11 @@ concept_neutralization
 <- sc_node_class;
 <- rrel_explored_concept:
    subject_domain_of_treatment_facilities;
+   subject_domain_of_physical_processes;
+   subject_domain_of_chemical_processes; //CHECK
 <= nrel_inclusion:
-   concept_physicochemical_treatment_method;
+   concept_physical_process;
+   concept_chemical_process;
 -> rrel_example:
    acid_wastewater_neutralization_with_alkali;
    alkaline_wastewater_neutralization_with_acid;
@@ -157,7 +161,7 @@ concept_neutralization
    [Нейтрализация — это физико-химический процесс очистки сточных вод, при котором pH среды доводится до нейтрального значения (6.5–8.5) путём добавления кислоты в щелочные воды или щёлочи — в кислые, либо фильтрованием через нейтрализующие материалы.]
    (*
        <- lang_ru;;
-   *);
+   *);;
 
 concept_coagulation
 => nrel_main_idtf:
@@ -168,8 +172,11 @@ concept_coagulation
 <- sc_node_class;
 <- rrel_explored_concept:
    subject_domain_of_treatment_facilities;
+   subject_domain_of_physical_processes;
+   subject_domain_of_chemical_processes; //CHECK
 <= nrel_inclusion:
-   concept_physicochemical_treatment_method;
+   concept_physical_process;
+   concept_chemical_process;
 -> rrel_example:
    aluminum_sulfate_coagulation;
    ferric_chloride_coagulation;
@@ -178,7 +185,7 @@ concept_coagulation
    [Коагуляция — это физико-химический процесс укрупнения коллоидных и мелкодисперсных частиц загрязнений в сточной воде под действием вводимых реагентов-коагулянтов, приводящий к образованию хлопьев, способных к осаждению или флотации.]
    (*
        <- lang_ru;;
-   *);
+   *);;
 
 concept_flocculation
 => nrel_main_idtf:
@@ -189,8 +196,11 @@ concept_flocculation
 <- sc_node_class;
 <- rrel_explored_concept:
    subject_domain_of_treatment_facilities;
+   subject_domain_of_physical_processes;
+   subject_domain_of_chemical_processes; //CHECK
 <= nrel_inclusion:
-   concept_physicochemical_treatment_method;
+   concept_physical_process;
+   concept_chemical_process;
 -> rrel_example:
    polymer_flocculation;
    polyacrylamide_flocculation;
@@ -199,7 +209,7 @@ concept_flocculation
    [Флокуляция — это физико-химический процесс агрегации мелких хлопьев, образовавшихся на стадии коагуляции, в более крупные и прочные флокулы под действием высокомолекулярных реагентов-флокулянтов, что ускоряет их осаждение или всплывание.]
    (*
        <- lang_ru;;
-   *);
+   *);;
 
 concept_oxidation
 => nrel_main_idtf:
@@ -210,8 +220,11 @@ concept_oxidation
 <- sc_node_class;
 <- rrel_explored_concept:
    subject_domain_of_treatment_facilities;
+   subject_domain_of_physical_processes;
+   subject_domain_of_chemical_processes; //CHECK
 <= nrel_inclusion:
-   concept_physicochemical_treatment_method;
+   concept_physical_process;
+   concept_chemical_process;
 -> rrel_example:
    ozonation;
    hydrogen_peroxide_oxidation;
@@ -221,7 +234,7 @@ concept_oxidation
    [Окисление — это физико-химический процесс разрушения органических и неорганических загрязнителей сточных вод за счёт передачи электронов от загрязнителя к сильному окислителю (озон, хлор, пероксид водорода, перманганат калия), приводящий к образованию менее токсичных или легко удаляемых соединений.]
    (*
        <- lang_ru;;
-   *);
+   *);;
 
 concept_reduction
 => nrel_main_idtf:
@@ -232,8 +245,11 @@ concept_reduction
 <- sc_node_class;
 <- rrel_explored_concept:
    subject_domain_of_treatment_facilities;
+   subject_domain_of_physical_processes;
+   subject_domain_of_chemical_processes; //CHECK
 <= nrel_inclusion:
-   concept_physicochemical_treatment_method;
+   concept_physical_process;
+   concept_chemical_process;
 -> rrel_example:
    chromium_VI_reduction_to_chromium_III;
    mercury_II_reduction_to_elemental_mercury;
@@ -242,7 +258,7 @@ concept_reduction
    [Восстановление — это физико-химический процесс преобразования токсичных соединений в сточных водах (обычно тяжёлых металлов в высших степенях окисления) в менее токсичные или легче удаляемые формы путём добавления восстановителей.]
    (*
        <- lang_ru;;
-   *);
+   *);;
 
 concept_flotation
 => nrel_main_idtf:
@@ -253,8 +269,11 @@ concept_flotation
 <- sc_node_class;
 <- rrel_explored_concept:
    subject_domain_of_treatment_facilities;
+   subject_domain_of_physical_processes;
+   subject_domain_of_chemical_processes; //CHECK
 <= nrel_inclusion:
-   concept_physicochemical_treatment_method;
+   concept_physical_process;
+   concept_chemical_process;
 -> rrel_example:
    dissolved_air_flotation;
    induced_air_flotation;
@@ -264,7 +283,7 @@ concept_flotation
    [Флотация — это физико-химический процесс разделения твёрдых частиц или жидких примесей в сточной воде, основанный на их прилипании к пузырькам газа (обычно воздуха) и всплывании на поверхность, где они удаляются в виде пенного продукта.]
    (*
        <- lang_ru;;
-   *);
+   *);;
 
 concept_coalescence
 => nrel_main_idtf:
@@ -275,8 +294,11 @@ concept_coalescence
 <- sc_node_class;
 <- rrel_explored_concept:
    subject_domain_of_treatment_facilities;
+   subject_domain_of_physical_processes;
+   subject_domain_of_chemical_processes; //CHECK
 <= nrel_inclusion:
-   concept_physicochemical_treatment_method;
+   concept_physical_process;
+   concept_chemical_process;
 -> rrel_example:
    oily_wastewater_coalescence;
    coalescing_filter_separator;
@@ -285,7 +307,7 @@ concept_coalescence
    [Коалесценция — это физико-химический процесс слияния мелких капель эмульгированных жидкостей (нефтепродуктов, масел, жиров) в более крупные капли в сточной воде при прохождении через коалесцирующую насадку или фильтр, что ускоряет их последующее гравитационное отделение.]
    (*
        <- lang_ru;;
-   *);
+   *);;
 
 concept_sorption
 => nrel_main_idtf:
@@ -296,8 +318,11 @@ concept_sorption
 <- sc_node_class;
 <- rrel_explored_concept:
    subject_domain_of_treatment_facilities;
+   subject_domain_of_physical_processes;
+   subject_domain_of_chemical_processes; //CHECK
 <= nrel_inclusion:
-   concept_physicochemical_treatment_method;
+   concept_physical_process;
+   concept_chemical_process;
 -> rrel_example:
    activated_carbon_adsorption;
    zeolite_adsorption;
@@ -306,7 +331,7 @@ concept_sorption
    [Сорбция — это физико-химический процесс поглощения растворённых загрязнителей из сточной воды твёрдым сорбентом (активированный уголь, цеолит, силикагель) за счёт адсорбции на поверхности или абсорбции в объёме, применяемый для глубокой очистки от органических соединений, тяжёлых металлов и других примесей.]
    (*
        <- lang_ru;;
-   *);
+   *);;
 
 concept_extraction
 => nrel_main_idtf:
@@ -317,8 +342,11 @@ concept_extraction
 <- sc_node_class;
 <- rrel_explored_concept:
    subject_domain_of_treatment_facilities;
+   subject_domain_of_physical_processes;
+   subject_domain_of_chemical_processes; //CHECK
 <= nrel_inclusion:
-   concept_physicochemical_treatment_method;
+   concept_physical_process;
+   concept_chemical_process;
 -> rrel_example:
    liquid_liquid_extraction;
    extraction_of_phenols_from_wastewater;
@@ -327,7 +355,7 @@ concept_extraction
    [Экстракция — это физико-химический процесс извлечения растворённых органических загрязнителей (фенолы, масла, органические кислоты) из сточной воды путём контакта с несмешивающимся с водой органическим растворителем, в котором загрязнитель растворяется лучше, чем в воде, с последующим отделением экстрагента и регенерацией ценных компонентов.]
    (*
        <- lang_ru;;
-   *);
+   *);;
 
 concept_evaporation
 => nrel_main_idtf:
@@ -338,8 +366,11 @@ concept_evaporation
 <- sc_node_class;
 <- rrel_explored_concept:
    subject_domain_of_treatment_facilities;
+   subject_domain_of_physical_processes;
+   subject_domain_of_chemical_processes; //CHECK
 <= nrel_inclusion:
-   concept_physicochemical_treatment_method;
+   concept_physical_process;
+   concept_chemical_process;
 -> rrel_example:
    vacuum_evaporation;
    heat_pump_evaporator;
@@ -348,7 +379,7 @@ concept_evaporation
    [Выпаривание — это физико-химический процесс концентрирования сточных вод путём перевода воды в парообразное состояние под воздействием тепла, в результате чего нелетучие загрязнители остаются в жидком остатке (кубовом остатке), а конденсат может быть возвращён в производство или сброшен.]
    (*
        <- lang_ru;;
-   *);
+   *);;
 
 concept_ion_exchange
 => nrel_main_idtf:
@@ -359,8 +390,11 @@ concept_ion_exchange
 <- sc_node_class;
 <- rrel_explored_concept:
    subject_domain_of_treatment_facilities;
+   subject_domain_of_physical_processes;
+   subject_domain_of_chemical_processes; //CHECK
 <= nrel_inclusion:
-   concept_physicochemical_treatment_method;
+   concept_physical_process;
+   concept_chemical_process;
 -> rrel_example:
    cation_exchange_for_hardness_removal;
    anion_exchange_for_nitrate_removal;
@@ -369,5 +403,4 @@ concept_ion_exchange
    [Ионный обмен — это физико-химический процесс извлечения ионов загрязнителей (тяжёлых металлов, солей жёсткости, нитратов, нитритов, цианидов) из сточной воды с помощью твёрдых ионообменных материалов (катионитов и анионитов), где ионы загрязнителей замещаются на безвредные ионы (натрий, водород, гидроксил).]
    (*
        <- lang_ru;;
-   *);
-;
+   *);;
