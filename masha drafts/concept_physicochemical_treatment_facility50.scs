@@ -29,7 +29,7 @@ concept_deep_wastewater_treatment
 <- rrel_explored_concept:
    subject_domain_of_treatment_facilities;
 <= nrel_inclusion:
-   concept_wastewater_treatment_process;
+   concept_wastewater_treatment_process; //нету такого, есть concept_technological_process
 -> rrel_example:
    tertiary_treatment;
    polishing_treatment;
@@ -96,7 +96,7 @@ concept_list_of_pollutants_for_sorption_treatment
        <- lang_ru;;
    *);;
 
-concept_sorption_treatment_goals
+concept_sorption_treatment_goals //единственное число и наверное не то CHECK
 => nrel_main_idtf:
    [цели сорбционной очистки]
    (*
@@ -133,7 +133,7 @@ concept_influent_pollutants_content_for_sorption
        <- lang_ru;;
    *);;
 
-concept_treated_water_quality_requirements_for_sorption
+concept_treated_water_quality_requirements_for_sorption //не уверена CHECK
 => nrel_main_idtf:
    [требования к очищенной сточной воде после сорбционной очистки]
    (*
@@ -152,7 +152,7 @@ concept_treated_water_quality_requirements_for_sorption
        <- lang_ru;;
    *);;
 
-concept_pre_treatment_efficiency_before_sorption
+concept_pre_treatment_efficiency_before_sorption //тут тоже не уверена CHECK
 => nrel_main_idtf:
    [эффективность предварительной очистки сточных вод перед подачей на сорбционную очистку]
    (*
@@ -226,7 +226,7 @@ concept_sorbent_carryover_losses
 
 concept_sorbent_activity_control
 => nrel_main_idtf:
-   [контроль сорбционной активности сорбента]
+   [контроль сорбционной активности сорбента] //система контроля тогда уж
    (*
       <- lang_ru;;
    *);
@@ -300,7 +300,7 @@ concept_sorbent_regeneration
 
 concept_regeneration_in_design
 => nrel_main_idtf:
-   [регенерация сорбента, предусмотренная проектной документацией]
+   [регенерация сорбента, предусмотренная проектной документацией] //я не уверена в чём разница с верхним CHECK
    (*
       <- lang_ru;;
    *);
@@ -362,6 +362,7 @@ concept_insoluble_impurities_in_sorbent_bed
 <- sc_node_class;
 <- rrel_explored_concept:
    subject_domain_of_treatment_facilities;
+   //включение в концепт загрязняющих веществ
 -> rrel_example:
    suspended_solids_deposited;
    colloidal_particles;
@@ -392,7 +393,7 @@ concept_backwash_intensity
 
 concept_backwash_intensity_range_for_activated_carbon
 => nrel_main_idtf:
-   [интенсивность промывки для активных углей (от 10 до 15 дм³/см²)]
+   [интенсивность промывки для активных углей (от 10 до 15 дм³/см²)] //переделать
    (*
       <- lang_ru;;
    *);
@@ -429,7 +430,7 @@ concept_backwash_duration
 
 concept_backwash_duration_range_8_10_min
 => nrel_main_idtf:
-   [продолжительность промывки от 8 до 10 минут]
+   [продолжительность промывки от 8 до 10 минут] //это просто снести
    (*
       <- lang_ru;;
    *);
@@ -446,7 +447,7 @@ concept_backwash_duration_range_8_10_min
        <- lang_ru;;
    *);;
 
-concept_sorbent_operation_period_between_regenerations
+concept_sorbent_operation_period_between_regenerations //не уверена CHECK
 => nrel_main_idtf:
    [продолжительность работы сорбента между регенерациями]
    (*
@@ -464,7 +465,7 @@ concept_sorbent_operation_period_between_regenerations
        <- lang_ru;;
    *);;
 
-concept_sorbent_operation_period_between_replacement
+concept_sorbent_operation_period_between_replacement //не уверенна CHECK
 => nrel_main_idtf:
    [продолжительность работы сорбента между его заменой]
    (*
