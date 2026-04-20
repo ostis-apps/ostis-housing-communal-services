@@ -1,0 +1,413 @@
+concept_chemical_phosphorus_precipitation_facilities
+=> nrel_main_idtf:
+   [сооружения для химического осаждения соединений фосфора]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_treatment_facility;
+-> rrel_example:
+   phosphorus_precipitation_units;
+   chemical_phosphorus_removal_facilities;
+=> nrel_definition:
+   [Сооружения для химического осаждения соединений фосфора — технические объекты, предназначенные для снижения концентраций соединений фосфора в очищенной воде путем добавления коагулянтов и перевода растворимых соединений фосфора в нерастворимые с образованием осадка.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_phosphorus_compounds_concentration_reduction
+=> nrel_main_idtf:
+   [снижение концентраций соединений фосфора в очищенной воде]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_wastewater_treatment_process;
+-> rrel_example:
+   reduction_of_total_phosphorus;
+   reduction_of_orthophosphates;
+=> nrel_definition:
+   [Снижение концентраций соединений фосфора — уменьшение содержания фосфорсодержащих веществ (ортофосфатов, полифосфатов, органических соединений фосфора) в очищенной сточной воде до установленных нормативов.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_coagulants_addition
+=> nrel_main_idtf:
+   [добавление коагулянтов]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   addition_of_aluminum_salts;
+   addition_of_iron_salts;
+=> nrel_definition:
+   [Добавление коагулянтов — технологическая операция введения химических реагентов (солей алюминия, железа, кальция) в сточную воду для осаждения растворимых соединений фосфора и образования нерастворимых фосфатов.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_soluble_phosphorus_compounds
+=> nrel_main_idtf:
+   [растворимые соединения фосфора]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   orthophosphates;
+   polyphosphates;
+   organic_phosphorus_compounds;
+=> nrel_definition:
+   [Растворимые соединения фосфора — формы фосфора, находящиеся в сточной воде в растворённом состоянии (ортофосфаты, полифосфаты, фосфорорганические соединения), подлежащие переводу в нерастворимый осадок при химическом осаждении.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_insoluble_phosphorus_compounds
+=> nrel_main_idtf:
+   [нерастворимые соединения фосфора]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   aluminum_phosphate;
+   ferric_phosphate;
+   calcium_phosphate;
+=> nrel_definition:
+   [Нерастворимые соединения фосфора — фосфаты металлов (алюминия, железа, кальция), выпадающие в осадок в результате химической реакции между растворимыми соединениями фосфора и добавленными коагулянтами.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_phosphorus_transfer_to_sludge
+=> nrel_main_idtf:
+   [перевод соединений фосфора в осадок]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   phosphorus_precipitation;
+   phosphorus_removal_with_sludge;
+=> nrel_definition:
+   [Перевод соединений фосфора в осадок — процесс химического осаждения, при котором растворимые соединения фосфора превращаются в нерастворимые фосфаты и выводится из очищенной воды вместе с осадком.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_physicochemical_phosphorus_removal
+=> nrel_main_idtf:
+   [осаждение соединений фосфора из сточных вод путем физико-химической очистки с дозированием коагулянтов]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_physicochemical_treatment_method;
+-> rrel_example:
+   direct_chemical_precipitation;
+   coagulation_phosphorus_removal;
+=> nrel_definition:
+   [Физико-химическое осаждение фосфора — метод удаления фосфора из сточных вод путём дозирования коагулянтов без использования биологических процессов, основанный на образовании нерастворимых фосфатов.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_combined_biological_and_chemical_phosphorus_removal
+=> nrel_main_idtf:
+   [сочетание биологической очистки и добавления коагулянтов для осаждения фосфора]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_combined_treatment_method;
+-> rrel_example:
+   simultaneous_precipitation;
+   post_precipitation;
+   pre_precipitation;
+=> nrel_definition:
+   [Сочетание биологической очистки и добавления коагулянтов — комбинированный метод удаления фосфора, при котором химическое осаждение дополняет биологическое фосфорудаление для достижения более низких остаточных концентраций фосфора.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_coagulant_dosing_to_primary_settling_tank
+=> nrel_main_idtf:
+   [дозирование коагулянтов в поток сточных вод, поступающих на первичный отстойник]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   pre_precipitation_dosing;
+   dosing_before_primary_clarifier;
+=> nrel_definition:
+   [Дозирование на первичный отстойник — подача коагулянта в поток сточной воды перед первичным отстойником для осаждения фосфора на стадии предварительной очистки (пре-преципитация).]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_coagulant_dosing_to_grit_chamber
+=> nrel_main_idtf:
+   [дозирование коагулянтов на песколовку (предварительное осаждение)]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   dosing_before_grit_removal;
+=> nrel_definition:
+   [Дозирование на песколовку — подача коагулянта в поток сточной воды перед песколовкой для предварительного осаждения фосфора вместе с песком и грубыми примесями.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_coagulant_dosing_directly_into_aeration_tanks
+=> nrel_main_idtf:
+   [дозирование реагентов непосредственно в аэротенки]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   simultaneous_precipitation_in_activated_sludge;
+   direct_dosing_to_aeration_basin;
+=> nrel_definition:
+   [Дозирование непосредственно в аэротенки — подача коагулянта непосредственно в аэротенки для параллельного осаждения фосфора в процессе биологической очистки (симультанная преципитация).]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_coagulant_dosing_to_aeration_tank_influent
+=> nrel_main_idtf:
+   [дозирование реагентов в поток сточных вод, поступающих в аэротенки]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   dosing_before_aeration_tank;
+   inline_dosing_to_aeration_tank_inlet;
+=> nrel_definition:
+   [Дозирование в поток, поступающий в аэротенки — подача коагулянта в трубопровод подачи сточной воды перед аэротенками для обеспечения равномерного смешения и осаждения фосфора в аэротенке.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_parallel_phosphorus_precipitation
+=> nrel_main_idtf:
+   [параллельное осаждение фосфора]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_phosphorus_removal_method;
+-> rrel_example:
+   simultaneous_precipitation;
+   co_precipitation;
+=> nrel_definition:
+   [Параллельное осаждение фосфора — метод удаления фосфора, при котором коагулянт дозируется непосредственно в аэротенки или в поток, поступающий в аэротенки, совмещая химическое осаждение с биологической очисткой.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_coagulant_dose_maintenance
+=> nrel_main_idtf:
+   [поддержание доз коагулянтов]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   optimal_coagulant_dosing;
+   maintaining_dose_within_limits;
+=> nrel_definition:
+   [Поддержание доз коагулянтов — обеспечение дозирования коагулянтов в заданном диапазоне концентраций, не превышающем допустимые значения для предотвращения угнетения микроорганизмов в биологической системе очистки.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_coagulant_dose_permissible_values
+=> nrel_main_idtf:
+   [допустимые значения доз коагулянтов]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   maximum_tolerable_coagulant_dose;
+   recommended_dose_range;
+=> nrel_definition:
+   [Допустимые значения доз коагулянтов — максимальные концентрации коагулянтов, при которых не происходит значительного угнетения микроорганизмов активного ила в системах биологической очистки.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_microorganism_inhibition_by_coagulants
+=> nrel_main_idtf:
+   [угнетение микроорганизмов коагулянтами]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   toxicity_of_aluminum_to_microbes;
+   iron_salts_inhibition_of_activated_sludge;
+=> nrel_definition:
+   [Угнетение микроорганизмов — негативное воздействие избыточных концентраций коагулянтов (солей алюминия, железа) на активность микроорганизмов активного ила, приводящее к снижению эффективности биологической очистки.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_additional_sludge_from_phosphorus_precipitation
+=> nrel_main_idtf:
+   [получение дополнительного количества осадка за счет дополнительного химического осаждения фосфора]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   chemical_sludge_from_phosphate_precipitation;
+   metal_phosphate_sludge;
+=> nrel_definition:
+   [Дополнительное количество осадка — увеличение объёма и массы осадка очистных сооружений, образующееся в результате связывания фосфора коагулянтами и выпадения нерастворимых фосфатов металлов.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_clarification_intensification_due_to_coagulation
+=> nrel_main_idtf:
+   [интенсификация осветления из-за процессов коагуляции]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   improved_sedimentation;
+   enhanced_solids_removal;
+=> nrel_definition:
+   [Интенсификация осветления — улучшение процессов отстаивания и осветления сточной воды благодаря агрегации мелкодисперсных взвешенных веществ под действием коагулянтов, добавляемых для осаждения фосфора.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_additional_coagulant_consumption_from_side_reactions
+=> nrel_main_idtf:
+   [дополнительный расход коагулянтов из-за неизбежных побочных реакций, не связанных с осаждением фосфора]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   coagulant_consumption_by_alkalinity;
+   coagulant_loss_to_suspended_solids;
+=> nrel_definition:
+   [Дополнительный расход коагулянтов — увеличение потребности в коагулянтах сверх стехиометрического количества, необходимое для осаждения фосфора, вызванное взаимодействием коагулянтов с другими компонентами сточной воды (щелочностью, органическими веществами, взвешенными частицами).]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_side_reactions_not_related_to_phosphorus_precipitation
+=> nrel_main_idtf:
+   [побочные реакции, не связанные с осаждением фосфора]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   coagulant_hydrolysis;
+   reaction_with_alkalinity;
+   complexation_with_organic_matter;
+=> nrel_definition:
+   [Побочные реакции — химические взаимодействия коагулянтов с компонентами сточной воды, не являющимися соединениями фосфора (гидрокарбонатами, органическими веществами, сульфатами), приводящие к дополнительному расходу реагентов.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_requirements_for_reagent_house_operation_51
+=> nrel_main_idtf:
+   [требования к эксплуатации реагентного хозяйства для химического осаждения фосфора]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_operational_requirement;
+-> rrel_example:
+   timely_preparation_of_coagulant_solutions;
+   accurate_dosing_of_coagulants;
+   storage_of_coagulant_stock;
+=> nrel_definition:
+   [Требования к эксплуатации реагентного хозяйства — совокупность правил по приготовлению, хранению, дозированию коагулянтов и обслуживанию оборудования, применяемые при эксплуатации сооружений химического осаждения фосфора.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_requirements_for_coagulation_facilities_operation
+=> nrel_main_idtf:
+   [требования к эксплуатации сооружений для обработки сточных вод коагулянтами]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_operational_requirement;
+-> rrel_example:
+   mixing_intensity_control;
+   sludge_removal_from_clarifiers;
+=> nrel_definition:
+   [Требования к эксплуатации сооружений для обработки сточных вод коагулянтами — правила управления процессами смешения, осаждения и удаления осадка при использовании коагулянтов для очистки сточных вод, включая химическое осаждение фосфора.]
+   (*
+       <- lang_ru;;
+   *);;

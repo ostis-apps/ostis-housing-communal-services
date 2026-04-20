@@ -1,0 +1,355 @@
+concept_ozonation_disinfection_facilities
+=> nrel_main_idtf:
+   [сооружения обеззараживания с применением метода озонирования]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_treatment_facility;
+-> rrel_example:
+   ozone_contact_tanks;
+   ozone_generation_system;
+   ozone_destruction_units;
+=> nrel_definition:
+   [Сооружения обеззараживания с применением метода озонирования — технические объекты, предназначенные для уничтожения патогенных микроорганизмов в сточной воде путём введения озона, получаемого на территории очистных сооружений.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_ozonation_method
+=> nrel_main_idtf:
+   [метод озонирования]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_disinfection_method;
+-> rrel_example:
+   ozonation_of_wastewater;
+   ozone_disinfection;
+=> nrel_definition:
+   [Метод озонирования — способ обеззараживания сточных вод путём введения озона (O₃) — сильного окислителя, обладающего бактерицидным и вирулицидным действием.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_ozone
+=> nrel_main_idtf:
+   [озон]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   ozone_generated_from_air;
+   ozone_generated_from_oxygen;
+=> nrel_definition:
+   [Озон — аллотропная модификация кислорода (O₃), сильный окислитель, получаемый на территории очистных сооружений из воздуха или технического кислорода в генераторах озона и применяемый для обеззараживания сточных вод.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_ozone_production_on_site
+=> nrel_main_idtf:
+   [получение озона на территории очистных сооружений]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   corona_discharge_ozone_generators;
+   dielectric_barrier_discharge_ozonators;
+=> nrel_definition:
+   [Получение озона на территории очистных сооружений — процесс генерации озона из кислородсодержащего газа (воздуха или кислорода) с помощью электрического разряда непосредственно на площадке очистных сооружений для последующего дозирования в сточную воду.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_ozone_dosing_into_wastewater_stream
+=> nrel_main_idtf:
+   [дозирование озона в поток сточных вод]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   dosing_via_ejector;
+   dosing_via_diffuser;
+   dosing_via_venturi_injector;
+=> nrel_definition:
+   [Дозирование озона в поток сточных вод — технологическая операция подачи озоновоздушной или озоно-кислородной смеси в поток сточной воды через специальные устройства (эжекторы, диффузоры, инжекторы Вентури).]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_treatment_of_total_flow_rate
+=> nrel_main_idtf:
+   [обработка всего расхода воды]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   full_flow_ozonation;
+   treatment_of_100_percent_flow;
+=> nrel_definition:
+   [Обработка всего расхода воды — режим дозирования озона, при котором озон вводится во весь поток сточных вод, поступающих на обеззараживание, без разделения расхода.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_dosing_into_partial_flow
+=> nrel_main_idtf:
+   [дозирование озона в часть расхода сточных вод]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   bypass_ozonation;
+   side_stream_ozone_injection;
+=> nrel_definition:
+   [Дозирование озона в часть расхода сточных вод — режим, при котором озон вводится только в часть общего потока сточной воды (например, 20-50% расхода) с последующим смешиванием обработанной порции с остальным расходом.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_mixing_with_remaining_flow
+=> nrel_main_idtf:
+   [смешивание с остальным расходом сточных вод]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   turbulent_mixing_in_pipeline;
+   mixing_in_contact_tank;
+=> nrel_definition:
+   [Смешивание с остальным расходом сточных вод — технологическая операция объединения части потока сточной воды, обработанной озоном, с остальным необработанным расходом для достижения равномерного распределения озона и достаточного обеззараживающего эффекта.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_ozonation_equipment_operation_instructions
+=> nrel_main_idtf:
+   [инструкции изготовителей оборудования для обеззараживания озонированием]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   ozone_generator_manual;
+   ozone_contact_tank_operating_guidelines;
+   ozone_destructor_maintenance_instructions;
+=> nrel_definition:
+   [Инструкции изготовителей — технические документы, регламентирующие порядок технического обслуживания и эксплуатации оборудования и сооружений обеззараживания озонированием, обязательные к исполнению.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_technical_maintenance_of_ozonation_equipment
+=> nrel_main_idtf:
+   [техническое обслуживание оборудования и сооружений обеззараживания озонированием]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   ozone_generator_inspection;
+   dielectric_replacement;
+   cooling_system_maintenance;
+=> nrel_definition:
+   [Техническое обслуживание — комплекс операций по поддержанию работоспособности и исправности оборудования озонирования (генераторы, контактные резервуары, деструкторы остаточного озона), выполняемый согласно инструкциям изготовителей.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_ozone_dose
+=> nrel_main_idtf:
+   [доза озона]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   5_to_35_mg_per_dm3;
+   operating_ozone_dose;
+=> nrel_definition:
+   [Доза озона — количество озона (в мг/дм³), вводимое в сточную воду для достижения требуемого обеззараживающего эффекта, принимаемое исходя из состава биологически очищенных сточных вод и их микробиологических параметров в соответствии с проектной документацией.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_ozone_contact_duration
+=> nrel_main_idtf:
+   [продолжительность контакта озона с обрабатываемой сточной водой]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   5_to_30_minutes;
+   contact_time_in_ozone_contact_tank;
+=> nrel_definition:
+   [Продолжительность контакта озона — время от момента введения озона в сточную воду до момента завершения реакции обеззараживания, необходимое для окисления микроорганизмов и растворённых загрязнений, принимаемое от 5 до 30 минут при нормальном режиме эксплуатации.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_biologically_treated_wastewater_composition_for_ozone
+=> nrel_main_idtf:
+   [состав биологически очищенных сточных вод для озонирования]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   organic_matter_concentration;
+   suspended_solids_for_ozone;
+   alkalinity_for_ozone;
+=> nrel_definition:
+   [Состав биологически очищенных сточных вод — совокупность физико-химических показателей сточной воды после биологической очистки (содержание органических веществ, взвешенных веществ, щёлочность), влияющих на потребляемую дозу озона и эффективность обеззараживания.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_microbiological_parameters_for_ozone
+=> nrel_main_idtf:
+   [микробиологические параметры сточных вод для озонирования]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   total_coliform_count_for_ozone;
+   ozone_resistant_microorganisms;
+=> nrel_definition:
+   [Микробиологические параметры сточных вод — показатели содержания микроорганизмов (бактерий, вирусов, спор, цист простейших) в сточной воде, определяющие требуемую дозу озона и продолжительность контакта для достижения нормативного качества обеззараживания.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_normal_operation_mode_of_ozonation_facilities
+=> nrel_main_idtf:
+   [нормальный режим эксплуатации сооружений обеззараживания озонированием]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   regular_ozonation_within_design_parameters;
+   steady_state_ozone_disinfection;
+=> nrel_definition:
+   [Нормальный режим эксплуатации — штатный режим работы сооружений озонирования, при котором параметры процесса (доза озона, продолжительность контакта, содержание остаточного озона) поддерживаются в пределах установленных нормативов (доза 5-35 мг/дм³, контакт 5-30 мин, остаточный озон 0,1-1,0 мг/дм³).]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_normal_ozone_dose_range
+=> nrel_main_idtf:
+   [доза озона при нормальном режиме эксплуатации (от 5 до 35 мг/дм³)]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_technological_norm;
+-> rrel_example:
+   minimum_ozone_dose_5_mg_per_dm3;
+   maximum_ozone_dose_35_mg_per_dm3;
+=> nrel_definition:
+   [Доза озона от 5 до 35 мг/дм³ — нормативный диапазон дозы озона при нормальном режиме эксплуатации сооружений обеззараживания озонированием, устанавливаемый проектной документацией и обеспечивающий эффективное обеззараживание.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_normal_ozone_contact_duration_range
+=> nrel_main_idtf:
+   [продолжительность контакта озона с обрабатываемой сточной водой при нормальном режиме эксплуатации (от 5 до 30 мин)]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_technological_norm;
+-> rrel_example:
+   minimum_contact_time_5_minutes;
+   maximum_contact_time_30_minutes;
+=> nrel_definition:
+   [Продолжительность контакта от 5 до 30 минут — нормативный диапазон времени контакта озона со сточной водой при нормальном режиме эксплуатации сооружений обеззараживания озонированием.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_residual_ozone_content
+=> nrel_main_idtf:
+   [содержание остаточного озона в обработанной воде]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   residual_ozone_from_0_1_to_1_0_mg_per_dm3;
+=> nrel_definition:
+   [Содержание остаточного озона — концентрация растворённого озона в обработанной сточной воде после завершения контакта, поддерживаемая в пределах от 0,1 до 1,0 мг/дм³ при нормальном режиме эксплуатации для гарантии полноты обеззараживания.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_residual_ozone_range_0_1_1_0_mg_per_dm3
+=> nrel_main_idtf:
+   [содержание остаточного озона в обработанной воде от 0,1 до 1,0 мг/дм³]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_technological_norm;
+-> rrel_example:
+   minimum_residual_ozone_0_1_mg_per_dm3;
+   maximum_residual_ozone_1_0_mg_per_dm3;
+=> nrel_definition:
+   [Содержание остаточного озона от 0,1 до 1,0 мг/дм³ — нормативный диапазон концентрации остаточного озона в обработанной воде при нормальном режиме эксплуатации сооружений обеззараживания озонированием, обеспечивающий бактерицидный эффект и предотвращающий избыточное окисление.]
+   (*
+       <- lang_ru;;
+   *);;

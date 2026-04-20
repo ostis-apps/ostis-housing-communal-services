@@ -1,0 +1,483 @@
+concept_uv_disinfection_facilities
+=> nrel_main_idtf:
+   [сооружения обеззараживания с применением метода ультрафиолетового облучения]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_treatment_facility;
+-> rrel_example:
+   uv_disinfection_units;
+   open_channel_uv_systems;
+   closed_vessel_uv_reactors;
+=> nrel_definition:
+   [Сооружения обеззараживания с применением метода ультрафиолетового облучения — технические объекты, предназначенные для уничтожения патогенных микроорганизмов в сточной воде путём обработки ультрафиолетовым излучением с длиной волны от 205 до 315 нм.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_uv_disinfection_method
+=> nrel_main_idtf:
+   [метод ультрафиолетового облучения]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_disinfection_method;
+-> rrel_example:
+   low_pressure_uv_disinfection;
+   medium_pressure_uv_disinfection;
+   pulsed_uv_disinfection;
+=> nrel_definition:
+   [Метод ультрафиолетового облучения — способ обеззараживания сточных вод путём обработки ультрафиолетовым излучением в активной области спектра с длиной волны от 205 до 315 нм, вызывающим повреждение ДНК микроорганизмов.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_uv_disinfection
+=> nrel_main_idtf:
+   [обеззараживание ультрафиолетовым облучением]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_wastewater_treatment_process;
+-> rrel_example:
+   uv_treatment_of_secondary_effluent;
+   uv_disinfection_of_industrial_wastewater;
+=> nrel_definition:
+   [Обеззараживание ультрафиолетовым облучением — этап очистки сточных вод, при котором микроорганизмы инактивируются под действием ультрафиолетового излучения без применения химических реагентов.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_active_uv_spectrum_range
+=> nrel_main_idtf:
+   [активная область спектра ультрафиолетового облучения]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   wavelength_from_205_to_315_nm;
+   germicidal_uv_range;
+=> nrel_definition:
+   [Активная область спектра ультрафиолетового облучения — диапазон длин волн ультрафиолетового излучения от 205 до 315 нм, обладающий максимальным бактерицидным эффектом и используемый для обеззараживания сточных вод.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_wavelength_range_205_315_nm
+=> nrel_main_idtf:
+   [длина волны от 205 до 315 нм]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   254_nm_mercury_line;
+   207_nm_far_uvc;
+=> nrel_definition:
+   [Длина волны от 205 до 315 нм — диапазон ультрафиолетового излучения, применяемый для обеззараживания сточных вод, включающий UV-C (200–280 нм) и часть UV-B (280–315 нм) спектра.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_uv_equipment_operation_instructions
+=> nrel_main_idtf:
+   [инструкции изготовителей оборудования для обеззараживания ультрафиолетовым облучением]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   manufacturer_technical_manual;
+   uv_reactor_operating_guidelines;
+   maintenance_schedule_for_uv_lamps;
+=> nrel_definition:
+   [Инструкции изготовителей — технические документы, регламентирующие порядок технического обслуживания и эксплуатации оборудования и сооружений обеззараживания ультрафиолетовым облучением, обязательные к исполнению.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_technical_maintenance_of_uv_equipment
+=> nrel_main_idtf:
+   [техническое обслуживание оборудования и сооружений обеззараживания ультрафиолетовым облучением]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   lamp_replacement;
+   quartz_sleeve_cleaning;
+   uv_intensity_monitoring;
+=> nrel_definition:
+   [Техническое обслуживание — комплекс операций по поддержанию работоспособности и исправности оборудования ультрафиолетового обеззараживания, выполняемый согласно инструкциям изготовителей.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_uv_radiation_dose
+=> nrel_main_idtf:
+   [доза ультрафиолетового облучения]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   dose_in_mJ_per_cm2;
+   fluence_rate;
+=> nrel_definition:
+   [Доза ультрафиолетового облучения — количество ультрафиолетовой энергии (в мДж/см²), подводимое к единице поверхности обрабатываемой сточной воды, принимаемое исходя из состава биологически очищенных сточных вод и их микробиологических параметров в соответствии с проектной документацией.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_biologically_treated_wastewater_composition
+=> nrel_main_idtf:
+   [состав биологически очищенных сточных вод]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   suspended_solids_concentration;
+   cod_value;
+   bod5_value;
+   colority_value;
+=> nrel_definition:
+   [Состав биологически очищенных сточных вод — совокупность физико-химических и микробиологических показателей сточной воды после биологической очистки, влияющих на эффективность последующего ультрафиолетового обеззараживания.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_microbiological_parameters_of_wastewater
+=> nrel_main_idtf:
+   [микробиологические параметры сточных вод]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   total_coliform_count;
+   e_coli_concentration;
+   virus_titer;
+=> nrel_definition:
+   [Микробиологические параметры сточных вод — показатели содержания микроорганизмов (бактерий, вирусов, простейших) в сточной воде, определяющие требуемую дозу ультрафиолетового облучения для достижения нормативного качества обеззараживания.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_uv_influent_water_quality_requirements
+=> nrel_main_idtf:
+   [требования к составу сточной воды, подаваемой на обеззараживание ультрафиолетовым облучением]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   maximum_suspended_solids;
+   maximum_cod;
+   maximum_bod5;
+   maximum_colority;
+=> nrel_definition:
+   [Требования к составу сточной воды — предельные значения показателей качества воды, подаваемой на установки ультрафиолетового обеззараживания, определяемые по данным производителей оборудования.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_manufacturer_data_for_uv_equipment
+=> nrel_main_idtf:
+   [данные производителей оборудования для обеззараживания ультрафиолетовым облучением]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   technical_specifications;
+   influent_quality_limits;
+   performance_guarantees;
+=> nrel_definition:
+   [Данные производителей — технические требования к качеству исходной сточной воды, устанавливаемые производителем ультрафиолетового оборудования для обеспечения заявленной эффективности обеззараживания.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_suspended_solids_limit_10_mg_per_dm3
+=> nrel_main_idtf:
+   [содержание взвешенных веществ более 10 мг/дм³ (порог снижения эффективности)]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   threshold_for_efficiency_reduction;
+=> nrel_definition:
+   [Содержание взвешенных веществ более 10 мг/дм³ — значение концентрации взвешенных веществ, при превышении которого эффективность обеззараживания ультрафиолетовым облучением начинает снижаться.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_cod_limit_50_mgO2_per_dm3
+=> nrel_main_idtf:
+   [ХПКCr более 50 мгО₂/дм³ (порог снижения эффективности)]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   chemical_oxygen_demand_threshold;
+=> nrel_definition:
+   [ХПКCr более 50 мгО₂/дм³ — значение химического потребления кислорода, определяемого бихроматным методом, при превышении которого снижается эффективность ультрафиолетового обеззараживания сточных вод.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_bod5_limit_10_mgO2_per_dm3
+=> nrel_main_idtf:
+   [БПК5 более 10 мгО₂/дм³ (порог снижения эффективности)]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   biochemical_oxygen_demand_threshold;
+=> nrel_definition:
+   [БПК5 более 10 мгО₂/дм³ — значение биохимического потребления кислорода за 5 суток, при превышении которого наблюдается снижение бактерицидной эффективности ультрафиолетового облучения.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_colority_limit_50_degrees
+=> nrel_main_idtf:
+   [цветность более 50 град. (порог снижения эффективности)]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   color_threshold_for_uv_transmission;
+=> nrel_definition:
+   [Цветность более 50 градусов — значение цветности воды (по платиново-кобальтовой шкале), при превышении которого ультрафиолетовое излучение поглощается окрашенными веществами, снижая эффективность обеззараживания.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_not_recommended_suspended_solids_20_mg_per_dm3
+=> nrel_main_idtf:
+   [содержание взвешенных веществ более 20 мг/дм³ (не рекомендуется подавать)]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   maximum_recommended_ss_for_uv;
+=> nrel_definition:
+   [Содержание взвешенных веществ более 20 мг/дм³ — значение концентрации взвешенных веществ, при котором подача сточной воды на установки ультрафиолетового обеззараживания не рекомендуется из-за резкого снижения эффективности и экранирования микроорганизмов.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_uv_irradiators
+=> nrel_main_idtf:
+   [ультрафиолетовые излучатели]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   low_pressure_mercury_lamps;
+   medium_pressure_uv_lamps;
+   amalgam_lamps;
+   led_uv_emitters;
+=> nrel_definition:
+   [Ультрафиолетовые излучатели — источники ультрафиолетового излучения (обычно ртутные лампы или UV-LED), используемые в установках обеззараживания сточных вод для генерации бактерицидного ультрафиолетового света.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_uv_irradiator_shutdown
+=> nrel_main_idtf:
+   [отключение ультрафиолетовых излучателей]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   electrical_disconnection;
+   cooldown_period;
+   lockout_tagout_procedure;
+=> nrel_definition:
+   [Отключение ультрафиолетовых излучателей — обязательная процедура обесточивания и охлаждения излучателей перед выполнением работ по очистке и обслуживанию для обеспечения безопасности персонала.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_chemical_cleaning_of_uv_irradiators
+=> nrel_main_idtf:
+   [химическая очистка ультрафиолетовых излучателей]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   acid_cleaning_of_quartz_sleeves;
+   descaling_with_organic_acids;
+=> nrel_definition:
+   [Химическая очистка ультрафиолетовых излучателей — удаление минеральных отложений и органических загрязнений с поверхности защитных чехлов (кварцевых стаканов) излучателей с использованием органических кислот.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_organic_acids_for_uv_cleaning
+=> nrel_main_idtf:
+   [органические кислоты для химической очистки излучателей]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   citric_acid;
+   oxalic_acid;
+   acetic_acid;
+=> nrel_definition:
+   [Органические кислоты — химические реагенты (лимонная, щавелевая, уксусная кислоты), применяемые для растворения минеральных отложений при химической очистке ультрафиолетовых излучателей.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_neutralization_of_spent_acids
+=> nrel_main_idtf:
+   [нейтрализация органических кислот после использования]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   neutralization_with_alkali;
+   ph_adjustment_to_6_5_8_5;
+=> nrel_definition:
+   [Нейтрализация органических кислот — обязательная обработка отработанных кислотных растворов (например, щелочью) для доведения pH до нейтральных значений перед сбросом или утилизацией.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_failed_uv_irradiators
+=> nrel_main_idtf:
+   [вышедшие из строя излучатели]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   burned_out_uv_lamps;
+   broken_quartz_sleeves_with_lamps;
+=> nrel_definition:
+   [Вышедшие из строя излучатели — ультрафиолетовые лампы, утратившие работоспособность (перегоревшие, разбитые, с истёкшим сроком службы), содержащие ртуть и подлежащие специальной утилизации.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_mercury_containing_waste
+=> nrel_main_idtf:
+   [ртуть в составе излучателей]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   mercury_vapor_in_lamps;
+   liquid_mercury_in_amalgam_lamps;
+=> nrel_definition:
+   [Ртуть — токсичное вещество (класс опасности 1), содержащееся в ультрафиолетовых лампах в виде паров или амальгамы, требующее специального обращения при утилизации вышедших из строя излучателей.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_uv_irradiator_utilization
+=> nrel_main_idtf:
+   [утилизация вышедших из строя излучателей, содержащих ртуть]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   demercurization;
+   recycling_at_specialized_facilities;
+=> nrel_definition:
+   [Утилизация излучателей — процесс сбора, транспортирования, обезвреживания и переработки отработанных ртутьсодержащих ультрафиолетовых ламп в соответствии с законодательством об обращении с отходами.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_waste_management_legislation
+=> nrel_main_idtf:
+   [законодательство об обращении с отходами]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   federal_law_on_production_and_consumption_waste;
+   hazardous_waste_classification;
+   permitting_system_for_waste_management;
+=> nrel_definition:
+   [Законодательство об обращении с отходами — совокупность нормативных правовых актов, устанавливающих требования к сбору, транспортированию, обработке, утилизации, обезвреживанию и размещению отходов производства и потребления, включая ртутьсодержащие отходы.]
+   (*
+       <- lang_ru;;
+   *);;

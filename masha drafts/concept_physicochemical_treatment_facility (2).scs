@@ -1,0 +1,859 @@
+// ============== БАЗОВЫЕ КОНЦЕПТЫ ==============
+
+concept_number
+<- sc_node_class;
+=> nrel_main_idtf:
+    [числовое значение]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_contaminator
+<- sc_node_class;
+=> nrel_main_idtf:
+    [загрязняющее вещество]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_reagent
+<- sc_node_class;
+=> nrel_main_idtf:
+    [реагент]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_wavelength
+<- sc_node_class;
+=> nrel_main_idtf:
+    [длина волны]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_pressure
+<- sc_node_class;
+=> nrel_main_idtf:
+    [давление]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_flow_rate
+<- sc_node_class;
+=> nrel_main_idtf:
+    [расход]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_volume
+<- sc_node_class;
+=> nrel_main_idtf:
+    [объем]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_moisture_content
+<- sc_node_class;
+=> nrel_main_idtf:
+    [влажность]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_duration
+<- sc_node_class;
+=> nrel_main_idtf:
+    [продолжительность]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_intensity
+<- sc_node_class;
+=> nrel_main_idtf:
+    [интенсивность]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_velocity
+<- sc_node_class;
+=> nrel_main_idtf:
+    [скорость]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_concentration
+<- sc_node_class;
+=> nrel_main_idtf:
+    [концентрация]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_voltage
+<- sc_node_class;
+=> nrel_main_idtf:
+    [напряжение]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_current_density
+<- sc_node_class;
+=> nrel_main_idtf:
+    [плотность тока]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_power_consumption
+<- sc_node_class;
+=> nrel_main_idtf:
+    [потребление электроэнергии]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_phosphorus_content
+<- sc_node_class;
+=> nrel_main_idtf:
+    [содержание фосфора]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_treatment_efficiency
+<- sc_node_class;
+=> nrel_main_idtf:
+    [эффективность очистки]
+    (*
+        <- lang_ru;;
+    *);;
+
+// ============== СООРУЖЕНИЯ ФИЗИКО-ХИМИЧЕСКОЙ ОЧИСТКИ ==============
+
+concept_physicochemical_treatment_facility
+<- sc_node_class;
+=> nrel_main_idtf:
+    [очистные сооружения физико-химической очистки]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_reagent_management
+<- sc_node_class;
+=> nrel_main_idtf:
+    [реагентное хозяйство]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_coagulation_treatment_facility
+<- sc_node_class;
+=> nrel_main_idtf:
+    [сооружения для обработки сточных вод коагуляцией]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_electrocoagulator
+<- sc_node_class;
+=> nrel_main_idtf:
+    [электрокоагулятор]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_galvanocoagulator
+<- sc_node_class;
+=> nrel_main_idtf:
+    [гальванокоагулятор]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_neutralization_facility
+<- sc_node_class;
+=> nrel_main_idtf:
+    [сооружения нейтрализации сточных вод]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_filter_neutralizer
+<- sc_node_class;
+=> nrel_main_idtf:
+    [фильтр-нейтрализатор]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_flotation_treatment_facility
+<- sc_node_class;
+=> nrel_main_idtf:
+    [сооружения флотационной очистки]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_flotator
+<- sc_node_class;
+=> nrel_main_idtf:
+    [флотатор]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_electroflotator
+<- sc_node_class;
+=> nrel_main_idtf:
+    [электрофлотатор]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_sorption_treatment_facility
+<- sc_node_class;
+=> nrel_main_idtf:
+    [сооружения сорбционной очистки]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_adsorber
+<- sc_node_class;
+=> nrel_main_idtf:
+    [адсорбер]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_chemical_phosphorus_precipitation_facility
+<- sc_node_class;
+=> nrel_main_idtf:
+    [сооружения для химического осаждения соединений фосфора]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_disinfection_facility
+<- sc_node_class;
+=> nrel_main_idtf:
+    [сооружения обеззараживания]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_ozonation_facility
+<- sc_node_class;
+=> nrel_main_idtf:
+    [сооружения обеззараживания озонированием]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_ultraviolet_disinfection_facility
+<- sc_node_class;
+=> nrel_main_idtf:
+    [сооружения обеззараживания ультрафиолетовым облучением]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_chlorination_facility
+<- sc_node_class;
+=> nrel_main_idtf:
+    [сооружения обеззараживания хлорированием]
+    (*
+        <- lang_ru;;
+    *);;
+
+
+// ============== РЕАГЕНТЫ ==============
+
+concept_coagulant
+<- sc_node_class;
+=> nrel_main_idtf:
+    [коагулянт]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_flocculant
+<- sc_node_class;
+=> nrel_main_idtf:
+    [флокулянт]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_neutralizing_reagent
+<- sc_node_class;
+=> nrel_main_idtf:
+    [нейтрализующий реагент]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_sorbent
+<- sc_node_class;
+=> nrel_main_idtf:
+    [сорбент]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_activated_carbon
+<- sc_node_class;
+=> nrel_main_idtf:
+    [активный уголь]
+    (*
+        <- lang_ru;;
+    *);;
+
+
+// ============== ХЛОРСОДЕРЖАЩИЕ РЕАГЕНТЫ ==============
+
+concept_chlorine_reagent
+<- sc_node_class;
+=> nrel_main_idtf:
+    [хлорсодержащий реагент]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_sodium_hypochlorite
+<- sc_node_class;
+=> nrel_main_idtf:
+    [гипохлорит натрия]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_calcium_hypochlorite
+<- sc_node_class;
+=> nrel_main_idtf:
+    [гипохлорит кальция]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_bleaching_powder
+<- sc_node_class;
+=> nrel_main_idtf:
+    [хлорная известь]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_chlorine_dioxide
+<- sc_node_class;
+=> nrel_main_idtf:
+    [диоксид хлора]
+    (*
+        <- lang_ru;;
+    *);;
+
+
+// ============== ДРУГИЕ РЕАГЕНТЫ ==============
+
+concept_ozone
+<- sc_node_class;
+=> nrel_main_idtf:
+    [озон]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_electrode_material
+<- sc_node_class;
+=> nrel_main_idtf:
+    [электродный материал]
+    (*
+        <- lang_ru;;
+    *);;
+
+
+// ============== ОБОРУДОВАНИЕ ==============
+
+concept_saturator
+<- sc_node_class;
+=> nrel_main_idtf:
+    [сатуратор]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_air_ejector
+<- sc_node_class;
+=> nrel_main_idtf:
+    [воздушный эжектор]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_dosing_pump
+<- sc_node_class;
+=> nrel_main_idtf:
+    [насос-дозатор]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_mixer
+<- sc_node_class;
+=> nrel_main_idtf:
+    [смеситель]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_reaction_chamber
+<- sc_node_class;
+=> nrel_main_idtf:
+    [камера реакций]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_dissolving_tank
+<- sc_node_class;
+=> nrel_main_idtf:
+    [растворный бак]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_consumable_tank
+<- sc_node_class;
+=> nrel_main_idtf:
+    [расходный бак]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_contact_tank
+<- sc_node_class;
+=> nrel_main_idtf:
+    [контактный резервуар]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_uv_lamp
+<- sc_node_class;
+=> nrel_main_idtf:
+    [УФ-излучатель]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_ozone_generator
+<- sc_node_class;
+=> nrel_main_idtf:
+    [озонатор]
+    (*
+        <- lang_ru;;
+    *);;
+
+
+// ============== ПАРАМЕТРЫ ==============
+
+concept_reagent_dosage
+<- sc_node_class;
+=> nrel_main_idtf:
+    [доза реагента]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_reagent_consumption
+<- sc_node_class;
+=> nrel_main_idtf:
+    [расход реагента]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_reagent_concentration
+<- sc_node_class;
+=> nrel_main_idtf:
+    [концентрация раствора реагента]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_dosing_accuracy
+<- sc_node_class;
+=> nrel_main_idtf:
+    [точность дозирования]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_ph_value
+<- sc_node_class;
+=> nrel_main_idtf:
+    [водородный показатель]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_residual_chlorine
+<- sc_node_class;
+=> nrel_main_idtf:
+    [остаточный хлор]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_chlorine_demand
+<- sc_node_class;
+=> nrel_main_idtf:
+    [хлорпоглощаемость]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_flotation_sludge
+<- sc_node_class;
+=> nrel_main_idtf:
+    [флотошлам]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_saturator_pressure
+<- sc_node_class;
+=> nrel_main_idtf:
+    [давление в сатураторе]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_retention_time
+<- sc_node_class;
+=> nrel_main_idtf:
+    [продолжительность пребывания]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_air_to_water_ratio
+<- sc_node_class;
+=> nrel_main_idtf:
+    [расход воздуха]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_sorption_activity
+<- sc_node_class;
+=> nrel_main_idtf:
+    [сорбционная активность]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_sorbent_replacement_frequency
+<- sc_node_class;
+=> nrel_main_idtf:
+    [периодичность замены сорбента]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_sorbent_consumption
+<- sc_node_class;
+=> nrel_main_idtf:
+    [расход загрузки сорбента]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_ozone_dosage
+<- sc_node_class;
+=> nrel_main_idtf:
+    [доза озона]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_ozone_residual
+<- sc_node_class;
+=> nrel_main_idtf:
+    [остаточный озон]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_contact_time
+<- sc_node_class;
+=> nrel_main_idtf:
+    [продолжительность контакта]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_uv_dosage
+<- sc_node_class;
+=> nrel_main_idtf:
+    [доза ультрафиолетового облучения]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_uv_transmittance
+<- sc_node_class;
+=> nrel_main_idtf:
+    [пропускание ультрафиолетового излучения]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_coliform_bacteria
+<- sc_node_class;
+=> nrel_main_idtf:
+    [общие колиформные бактерии]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_coliphages
+<- sc_node_class;
+=> nrel_main_idtf:
+    [колифаги]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_regulated_ph_range
+<- sc_node_class;
+=> nrel_main_idtf:
+    [нормативный диапазон водородного показателя]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_regulated_residual_chlorine
+<- sc_node_class;
+=> nrel_main_idtf:
+    [нормативный остаточный активный хлор]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_ozone_dosage_range
+<- sc_node_class;
+=> nrel_main_idtf:
+    [диапазон доз озона]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_uv_wavelength_range
+<- sc_node_class;
+=> nrel_main_idtf:
+    [диапазон длин волн ультрафиолетового излучения]
+    (*
+        <- lang_ru;;
+    *);;
+
+
+// ============== ПРОЦЕССЫ ==============
+
+concept_coagulation_process
+<- sc_node_class;
+=> nrel_main_idtf:
+    [коагуляция]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_flocculation_process
+<- sc_node_class;
+=> nrel_main_idtf:
+    [флокуляция]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_flotation_process
+<- sc_node_class;
+=> nrel_main_idtf:
+    [флотация]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_coalescence_process
+<- sc_node_class;
+=> nrel_main_idtf:
+    [коалесценция]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_sorption_process
+<- sc_node_class;
+=> nrel_main_idtf:
+    [сорбция]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_extraction_process
+<- sc_node_class;
+=> nrel_main_idtf:
+    [экстракция]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_evaporation_process
+<- sc_node_class;
+=> nrel_main_idtf:
+    [эвапорация]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_ion_exchange_process
+<- sc_node_class;
+=> nrel_main_idtf:
+    [ионный обмен]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_oxidation_process
+<- sc_node_class;
+=> nrel_main_idtf:
+    [окисление]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_reduction_process
+<- sc_node_class;
+=> nrel_main_idtf:
+    [восстановление]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_electrochemical_dissolution
+<- sc_node_class;
+=> nrel_main_idtf:
+    [электрохимическое растворение]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_ozonation_process
+<- sc_node_class;
+=> nrel_main_idtf:
+    [озонирование]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_uv_irradiation_process
+<- sc_node_class;
+=> nrel_main_idtf:
+    [ультрафиолетовое облучение]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_chlorination_process
+<- sc_node_class;
+=> nrel_main_idtf:
+    [хлорирование]
+    (*
+        <- lang_ru;;
+    *);;
+
+
+// ============== СПОСОБЫ ДОЗИРОВАНИЯ ==============
+
+concept_reagent_dosing
+<- sc_node_class;
+=> nrel_main_idtf:
+    [дозирование реагентов]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_direct_electrolysis
+<- sc_node_class;
+=> nrel_main_idtf:
+    [прямой электролиз]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_indirect_electrolysis
+<- sc_node_class;
+=> nrel_main_idtf:
+    [непрямой электролиз]
+    (*
+        <- lang_ru;;
+    *);;
+
+
+// ============== ДОПОЛНИТЕЛЬНЫЕ КОНЦЕПТЫ ==============
+
+concept_reagent_solution
+<- sc_node_class;
+=> nrel_main_idtf:
+    [раствор реагента]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_dosing_device
+<- sc_node_class;
+=> nrel_main_idtf:
+    [дозирующее устройство]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_measurement_value
+<- sc_node_class;
+=> nrel_main_idtf:
+    [измеряемая величина]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_wastewater
+<- sc_node_class;
+=> nrel_main_idtf:
+    [сточная вода]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_treated_wastewater
+<- sc_node_class;
+=> nrel_main_idtf:
+    [очищенная сточная вода]
+    (*
+        <- lang_ru;;
+    *);;
+
+concept_loading_material
+<- sc_node_class;
+=> nrel_main_idtf:
+    [материал загрузки]
+    (*
+        <- lang_ru;;
+    *);;
