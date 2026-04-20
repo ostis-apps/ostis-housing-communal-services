@@ -1,38 +1,3 @@
-concept_grease_trap
-  => nrel_main_idtf:
-    [жироуловитель] (* <- lang_ru;; *);
-  <- sc_node_class;
-  => nrel_designed_for:
-      concept_clarifying;
-      concept_removing;;
-
-concept_oop_class
-=> nrel_main_idtf:
-   [класс в ООП]
-   (*
-      <- lang_ru;;
-   *);
-=> nrel_main_idtf:
-   [class in OOP]
-   (*
-      <- lang_en;;
-   *);
-<- rrel_explored_concept:
-   subject_domain_of_object_modeling_intelligent_systems;
-<= nrel_inclusion:
-   concept_abstract_data_type;
-=> nrel_inclusion:
-   concept_abstract_class;
-   concept_interface_class;
--> rrel_example:
-   class_A; 
-=> nrel_definition:
-  [Класс в ООП — это абстрактный тип данных, шаблон, по которому создаются объекты, определяющий их структуру (свойства) и поведение (методы).]
-   (*
-       <- lang_ru;;
-   *);;
-
-
 concept_physical_and_chemical_treatment_facility
 => nrel_main_idtf:
    [очистное сооружение физико-химической очистки]
@@ -54,9 +19,9 @@ concept_physical_and_chemical_treatment_facility
        <- lang_ru;;
    *);;
 
-concept_process
+concept_technological_process
 => nrel_main_idtf:
-   [процесс]
+   [технологический процесс]
    (*
       <- lang_ru;;
    *);
@@ -77,7 +42,7 @@ concept_process
     concept_evaporation;
     concept_ion_exchange;
 => nrel_definition:
-   [Процесс - это ...]
+   [Технологический роцесс - это ...]
    (*
        <- lang_ru;;
    *);;
