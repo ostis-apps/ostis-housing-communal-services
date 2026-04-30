@@ -1,0 +1,25 @@
+subject_domain_of_sludge_composting
+=> nrel_main_idtf:
+    [Предметная область компостирования] (* <- lang_ru;; *);
+	<- subject_domain;
+	<- sc_node_structure;
+
+-> rrel_maximum_studied_object_class:
+	concept_sludge_composting_platform
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[площадка компостирования] (* <- lang_ru;; *);;
+		<= nrel_sc_text_translation: ...
+	        (*
+	            <- concept_definition (*<- sc_node_class;;*);;
+	                ->[Компостирование — это аэробный биотермический процесс стабилизации смеси осадка с органическими наполнителями.] (*<-lang_ru;;*);;
+                    ->[Оптимальная влажность смеси для начала компостирования составляет 55–60 %.] (*<-lang_ru;;*);;
+                    ->[Для аэрации буртов должно производиться их ворошение не реже 1 раза в 10 суток или принудительная подача воздуха.] (*<-lang_ru;;*);;
+                    ->[Контроль завершения процесса осуществляется по снижению температуры в буртах до уровня окружающей среды и исчезновению специфического запаха.] (*<-lang_ru;;*);;
+	        *);;
+	*);
+
+-> rrel_not_maximum_studied_object_class:
+	concept_bulking_agent (* => nrel_main_idtf:[органический наполнитель] (* <- lang_ru;; *);; *);
+	concept_compost_windrow (* => nrel_main_idtf:[компостный бурт] (* <- lang_ru;; *);; *);
+	concept_aeration_fan (* => nrel_main_idtf:[вентилятор аэрации] (* <- lang_ru;; *);; *);;

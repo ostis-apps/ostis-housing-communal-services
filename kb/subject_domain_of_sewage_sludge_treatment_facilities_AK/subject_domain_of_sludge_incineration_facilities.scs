@@ -1,0 +1,25 @@
+subject_domain_of_sludge_incineration_facilities
+=> nrel_main_idtf:
+    [Предметная область установок сжигания] (* <- lang_ru;; *);
+	<- subject_domain;
+	<- sc_node_structure;
+
+-> rrel_maximum_studied_object_class:
+	concept_sludge_incineration_furnace
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[печь для сжигания осадка] (* <- lang_ru;; *);;
+		<= nrel_sc_text_translation: ...
+	        (*
+	            <- concept_definition (*<- sc_node_class;;*);;
+	                ->[Сжигание применяется для максимального сокращения объема осадков (до 95 %) и получения инертной золы.] (*<-lang_ru;;*);;
+                    ->[Температура в камере сгорания должна быть не ниже 850 °C для предотвращения образования диоксинов.] (*<-lang_ru;;*);;
+                    ->[Автоматика должна обеспечивать немедленную остановку подачи осадка при нарушении температурного режима или отказе газоочистки.] (*<-lang_ru;;*);;
+	        *);;
+	*);
+
+-> rrel_not_maximum_studied_object_class:
+	concept_ash_removal_system (* => nrel_main_idtf:[система золоудаления] (* <- lang_ru;; *);; *);
+	concept_electrostatic_precipitator (* => nrel_main_idtf:[электрофильтр] (* <- lang_ru;; *);; *);
+	concept_quench_chamber (* => nrel_main_idtf:[камера охлаждения газов] (* <- lang_ru;; *);; *);
+	concept_auxiliary_fuel_burner (* => nrel_main_idtf:[горелка вспомогательного топлива] (* <- lang_ru;; *);; *);;

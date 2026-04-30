@@ -1,0 +1,30 @@
+subject_domain_of_sludge_conditioning
+=> nrel_main_idtf:
+    [Предметная область кондиционирования осадка] (* <- lang_ru;; *);
+	<- subject_domain;
+	<- sc_node_structure;
+
+-> rrel_maximum_studied_object_class:
+	concept_sludge_conditioning_unit
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[установка кондиционирования осадка] (* <- lang_ru;; *);;
+		<= nrel_sc_text_translation: ...
+	        (*
+	            <- concept_definition (*<- sc_node_class;;*);;
+	                ->[Процесс подготовки осадка для улучшения его водоотдающих свойств перед механическим обезвоживанием.] (*<-lang_ru;;*);;
+                    ->[Реагентное кондиционирование включает использование коагулянтов (железо, алюминий) и флокулянтов (полиэлектролиты).] (*<-lang_ru;;*);;
+                    ->[Тепловая обработка осадка (термокондиционирование) должна производиться при температуре 160–190 °C и давлении до 2 МПа.] (*<-lang_ru;;*);;
+                    ->[При использовании извести для кондиционирования её доза должна обеспечивать pH осадка выше 10–12 для подавления микрофлоры.] (*<-lang_ru;;*);;
+	        *);;
+        <= nrel_subdividing:
+            concept_chemical_conditioning;
+            concept_thermal_conditioning;
+            concept_elutriation;;
+	*);
+
+-> rrel_not_maximum_studied_object_class:
+	concept_reagent_mixer (* => nrel_main_idtf:[смеситель реагентов] (* <- lang_ru;; *);; *);
+	concept_specific_filtration_resistance (* => nrel_main_idtf:[удельное сопротивление фильтрации] (* <- lang_ru;; *);; *);
+	concept_coagulant_storage (* => nrel_main_idtf:[склад коагулянтов] (* <- lang_ru;; *);; *);
+	concept_sludge_elutriation_tank (* => nrel_main_idtf:[резервуар промывки осадка] (* <- lang_ru;; *);; *);;

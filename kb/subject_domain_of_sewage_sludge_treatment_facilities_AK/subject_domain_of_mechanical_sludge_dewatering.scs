@@ -1,0 +1,33 @@
+subject_domain_of_mechanical_sludge_dewatering
+=> nrel_main_idtf:
+    [Предметная область механического обезвоживания] (* <- lang_ru;; *);
+	<- subject_domain;
+	<- sc_node_structure;
+
+-> rrel_maximum_studied_object_class:
+	concept_mechanical_dewatering_facility
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[сооружение механического обезвоживания] (* <- lang_ru;; *);;
+		<= nrel_sc_text_translation: ...
+	        (*
+	            <- concept_definition (*<- sc_node_class;;*);;
+	                ->[Механическое обезвоживание обеспечивает перевод осадка в транспортабельное состояние (кек).] (*<-lang_ru;;*);;
+                    ->[Доза флокулянта должна подбираться экспериментально и корректироваться в зависимости от концентрации сухого вещества на входе.] (*<-lang_ru;;*);;
+                    ->[Эксплуатация ленточных пресс-фильтров требует непрерывной промывки полотен технической или очищенной сточной водой под давлением 0,6–0,8 МПа.] (*<-lang_ru;;*);;
+                    ->[Влажность обезвоженного осадка после камерных фильтр-прессов не должна превышать 75 %, после центрифуг — 80 %.] (*<-lang_ru;;*);;
+                    ->[Не реже 1 раза в смену следует определять прозрачность фугата по цилиндру Снеллена.] (*<-lang_ru;;*);;
+	        *);;
+        <= nrel_subdividing:
+                concept_centrifuge;
+                concept_belt_filter_press;
+                concept_screw_press;
+                concept_chamber_filter_press;;
+	*);
+
+-> rrel_not_maximum_studied_object_class:
+	concept_flocculant_dosing_unit (* => nrel_main_idtf:[узел дозирования флокулянта] (* <- lang_ru;; *);; *);
+	concept_centrate (* => nrel_main_idtf:[фугат] (* <- lang_ru;; *);; *);
+	concept_sludge_cake_conveyor (* => nrel_main_idtf:[конвейер обезвоженного осадка] (* <- lang_ru;; *);; *);
+	concept_filter_cloth (* => nrel_main_idtf:[фильтровальная салфетка] (* <- lang_ru;; *);; *);
+	concept_shredder_pump (* => nrel_main_idtf:[насос-измельчитель] (* <- lang_ru;; *);; *);;

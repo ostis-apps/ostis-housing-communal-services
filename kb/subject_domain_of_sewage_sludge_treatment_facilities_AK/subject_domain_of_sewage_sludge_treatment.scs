@@ -1,0 +1,108 @@
+subject_domain_of_sewage_sludge_treatment
+=> nrel_main_idtf:
+    [Предметная область обработки осадков сточных вод] (* <- lang_ru;; *);
+=> nrel_idtf:
+    [Глава 6. Обработка осадков] (* <- lang_ru;; *);
+
+<- subject_domain;
+<- sc_node_structure;
+
+=> nrel_private_subject_domain:
+    subject_domain_of_sludge_thickeners;
+    subject_domain_of_sludge_conditioning;
+    subject_domain_of_aerobic_sludge_stabilizers;
+    subject_domain_of_anaerobic_sludge_digesters;
+    subject_domain_of_mechanical_sludge_dewatering;
+    subject_domain_of_sludge_drying_beds;
+    subject_domain_of_thermal_sludge_drying;
+    subject_domain_of_sludge_composting;
+    subject_domain_of_sludge_incineration_facilities;
+    subject_domain_of_sludge_utilization;
+    subject_domain_of_sludge_quality_indicators;
+    subject_domain_of_sludge_storage_and_transportation;
+    subject_domain_of_filters;
+    subject_domain_of_grease_traps;
+    subject_domain_of_hydrocyclones;
+    subject_domain_of_oil_traps;
+    subject_domain_of_primary_settling_tanks;
+    subject_domain_of_sand_catchers;
+    subject_domain_of_septic_tanks;
+    subject_domain_of_sifters;
+
+-> rrel_maximum_studied_object_class:
+    concept_sludge_treatment_facility;
+
+-> rrel_not_maximum_studied_object_class:
+    concept_sludge_thickener;
+    concept_mechanical_dewatering_facility;
+    concept_methane_tank;
+    concept_thermal_sludge_dryer;
+
+-> rrel_explored_relation:
+    nrel_sludge_loading_rate;
+    nrel_biogas_yield;
+    nrel_dewatering_efficiency;
+    nrel_sludge_resistance;;
+
+// --- УДАЛЯЕМ ВСЕ ИМЕНОВАННЫЕ УЗЛЫ РАЗБИЕНИЯ ---
+// Оставляем строго прямую связь родитель <= { потомки }
+
+concept_sludge_thickener
+<= nrel_subdividing:
+    {
+    concept_gravity_thickener;
+    concept_flotation_thickener;
+    concept_centrifugal_thickener
+    };;
+
+concept_mechanical_dewatering_facility
+<= nrel_subdividing:
+    {
+    concept_centrifuge;
+    concept_belt_filter_press;
+    concept_screw_press;
+    concept_chamber_filter_press
+    };;
+
+// --- ИДЕНТИФИКАТОРЫ ---
+
+concept_sludge_thickener => nrel_main_idtf: [уплотнитель осадка] (* <- lang_ru;; *);;
+concept_mechanical_dewatering_facility => nrel_main_idtf: [сооружение механического обезвоживания] (* <- lang_ru;; *);;
+
+concept_gravity_thickener => nrel_main_idtf: [гравитационный уплотнитель] (* <- lang_ru;; *);;
+concept_flotation_thickener => nrel_main_idtf: [флотационный уплотнитель] (* <- lang_ru;; *);;
+concept_centrifugal_thickener => nrel_main_idtf: [центробежный уплотнитель] (* <- lang_ru;; *);;
+
+concept_centrifuge => nrel_main_idtf: [центрифуга] (* <- lang_ru;; *);;
+concept_belt_filter_press => nrel_main_idtf: [ленточный фильтр-пресс] (* <- lang_ru;; *);;
+concept_screw_press => nrel_main_idtf: [шнековый пресс] (* <- lang_ru;; *);;
+concept_chamber_filter_press => nrel_main_idtf: [камерный фильтр-пресс] (* <- lang_ru;; *);;
+
+concept_sludge_treatment_facility => nrel_main_idtf: [сооружение обработки осадков] (* <- lang_ru;; *);;
+concept_methane_tank => nrel_main_idtf: [метантенк] (* <- lang_ru;; *);;
+concept_thermal_sludge_dryer => nrel_main_idtf: [установка термической сушки] (* <- lang_ru;; *);;
+
+// --- ОТНОШЕНИЯ ---
+
+nrel_sludge_loading_rate <- sc_node_norole_relation; => nrel_main_idtf: [нагрузка по осадку*] (* <- lang_ru;; *);;
+nrel_biogas_yield <- sc_node_norole_relation; => nrel_main_idtf: [выход биогаза*] (* <- lang_ru;; *);;
+nrel_dewatering_efficiency <- sc_node_norole_relation; => nrel_main_idtf: [эффективность обезвоживания*] (* <- lang_ru;; *);;
+nrel_sludge_resistance <- sc_node_norole_relation; => nrel_main_idtf: [удельное сопротивление фильтрации осадка*] (* <- lang_ru;; *);;
+concept_flotation_thickener => nrel_main_idtf: [флотационный уплотнитель] (* <- lang_ru;; *);;
+concept_centrifugal_thickener => nrel_main_idtf: [центробежный уплотнитель] (* <- lang_ru;; *);;
+
+concept_centrifuge => nrel_main_idtf: [центрифуга] (* <- lang_ru;; *);;
+concept_belt_filter_press => nrel_main_idtf: [ленточный фильтр-пресс] (* <- lang_ru;; *);;
+concept_screw_press => nrel_main_idtf: [шнековый пресс] (* <- lang_ru;; *);;
+concept_chamber_filter_press => nrel_main_idtf: [камерный фильтр-пресс] (* <- lang_ru;; *);;
+
+concept_sludge_treatment_facility => nrel_main_idtf: [сооружение обработки осадков] (* <- lang_ru;; *);;
+concept_methane_tank => nrel_main_idtf: [метантенк] (* <- lang_ru;; *);;
+concept_thermal_sludge_dryer => nrel_main_idtf: [установка термической сушки] (* <- lang_ru;; *);;
+
+// --- ПАРАМЕТРЫ ---
+
+nrel_sludge_loading_rate <- sc_node_norole_relation; => nrel_main_idtf: [нагрузка по осадку*] (* <- lang_ru;; *);;
+nrel_biogas_yield <- sc_node_norole_relation; => nrel_main_idtf: [выход биогаза*] (* <- lang_ru;; *);;
+nrel_dewatering_efficiency <- sc_node_norole_relation; => nrel_main_idtf: [эффективность обезвоживания*] (* <- lang_ru;; *);;
+nrel_sludge_resistance <- sc_node_norole_relation; => nrel_main_idtf: [удельное сопротивление фильтрации осадка*] (* <- lang_ru;; *);;

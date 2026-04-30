@@ -1,0 +1,29 @@
+subject_domain_of_anaerobic_sludge_digesters
+=> nrel_main_idtf:
+    [Предметная область анаэробных стабилизаторов] (* <- lang_ru;; *);
+	<- subject_domain;
+	<- sc_node_structure;
+
+-> rrel_maximum_studied_object_class:
+	concept_methane_tank
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[метантенк] (* <- lang_ru;; *);;
+		<= nrel_sc_text_translation: ...
+	        (*
+	            <- concept_definition (*<- sc_node_class;;*);;
+	                ->[Метантенки предназначены для стабилизации осадков путем разложения органики в бескислородной среде с получением биогаза.] (*<-lang_ru;;*);;
+                    ->[Термофильный режим (53±1 °C) обеспечивает полное обеззараживание осадка от патогенных микроорганизмов и яиц гельминтов.] (*<-lang_ru;;*);;
+                    ->[Система перемешивания должна исключать образование застойных зон и обеспечивать равномерный прогрев всей массы осадка.] (*<-lang_ru;;*);;
+                    ->[Запрещается эксплуатация метантенков при неисправности предохранительных клапанов, огнепреградителей или систем автоматики контроля давления биогаза.] (*<-lang_ru;;*);;
+                    ->[Ежесменно следует контролировать температуру, уровень осадка, давление газа и интенсивность выделения биогаза.] (*<-lang_ru;;*);;
+	        *);;
+	*);
+
+-> rrel_not_maximum_studied_object_class:
+	concept_gas_holder (* => nrel_main_idtf:[газгольдер] (* <- lang_ru;; *);; *);
+	concept_gas_burner_unit (* => nrel_main_idtf:[газогорелочное устройство] (* <- lang_ru;; *);; *);
+	concept_flame_arrester (* => nrel_main_idtf:[огнепреградитель] (* <- lang_ru;; *);; *);
+	concept_heat_exchanger (* => nrel_main_idtf:[теплообменник] (* <- lang_ru;; *);; *);
+	concept_biogas_meter (* => nrel_main_idtf:[счетчик биогаза] (* <- lang_ru;; *);; *);
+	concept_volatilized_organic_matter (* => nrel_main_idtf:[беззольное вещество осадка] (* <- lang_ru;; *);; *);;
