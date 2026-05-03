@@ -407,9 +407,9 @@ concept_ion_exchange
 
 concept_solid_state_of_matter
 => nrel_main_idtf:
-   [твёрдое агрегатное состояние вещества] (* <- lang_ru;; *)
+   [твёрдое агрегатное состояние вещества] (* <- lang_ru;; *);
 => nrel_idtf:
-   [твёрдый вид] (* <- lang_ru;; *)
+   [твёрдый вид] (* <- lang_ru;; *);
 <- sc_node_class;
 <- rrel_explored_concept:
    subject_domain_of_treatment_facilities;
@@ -423,9 +423,9 @@ concept_solid_state_of_matter
 
 concept_gas_state_of_matter
 => nrel_main_idtf:
-   [газообразное агрегатное состояние вещества] (* <- lang_ru;; *)
+   [газообразное агрегатное состояние вещества] (* <- lang_ru;; *);
 => nrel_idtf:
-   [газообразный вид] (* <- lang_ru;; *)
+   [газообразный вид] (* <- lang_ru;; *);
 <- sc_node_class;
 <- rrel_explored_concept:
    subject_domain_of_treatment_facilities;
@@ -439,7 +439,7 @@ concept_gas_state_of_matter
 
 concept_electrochemical_dissolution
 => nrel_main_idtf:
-   [электрохимическое растворение] (* <- lang_ru;; *)
+   [электрохимическое растворение] (* <- lang_ru;; *);
 <- sc_node_class;
 <- rrel_explored_concept:
    subject_domain_of_treatment_facilities;
@@ -451,13 +451,13 @@ concept_electrochemical_dissolution
 
 nrel_state_of_matter
 => nrel_main_idtf:
-   [агрегатное состояние вещества*] (* <- lang_ru;; *)
+   [агрегатное состояние вещества*] (* <- lang_ru;; *);
 <- sc_node_non_role_relation;
 <- rrel_explored_relation:
    subject_domain_of_treatment_facilities;
 => nrel_definitional_domain: ...
    (*
-      nrel_set_union: {
+      => nrel_set_union: {
          concept_matter;
          concept_state_of_matter
       };;
@@ -467,4 +467,4 @@ nrel_state_of_matter
 => nrel_second_domain:
    concept_state_of_matter;
 => nrel_definition:
-   [Агрегатное состояние вещества - ...] (* <- lang_ru;; *)
+   [Агрегатное состояние вещества - ...] (* <- lang_ru;; *);;
