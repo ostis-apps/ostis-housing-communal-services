@@ -1,0 +1,207 @@
+subject_domain_of_filters
+
+=> nrel_main_idtf:
+    [Предметная область фильтров] (* <- lang_ru;; *);
+<- subject_domain;
+<- sc_node_structure;
+
+-> rrel_maximum_studied_object_class:
+    concept_filter
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[фильтр] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[filter] (* <- lang_en;; *);;
+        => nrel_has_parameter: concept_filtration_rate;;
+        => nrel_has_parameter: concept_pressure_loss;;
+        => nrel_has_parameter: concept_wash_water_volume;;
+        => nrel_has_parameter: concept_suspended_solids_in_effluent;;
+        => nrel_has_parameter: concept_bod5_in_effluent;;
+        <= nrel_inclusion: concept_mechanical_wastewater_treatment_facility;;
+        <= nrel_subdividing: 
+        {
+        concept_filter_with_granular_media; 
+        concept_filter_with_other_media
+        };;
+    *);
+
+-> rrel_not_maximum_studied_object_class:
+
+    concept_filter_with_granular_media
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[фильтр с зернистой загрузкой] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[filter with granular media] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Фильтр с зернистой загрузкой - сооружение механической очистки в котором фильтрующим материалом является зернистая загрузка.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_filter_with_other_media
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[фильтр с другой загрузкой] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[filter with other media] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Фильтр с другой загрузкой - сооружение механической очистки в котором фильтрующим материалом являются материалы отличные от зернистой загрузки.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_filter_media
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[фильтрующая загрузка] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[filter media] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Фильтрующая загрузка - материал используемый в фильтрах для задержания загрязняющих примесей из сточных вод.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_wash_water
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[промывная вода] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[wash water] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Промывная вода - вода используемая для промывки фильтрующей загрузки.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_filterate
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[фильтрат] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[filterate] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Фильтрат - сточная вода прошедшая через фильтрующую загрузку.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_disinfectant_solution
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[раствор дезинфектанта] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[disinfectant solution] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Раствор дезинфектанта - раствор используемый для обработки фильтров для предотвращения биологического обрастания.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+// Показатели для фильтров
+concept_filtration_rate (*
+    <- concept_indicator;;
+    <= nrel_inclusion: concept_indicator;;
+    => nrel_main_idtf:[скорость фильтрования] (* <- lang_ru;; *);;
+    => rrel_has_unit:[м/ч] (* <- lang_ru;; *);;
+*);
+
+concept_pressure_loss (*
+    <- concept_indicator;;
+    <= nrel_inclusion: concept_indicator;;
+    => nrel_main_idtf:[потери напора] (* <- lang_ru;; *);;
+    => rrel_has_unit:[м] (* <- lang_ru;; *);;
+*);
+
+concept_wash_water_volume (*
+    <- concept_indicator;;
+    <= nrel_inclusion: concept_indicator;;
+    => nrel_main_idtf:[объем промывной воды] (* <- lang_ru;; *);;
+    => rrel_has_unit:[м³] (* <- lang_ru;; *);;
+*);
+
+concept_treatment_efficiency
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_indicator;;
+        => nrel_main_idtf:[эффективность очистки] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[treatment efficiency] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Показатель, характеризующий степень удаления загрязняющих веществ из сточных вод в процессе очистки, выраженный в процентах снижения концентрации загрязнений.]
+                (* <- lang_ru;; *);;
+            *);;
+        => rrel_has_unit:[%];;
+    *);
+
+// Концепт "перемешивание слоев загрузки"
+concept_media_layers_mixing
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_prohibited_process;;
+        => nrel_main_idtf:[перемешивание слоев загрузки] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[media layers mixing] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Процесс нежелательного смешения разнородных слоев фильтрующей загрузки, приводящий к нарушению структуры фильтра и снижению эффективности очистки.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+
+// Концепт "смещение загрузки в горизонтальной плоскости"
+concept_media_horizontal_displacement
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_prohibited_process;;
+        => nrel_main_idtf:[смещение загрузки в горизонтальной плоскости] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[horizontal media displacement] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Процесс горизонтального сдвига фильтрующей загрузки относительно проектного положения, возникающий при нарушении правил эксплуатации и приводящий к неравномерному распределению потока воды.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+    concept_gradual_flow_increase
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_process;;
+        => nrel_main_idtf:[постепенное увеличение расхода промывной воды] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[gradual flow increase] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Плавное наращивание объёма промывной воды, подаваемой на фильтр, от нуля до рабочего значения в течение 1,0-1,5 минут для предотвращения смещения и перемешивания слоёв загрузки.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+
+// Концепт "постепенное снижение расхода промывной воды"
+concept_gradual_flow_decrease
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_process;;
+        => nrel_main_idtf:[постепенное снижение расхода промывной воды] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[gradual flow decrease] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Плавное уменьшение объёма промывной воды, подаваемой на фильтр, от рабочего значения до нуля в течение 1,0-1,5 минут для предотвращения смещения и перемешивания слоёв загрузки при остановке промывки.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+concept_polishing_treatment
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_technological_process;;
+        => nrel_main_idtf:[доочистка сточных вод] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[polishing treatment] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Доочистка сточных вод — процесс дополнительной очистки, применяемый после основной механической, биологической или физико-химической очистки для достижения более высоких требований к качеству очищенной воды и задержания специфических примесей.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);;

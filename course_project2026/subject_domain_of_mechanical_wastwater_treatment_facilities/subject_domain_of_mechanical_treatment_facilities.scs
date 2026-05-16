@@ -32,24 +32,101 @@ subject_domain_of_mechanical_wastewater_treatment_facility
   concept_filter;
   concept_hydrocyclone;
 
-  
-  concept_mechanical_treatment_process
-(*
-    <- sc_node_class;;
-    => nrel_main_idtf:[процесс механической очистки сточных вод] (* <- lang_ru;; *);;
-    <= nrel_inclusion: concept_mechanical_wastewater_treatment_facility;;
-    <= nrel_sc_text_translation: ...
-        (*
-            <- concept_definition (*<- sc_node_class;;*);;
-            -> [Процесс механической очистки сточных вод — совокупность операций по удалению грубодисперсных и минеральных примесей из сточных вод.] (* <- lang_ru;; *);;
-        *);;
-*);
+concept_tray
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[лоток] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[tray] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Открытое гидротехническое сооружение в форме желоба для транспортировки и распределения сточных вод.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
 
+// Концепт "канал"
+concept_channel
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[канал] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[channel] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Искусственное русло для транспортировки сточных вод между сооружениями или внутри них.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+  concept_supply_tray
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_tray;;
+        => nrel_main_idtf:[подводящий лоток] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[supply tray] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Подводящий лоток - элемент сооружения для подвода и распределения сточных вод к отстойникам, нефтеловушкам, жироловкам и другим сооружениям механической очистки.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+
+concept_discharge_tray
+    (*
+        <- sc_node_class;;
+         <= nrel_inclusion: concept_tray;;
+        => nrel_main_idtf:[отводящий лоток] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[discharge tray] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Отводящий лоток - элемент сооружения для отвода осветленной или очищенной воды из отстойников, нефтеловушек, жироловок и других сооружений механической очистки.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+    // Концепт "резервные агрегаты"
+concept_reserve_units
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[резервные агрегаты] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[reserve units] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Резервные агрегаты - дополнительное оборудование, предназначенное для включения в работу при выходе из строя основных агрегатов или при превышении проектной нагрузки.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+    // Концепт "поддержание нагрузки на оборудование"
+concept_load_maintenance
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_technological_process;;
+        => nrel_main_idtf:[поддержание нагрузки на оборудование] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[load maintenance] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Процесс обеспечения работы оборудования в пределах его проектной пропускной способности путем регулирования количества поступающих сточных вод и включения или выключения резервных агрегатов.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+
+
+concept_coarse_impurities (*
+    <- sc_node_class;;
+    <- concept_pollutant;;
+    => nrel_main_idtf: [грубодисперсные примеси] (* <- lang_ru;; *);;
+    => nrel_main_idtf: [coarse impurities] (* <- lang_en;; *);;
+    *);
+    
 concept_screening
 (*
     <- sc_node_class;;
     => nrel_main_idtf:[процеживание] (* <- lang_ru;; *);;
     <= nrel_inclusion: concept_mechanical_treatment_process;;
+    => nrel_retained_substance: concept_coarse_impurities;;
     <= nrel_sc_text_translation: ...
         (*
             <- concept_definition (*<- sc_node_class;;*);;
@@ -93,7 +170,7 @@ concept_centrifugal_separation
         *);;
 *);
 
-
+        
 concept_sludge_volume (*
 	<- concept_indicator;;
 	<= nrel_inclusion: concept_indicator;;
@@ -171,7 +248,21 @@ concept_sludge_level (*
    *);
    
   -> rrel_explored_relation:
-  
+  nrel_occurs_in
+    (*
+        <- sc_node_non_role_relation;;
+        => nrel_main_idtf:[происходит в*] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[occurs in*] (* <- lang_en;; *);;
+        => nrel_first_domain: concept_process;;
+        => nrel_second_domain: concept_place;;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Отношение, связывающее процесс (сбор, хранение, удаление, обработку) с местом его выполнения (контейнер, бункер, площадка, приямок, территория, ёмкость).]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+    
 rrel_uses_screening
  (*
     <- sc_node_non_role_relation;;

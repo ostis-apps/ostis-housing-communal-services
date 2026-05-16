@@ -1,0 +1,8 @@
+concept_law
+<- sc_node_class;
+=> nrel_main_idtf:
+    [закон]
+    (*
+        <- lang_ru;;
+    *);;
+

@@ -1,0 +1,23 @@
+ @search_process_template = {
+    rrel_init_template: {
+        rrel_template: [*
+            @input_param1 = (.._ec <-_ process);;
+             nrel_inclusion _-> (.._ec _-> .._law);;
+            @output_param1 = (.._law <-_ concept_mechanical_treatment_process);;
+        *];
+        rrel_template_input_params: {
+            @input_param1
+        };
+        rrel_template_output_params: {
+            @output_param1
+        }
+    } (* <- nrel_search_set_template;; *)
+};;
+
+@search_process_template
+<- nrel_fixed_search_strategy_template;
+=> nrel_main_idtf:
+    [Шаблон поиска процессов]
+    (*
+        <- lang_ru;;
+    *);;

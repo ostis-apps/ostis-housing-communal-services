@@ -1,0 +1,123 @@
+subject_domain_of_hydrocyclones
+
+=> nrel_main_idtf:
+    [Предметная область гидроциклонов] (* <- lang_ru;; *);
+<- subject_domain;
+<- sc_node_structure;
+
+-> rrel_maximum_studied_object_class:
+    concept_hydrocyclone
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[гидроциклон] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[hydrocyclone] (* <- lang_en;; *);;
+        <= nrel_inclusion: concept_mechanical_wastewater_treatment_facility;;
+        => nrel_has_parameter: concept_hydraulic_load;;
+        => nrel_has_parameter: concept_sludge_volume;;
+        => nrel_has_parameter: concept_sludge_moisture;;
+        => nrel_has_parameter: concept_suspended_solids_in_effluent;;
+    *);
+
+-> rrel_not_maximum_studied_object_class:
+  concept_clogging_susceptible_element
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[конструктивный элемент, подверженный засорению] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[structural element susceptible to clogging] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Элементы конструкции гидроциклонов и других сооружений (подводящие трубопроводы, сливные и шламовые насадки и др.), которые могут засоряться в процессе эксплуатации и требуют периодической очистки.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+    concept_sludge_nozzle
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[шламовая насадка] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[sludge nozzle] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Шламовая насадка - сменный элемент гидроциклона через который удаляется осадок.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_drain_nozzle
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[сливная насадка] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[drain nozzle] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Сливная насадка - сменный элемент гидроциклона через который отводится очищенная вода.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_feed_liner
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[вкладыш питающего отверстия] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[feed liner] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Вкладыш питающего отверстия - сменный элемент гидроциклона в зоне подачи исходной воды.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_manometer
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[манометр] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[manometer] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Манометр - прибор для измерения давления перед гидроциклоном.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_feed_pump
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[питательный насос] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[feed pump] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Питательный насос - насос для подачи сточных вод в гидроциклон.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_feed_tank
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[питательная емкость] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[feed tank] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Питательная емкость - резервуар из которого сточная вода подается в гидроциклон самотеком.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_pressure_loss
+    (*
+        <- concept_indicator;;
+        <= nrel_inclusion: concept_indicator;;
+        => nrel_main_idtf:[потери напора] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[pressure loss] (* <- lang_en;; *);;
+        => rrel_has_unit:[м] (* <- lang_ru;; *);;
+    *);
+
+// Показатели
+concept_hydraulic_load
+(*
+    <- concept_indicator;;
+    <= nrel_inclusion: concept_indicator;;
+    => nrel_main_idtf:[гидравлическая нагрузка] (* <- lang_ru;; *);;
+    => nrel_main_idtf:[hydraulic load] (* <- lang_en;; *);;
+    => rrel_has_unit:[м³/(м²·ч)] (* <- lang_ru;; *);;
+*);;

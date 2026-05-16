@@ -1,0 +1,217 @@
+subject_domain_of_oil_traps
+
+=> nrel_main_idtf:
+    [Предметная область нефтеловушек] (* <- lang_ru;; *);
+<- subject_domain;
+<- sc_node_structure;
+
+-> rrel_maximum_studied_object_class:
+    concept_oil_trap
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[нефтеловушка] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[oil trap] (* <- lang_en;; *);;
+        => nrel_has_parameter: concept_oil_volume;;
+        => nrel_has_parameter: concept_sludge_volume;;
+        => nrel_has_parameter: concept_sludge_moisture;;
+        => nrel_has_parameter: concept_oil_concentration_in_effluent;;
+        => nrel_has_parameter: concept_settling_duration;;
+        => rrel_has_part: concept_oil_collection_pipe;;
+        => rrel_has_part: concept_oil_sump;;
+        => rrel_has_part: concept_inlet_gate;;
+        => rrel_has_part: concept_distribution_tray;;
+        => rrel_has_part: concept_collection_tray;;
+        => rrel_has_part: concept_weir;;
+        <= nrel_inclusion: concept_mechanical_wastewater_treatment_facility;;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Нефтеловушки предназначены для осветления сточных вод и удаления из них нефтепродуктов.] (* <- lang_ru;; *);;
+                -> [Обеспечивать с помощью входных шиберов или задвижек равномерное распределение сточных вод между секциями нефтеловушек с расходами не превышающими их пропускную способность.] (* <- lang_ru;; *);;
+                -> [Осуществлять своевременное удаление задержанных нефтепродуктов и осадка по мере их накопления.] (* <- lang_ru;; *);;
+                -> [Очищать подводящие и отводящие лотки от осадков и отложений.] (* <- lang_ru;; *);;
+                -> [Постоянно следить за чистотой и исправностью распределительных и сборных лотков нефтесборных труб водосливов и механизмов для сгребания и удаления осадка.] (* <- lang_ru;; *);;
+                -> [Поддерживать горизонтальность водосливов и нефтесборных труб.] (* <- lang_ru;; *);;
+                -> [Предотвращать засорение нефтесборных труб производить их осмотр по мере необходимости но не реже чем 1 раз в неделю.] (* <- lang_ru;; *);;
+                -> [Нефтеловушки при эксплуатации закрываются перекрытиями если иное не установлено проектной документацией.] (* <- lang_ru;; *);;
+                -> [Сбор всплывших нефтепродуктов осуществляется не реже чем 1 раз в смену. Продолжительность сбора при включенном скребковом механизме не превышает 1 час.] (* <- lang_ru;; *);;
+                -> [Нефтесборные трубы устанавливаются строго горизонтально чтобы при их повороте вокруг продольной оси через прорезь сделанную вдоль труб поступали нефтепродукты с одного уровня во избежание попадания с ними большого количества воды.] (* <- lang_ru;; *);;
+                -> [В нефтеловушках не оборудованных нефтесборными трубами и скребками сбор всплывших нефтепродуктов осуществляется по мере их накопления как правило до достижения толщины слоя от 10 до 15 см но не реже 1 раза в сутки.] (* <- lang_ru;; *);;
+                -> [При наличии скребковых механизмов осадок накопившийся в нефтеловушках сгребают к приямку из которого далее откачивать насосом эжектором или выпускать через донные клапаны не реже чем 1 раз в сутки.] (* <- lang_ru;; *);;
+                -> [При отсутствии скребковых механизмов очистку нефтеловушек необходимо проводить не реже 2 раз в год весной и осенью.] (* <- lang_ru;; *);;
+            *);;
+        <= nrel_subdividing: 
+        {
+        concept_oil_trap_with_scraper; 
+        concept_oil_trap_without_scraper
+        };;
+    *);
+
+-> rrel_not_maximum_studied_object_class:
+
+    concept_oil_trap_with_scraper
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[нефтеловушка со скребковым механизмом] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[oil trap with scraper] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Нефтеловушка со скребковым механизмом - нефтеловушка оснащенная механическим устройством для сгребания осадка.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_oil_trap_without_scraper
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[нефтеловушка без скребкового механизма] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[oil trap without scraper] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Нефтеловушка без скребкового механизма - нефтеловушка в которой очистка производится вручную или с использованием передвижных средств.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_oil_products
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[нефтепродукты] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[oil products] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Нефтепродукты - загрязняющие вещества удаляемые из сточных вод в нефтеловушках.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_oil_collection_pipe
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[нефтесборная труба] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[oil collection pipe] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Нефтесборная труба - устройство для сбора всплывших нефтепродуктов с поверхности воды в нефтеловушке.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+ 
+    concept_inlet_gate
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[входной шибер] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[inlet gate] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Входной шибер - устройство для регулирования подачи сточных вод в секции нефтеловушки.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+concept_penstock
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[задвижка] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[penstock] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Задвижка - запорное устройство для полного перекрытия потока сточной воды в трубопроводах.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+    
+    concept_distribution_tray
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[распределительный лоток] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[distribution tray] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Распределительный лоток - элемент нефтеловушки для равномерного распределения сточных вод по сечению.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_collection_tray
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[сборный лоток] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[collection tray] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Сборный лоток - элемент нефтеловушки для сбора осветленной воды.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_weir
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[водослив] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[weir] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Водослив - устройство для перелива воды из одной части нефтеловушки в другую.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_scraper_mechanism
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[скребковый механизм] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[scraper mechanism] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Скребковый механизм - устройство для механического сгребания осадка в нефтеловушке.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_oil_layer_thickness
+    (*
+        <- concept_indicator;;
+        <= nrel_inclusion: concept_indicator;;
+        => nrel_main_idtf:[толщина слоя нефтепродуктов] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[oil layer thickness] (* <- lang_en;; *);;
+        => rrel_has_unit:[см] (* <- lang_ru;; *);;
+    *);
+
+// Показатели
+concept_oil_volume
+(*
+    <- concept_indicator;;
+    <= nrel_inclusion: concept_indicator;;
+    => nrel_main_idtf:[объем задержанных нефтепродуктов] (* <- lang_ru;; *);;
+    => nrel_main_idtf:[oil volume] (* <- lang_en;; *);;
+    => rrel_has_unit:[м³] (* <- lang_ru;; *);;
+*);
+concept_horizontality_maintenance
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[поддержание горизонтальности] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[horizontality maintenance] (* <- lang_en;; *);;
+        <= nrel_inclusion: concept_technological_process;;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Поддержание горизонтальности - требование к установке водосливов и нефтесборных труб в строго горизонтальном положении для обеспечения равномерного сбора нефтепродуктов.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+concept_oil_removal_process
+(*
+   <= nrel_inclusion: concept_pollutant_removal;;
+    => nrel_removed_substance: concept_oil_products;;
+    *);
+concept_oil_concentration_in_effluent
+(*
+    <- concept_indicator;;
+    <= nrel_inclusion: concept_indicator;;
+    => nrel_main_idtf:[концентрация нефтепродуктов в осветленной воде] (* <- lang_ru;; *);;
+    => nrel_main_idtf:[oil concentration in effluent] (* <- lang_en;; *);;
+    => rrel_has_unit:[мг/дм³] (* <- lang_ru;; *);;
+*);;

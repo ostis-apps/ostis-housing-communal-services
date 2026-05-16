@@ -1,0 +1,8 @@
+concept_ec
+<- sc_node_class;
+=> nrel_main_idtf:
+    [экологические правила и нормы]
+    (*
+        <- lang_ru;;
+    *);;
+

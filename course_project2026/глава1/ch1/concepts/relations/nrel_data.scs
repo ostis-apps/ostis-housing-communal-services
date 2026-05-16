@@ -1,0 +1,11 @@
+nrel_fio
+<- sc_node_non_role_relation;
+=> nrel_main_idtf:
+    [ФИО*]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_first_domain:
+    concept_human;
+=> nrel_second_domain:
+    lang_ru;;

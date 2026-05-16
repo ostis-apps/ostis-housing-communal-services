@@ -1,0 +1,415 @@
+subject_domain_of_sifters
+
+=> nrel_main_idtf:
+    [Предметная область решеток и сит](* <- lang_ru;; *);
+<- subject_domain;
+<- sc_node_structure;
+
+-> rrel_maximum_studied_object_class:
+    concept_sifters
+    (*
+        <- sc_node_class;;
+        => nrel_has_parameter: concept_debris_volume;;
+        => nrel_has_parameter: concept_debris_moisture;;
+        => nrel_has_parameter: concept_debris_ash_content;;
+        => nrel_has_parameter: concept_debris_density;;
+        => nrel_main_idtf:[решетки и сита] (* <- lang_ru;; *);;
+        <= nrel_inclusion: concept_mechanical_wastewater_treatment_facility;;
+        <= nrel_subdividing: 
+        {
+        concept_screen; 
+        concept_sieve
+        };;
+    *);
+
+-> rrel_not_maximum_studied_object_class:
+    concept_screen
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[решетка] (* <- lang_ru;; *);;
+        => nrel_is_intended_for: concept_screening;;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Решетка - сооружение механической очистки предназначенное для задержания крупных грубодисперсных примесей из сточных вод.] (* <- lang_ru;; *);;
+            *);;
+       
+ <= nrel_subdividing: 
+        {
+        concept_manual_cleaning_screen; 
+         concept_mechanical_cleaning_screen
+        };;
+    *);
+  concept_sieve
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[сито] (* <- lang_ru;; *);;
+         => nrel_is_intended_for: concept_screening;;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Сито - сооружение механической очистки предназначенное для задержания мелких грубодисперсных примесей из сточных вод.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_manual_cleaning_screen
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[решетка с ручной очисткой] (* <- lang_ru;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Решетка с ручной очисткой - решетка очистка которой производится вручную с периодичностью не реже 1 раза в 3 суток.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_mechanical_cleaning_screen
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[решетка с механизированной очисткой] (* <- lang_ru;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Решетка с механизированной очисткой - решетка оснащенная механическим устройством для автоматического удаления задержанных отбросов.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    
+    concept_debris
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[отбросы] (* <- lang_ru;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Отбросы - задержанные на решетках и ситах грубодисперсные примеси удаляемые из сточных вод.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_supply_channel
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[подводящий канал] (* <- lang_ru;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Подводящий канал - гидротехническое сооружение для подачи сточных вод к решеткам и ситам.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_container
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[контейнер] (* <- lang_ru;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Контейнер - емкость для сбора и временного хранения отбросов удаляемых с решеток и сит.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_ventilation_system
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[система вентиляции] (* <- lang_ru;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Система вентиляции - комплекс оборудования для обеспечения воздухообмена в помещении решеток.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_disinfectant
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[дезинфектант] (* <- lang_ru;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Дезинфектант - химическое вещество используемое для обеззараживания отбросов в теплый период.] (* <- lang_ru;; *);;
+            *);;
+    *);
+
+// Показатели для решеток и сит
+concept_debris_volume
+(*
+    <- concept_indicator;;
+    <= nrel_inclusion: concept_indicator;;
+    => nrel_main_idtf:[объем задерживаемых отбросов] (* <- lang_ru;; *);;
+    => rrel_has_unit:[м³] (* <- lang_ru;; *);;
+*);
+
+concept_debris_moisture
+(*
+    <- concept_indicator;;
+    <= nrel_inclusion: concept_indicator;;
+    => nrel_main_idtf:[влажность отбросов] (* <- lang_ru;; *);;
+    => rrel_has_unit:[%] (* <- lang_ru;; *);;
+*);
+
+concept_debris_ash_content
+(*
+    <- sc_node_class;;
+    <= nrel_inclusion: concept_indicator;;
+    => nrel_main_idtf:[зольность отбросов] (* <- lang_ru;; *);;
+    => rrel_has_unit:[%] (* <- lang_ru;; *);;
+*);
+concept_excessive_clogging
+(*
+    <- sc_node_class;;
+    <= nrel_inclusion: concept_process;;
+    => nrel_main_idtf:[процесс чрезмерного засорения] (* <- lang_ru;; *);;
+    => nrel_main_idtf:[excessive clogging process] (* <- lang_en;; *);;
+    <= nrel_sc_text_translation: ...
+        (*
+            <- concept_definition (*<- sc_node_class;;*);;
+            -> [Процесс накопления отбросов на решетках и ситах, приводящий к снижению пропускной способности.]
+            (* <- lang_ru;; *);;
+        *);;
+*);
+
+concept_capacity_reduction
+(*
+    <- sc_node_class;;
+    <= nrel_inclusion: concept_process;;
+    => nrel_main_idtf:[процесс снижения пропускной способности] (* <- lang_ru;; *);;
+    => nrel_main_idtf:[capacity reduction process] (* <- lang_en;; *);;
+    <= nrel_sc_text_translation: ...
+        (*
+            <- concept_definition (*<- sc_node_class;;*);;
+            -> [Процесс уменьшения максимального расхода сточных вод, который может пропустить сооружение.]
+            (* <- lang_ru;; *);;
+        *);;
+*);
+
+concept_wastewater_level_rise
+(*
+    <- sc_node_class;;
+    <= nrel_inclusion: concept_process;;
+    => nrel_main_idtf:[процесс повышения уровня сточной воды] (* <- lang_ru;; *);;
+    => nrel_main_idtf:[wastewater level rise process] (* <- lang_en;; *);;
+    <= nrel_sc_text_translation: ...
+        (*
+            <- concept_definition (*<- sc_node_class;;*);;
+            -> [Процесс увеличения уровня воды в подводящем канале перед решетками.]
+            (* <- lang_ru;; *);;
+        *);;
+*);
+concept_water_drain_hole
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[отверстие для отвода воды] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[water drain hole] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Отверстия в контейнере для отвода воды, выделяющейся из отбросов, в канализацию.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+    // Концепт "сбор"
+concept_collection
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_technological_process;;
+        => nrel_main_idtf:[сбор] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[collection] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Процесс накопления и объединения отбросов, осадка, нефтепродуктов, жиров и других выделенных примесей в специальных емкостях или зонах для последующего удаления.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+    concept_debris_density
+(*
+    <- concept_indicator;;
+    <= nrel_inclusion: concept_indicator;;
+    => nrel_main_idtf:[плотность отбросов] (* <- lang_ru;; *);;
+    => rrel_has_unit:[кг/м³] (* <- lang_ru;; *);;
+*);
+
+
+// Концепт "холодный период"
+concept_cold_period
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[холодный период] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[cold period] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Временной интервал года с устойчивыми отрицательными температурами, характеризующийся риском замерзания воды, отбросов и осадка в очистных сооружениях и контейнерах.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+
+// Концепт "тёплый период"
+concept_warm_period
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[тёплый период] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[warm period] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Временной интервал года с положительными температурами, характеризующийся активностью микроорганизмов и риском размножения насекомых в отбросах, требующий обработки дезинфектантами.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+
+// Отношение "период"
+nrel_period
+    (*
+        <- sc_node_non_role_relation;;
+        => nrel_main_idtf:[период*] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[period*] (* <- lang_en;; *);;
+        => nrel_first_domain: concept_temporal_entity;;
+        => nrel_second_domain: concept_time_interval;;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Отношение, связывающее сущность (например, сезонное мероприятие, режим работы, процесс) с соответствующим временным интервалом, в течение которого оно актуально или выполняется.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+    concept_freezing
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_process;;
+        => nrel_main_idtf:[замерзание] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[freezing] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Процесс перехода воды или влагосодержащих материалов (отбросов, осадка) из жидкого состояния в твёрдое (лёд) при снижении температуры ниже точки замерзания, приводящий к обезвоживанию, увеличению объёма и затруднению удаления отходов.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+
+// Концепт "обработка хлорсодержащими дезинфектантами"
+concept_chlorination_treatment
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_technological_process;;
+        => nrel_main_idtf:[обработка хлорсодержащими дезинфектантами] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[chlorination treatment] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Процесс обеззараживания отбросов, осадка, песка или других материалов путём внесения хлорсодержащих реагентов (хлорной извести, гипохлорита натрия, гипохлорита кальция и др.) для предотвращения размножения микроорганизмов, насекомых и выделения неприятных запахов.]
+                (* <- lang_ru;; *);;
+            *);;
+        -> rrel_uses_substance: concept_chlorine_disinfectants;;
+    *);
+concept_grinding
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_technological_process;;
+        => nrel_main_idtf:[измельчение] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[grinding] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Процесс механического дробления или перемалывания твёрдых отходов (отбросов, осадка) для уменьшения размера частиц перед их сбросом или дальнейшей обработкой.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+    concept_discharge
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_technological_process;;
+        => nrel_main_idtf:[сброс в поток сточных вод] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[discharge] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Процесс возврата измельчённых отбросов, промывных вод, фильтрата или других жидких отходов в поток сточных вод, поступающих на очистку.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    // Концепт "территория очистных сооружений"
+concept_treatment_facility_territory
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[территория очистных сооружений] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[treatment facility territory] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Земельный участок, на котором расположены очистные сооружения, включая здания, сооружения, проезды, площадки для хранения материалов и озеленённые зоны.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+
+// Концепт "песковая площадка"
+concept_sand_platform
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[песковая площадка] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[sand platform] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Специально оборудованная открытая площадка на территории очистных сооружений для обезвоживания и временного хранения песка, извлечённого из песколовок.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+
+// Концепт "доступность для погрузки на транспорт"
+concept_loading_accessibility
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[доступность для погрузки на транспорт] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[loading accessibility] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Свойство места хранения (песковой площадки, контейнера, бункера), обеспечивающее свободный подъезд погрузочной техники (экскаватора, погрузчика) и возможность механизированной загрузки материала в транспортные средства для вывоза.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+
+    concept_storage
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_technological_process;;
+        => nrel_main_idtf:[хранение] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[storage] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Процесс временного размещения и содержания материалов (песка, осадка, отбросов) в специально отведённых местах (площадках, контейнерах, бункерах, приямках) до их последующего удаления или утилизации.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+    // Концепт "размещение"
+concept_placement
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_technological_process;;
+        => nrel_main_idtf:[размещение] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[placement] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Процесс расположения материалов (песка, осадка, отбросов) в специально отведённых местах хранения (площадках, контейнерах, бункерах, приямках).]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+nrel_collection_point
+    (*
+        <- sc_node_non_role_relation;;
+        => nrel_main_idtf:[место сбора*] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[collection point*] (* <- lang_en;; *);;
+        => nrel_first_domain: concept_collection;;
+        => nrel_second_domain: sc_node_class;;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Отношение, связывающее процесс сбора с местом (контейнером, приямком, емкостью, зоной), где происходит накопление отбросов, осадка или других примесей.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);;
+

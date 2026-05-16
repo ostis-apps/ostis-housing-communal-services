@@ -1,0 +1,62 @@
+econip
+<- concept_ec;
+=> nrel_main_idtf:
+    [ЭкоНиП 17.06.06-005-2022]
+    (*
+        <- lang_ru;;
+    *);
+-> nrel_law:
+    water_code_ref;
+    environmental_protection_law_ref;
+    waste_management_law_ref;
+    air_protection_law_ref;
+    measurement_unity_law_ref;
+    construction_activity_law_ref;;
+
+water_code_ref
+=> nrel_main_idtf:
+    [Водный кодекс Республики Беларусь]
+    (*
+        <- lang_ru;;
+    *);
+<- concept_law;;
+
+environmental_protection_law_ref
+=> nrel_main_idtf:
+    [Закон Республики Беларусь «Об охране окружающей среды»]
+    (*
+        <- lang_ru;;
+    *);
+<- concept_law;;
+
+waste_management_law_ref
+=> nrel_main_idtf:
+    [Закон Республики Беларусь «Об обращении с отходами»]
+    (*
+        <- lang_ru;;
+    *);
+<- concept_law;;
+
+air_protection_law_ref
+=> nrel_main_idtf:
+    [Закон Республики Беларусь «Об охране атмосферного воздуха»]
+    (*
+        <- lang_ru;;
+    *);
+<- concept_law;;
+
+measurement_unity_law_ref
+=> nrel_main_idtf:
+    [Закон Республики Беларусь «Об обеспечении единства измерений»]
+    (*
+        <- lang_ru;;
+    *);
+<- concept_law;;
+
+construction_activity_law_ref
+=> nrel_main_idtf:
+    [Закон Республики Беларусь «Об архитектурной, градостроительной и строительной деятельности в Республике Беларусь»]
+    (*
+        <- lang_ru;;
+    *);
+<- concept_law;;

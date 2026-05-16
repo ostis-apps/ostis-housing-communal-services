@@ -1,0 +1,39 @@
+Petrov
+<- concept_student;
+=> nrel_fio: nrel_main_idtf:
+    [Петров П.П.]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_average_mark:
+    [9.2];;
+
+Ivanov
+<- concept_student;
+=> nrel_fio: nrel_main_idtf:
+    [Иванов И.И.]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_average_mark:
+    [5.1];;
+
+Olegov
+<- concept_student;
+=> nrel_fio: nrel_main_idtf:
+    [Олегов О.О.]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_average_mark:
+    [8.1];;
+
+Sidorov
+<- concept_student;
+=> nrel_fio: nrel_main_idtf:
+    [Сидоров С.С.]
+    (*
+        <- lang_ru;;
+    *);
+=> nrel_average_mark:
+    [7.1];;

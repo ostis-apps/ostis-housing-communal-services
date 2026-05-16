@@ -13,12 +13,6 @@ subject_domain_of_wastewater_treatment_facilities
 	subject_domain_of_sludge_treatment_facilities;
 	
 -> rrel_maximum_studied_object_class:
-	concept_wastewater_treatment_facility (*
-		<- sc_node_class;;
-		=> nrel_main_idtf:[очистное сооружение сточных вод](* <- lang_ru;; *);;
-*);
-
--> rrel_maximum_studied_object_class:
     concept_wastewater_treatment_facility
     (*
         <- sc_node_class;;
@@ -55,7 +49,34 @@ subject_domain_of_wastewater_treatment_facilities
                 -> [Очищенные сточные воды — сточные воды, прошедшие очистку на очистных сооружениях и сбрасываемые в окружающую среду.] (* <- lang_ru;; *);;
             *);;
     *);
+concept_surface_wastewater
+    (*
+        <- concept_wastewater;;
+        => nrel_main_idtf:[поверхностные сточные воды] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[surface wastewater] (* <- lang_en;; *);;
+          <= nrel_inclusion: concept_wastewater;;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Поверхностные сточные воды — воды, образующиеся в результате выпадения атмосферных осадков (дождевые, талые воды), а также воды от полива территорий и мытья улиц, требующие очистки перед сбросом в водные объекты.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
 
+// Концепт "производственные сточные воды"
+concept_industrial_wastewater
+    (*
+        <- concept_wastewater;;
+        => nrel_main_idtf:[производственные сточные воды] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[industrial wastewater] (* <- lang_en;; *);;
+         <= nrel_inclusion: concept_wastewater;;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Производственные сточные воды — воды, образующиеся в результате технологических процессов промышленных предприятий, содержащие специфические загрязняющие вещества, характерные для данного вида производства.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
     concept_pipeline
 (*
     <- sc_node_class;;
@@ -104,80 +125,106 @@ concept_outlet_pipeline
             *);;
     *);
 
-
+concept_waste
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_pollutant;;
+        => nrel_main_idtf:[отбросы] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[waste] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Крупные нерастворимые примеси, задерживаемые на решётках и ситах в процессе процеживания сточных вод, подлежащие сбору в контейнеры, обезвреживанию и удалению.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
 concept_suspended_solids (*
-	<- concept_pollutant;;
+<- sc_node_class;;
+	<= nrel_inclusion: concept_pollutant;;
 	=> nrel_main_idtf:[взвешенные вещества](* <- lang_ru;; *);;
 *);
 
 
 concept_sand (*
-	<- concept_pollutant;;
+<- sc_node_class;;
+	<= nrel_inclusion: concept_pollutant;;
 	=> nrel_main_idtf:[песок](* <- lang_ru;; *);;
 *);
 
 
 
 concept_surfactants (*
-	<- concept_pollutant;;
+<- sc_node_class;;
+	<= nrel_inclusion: concept_pollutant;;
 	=> nrel_main_idtf:[СПАВ](* <- lang_ru;; *);;
 *);
 
 concept_grease (*
-	<- concept_pollutant;;
+<- sc_node_class;;
+	<= nrel_inclusion: concept_pollutant;;
 	=> nrel_main_idtf:[жиры](* <- lang_ru;; *);;
 *);
 
 
 concept_heavy_metals (*
-	<- concept_pollutant;;
+<- sc_node_class;;
+	<= nrel_inclusion: concept_pollutant;;
 	=> nrel_main_idtf:[тяжелые металлы](* <- lang_ru;; *);;
 *);
 
 
 concept_bod5 (*
-	<- concept_pollutant;;
+<- sc_node_class;;
+	<= nrel_inclusion: concept_pollutant;;
 	=> nrel_main_idtf:[БПК5](* <- lang_ru;; *);;
 *);
 
 concept_cod (*
-	<- concept_pollutant;;
+<- sc_node_class;;
+	<= nrel_inclusion: concept_pollutant;;
 	=> nrel_main_idtf:[ХПК](* <- lang_ru;; *);;
 *);
 
 concept_phosphorus (*
-	<- concept_pollutant;;
+<- sc_node_class;;
+	<= nrel_inclusion: concept_pollutant;;
 	=> nrel_main_idtf:[фосфор общий](* <- lang_ru;; *);;
 *);
 
 concept_nitrogen (*
-	<- concept_pollutant;;
+<- sc_node_class;;
+	<= nrel_inclusion: concept_pollutant;;
 	=> nrel_main_idtf:[азот общий](* <- lang_ru;; *);;
 *);
 
 concept_ammonium (*
-	<- concept_pollutant;;
+<- sc_node_class;;
+	<= nrel_inclusion: concept_pollutant;;
 	=> nrel_main_idtf:[аммоний-ионы](* <- lang_ru;; *);;
 *);
 
 concept_nitrites (*
-	<- concept_pollutant;;
+<- sc_node_class;;
+	<= nrel_inclusion: concept_pollutant;;
 	=> nrel_main_idtf:[нитрит-ионы](* <- lang_ru;; *);;
 *);
 
 concept_nitrates (*
-	<- concept_pollutant;;
+<- sc_node_class;;
+	 <= nrel_inclusion: concept_pollutant;;
 	=> nrel_main_idtf:[нитрат-ионы](* <- lang_ru;; *);;
 *);
 
 concept_coliform_bacteria (*
-	<- concept_pollutant;;
+<- sc_node_class;;
+	<= nrel_inclusion: concept_pollutant;;
 	=> nrel_main_idtf:[общие колиформные бактерии](* <- lang_ru;; *);;
 *);
 
 
 concept_coliphages (*
-	<- concept_pollutant;;
+<- sc_node_class;;
+	<= nrel_inclusion: concept_pollutant;;
 	=> nrel_main_idtf:[колифаги](* <- lang_ru;; *);;
 *);
 
@@ -192,39 +239,52 @@ concept_sludge
             -> [Осадок сточных вод — твёрдая фракция, образующаяся в процессе очистки сточных вод на различных этапах.] (* <- lang_ru;; *);;
         *);;
 *);
+concept_accumulated_pollutant
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_pollutant;;
+        => nrel_main_idtf:[накопленное загрязняющее вещество] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[accumulated pollutant] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Накопленное загрязняющее вещество - осадок, песок, отбросы, нефтепродукты, жиры и другие примеси, оседающие или всплывающие в очистных сооружениях и подлежащие периодическому удалению.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+    
 
-concept_technological_process (*
-    <- sc_node_class;;
-    => nrel_main_idtf:[технологический процесс](* <- lang_ru;; *);;
-*);
 
-concept_mechanical_treatment_process (*
-    <- concept_technological_process;;
-    => nrel_main_idtf:[процесс механической очистки сточных вод](* <- lang_ru;; *);;
-    <= nrel_inclusion: concept_mechanical_treatment_facility;;
-*);
+
 
 concept_biological_treatment_process (*
+<- sc_node_class;;
     <- concept_technological_process;;
     => nrel_main_idtf:[процесс биологической очистки сточных вод](* <- lang_ru;; *);;
     <= nrel_inclusion: concept_biological_treatment_facility;;
 *);
 
 concept_physicochemical_treatment_process (*
+<- sc_node_class;;
     <- concept_technological_process;;
     => nrel_main_idtf:[процесс физико-химической очистки сточных вод](* <- lang_ru;; *);;
     <= nrel_inclusion: concept_physicochemical_treatment_facility;;
 *);
 
 concept_sludge_treatment_process (*
+<- sc_node_class;;
     <- concept_technological_process;;
     => nrel_main_idtf:[процесс обработки осадка](* <- lang_ru;; *);;
     <= nrel_inclusion: concept_sludge_treatment_facility;;
 *);
-
 concept_indicator (*
 	<- sc_node_class;;
 	=> nrel_main_idtf:[показатель технологического режима работы очистных сооружений механической очистки](* <- lang_ru;; *);;
+<= nrel_inclusion:
+   concept_measurement_parameter;;
+=> nrel_definition:
+   [Технологический показатель — это количественная или качественная характеристика технологического процесса, используемая для оценки режима работы и эффективности очистки сточных вод.]
+   (* <- lang_ru;; *);;
 *);
 
 
@@ -235,23 +295,26 @@ concept_temperature (*
 	<= nrel_inclusion: concept_indicator;;
 *);
 
-
+concept_frequency (*
+    <- sc_node_class;;
+    <= nrel_inclusion: concept_indicator;;
+    => nrel_main_idtf: [периодичность] (* <- lang_ru;; *);;
+    <= nrel_sc_text_translation: ...
+        (*
+            <- concept_definition (*<- sc_node_class;;*);;
+            -> [Характеристика процесса или действия, определяющая интервал времени между его повторениями.] (* <- lang_ru;; *);;
+        *);;
+        *);
 // (переиспользуются в механической, биологической и физико-химической очистке)
-
-concept_indicator (*
-	<- sc_node_class;;
-	=> nrel_main_idtf:[показатель технологического режима](* <- lang_ru;; *);;
-*);
-
 
 // Используется: песколовки, биофильтры, фильтры, биологические пруды
 
 
 concept_hydraulic_load (*
-	<- concept_indicator;;
+	 <- sc_node_class;;
 	<= nrel_inclusion: concept_indicator;;
 	=> nrel_main_idtf:[гидравлическая нагрузка](* <- lang_ru;; *);;
-	=> rrel_has_unit:[м³/(м²·ч)](* <- lang_ru;; *);;
+	=> nrel_has_unit:[м³/(м²·ч)](* <- lang_ru;; *);;
 *);
 
 
@@ -260,54 +323,45 @@ concept_hydraulic_load (*
 //                биологические пруды
 
 concept_suspended_solids_in_effluent (*
-	<- concept_indicator;;
+	 <- sc_node_class;;
 	<= nrel_inclusion: concept_indicator;;
 	=> nrel_main_idtf:[содержание взвешенных веществ в осветленной воде](* <- lang_ru;; *);;
-	=> rrel_has_unit:[мг/дм³](* <- lang_ru;; *);;
+	=> nrel_has_unit:[мг/дм³](* <- lang_ru;; *);;
+*);
+concept_suspended_solids (*
+	 <- sc_node_class;;
+	<= nrel_inclusion: concept_indicator;;
+	=> nrel_main_idtf:[содержание взвешенных веществ](* <- lang_ru;; *);;
+	=> nrel_has_unit:[мг/дм³](* <- lang_ru;; *);;
 *);
 
 // Используется: первичные отстойники, двухъярусные отстойники, фильтры,
 //                биофильтры, биологические пруды
 
 concept_bod5_in_effluent (*
-	<- concept_indicator;;
+	 <- sc_node_class;;
 	<= nrel_inclusion: concept_indicator;;
 	=> nrel_main_idtf:[БПК5 в осветленной воде](* <- lang_ru;; *);;
 	=> rrel_has_unit:[мгО₂/дм³](* <- lang_ru;; *);;
 *);
 
 
-concept_sludge_level (*
-	<- concept_indicator;;
-	<= nrel_inclusion: concept_indicator;;
-	=> nrel_main_idtf:[уровень осадка](* <- lang_ru;; *);;
-	=> rrel_has_unit:[м](* <- lang_ru;; *);;
-*);
-
-
-concept_filtration_rate (*
-	<- concept_indicator;;
-	<= nrel_inclusion: concept_indicator;;
-	=> nrel_main_idtf:[скорость фильтрования](* <- lang_ru;; *);;
-	=> rrel_has_unit:[м/ч](* <- lang_ru;; *);;
-*);
-
-
-concept_pressure_loss (*
-	<- concept_indicator;;
-	<= nrel_inclusion: concept_indicator;;
-	=> nrel_main_idtf:[потери напора](* <- lang_ru;; *);;
-	=> rrel_has_unit:[м](* <- lang_ru;; *);;
-*);
-
 concept_wash_water_volume (*
-	<- concept_indicator;;
+ <- sc_node_class;;
 	<= nrel_inclusion: concept_indicator;;
 	=> nrel_main_idtf:[объем промывной воды](* <- lang_ru;; *);;
-	=> rrel_has_unit:[м³](* <- lang_ru;; *);;
+	=> nrel_has_unit:[м³](* <- lang_ru;; *);;
 *);
 
-
+concept_treatment_facility_operation  (*
+=> nrel_main_idtf:
+   [эксплуатация очистного сооружения] (* <- lang_ru;; *);;
+<- sc_node_class;;
+<= nrel_inclusion: concept_technological_process;;
+=> nrel_definition:
+   [Эксплуатация очистного сооружения — это процесс функционирования, обслуживания и управления очистным сооружением, направленный на обеспечение его надежной работы и достижения требуемой эффективности очистки сточных вод.] (* <- lang_ru;; *);;
+   *);
+   
 concept_operating_mode (*
     <- sc_node_class;;
     => nrel_main_idtf:[режим эксплуатации](* <- lang_ru;; *);;
@@ -331,46 +385,203 @@ concept_aeration_mode (*
     => nrel_main_idtf:[режим аэрации](* <- lang_ru;; *);;
     <= nrel_inclusion: concept_operating_mode;;
 *);
+concept_meter
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[метр] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[meter] (* <- lang_en;; *);;
+    *);
 
+concept_day
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[сутки] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[day] (* <- lang_en;; *);;
+    *);
 
+concept_week
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[неделя] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[week] (* <- lang_en;; *);;
+    *);
+concept_hour
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[час] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[hour] (* <- lang_en;; *);;
+    *);
+concept_month
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[месяц] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[month] (* <- lang_en;; *);;
+    *);
+
+concept_year
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[год] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[year] (* <- lang_en;; *);;
+    *);
+
+concept_shift
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[смена] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[shift] (* <- lang_en;; *);;
+    *);
+
+concept_percent
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[процент] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[percent] (* <- lang_en;; *);;
+    *);
+ 
+concept_mg_per_dm3
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[мг/дм³] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[mg/dm³] (* <- lang_en;; *);;
+    *);
+concept_one_time_per_year
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[1 раз в год] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[one time per year] (* <- lang_en;; *);;
+    *);
+concept_one_time_per_half_a_year
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[1 раз в полгода] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[one time per year] (* <- lang_en;; *);;
+    *);
+concept_one_time_per_week
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[1 раз в неделю] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[one time per week] (* <- lang_en;; *);;
+    *);
+concept_one_time_per_3_month
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[1 раз 3 месяца] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[one time per 3 month] (* <- lang_en;; *);;
+    *);
+
+concept_one_time_per_day
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[1 раз в сутки] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[one time per day] (* <- lang_en;; *);;
+    *);
+concept_two_time_per_day
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[2 раза в сутки] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[two time per day] (* <- lang_en;; *);;
+    *);
+concept_two_times_per_year
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[2 раза в год] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[two times per year] (* <- lang_en;; *);;
+    *);
+
+concept_one_time_per_3_days
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[1 раз в 3 суток] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[one time per 3 days] (* <- lang_en;; *);;
+    *);
+
+concept_one_time_per_2_days
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[1 раз в 2 суток] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[one time per 2 days] (* <- lang_en;; *);;
+    *);
+
+concept_one_time_per_shift
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[1 раз в смену] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[one time per shift] (* <- lang_en;; *);;
+    *);
+
+concept_one_time_per_1_5_years
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[1 раз в 1,5 года] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[one time per 1.5 years] (* <- lang_en;; *);;
+    *);
+    concept_one_time_per_2_years
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[1 раз в 2 года] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[one time per 2 years] (* <- lang_en;; *);;
+    *);
+    concept_one_time_per_3_years
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[1 раз в 3 года] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[one time per 3 years] (* <- lang_en;; *);;
+    *);
+    // Концепт "продолжительность"
+concept_duration
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_indicator;;
+        => nrel_main_idtf:[продолжительность] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[duration] (* <- lang_en;; *);;
+        => rrel_has_unit:[ч];;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Временной интервал, в течение которого выполняется процесс, операция или сохраняется определённое состояние.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+   
 -> rrel_explored_relation:
 
-rrel_contains_pollutant (*
+nrel_contains_pollutant (*
 	<- sc_node_non_role_relation;;
 	=> nrel_main_idtf:[содержит загрязняющее вещество](* <- lang_ru;; *);;
 	=> nrel_first_domain: concept_wastewater;;
 	=> nrel_second_domain: concept_pollutant;;
 *);
 
-rrel_has_parameter (*
+nrel_has_parameter (*
 	<- sc_node_non_role_relation;;
 	=> nrel_main_idtf:[характеризуется показателем](* <- lang_ru;; *);;
-	=> nrel_first_domain: concept_wastewater;;
+	=> nrel_first_domain: concept_wastewater_treatment_facility;;
 	=> nrel_second_domain: concept_indicator;;
 *);
 
-rrel_is_treated_by (*
+nrel_is_treated_by (*
 	<- sc_node_non_role_relation;;
 	=> nrel_main_idtf:[очищается на сооружении](* <- lang_ru;; *);;
 	=> nrel_first_domain: concept_wastewater;;
 	=> nrel_second_domain: concept_wastewater_treatment_facility;;
 *);
 
-rrel_discharged_to (*
+nrel_discharged_to (*
 	<- sc_node_non_role_relation;;
 	=> nrel_main_idtf:[сбрасывается в](* <- lang_ru;; *);;
 	=> nrel_first_domain: concept_treated_wastewater;;
 	=> nrel_second_domain: concept_environment;;
 *);
 
-rrel_removes_substance (*
+nrel_removes_substance (*
 	<- sc_node_non_role_relation;;
 	=> nrel_main_idtf:[удаляет вещество](* <- lang_ru;; *);;
 	=> nrel_first_domain: concept_wastewater_treatment_facility;;
 	=> nrel_second_domain: concept_pollutant;;
 *);
 
-rrel_produces_sludge (*
+nrel_produces_sludge (*
 	<- sc_node_non_role_relation;;
 	=> nrel_main_idtf:[образует осадок](* <- lang_ru;; *);;
 	=> nrel_first_domain: concept_wastewater_treatment_facility;;
@@ -378,24 +589,161 @@ rrel_produces_sludge (*
 *);
 
 
-rrel_has_operating_mode (*
+nrel_has_operating_mode (*
 	<- sc_node_non_role_relation;;
 	=> nrel_main_idtf:[имеет режим эксплуатации](* <- lang_ru;; *);;
 	=> nrel_first_domain: concept_wastewater_treatment_facility;;
 	=> nrel_second_domain: concept_operating_mode;;
 *);
 
-rrel_requires_monitoring (*
+nrel_requires_monitoring (*
 	<- sc_node_non_role_relation;;
 	=> nrel_main_idtf:[требует контроля](* <- lang_ru;; *);;
 	=> nrel_first_domain: concept_wastewater_treatment_facility;;
 	=> nrel_second_domain: concept_indicator;;
 *);
 
-rrel_has_unit (*
+nrel_has_unit (*
 	<- sc_node_non_role_relation;;
 	=> nrel_main_idtf:[имеет единицу измерения](* <- lang_ru;; *);;
 	=> nrel_first_domain: concept_indicator;;
 	=> nrel_second_domain: sc_node_class;;
-*);;
+*);
 
+nrel_min_value
+    (*
+        <- sc_node_non_role_relation;;
+        => nrel_main_idtf:[минимальная величина*] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[minimum value*] (* <- lang_en;; *);;
+        => nrel_first_domain: concept_indicator;;
+        => nrel_second_domain: concept_numeric_value;;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Отношение, связывающее показатель с его минимальным допустимым числовым значением.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+
+nrel_max_value
+    (*
+        <- sc_node_non_role_relation;;
+        => nrel_main_idtf:[максимальная величина*] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[maximum value*] (* <- lang_en;; *);;
+        => nrel_first_domain: concept_indicator;;
+        => nrel_second_domain: concept_numeric_value;;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Отношение, связывающее показатель с его максимальным допустимым числовым значением.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+        
+// Отношение "удаляемое вещество" - связывает процесс удаления с конкретным загрязняющим вещество
+        
+        nrel_is_intended_for (*
+    <- sc_node_non_role_relation;;
+    => nrel_main_idtf: [предназначен для*] (* <- lang_ru;; *);;
+    => nrel_main_idtf: [is intended for*] (* <- lang_en;; *);;
+    => nrel_first_domain: concept_wastewater_treatment_facility;;
+    => nrel_second_domain: concept_technological_process;;
+    <= nrel_sc_text_translation: ...
+        (*
+            <- concept_definition (*<- sc_node_class;;*);;
+            -> [Отношение, связывающее очистное сооружение с технологическим процессом, для выполнения которого это сооружение предназначено.]
+            (* <- lang_ru;; *);;
+        *);;
+        *);
+        
+       
+
+// Отношение "задерживаемое вещество" - связывает процесс задержания с конкретным веществом
+nrel_retained_substance (*
+    <- sc_node_non_role_relation;;
+    => nrel_main_idtf: [задерживаемое вещество*] (* <- lang_ru;; *);;
+    => nrel_main_idtf: [retained substance*] (* <- lang_en;; *);;
+    => nrel_first_domain: concept_substances_retention;;
+    => nrel_second_domain: concept_pollutant;;
+    <= nrel_sc_text_translation: ...
+        (*
+            <- concept_definition (*<- sc_node_class;;*);;
+            -> [Отношение, связывающее процесс задержания с веществом, которое задерживается в ходе процесса.]
+            (* <- lang_ru;; *);;
+        *);;
+        *);
+        concept_avoidable_process
+    (*
+        <- sc_node_class;;
+         <= nrel_inclusion: concept_process;;
+        => nrel_main_idtf:[избегаемый процесс] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[avoidable process] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Технологический процесс или состояние, возникновения которого следует избегать при нормальной эксплуатации очистных сооружений, так как оно приводит к снижению эффективности очистки, нарушению работы оборудования или ухудшению качества очищенной воды.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+
+
+
+    // Отношение "определяется с помощью"
+nrel_is_determined_by
+    (*
+        <- sc_node_non_role_relation;;
+        => nrel_main_idtf:[определяется с помощью*] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[is determined by*] (* <- lang_en;; *);;
+        => nrel_first_domain: sc_node_class;;
+        => nrel_second_domain: sc_node_class;;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Отношение, связывающее любую сущность с методом, средством, способом или инструментом её определения, измерения, оценки или выявления.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+concept_retention_time
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_indicator;;
+        => nrel_main_idtf:[время пребывания] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[retention time] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Продолжительность нахождения сточных вод в сооружении, за которую происходит осаждение взвешенных веществ или протекают другие процессы очистки.]
+                (* <- lang_ru;; *);;
+            *);;
+        => rrel_has_unit:[ч];;
+    *);
+    // Концепт "снижение"
+concept_reduction
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_process;;
+        => nrel_main_idtf:[снижение] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[reduction] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Процесс уменьшения значения параметра, концентрации загрязняющих веществ или уровня в результате очистки или регулирования.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+   nrel_enabling
+    (*
+        <- sc_node_non_role_relation;;
+        => nrel_main_idtf:[обеспечивается*] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[is ensured by*] (* <- lang_en;; *);;
+        => nrel_first_domain: concept_technological_process;;
+        => nrel_second_domain: sc_node_class;;
+    *);;
+   
+    
+     
+    
+ 
+
+        
+        
