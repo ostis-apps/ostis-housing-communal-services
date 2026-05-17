@@ -5,20 +5,36 @@ econip
     (*
         <- lang_ru;;
     *);
--> nrel_law:
+=> nrel_law:
     water_code_ref;
     environmental_protection_law_ref;
     waste_management_law_ref;
     air_protection_law_ref;
     measurement_unity_law_ref;
-    construction_activity_law_ref;;
+    construction_activity_law_ref; 
+ => nrel_chapter:
+   chapter3;;
+ 
+chapter3
+=> nrel_main_idtf:
+    [Глава 3]
+    (*
+        <- lang_ru;;
+    *); 
+<- concept_chapter;
+<= nrel_has_source: subject_domain_of_mechanical_wastewater_treatment_facility;;
 
 water_code_ref
 => nrel_main_idtf:
     [Водный кодекс Республики Беларусь]
     (*
         <- lang_ru;;
-    *);
+    *); 
+    => nrel_data: nrel_main_idtf:
+    [30 апреля 2014 г.]
+    (*
+        <- lang_ru;;
+    *); 
 <- concept_law;;
 
 environmental_protection_law_ref
@@ -27,6 +43,11 @@ environmental_protection_law_ref
     (*
         <- lang_ru;;
     *);
+    => nrel_data: nrel_main_idtf:
+    [26 ноября 1992 г.]
+    (*
+        <- lang_ru;;
+    *); 
 <- concept_law;;
 
 waste_management_law_ref
@@ -35,6 +56,11 @@ waste_management_law_ref
     (*
         <- lang_ru;;
     *);
+    => nrel_data: nrel_main_idtf:
+    [20 июля 2007 г.]
+    (*
+        <- lang_ru;;
+    *);   
 <- concept_law;;
 
 air_protection_law_ref
@@ -43,6 +69,11 @@ air_protection_law_ref
     (*
         <- lang_ru;;
     *);
+     => nrel_data: nrel_main_idtf:
+    [16 декабря 2008 г.]
+    (*
+        <- lang_ru;;
+    *); 
 <- concept_law;;
 
 measurement_unity_law_ref
@@ -51,6 +82,11 @@ measurement_unity_law_ref
     (*
         <- lang_ru;;
     *);
+      => nrel_data: nrel_main_idtf:
+    [ 5 сентября 1995 г.]
+    (*
+        <- lang_ru;;
+    *); 
 <- concept_law;;
 
 construction_activity_law_ref
@@ -59,4 +95,9 @@ construction_activity_law_ref
     (*
         <- lang_ru;;
     *);
+     => nrel_data: nrel_main_idtf:
+    [  5 июля 2004 г.]
+    (*
+        <- lang_ru;;
+    *); 
 <- concept_law;;

@@ -29,15 +29,10 @@ subject_domain_of_settling_tanks
         => nrel_main_idtf:[первичный отстойник] (* <- lang_ru;; *);;
         => nrel_main_idtf:[primary settling tank] (* <- lang_en;; *);;
         <= nrel_sc_text_translation: ...
-            (*
-                <- concept_definition (*<- sc_node_class;;*);;
-                -> [Первичные отстойники предназначены для предварительного осветления сточных вод поступающих на биологическую или физико-химическую очистку.] (* <- lang_ru;; *);;
-                -> [При эксплуатации в нормальном режиме в вертикальных отстойниках при времени пребывания сточной воды 1,5 ч достигается снижение содержания взвешенных веществ до 40 процентов в радиальных и горизонтальных до 50 процентов.] (* <- lang_ru;; *);;
-                -> [Обеспечивать равномерное распределение сточной воды между отстойниками.] (* <- lang_ru;; *);;
-                -> [Очищать лотки и каналы подводящие воду к отстойникам от отложений осадка и отбросов удалять плавающие примеси.] (* <- lang_ru;; *);;
-                -> [Контролировать эффект осветления сточной воды и предупреждать вынос осадка.] (* <- lang_ru;; *);;
-                -> [Обеспечивать удаление осадка из отстойников не реже 2 раз в сутки.] (* <- lang_ru;; *);;
-            *);;
+    (*
+        <- concept_definition (*<- sc_node_class;;*);;
+        -> [Первичный отстойник — отстойник, в котором сточная вода осветляется перед подачей на биологическую или физико-химическую очистку.] (* <- lang_ru;; *);;
+    *);;
         <= nrel_subdividing:
         {
 concept_vertical_settling_tank; 
@@ -52,13 +47,10 @@ concept_horizontal_settling_tank
         => nrel_main_idtf:[двухъярусный отстойник] (* <- lang_ru;; *);;
         => nrel_main_idtf:[two tier settling tank] (* <- lang_en;; *);;
         <= nrel_sc_text_translation: ...
-            (*
-                <- concept_definition (*<- sc_node_class;;*);;
-                -> [Двухъярусные отстойники предназначены для предварительного осветления сточных вод с одновременным сбраживанием осадка.] (* <- lang_ru;; *);;
-                -> [Производить выпуск осадка по мере накопления но не реже чем 1 раз в 3 месяца.] (* <- lang_ru;; *);;
-                -> [Предотвращать образование на поверхности сточной воды в отстойнике плотной корки и вспенивания сбраживаемого осадка.] (* <- lang_ru;; *);;
-                -> [Для проведения работ по техническому обслуживанию двухъярусный отстойник опорожняется не реже 1 раза в 4 года.] (* <- lang_ru;; *);;
-            *);;
+    (*
+        <- concept_definition (*<- sc_node_class;;*);;
+        -> [Двухъярусный отстойник — отстойник, состоящий из верхней (отстойной) и нижней (иловой) камер, в которой сбраживается осадок.] (* <- lang_ru;; *);;
+    *);;
     *);
 
     concept_vertical_settling_tank
@@ -203,7 +195,7 @@ concept_sludge_volume
     <= nrel_inclusion: concept_indicator;;
     => nrel_main_idtf:[объем осадка] (* <- lang_ru;; *);;
     => nrel_main_idtf:[sludge volume] (* <- lang_en;; *);;
-    => rrel_has_unit:[м³] (* <- lang_ru;; *);;
+    => nrel_has_unit:[м³] (* <- lang_ru;; *);;
 *);
 
 concept_sludge_moisture
@@ -212,23 +204,58 @@ concept_sludge_moisture
     <= nrel_inclusion: concept_indicator;;
     => nrel_main_idtf:[влажность осадка] (* <- lang_ru;; *);;
     => nrel_main_idtf:[sludge moisture] (* <- lang_en;; *);;
-    => rrel_has_unit:[%] (* <- lang_ru;; *);;
+    => nrel_has_unit:[%] (* <- lang_ru;; *);;
 *);
-concept_clarification_effect
+concept_dark_gray_color
     (*
         <- sc_node_class;;
-        <= nrel_inclusion: concept_indicator;;
-        => nrel_main_idtf:[эффект осветления сточной воды] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[wastewater clarification effect] (* <- lang_en;; *);;
+        <= nrel_inclusion: concept_property;;
+        => nrel_main_idtf:[темно-серая окраска] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[dark gray color] (* <- lang_en;; *);;
+    *);
+
+concept_granular_structure
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_property;;
+        => nrel_main_idtf:[зернистая структура] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[granular structure] (* <- lang_en;; *);;
         <= nrel_sc_text_translation: ...
             (*
                 <- concept_definition (*<- sc_node_class;;*);;
-                -> [Показатель, характеризующий степень снижения содержания взвешенных веществ в сточной воде после отстаивания.]
+                -> [Зернистая структура — морфологическая характеристика сброженного осадка, при которой он состоит из мелких, хорошо разделяемых частиц, что облегчает его обезвоживание.]
                 (* <- lang_ru;; *);;
             *);;
-        => rrel_has_unit:[%];;
     *);
-
+    concept_ph_value_digested_sludge
+    (*
+        <- concept_indicator;;
+        <= nrel_inclusion: concept_indicator;;
+        => nrel_main_idtf:[водородный показатель сброженного осадка] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[pH value of digested sludge] (* <- lang_en;; *);;
+        => nrel_has_unit: concept_ph_unit;;
+        => nrel_min_value: 7.2;;
+        => nrel_max_value: 7.6;;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [pH сброженного осадка находится в диапазоне от 7,2 до 7,6, что соответствует щелочной среде и свидетельствует о завершении процесса сбраживания.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+    concept_hydrogen_sulfide_odor
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_odor;;
+        => nrel_main_idtf:[запах сероводорода] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[hydrogen sulfide odor] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Запах сероводорода — характерный неприятный запах тухлых яиц, свидетельствующий о протекании анаэробных процессов гниения белков, образовании сероводорода в осадке или сточных водах, что указывает на нарушение режима эксплуатации очистных сооружений.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
 // Концепт "предупреждение выноса осадка"
 concept_sludge_carryout_prevention
     (*
@@ -277,11 +304,68 @@ concept_sludge_layer_height
         <= nrel_inclusion: concept_indicator;;
         => nrel_main_idtf:[высота слоя осадка] (* <- lang_ru;; *);;
         => nrel_main_idtf:[sludge layer height] (* <- lang_en;; *);;
-        => rrel_has_unit:[м];;
+        => nrel_has_unit:[м];;
         <= nrel_sc_text_translation: ...
             (*
                 <- concept_definition (*<- sc_node_class;;*);;
                 -> [Расстояние от дна иловой камеры до верхней границы накопившегося осадка. Контролируется для предотвращения переполнения и попадания осадка в отстойные желоба.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+    concept_fermented_sludge_residue
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_technological_process;;
+        => nrel_main_idtf:[оставление сброженного осадка] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[fermented sludge residue] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Процесс оставления части объема сброженного осадка в иловой камере двухъярусного отстойника после выгрузки.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+
+// Концепт "обеспечение биомассы анаэробных микроорганизмов"
+concept_anaerobic_biomass_provision
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_technological_process;;
+        => nrel_main_idtf:[обеспечение биомассы анаэробных микроорганизмов] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[anaerobic biomass provision] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Процесс поддержания необходимого количества анаэробных микроорганизмов в иловой камере для эффективного сбраживания поступающего сырого осадка.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+
+// Концепт "сбраживание сырого осадка"
+concept_raw_sludge_fermentation
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_technological_process;;
+        => nrel_main_idtf:[сбраживание сырого осадка] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[raw sludge fermentation] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Процесс анаэробного разложения органических веществ в поступающем сыром осадке под действием микроорганизмов в двухъярусном отстойнике.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+    concept_fermented_sludge_volume
+    (*
+        <- sc_node_class;;
+        <= nrel_inclusion: concept_indicator;;
+        => nrel_main_idtf:[объем сброженного осадка] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[fermented sludge volume] (* <- lang_en;; *);;
+        => nrel_has_unit:[%];;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Часть объема сброженного осадка в иловой камере двухъярусного отстойника, которая оставляется после выгрузки для обеспечения биомассы анаэробных микроорганизмов.]
                 (* <- lang_ru;; *);;
             *);;
     *);
@@ -291,5 +375,5 @@ concept_settling_duration
     <= nrel_inclusion: concept_indicator;;
     => nrel_main_idtf:[продолжительность отстаивания] (* <- lang_ru;; *);;
     => nrel_main_idtf:[settling duration] (* <- lang_en;; *);;
-    => rrel_has_unit:[ч] (* <- lang_ru;; *);;
+    => nrel_has_unit:[ч] (* <- lang_ru;; *);;
 *);;

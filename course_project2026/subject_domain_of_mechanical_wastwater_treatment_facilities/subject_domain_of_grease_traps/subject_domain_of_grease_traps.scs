@@ -17,15 +17,10 @@ subject_domain_of_grease_traps
         => rrel_has_part: concept_working_chamber;;
         <= nrel_inclusion: concept_mechanical_wastewater_treatment_facility;;
         <= nrel_sc_text_translation: ...
-            (*
-                <- concept_definition (*<- sc_node_class;;*);;
-                -> [Жироловители предназначены для осветления сточных вод и удаления из них жиров.] (* <- lang_ru;; *);;
-                -> [Осуществлять своевременное удаление задержанных жира и осадка по мере их накопления.] (* <- lang_ru;; *);;
-                -> [Очищать подводящие и отводящие трубопроводы от осадков и жировых отложений.] (* <- lang_ru;; *);;
-                -> [Рекомендуется производить удаление жира при толщине его слоя в рабочей камере жироуловителя более 0,2 м.] (* <- lang_ru;; *);;
-                -> [Рекомендуется производить удаление осадка при его накоплении в жироуловителе более 30 процентов от объема рабочей камеры но не реже чем 1 раз в год.] (* <- lang_ru;; *);;
-                -> [После удаления задержанных жира и осадка из жироуловителей и перед повторным включением в работу их рабочий объем заполняют водой не содержащей жировых примесей.] (* <- lang_ru;; *);;
-            *);;
+    (*
+        <- concept_definition (*<- sc_node_class;;*);;
+        -> [Жироловитель(жироловка) — сооружение механической очистки сточных вод, предназначенное для осветления сточных вод и удаления из них жиров.] (* <- lang_ru;; *);;
+    *);;
     *);
 
 -> rrel_not_maximum_studied_object_class:
@@ -42,29 +37,6 @@ subject_domain_of_grease_traps
             *);;
     *);
 
-    concept_inlet_pipeline
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[подводящий трубопровод] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[inlet pipeline] (* <- lang_en;; *);;
-        <= nrel_sc_text_translation: ...
-            (*
-                <- concept_definition (*<- sc_node_class;;*);;
-                -> [Подводящий трубопровод - трубопровод для подачи сточных вод в жироловитель.] (* <- lang_ru;; *);;
-            *);;
-    *);
-
-    concept_outlet_pipeline
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[отводящий трубопровод] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[outlet pipeline] (* <- lang_en;; *);;
-        <= nrel_sc_text_translation: ...
-            (*
-                <- concept_definition (*<- sc_node_class;;*);;
-                -> [Отводящий трубопровод - трубопровод для отвода осветленной воды из жироловителя.] (* <- lang_ru;; *);;
-            *);;
-    *);
 
     concept_grease
     (*
@@ -149,7 +121,7 @@ concept_grease_volume
     <= nrel_inclusion: concept_indicator;;
     => nrel_main_idtf:[объем задержанного жира] (* <- lang_ru;; *);;
     => nrel_main_idtf:[grease volume] (* <- lang_en;; *);;
-    => rrel_has_unit:[м³] (* <- lang_ru;; *);;
+    => nrel_has_unit:[м³] (* <- lang_ru;; *);;
 *);
 
 concept_sludge_volume
@@ -158,7 +130,7 @@ concept_sludge_volume
     <= nrel_inclusion: concept_indicator;;
     => nrel_main_idtf:[объем осадка] (* <- lang_ru;; *);;
     => nrel_main_idtf:[sludge volume] (* <- lang_en;; *);;
-    => rrel_has_unit:[м³] (* <- lang_ru;; *);;
+    => nrel_has_unit:[м³] (* <- lang_ru;; *);;
 *);
 
 concept_grease_content_in_effluent
@@ -167,7 +139,7 @@ concept_grease_content_in_effluent
     <= nrel_inclusion: concept_indicator;;
     => nrel_main_idtf:[содержание жиров в осветленной воде] (* <- lang_ru;; *);;
     => nrel_main_idtf:[grease content in effluent] (* <- lang_en;; *);;
-    => rrel_has_unit:[мг/дм³] (* <- lang_ru;; *);;
+    => nrel_has_unit:[мг/дм³] (* <- lang_ru;; *);;
 *);
 
 concept_grease_layer_thickness
@@ -176,7 +148,7 @@ concept_grease_layer_thickness
     <= nrel_inclusion: concept_indicator;;
     => nrel_main_idtf:[толщина слоя жира] (* <- lang_ru;; *);;
     => nrel_main_idtf:[grease layer thickness] (* <- lang_en;; *);;
-    => rrel_has_unit:[м] (* <- lang_ru;; *);;
+    => nrel_has_unit:[м] (* <- lang_ru;; *);;
 *);;
 
 

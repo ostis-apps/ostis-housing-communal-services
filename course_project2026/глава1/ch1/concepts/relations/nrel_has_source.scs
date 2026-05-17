@@ -1,0 +1,5 @@
+nrel_has_source
+        <- sc_node_non_role_relation;
+        => nrel_main_idtf:[источник*] (* <- lang_ru;; *);
+        => nrel_first_domain: subject_domain;
+        => nrel_second_domain: concept_chapter;;

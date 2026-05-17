@@ -20,13 +20,11 @@ subject_domain_of_sand_catchers
         => rrel_has_part: concept_sand_pit_of_sand_catcher;;
         => rrel_has_part: concept_shutter;;
         <= nrel_inclusion: concept_mechanical_wastewater_treatment_facility;;
-        <= nrel_sc_text_translation: ...
-            (*
-                <- concept_definition (*<- sc_node_class;;*);;
-                -> [Тип песколовки (горизонтальная вертикальная тангенциальная аэрируемая) следует принимать с учетом производительности очистных сооружений схемы очистки сточных вод и обработки их осадков параметров очищаемой сточной воды.] (* <- lang_ru;; *);;
-                -> [До и после песколовки следует предусматривать затворы для их отключения на период минимального притока или ремонта.] (* <- lang_ru;; *);;
-                -> [Объем песковых приямков следует принимать не более двухсуточного объема выпадающего песка.] (* <- lang_ru;; *);;
-            *);;
+       <= nrel_sc_text_translation: ...
+    (*
+        <- concept_definition (*<- sc_node_class;;*);;
+        -> [Песколовка — сооружение, в котором из сточных вод выделяется песок и другие мелкие минеральные примеси под действием силы тяжести или центробежной силы.] (* <- lang_ru;; *);;
+    *);;
         <= nrel_subdividing:
         {
         concept_horizontal_sand_catcher;
@@ -177,7 +175,8 @@ subject_domain_of_sand_catchers
         => nrel_main_idtf:[sand classifier] (* <- lang_en;; *);;
     *);
 
-    concept_sand_platform
+// Концепт "песковая площадка"
+concept_sand_platform
     (*
         <- sc_node_class;;
         => nrel_main_idtf:[песковая площадка] (* <- lang_ru;; *);;
@@ -185,7 +184,22 @@ subject_domain_of_sand_catchers
         <= nrel_sc_text_translation: ...
             (*
                 <- concept_definition (*<- sc_node_class;;*);;
-                -> [Песковая площадка - сооружение для обезвоживания и хранения песка.] (* <- lang_ru;; *);;
+                -> [Специально оборудованная открытая площадка на территории очистных сооружений для обезвоживания и временного хранения песка, извлечённого из песколовок.]
+                (* <- lang_ru;; *);;
+            *);;
+    *);
+
+// Концепт "доступность для погрузки на транспорт"
+concept_loading_accessibility
+    (*
+        <- sc_node_class;;
+        => nrel_main_idtf:[доступность для погрузки на транспорт] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[loading accessibility] (* <- lang_en;; *);;
+        <= nrel_sc_text_translation: ...
+            (*
+                <- concept_definition (*<- sc_node_class;;*);;
+                -> [Свойство места хранения (песковой площадки, контейнера, бункера), обеспечивающее свободный подъезд погрузочной техники (экскаватора, погрузчика) и возможность механизированной загрузки материала в транспортные средства для вывоза.]
+                (* <- lang_ru;; *);;
             *);;
     *);
 
@@ -219,7 +233,7 @@ concept_sand_content
     <= nrel_inclusion: concept_indicator;;
     => nrel_main_idtf:[содержание песка] (* <- lang_ru;; *);;
     => nrel_main_idtf:[sand content] (* <- lang_en;; *);;
-    => rrel_has_unit:[%] (* <- lang_ru;; *);;
+    => nrel_has_unit:[%] (* <- lang_ru;; *);;
 *);
 concept_sand_catcher_efficiency
 (*
@@ -264,49 +278,11 @@ concept_sand_grain (*
         *);;
       *);
         
-   concept_mineral_fractions_retention
-    (*
-        <- sc_node_class;;
-        <= nrel_inclusion: concept_mechanical_treatment_process;;
-        => nrel_main_idtf:[задержание минеральных фракций] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[mineral fractions retention] (* <- lang_en;; *);;
-        <= nrel_sc_text_translation: ...
-            (*
-                <- concept_definition (*<- sc_node_class;;*);;
-                -> [Процесс задержания в песколовках преимущественно минеральных фракций взвешенных примесей из сточных вод.]
-                (* <- lang_ru;; *);;
-            *);;
-    *);
-
-concept_normal_operation_ensuring
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[обеспечение нормального режима работы] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[normal operation ensuring] (* <- lang_en;; *);;
-        <= nrel_sc_text_translation: ...
-            (*
-                <- concept_definition (*<- sc_node_class;;*);;
-                -> [Процесс обеспечения нормального режима работы насосных станций и сооружений обработки осадков путем задержания песка в песколовках.]
-                (* <- lang_ru;; *);;
-            *);;
-    *);
-        concept_sand_dewatering
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[обезвоживание песка] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[sand dewatering] (* <- lang_en;; *);;
-        <= nrel_sc_text_translation: ...
-            (*
-                <- concept_definition (*<- sc_node_class;;*);;
-                -> [Обезвоживание песка - процесс удаления воды из песка, задержанного в песколовках, для снижения его влажности перед утилизацией или временным хранением на песковых площадках или в бункерах-накопителях.]
-                (* <- lang_ru;; *);;
-            *);;
-            *);
 concept_sand_fractional_composition
 (*  
     <- sc_node_class;;
     <= nrel_inclusion: concept_indicator;;
     => nrel_main_idtf:[фракционный состав песка] (* <- lang_ru;; *);;
     => nrel_main_idtf:[sand fractional composition] (* <- lang_en;; *);;
-    => rrel_has_unit:[мм] (* <- lang_ru;; *);;
+    => nrel_has_unit:[мм] (* <- lang_ru;; *);;
 *);;

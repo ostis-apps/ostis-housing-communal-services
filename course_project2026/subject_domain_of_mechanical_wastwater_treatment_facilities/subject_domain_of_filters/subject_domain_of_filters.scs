@@ -17,6 +17,11 @@ subject_domain_of_filters
         => nrel_has_parameter: concept_suspended_solids_in_effluent;;
         => nrel_has_parameter: concept_bod5_in_effluent;;
         <= nrel_inclusion: concept_mechanical_wastewater_treatment_facility;;
+        <= nrel_sc_text_translation: ...
+    (*
+        <- concept_definition (*<- sc_node_class;;*);;
+        -> [Фильтр — это очистное сооружение, в котором задержание примесей осуществляется пропусканием сточной воды через фильтрующую загрузку.] (* <- lang_ru;; *);;
+    *);;
         <= nrel_subdividing: 
         {
         concept_filter_with_granular_media; 
@@ -100,24 +105,24 @@ subject_domain_of_filters
 
 // Показатели для фильтров
 concept_filtration_rate (*
-    <- concept_indicator;;
+    <- sc_node_class;;
     <= nrel_inclusion: concept_indicator;;
     => nrel_main_idtf:[скорость фильтрования] (* <- lang_ru;; *);;
-    => rrel_has_unit:[м/ч] (* <- lang_ru;; *);;
+    => nrel_has_unit:[м/ч] (* <- lang_ru;; *);;
 *);
 
 concept_pressure_loss (*
-    <- concept_indicator;;
+<- sc_node_class;;
     <= nrel_inclusion: concept_indicator;;
     => nrel_main_idtf:[потери напора] (* <- lang_ru;; *);;
-    => rrel_has_unit:[м] (* <- lang_ru;; *);;
+    => nrel_has_unit:[м] (* <- lang_ru;; *);;
 *);
 
 concept_wash_water_volume (*
-    <- concept_indicator;;
+   <- sc_node_class;;
     <= nrel_inclusion: concept_indicator;;
     => nrel_main_idtf:[объем промывной воды] (* <- lang_ru;; *);;
-    => rrel_has_unit:[м³] (* <- lang_ru;; *);;
+    => nrel_has_unit:[м³] (* <- lang_ru;; *);;
 *);
 
 concept_treatment_efficiency
@@ -132,76 +137,45 @@ concept_treatment_efficiency
                 -> [Показатель, характеризующий степень удаления загрязняющих веществ из сточных вод в процессе очистки, выраженный в процентах снижения концентрации загрязнений.]
                 (* <- lang_ru;; *);;
             *);;
-        => rrel_has_unit:[%];;
+        => nrel_has_unit:[%];;
     *);
 
-// Концепт "перемешивание слоев загрузки"
-concept_media_layers_mixing
+    concept_active_chlorine
     (*
         <- sc_node_class;;
-        <= nrel_inclusion: concept_prohibited_process;;
-        => nrel_main_idtf:[перемешивание слоев загрузки] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[media layers mixing] (* <- lang_en;; *);;
+        => nrel_main_idtf:[активный хлор] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[active chlorine] (* <- lang_en;; *);;
         <= nrel_sc_text_translation: ...
             (*
                 <- concept_definition (*<- sc_node_class;;*);;
-                -> [Процесс нежелательного смешения разнородных слоев фильтрующей загрузки, приводящий к нарушению структуры фильтра и снижению эффективности очистки.]
+                -> [Действующее вещество хлорсодержащих дезинфектантов, обеспечивающее обеззараживающий эффект. Содержание активного хлора в растворе для обработки фильтров должно составлять от 100 до 150 мг/дм3.]
                 (* <- lang_ru;; *);;
             *);;
     *);
 
-// Концепт "смещение загрузки в горизонтальной плоскости"
-concept_media_horizontal_displacement
+// Концепт "хлорсодержащие дезинфектанты"
+concept_chlorine_disinfectants
     (*
         <- sc_node_class;;
-        <= nrel_inclusion: concept_prohibited_process;;
-        => nrel_main_idtf:[смещение загрузки в горизонтальной плоскости] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[horizontal media displacement] (* <- lang_en;; *);;
+        => nrel_main_idtf:[хлорсодержащие дезинфектанты] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[chlorine disinfectants] (* <- lang_en;; *);;
         <= nrel_sc_text_translation: ...
             (*
                 <- concept_definition (*<- sc_node_class;;*);;
-                -> [Процесс горизонтального сдвига фильтрующей загрузки относительно проектного положения, возникающий при нарушении правил эксплуатации и приводящий к неравномерному распределению потока воды.]
+                -> [Химические вещества на основе хлора (хлорная известь, гипохлорит натрия, гипохлорит кальция, диоксид хлора), используемые для обеззараживания отбросов, осадка, песка и оборудования. Содержание активного хлора в рабочем растворе должно составлять от 100 до 150 мг/дм3.]
                 (* <- lang_ru;; *);;
             *);;
-    *);
-    concept_gradual_flow_increase
+    *);  
+   
+    concept_active_chlorine_content
     (*
-        <- sc_node_class;;
-        <= nrel_inclusion: concept_process;;
-        => nrel_main_idtf:[постепенное увеличение расхода промывной воды] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[gradual flow increase] (* <- lang_en;; *);;
+        => nrel_main_idtf:[содержание активного хлора] (* <- lang_ru;; *);;
+        => nrel_main_idtf:[active chlorine content] (* <- lang_en;; *);;
+        => nrel_has_unit:[мг/дм³];;
         <= nrel_sc_text_translation: ...
             (*
                 <- concept_definition (*<- sc_node_class;;*);;
-                -> [Плавное наращивание объёма промывной воды, подаваемой на фильтр, от нуля до рабочего значения в течение 1,0-1,5 минут для предотвращения смещения и перемешивания слоёв загрузки.]
-                (* <- lang_ru;; *);;
-            *);;
-    *);
-
-// Концепт "постепенное снижение расхода промывной воды"
-concept_gradual_flow_decrease
-    (*
-        <- sc_node_class;;
-        <= nrel_inclusion: concept_process;;
-        => nrel_main_idtf:[постепенное снижение расхода промывной воды] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[gradual flow decrease] (* <- lang_en;; *);;
-        <= nrel_sc_text_translation: ...
-            (*
-                <- concept_definition (*<- sc_node_class;;*);;
-                -> [Плавное уменьшение объёма промывной воды, подаваемой на фильтр, от рабочего значения до нуля в течение 1,0-1,5 минут для предотвращения смещения и перемешивания слоёв загрузки при остановке промывки.]
-                (* <- lang_ru;; *);;
-            *);;
-    *);
-concept_polishing_treatment
-    (*
-        <- sc_node_class;;
-        <= nrel_inclusion: concept_technological_process;;
-        => nrel_main_idtf:[доочистка сточных вод] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[polishing treatment] (* <- lang_en;; *);;
-        <= nrel_sc_text_translation: ...
-            (*
-                <- concept_definition (*<- sc_node_class;;*);;
-                -> [Доочистка сточных вод — процесс дополнительной очистки, применяемый после основной механической, биологической или физико-химической очистки для достижения более высоких требований к качеству очищенной воды и задержания специфических примесей.]
+                -> [Количество активного хлора в растворе хлорсодержащего дезинфектанта. Для обработки фильтров с зернистой загрузкой должно составлять от 100 до 150 мг/дм3.]
                 (* <- lang_ru;; *);;
             *);;
     *);;

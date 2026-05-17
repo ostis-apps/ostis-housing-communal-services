@@ -253,24 +253,6 @@ concept_accumulated_pollutant
             *);;
     *);
     
-
-
-
-
-concept_biological_treatment_process (*
-<- sc_node_class;;
-    <- concept_technological_process;;
-    => nrel_main_idtf:[процесс биологической очистки сточных вод](* <- lang_ru;; *);;
-    <= nrel_inclusion: concept_biological_treatment_facility;;
-*);
-
-concept_physicochemical_treatment_process (*
-<- sc_node_class;;
-    <- concept_technological_process;;
-    => nrel_main_idtf:[процесс физико-химической очистки сточных вод](* <- lang_ru;; *);;
-    <= nrel_inclusion: concept_physicochemical_treatment_facility;;
-*);
-
 concept_sludge_treatment_process (*
 <- sc_node_class;;
     <- concept_technological_process;;
@@ -289,7 +271,7 @@ concept_indicator (*
 
 
 concept_temperature (*
-	<- concept_physical_parameter;;
+	 <= nrel_inclusion: concept_indicator;;
 	=> nrel_main_idtf:[температура](* <- lang_ru;; *);;
 	=> nrel_has_unit:[°C](* <- lang_ru;; *);;
 	<= nrel_inclusion: concept_indicator;;
@@ -342,7 +324,7 @@ concept_bod5_in_effluent (*
 	 <- sc_node_class;;
 	<= nrel_inclusion: concept_indicator;;
 	=> nrel_main_idtf:[БПК5 в осветленной воде](* <- lang_ru;; *);;
-	=> rrel_has_unit:[мгО₂/дм³](* <- lang_ru;; *);;
+	=> nrel_has_unit:[мгО₂/дм³](* <- lang_ru;; *);;
 *);
 
 
@@ -385,149 +367,7 @@ concept_aeration_mode (*
     => nrel_main_idtf:[режим аэрации](* <- lang_ru;; *);;
     <= nrel_inclusion: concept_operating_mode;;
 *);
-concept_meter
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[метр] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[meter] (* <- lang_en;; *);;
-    *);
 
-concept_day
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[сутки] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[day] (* <- lang_en;; *);;
-    *);
-
-concept_week
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[неделя] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[week] (* <- lang_en;; *);;
-    *);
-concept_hour
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[час] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[hour] (* <- lang_en;; *);;
-    *);
-concept_month
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[месяц] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[month] (* <- lang_en;; *);;
-    *);
-
-concept_year
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[год] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[year] (* <- lang_en;; *);;
-    *);
-
-concept_shift
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[смена] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[shift] (* <- lang_en;; *);;
-    *);
-
-concept_percent
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[процент] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[percent] (* <- lang_en;; *);;
-    *);
- 
-concept_mg_per_dm3
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[мг/дм³] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[mg/dm³] (* <- lang_en;; *);;
-    *);
-concept_one_time_per_year
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[1 раз в год] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[one time per year] (* <- lang_en;; *);;
-    *);
-concept_one_time_per_half_a_year
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[1 раз в полгода] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[one time per year] (* <- lang_en;; *);;
-    *);
-concept_one_time_per_week
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[1 раз в неделю] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[one time per week] (* <- lang_en;; *);;
-    *);
-concept_one_time_per_3_month
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[1 раз 3 месяца] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[one time per 3 month] (* <- lang_en;; *);;
-    *);
-
-concept_one_time_per_day
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[1 раз в сутки] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[one time per day] (* <- lang_en;; *);;
-    *);
-concept_two_time_per_day
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[2 раза в сутки] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[two time per day] (* <- lang_en;; *);;
-    *);
-concept_two_times_per_year
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[2 раза в год] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[two times per year] (* <- lang_en;; *);;
-    *);
-
-concept_one_time_per_3_days
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[1 раз в 3 суток] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[one time per 3 days] (* <- lang_en;; *);;
-    *);
-
-concept_one_time_per_2_days
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[1 раз в 2 суток] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[one time per 2 days] (* <- lang_en;; *);;
-    *);
-
-concept_one_time_per_shift
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[1 раз в смену] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[one time per shift] (* <- lang_en;; *);;
-    *);
-
-concept_one_time_per_1_5_years
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[1 раз в 1,5 года] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[one time per 1.5 years] (* <- lang_en;; *);;
-    *);
-    concept_one_time_per_2_years
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[1 раз в 2 года] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[one time per 2 years] (* <- lang_en;; *);;
-    *);
-    concept_one_time_per_3_years
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[1 раз в 3 года] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[one time per 3 years] (* <- lang_en;; *);;
-    *);
     // Концепт "продолжительность"
 concept_duration
     (*
@@ -535,7 +375,7 @@ concept_duration
         <= nrel_inclusion: concept_indicator;;
         => nrel_main_idtf:[продолжительность] (* <- lang_ru;; *);;
         => nrel_main_idtf:[duration] (* <- lang_en;; *);;
-        => rrel_has_unit:[ч];;
+        => nrel_has_unit:[ч];;
         <= nrel_sc_text_translation: ...
             (*
                 <- concept_definition (*<- sc_node_class;;*);;
@@ -715,7 +555,7 @@ concept_retention_time
                 -> [Продолжительность нахождения сточных вод в сооружении, за которую происходит осаждение взвешенных веществ или протекают другие процессы очистки.]
                 (* <- lang_ru;; *);;
             *);;
-        => rrel_has_unit:[ч];;
+        => nrel_has_unit:[ч];;
     *);
     // Концепт "снижение"
 concept_reduction

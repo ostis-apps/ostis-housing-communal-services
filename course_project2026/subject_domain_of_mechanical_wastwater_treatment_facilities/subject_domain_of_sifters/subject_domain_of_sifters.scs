@@ -15,6 +15,11 @@ subject_domain_of_sifters
         => nrel_has_parameter: concept_debris_density;;
         => nrel_main_idtf:[решетки и сита] (* <- lang_ru;; *);;
         <= nrel_inclusion: concept_mechanical_wastewater_treatment_facility;;
+        <= nrel_sc_text_translation: ...
+    (*
+        <- concept_definition (*<- sc_node_class;;*);;
+        -> [Решётки и сита — сооружения механической очистки сточных вод, предназначенные для задержания грубодисперсных примесей (на решётках — крупных, на ситах — мелких).] (* <- lang_ru;; *);;
+    *);;
         <= nrel_subdividing: 
         {
         concept_screen; 
@@ -133,18 +138,18 @@ subject_domain_of_sifters
 // Показатели для решеток и сит
 concept_debris_volume
 (*
-    <- concept_indicator;;
+    <- sc_node_class;;
     <= nrel_inclusion: concept_indicator;;
     => nrel_main_idtf:[объем задерживаемых отбросов] (* <- lang_ru;; *);;
-    => rrel_has_unit:[м³] (* <- lang_ru;; *);;
+    => nrel_has_unit:[м³] (* <- lang_ru;; *);;
 *);
 
 concept_debris_moisture
 (*
-    <- concept_indicator;;
+      <- sc_node_class;;
     <= nrel_inclusion: concept_indicator;;
     => nrel_main_idtf:[влажность отбросов] (* <- lang_ru;; *);;
-    => rrel_has_unit:[%] (* <- lang_ru;; *);;
+    => nrel_has_unit:[%] (* <- lang_ru;; *);;
 *);
 
 concept_debris_ash_content
@@ -152,49 +157,9 @@ concept_debris_ash_content
     <- sc_node_class;;
     <= nrel_inclusion: concept_indicator;;
     => nrel_main_idtf:[зольность отбросов] (* <- lang_ru;; *);;
-    => rrel_has_unit:[%] (* <- lang_ru;; *);;
-*);
-concept_excessive_clogging
-(*
-    <- sc_node_class;;
-    <= nrel_inclusion: concept_process;;
-    => nrel_main_idtf:[процесс чрезмерного засорения] (* <- lang_ru;; *);;
-    => nrel_main_idtf:[excessive clogging process] (* <- lang_en;; *);;
-    <= nrel_sc_text_translation: ...
-        (*
-            <- concept_definition (*<- sc_node_class;;*);;
-            -> [Процесс накопления отбросов на решетках и ситах, приводящий к снижению пропускной способности.]
-            (* <- lang_ru;; *);;
-        *);;
+    => nrel_has_unit:[%] (* <- lang_ru;; *);;
 *);
 
-concept_capacity_reduction
-(*
-    <- sc_node_class;;
-    <= nrel_inclusion: concept_process;;
-    => nrel_main_idtf:[процесс снижения пропускной способности] (* <- lang_ru;; *);;
-    => nrel_main_idtf:[capacity reduction process] (* <- lang_en;; *);;
-    <= nrel_sc_text_translation: ...
-        (*
-            <- concept_definition (*<- sc_node_class;;*);;
-            -> [Процесс уменьшения максимального расхода сточных вод, который может пропустить сооружение.]
-            (* <- lang_ru;; *);;
-        *);;
-*);
-
-concept_wastewater_level_rise
-(*
-    <- sc_node_class;;
-    <= nrel_inclusion: concept_process;;
-    => nrel_main_idtf:[процесс повышения уровня сточной воды] (* <- lang_ru;; *);;
-    => nrel_main_idtf:[wastewater level rise process] (* <- lang_en;; *);;
-    <= nrel_sc_text_translation: ...
-        (*
-            <- concept_definition (*<- sc_node_class;;*);;
-            -> [Процесс увеличения уровня воды в подводящем канале перед решетками.]
-            (* <- lang_ru;; *);;
-        *);;
-*);
 concept_water_drain_hole
     (*
         <- sc_node_class;;
@@ -226,7 +191,7 @@ concept_collection
     <- concept_indicator;;
     <= nrel_inclusion: concept_indicator;;
     => nrel_main_idtf:[плотность отбросов] (* <- lang_ru;; *);;
-    => rrel_has_unit:[кг/м³] (* <- lang_ru;; *);;
+    => nrel_has_unit:[кг/м³] (* <- lang_ru;; *);;
 *);
 
 
@@ -343,33 +308,6 @@ concept_treatment_facility_territory
             *);;
     *);
 
-// Концепт "песковая площадка"
-concept_sand_platform
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[песковая площадка] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[sand platform] (* <- lang_en;; *);;
-        <= nrel_sc_text_translation: ...
-            (*
-                <- concept_definition (*<- sc_node_class;;*);;
-                -> [Специально оборудованная открытая площадка на территории очистных сооружений для обезвоживания и временного хранения песка, извлечённого из песколовок.]
-                (* <- lang_ru;; *);;
-            *);;
-    *);
-
-// Концепт "доступность для погрузки на транспорт"
-concept_loading_accessibility
-    (*
-        <- sc_node_class;;
-        => nrel_main_idtf:[доступность для погрузки на транспорт] (* <- lang_ru;; *);;
-        => nrel_main_idtf:[loading accessibility] (* <- lang_en;; *);;
-        <= nrel_sc_text_translation: ...
-            (*
-                <- concept_definition (*<- sc_node_class;;*);;
-                -> [Свойство места хранения (песковой площадки, контейнера, бункера), обеспечивающее свободный подъезд погрузочной техники (экскаватора, погрузчика) и возможность механизированной загрузки материала в транспортные средства для вывоза.]
-                (* <- lang_ru;; *);;
-            *);;
-    *);
 
     concept_storage
     (*

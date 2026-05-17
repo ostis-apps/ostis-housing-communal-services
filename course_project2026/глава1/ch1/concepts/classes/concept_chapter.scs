@@ -1,8 +1,7 @@
-concept_law
+concept_chapter
 <- sc_node_class;
 => nrel_main_idtf:
-    [закон Республики Беларусь]
+    [глава]
     (*
         <- lang_ru;;
     *);;
-

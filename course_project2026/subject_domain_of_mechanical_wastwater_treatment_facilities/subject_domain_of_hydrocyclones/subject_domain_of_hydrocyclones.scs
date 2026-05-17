@@ -16,6 +16,11 @@ subject_domain_of_hydrocyclones
         => nrel_has_parameter: concept_sludge_volume;;
         => nrel_has_parameter: concept_sludge_moisture;;
         => nrel_has_parameter: concept_suspended_solids_in_effluent;;
+        <= nrel_sc_text_translation: ...
+    (*
+        <- concept_definition (*<- sc_node_class;;*);;
+        -> [Гидроциклон — это аппарат для механической очистки сточных вод, в котором разделение суспензий и эмульсий происходит под действием центробежных сил.] (* <- lang_ru;; *);;
+    *);;
     *);
 
 -> rrel_not_maximum_studied_object_class:
@@ -109,7 +114,7 @@ subject_domain_of_hydrocyclones
         <= nrel_inclusion: concept_indicator;;
         => nrel_main_idtf:[потери напора] (* <- lang_ru;; *);;
         => nrel_main_idtf:[pressure loss] (* <- lang_en;; *);;
-        => rrel_has_unit:[м] (* <- lang_ru;; *);;
+        => nrel_has_unit:[м] (* <- lang_ru;; *);;
     *);
 
 // Показатели
@@ -119,5 +124,5 @@ concept_hydraulic_load
     <= nrel_inclusion: concept_indicator;;
     => nrel_main_idtf:[гидравлическая нагрузка] (* <- lang_ru;; *);;
     => nrel_main_idtf:[hydraulic load] (* <- lang_en;; *);;
-    => rrel_has_unit:[м³/(м²·ч)] (* <- lang_ru;; *);;
+    => nrel_has_unit:[м³/(м²·ч)] (* <- lang_ru;; *);;
 *);;

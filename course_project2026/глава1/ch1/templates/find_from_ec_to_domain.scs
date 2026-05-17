@@ -1,0 +1,39 @@
+@find_from_ec_to_domain = {
+    // Шаг 1: Найти все главы ЭкоНиП
+    rrel_init_template: {
+        rrel_template: [*
+            @input_param1 = (.._ec <-_ concept_ec);;
+            nrel_chapter _-> (.._ec _=> .._chapter);;
+            @output_param1 = (.._chapter <-_ concept_chapter);;
+        *];
+        rrel_template_input_params: {
+            @input_param1
+        };
+        rrel_template_output_params: {
+            @output_param1
+        }
+    } (* <- nrel_search_set_template;; *);
+    
+    // Шаг 2: Для каждой главы найти её предметную область
+    rrel_next_template: {
+        rrel_template: [*
+            @input_param1 = (.._chapter <-_ concept_chapter);;
+            nrel_has_source _-> (.._domain _=> .._chapter);;
+            @output_param1 = (.._domain <-_ subject_domain);;
+        *];
+        rrel_template_input_params: {
+            @input_param1
+        };
+        rrel_template_output_params: {
+            @output_param1
+        }
+    } (* <- nrel_search_set_template;; *)
+};;
+
+@find_from_ec_to_domain
+    <- nrel_fixed_search_strategy_template;
+    => nrel_main_idtf:
+        [Шаблон поиска предметных областей по ЭкоНиП]
+        (*
+            <- lang_ru;;
+        *);;

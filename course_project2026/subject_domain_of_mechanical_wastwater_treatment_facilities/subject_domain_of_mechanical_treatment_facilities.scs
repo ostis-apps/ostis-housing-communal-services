@@ -18,6 +18,7 @@ subject_domain_of_mechanical_wastewater_treatment_facility
   concept_mechanical_wastewater_treatment_facility(*
     <- sc_node_class;;
     => nrel_main_idtf:[сооружение механической очистки сточных вод](* <- lang_ru;; *);;
+     <= nrel_inclusion: concept_wastewater_treatment_facility;;
   *);
 
 -> rrel_not_maximum_studied_object_class:
@@ -172,66 +173,66 @@ concept_centrifugal_separation
 
         
 concept_sludge_volume (*
-	<- concept_indicator;;
+	 <- sc_node_class;;
 	<= nrel_inclusion: concept_indicator;;
 	=> nrel_main_idtf:[объем осадка](* <- lang_ru;; *);;
-	=> rrel_has_unit:[м³](* <- lang_ru;; *);;
+	=> nrel_has_unit:[м³](* <- lang_ru;; *);;
 *);
 
 concept_sludge_moisture (*
-	<- concept_indicator;;
+	 <- sc_node_class;;
 	<= nrel_inclusion: concept_indicator;;
 	=> nrel_main_idtf:[влажность осадка](* <- lang_ru;; *);;
-	=> rrel_has_unit:[%](* <- lang_ru;; *);;
+	=> nrel_has_unit:[%](* <- lang_ru;; *);;
 *);
 
 concept_sludge_density (*
-	<- concept_indicator;;
+	 <- sc_node_class;;
 	<= nrel_inclusion: concept_indicator;;
 	=> nrel_main_idtf:[плотность осадка](* <- lang_ru;; *);;
-	=> rrel_has_unit:[кг/м³](* <- lang_ru;; *);;
+	=> nrel_has_unit:[кг/м³](* <- lang_ru;; *);;
 *);
 
 concept_sludge_ash_content (*
-	<- concept_indicator;;
+	 <- sc_node_class;;
 	<= nrel_inclusion: concept_indicator;;
 	=> nrel_main_idtf:[зольность осадка](* <- lang_ru;; *);;
-	=> rrel_has_unit:[%](* <- lang_ru;; *);;
+	=> nrel_has_unit:[%](* <- lang_ru;; *);;
 *);
 
 concept_sludge_chemical_composition (*
-	<- concept_indicator;;
+	 <- sc_node_class;;
 	<= nrel_inclusion: concept_indicator;;
 	=> nrel_main_idtf:[химический состав осадка](* <- lang_ru;; *);;
 *);
 
 // ----- ВОДА (общие показатели) -----
 concept_suspended_solids_in_effluent (*
-	<- concept_indicator;;
+	 <- sc_node_class;;
 	<= nrel_inclusion: concept_indicator;;
 	=> nrel_main_idtf:[содержание взвешенных веществ в осветленной воде](* <- lang_ru;; *);;
-	=> rrel_has_unit:[мг/дм³](* <- lang_ru;; *);;
+	=> nrel_has_unit:[мг/дм³](* <- lang_ru;; *);;
 *);
 
 concept_bod5_in_effluent (*
-	<- concept_indicator;;
+	 <- sc_node_class;;
 	<= nrel_inclusion: concept_indicator;;
 	=> nrel_main_idtf:[БПК5 в осветленной воде](* <- lang_ru;; *);;
-	=> rrel_has_unit:[мгО₂/дм³](* <- lang_ru;; *);;
+	=> nrel_has_unit:[мгО₂/дм³](* <- lang_ru;; *);;
 *);
 
 concept_settling_duration (*
-	<- concept_indicator;;
+	 <- sc_node_class;;
 	<= nrel_inclusion: concept_indicator;;
 	=> nrel_main_idtf:[продолжительность отстаивания](* <- lang_ru;; *);;
-	=> rrel_has_unit:[ч](* <- lang_ru;; *);;
+	=> nrel_has_unit:[ч](* <- lang_ru;; *);;
 *);
 
 concept_sludge_level (*
-	<- concept_indicator;;
+	 <- sc_node_class;;
 	<= nrel_inclusion: concept_indicator;;
 	=> nrel_main_idtf:[уровень осадка](* <- lang_ru;; *);;
-	=> rrel_has_unit:[м](* <- lang_ru;; *);;
+	=> nrel_has_unit:[м](* <- lang_ru;; *);;
 *);
 
 
