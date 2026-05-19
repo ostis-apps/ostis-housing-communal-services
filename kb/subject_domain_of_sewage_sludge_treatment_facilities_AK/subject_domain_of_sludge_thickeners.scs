@@ -1,0 +1,31 @@
+subject_domain_of_sludge_thickeners
+=> nrel_main_idtf:
+    [Предметная область уплотнителей осадка] (* <- lang_ru;; *);
+	<- subject_domain;
+	<- sc_node_structure;
+
+-> rrel_maximum_studied_object_class:
+	concept_sludge_thickener
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[уплотнитель осадка] (* <- lang_ru;; *);;
+		<= nrel_sc_text_translation: ...
+	        (*
+	            <- concept_definition (*<- sc_node_class;;*);;
+	                ->[Уплотнители предназначены для снижения влажности осадка и уменьшения его объема перед подачей на последующие сооружения.] (*<-lang_ru;;*);;
+                    ->[При гравитационном уплотнении избыточного активного ила нагрузка на поверхность должна составлять не более 0,5–1,5 кг/(м2·ч).] (*<-lang_ru;;*);;
+                    ->[Допускается использование реагентов для ускорения процесса уплотнения и повышения прозрачности сливной воды.] (*<-lang_ru;;*);;
+                    ->[Удаление уплотненного осадка из гравитационных уплотнителей должно производиться непрерывно или периодически по графику, исключающему его взбраживание.] (*<-lang_ru;;*);;
+	        *);;
+        <= nrel_subdividing:
+                concept_gravity_thickener;
+                concept_flotation_thickener;
+                concept_centrifugal_thickener;;
+	*);
+
+-> rrel_not_maximum_studied_object_class:
+	concept_sludge_layer_level_sensor (* => nrel_main_idtf:[датчик уровня илового слоя] (* <- lang_ru;; *);; *);
+	concept_sludge_scraper (* => nrel_main_idtf:[илоскреб] (* <- lang_ru;; *);; *);
+	concept_supernatant_water (* => nrel_main_idtf:[сливная вода] (* <- lang_ru;; *);; *);
+	concept_sludge_pump_station (* => nrel_main_idtf:[насосная станция ила] (* <- lang_ru;; *);; *);
+	concept_air_saturation_tank (* => nrel_main_idtf:[напорный резервуар-сатуратор] (* <- lang_ru;; *);; *);;

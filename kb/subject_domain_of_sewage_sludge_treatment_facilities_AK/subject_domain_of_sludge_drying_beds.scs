@@ -1,0 +1,27 @@
+subject_domain_of_sludge_drying_beds
+=> nrel_main_idtf:
+    [Предметная область иловых площадок] (* <- lang_ru;; *);
+	<- subject_domain;
+	<- sc_node_structure;
+
+-> rrel_maximum_studied_object_class:
+	concept_sludge_drying_bed
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[иловая площадка] (* <- lang_ru;; *);;
+		<= nrel_sc_text_translation: ...
+	        (*
+	            <- concept_definition (*<- sc_node_class;;*);;
+	                ->[Иловые площадки служат для подсушки осадка за счет испарения и фильтрации воды через дренажный слой.] (*<-lang_ru;;*);;
+                    ->[Влажность осадка при выгрузке с площадок должна составлять 75–80 %.] (*<-lang_ru;;*);;
+                    ->[При механизированной уборке осадка на поверхность карт должен быть уложен слой щебня или асфальта, выдерживающий нагрузку от спецтехники.] (*<-lang_ru;;*);;
+                    ->[Поверхностную иловую воду необходимо удалять через колодцы по мере её отстаивания.] (*<-lang_ru;;*);;
+                    ->[Зимой допускается намораживание осадка слоями, что улучшает его структуру после весеннего оттаивания.] (*<-lang_ru;;*);;
+	        *);;
+	*);
+
+-> rrel_not_maximum_studied_object_class:
+	concept_drainage_well (* => nrel_main_idtf:[дренажный колодец] (* <- lang_ru;; *);; *);
+	concept_stop_log_gate (* => nrel_main_idtf:[шандорный затвор] (* <- lang_ru;; *);; *);
+	concept_gravel_filter_layer (* => nrel_main_idtf:[дренажный слой щебня] (* <- lang_ru;; *);; *);
+	concept_sludge_pumping_main (* => nrel_main_idtf:[напорный илопровод] (* <- lang_ru;; *);; *);;

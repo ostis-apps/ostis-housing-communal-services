@@ -1,0 +1,26 @@
+subject_domain_of_aerobic_sludge_stabilizers
+=> nrel_main_idtf:
+    [Предметная область аэробных стабилизаторов] (* <- lang_ru;; *);
+	<- subject_domain;
+	<- sc_node_structure;
+
+-> rrel_maximum_studied_object_class:
+	concept_aerobic_stabilizer
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[аэробный стабилизатор] (* <- lang_ru;; *);;
+		<= nrel_sc_text_translation: ...
+	        (*
+	            <- concept_definition (*<- sc_node_class;;*);;
+	                ->[Предназначены для стабилизации избыточного активного ила или его смеси с осадком первичных отстойников путем длительного аэрирования.] (*<-lang_ru;;*);;
+                    ->[Продолжительность аэробной стабилизации при температуре 20 °C должна составлять 8–12 суток для активного ила.] (*<-lang_ru;;*);;
+                    ->[Интенсивность аэрации для поддержания осадка во взвешенном состоянии должна быть не менее 6 м3/(м2·ч).] (*<-lang_ru;;*);;
+                    ->[Расход воздуха следует принимать исходя из обеспечения концентрации растворенного кислорода не менее 1–2 мг/дм3.] (*<-lang_ru;;*);;
+	        *);;
+	*);
+
+-> rrel_not_maximum_studied_object_class:
+	concept_aeration_system (* => nrel_main_idtf:[система аэрации] (* <- lang_ru;; *);; *);
+	concept_dissolved_oxygen_sensor (* => nrel_main_idtf:[датчик растворенного кислорода] (* <- lang_ru;; *);; *);
+	concept_stabilized_sludge (* => nrel_main_idtf:[стабилизированный осадок] (* <- lang_ru;; *);; *);
+	concept_decanting_device (* => nrel_main_idtf:[декантирующее устройство] (* <- lang_ru;; *);; *);;

@@ -1,0 +1,25 @@
+subject_domain_of_sludge_quality_indicators
+=> nrel_main_idtf:
+    [Предметная область показателей качества] (* <- lang_ru;; *);
+	<- subject_domain;
+	<- sc_node_structure;
+
+-> rrel_maximum_studied_object_class:
+	concept_sludge_quality_indicator
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[показатель качества осадка] (* <- lang_ru;; *);;
+		<= nrel_sc_text_translation: ...
+	        (*
+	            <- concept_definition (*<- sc_node_class;;*);;
+	                ->[Основными критериями качества являются влажность, зольность, содержание тяжелых металлов и микробиологическая чистота.] (*<-lang_ru;;*);;
+                    ->[Суммарное содержание меди, никеля, цинка, свинца, кадмия и ртути не должно превышать нормативы для конкретного вида утилизации.] (*<-lang_ru;;*);;
+                    ->[Класс опасности осадка определяется расчетным или экспериментальным путем (биотестирование) не реже 1 раза в год.] (*<-lang_ru;;*);;
+	        *);;
+	*);
+
+-> rrel_not_maximum_studied_object_class:
+	concept_heavy_metals_concentration (* => nrel_main_idtf:[концентрация тяжелых металлов] (* <- lang_ru;; *);; *);
+	concept_helminth_egg_count (* => nrel_main_idtf:[содержание яиц гельминтов] (* <- lang_ru;; *);; *);
+	concept_ash_content (* => nrel_main_idtf:[зольность] (* <- lang_ru;; *);; *);
+	concept_ph_value (* => nrel_main_idtf:[величина pH] (* <- lang_ru;; *);; *);;

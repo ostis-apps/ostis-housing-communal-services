@@ -1,0 +1,25 @@
+subject_domain_of_sludge_storage_and_transportation
+=> nrel_main_idtf:
+    [Предметная область хранения и транспорта] (* <- lang_ru;; *);
+	<- subject_domain;
+	<- sc_node_structure;
+
+-> rrel_maximum_studied_object_class:
+	concept_sludge_storage_facility
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[сооружение хранения] (* <- lang_ru;; *);;
+		<= nrel_sc_text_translation: ...
+	        (*
+	            <- concept_definition (*<- sc_node_class;;*);;
+	                ->[Накопители должны обеспечивать хранение запаса осадка на случай выхода из строя оборудования или сезонных перерывов в утилизации.] (*<-lang_ru;;*);;
+                    ->[Транспортировка жидкого осадка по илопроводам должна производиться со скоростями, исключающими осаждение твердой фазы (не менее 0,8 м/с).] (*<-lang_ru;;*);;
+                    ->[Автотранспорт для перевозки обезвоженного осадка должен иметь герметичные кузова и тенты.] (*<-lang_ru;;*);;
+	        *);;
+	*);
+
+-> rrel_not_maximum_studied_object_class:
+	concept_sludge_bunker (* => nrel_main_idtf:[бункер-накопитель] (* <- lang_ru;; *);; *);
+	concept_arch_breaker (* => nrel_main_idtf:[сводообрушитель] (* <- lang_ru;; *);; *);
+	concept_sludge_pipe_line (* => nrel_main_idtf:[илопровод] (* <- lang_ru;; *);; *);
+	concept_progressive_cavity_pump (* => nrel_main_idtf:[винтовой насос] (* <- lang_ru;; *);; *);;
