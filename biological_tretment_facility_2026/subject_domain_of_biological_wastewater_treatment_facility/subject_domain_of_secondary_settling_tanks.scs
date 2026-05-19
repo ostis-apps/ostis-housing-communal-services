@@ -1,0 +1,151 @@
+subject_domain_of_secondary_settling_tanks
+
+=> nrel_main_idtf:
+    [Предметная область вторичных отстойников](* <- lang_ru;; *);
+	<- subject_domain;
+	<- sc_node_structure;
+	
+-> rrel_maximum_studied_object_class:
+	concept_secondary_settling_tank
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[вторичный отстойник] (* <- lang_ru;; *);;
+		<= nrel_inclusion:
+        concept_biological_wastewater_treatment_facility;;
+        <= nrel_sc_text_translation: ...
+	        (*
+	            <- concept_definition (*<- sc_node_class;;*);;
+	                ->[Вторичные отстойники предназначены для разделения иловой смеси и очищенной сточной воды и (или) отделения биопленки.]
+	                (*<-lang_ru;;*);;
+                    ->[При отведении сточной воды со вторичных отстойников на сооружения последующей очистки, концентрация взвешенных веществ в сточной воде, отводимой от вторичных отстойников, должна обеспечивать технологический режим эксплуатации сооружений последующего этапа очистки и не приводить к их чрезмерной перегрузке.]
+	                (*<-lang_ru;;*);;
+                    ->[При эксплуатации вторичных отстойников необходимо обеспечить режим удаления активного ила для предотвращения нежелательной денитрификации и выноса осадка в осветленную воду образующимися газами, а также обратного перехода соединений фосфора в очищенную сточную воду.]
+	                (*<-lang_ru;;*);;
+                    ->[Обеспечить режим подачи рециркуляционного ила из вторичного отстойника в аэротенки со степенью рециркуляции активного ила, установленной в проектной документации, в сооружения с нитрификацией и денитрификацией со степенью рециркуляции активного ила не менее 0,5.]
+	                (*<-lang_ru;;*);;
+                    ->[Рекомендуемая продолжительность нахождения осадка во вторичном отстойнике зависит от вида биологической очистки и составляет для сооружений без нитрификации от 1,5 до 2,0 ч, для сооружений с нитрификацией от 1,0 до 1,5 ч, сооружений с денитрификацией от 2,0 до 2,5 ч.]
+	                (*<-lang_ru;;*);;
+                    ->[Продолжительность пребывания осадка в зоне уплотнения не должна превышать 40 минут, для предотвращения его загнивания и снижения активности.]
+	                (*<-lang_ru;;*);;
+                    ->[Степень рециркуляции активного ила при использовании горизонтальных и радиальных вторичных отстойников рекомендуется не более 1,0, для вертикальных отстойников – не более 1,5.]
+	                (*<-lang_ru;;*);;
+                    ->[Опорожнение вторичных отстойников для проведения технического обслуживания производится не реже 1 раза в 2 года.]
+	                (*<-lang_ru;;*);;
+	        *);;
+        => nrel_inclusion:
+                concept_horizontal_secondary_settling_tank;
+                concept_radial_secondary_settling_tank;
+                concept_vertical_secondary_settling_tank;;
+	*);
+
+-> rrel_not_maximum_studied_object_class:
+	concept_horizontal_secondary_settling_tank
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[горизонтальный вторичный отстойник] (* <- lang_ru;; *);;
+	*);
+	concept_radial_secondary_settling_tank
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[радиальный вторичный отстойник] (* <- lang_ru;; *);;
+	*);
+	concept_vertical_secondary_settling_tank
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[вертикальный вторичный отстойник] (* <- lang_ru;; *);;
+	*);
+	concept_process_separation
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[процесс разделения] (* <- lang_ru;; *);;
+	*);
+	concept_recirculation_rate
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[степень рециркуляции] (* <- lang_ru;; *);;
+	*);
+	concept_sludge_compaction_zone
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[зона уплотнения осадка] (* <- lang_ru;; *);;
+	*);
+	concept_biofilm_separation
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[отделение биопленки] (* <- lang_ru;; *);;
+	*);
+	concept_supply_to_aerotank
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[подача в аэротенки] (* <- lang_ru;; *);;
+	*);
+	concept_supply_to_the_nitrifier_and_denitrifier
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[подача в нитрификатор и денитрификатор] (* <- lang_ru;; *);;
+	*);
+	concept_clarified_water
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[осветлённая вода] (* <- lang_ru;; *);;
+	*);
+	concept_percentage_of_sludge_recirculation_degree
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[процент степени рециркуляции ила] (* <- lang_ru;; *);;
+	*);
+	concept_sediment_content
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[содержание осадка] (* <- lang_ru;; *);;
+	*);
+	concept_sediment_content_from_the_nitrifier
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[содержание осадка из нитрификатора] (* <- lang_ru;; *);;
+	*);
+	concept_sediment_content_from_the_denitrifier
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[содержание осадка из денитрификатора] (* <- lang_ru;; *);;
+	*);
+	concept_sediment_content_from_the_facilities_for_the_removal_of_phosphorus_compounds
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[содержание осадка из сооружения для удаления соединений фосфора] (* <- lang_ru;; *);;
+	*);
+	concept_sediment
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[осадок] (* <- lang_ru;; *);;
+	*);
+	concept_sediment_content_period
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[период содержания осадка] (* <- lang_ru;; *);;
+	*);
+	concept_sediment_putrefaction
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[загнивание осадка] (* <- lang_ru;; *);;
+	*);
+	concept_decreased_activity
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[снижения активности] (* <- lang_ru;; *);;
+	*);
+	concept_emptying_secondary_settling_tanks
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[опорожнение вторичных отстойников] (* <- lang_ru;; *);;
+	*);
+	concept_carrying_out_maintenance
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[проведение технического обслуживания] (* <- lang_ru;; *);;
+	*);
+	concept_preventing_the_retransfer
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[предотвращение обратного перехода] (* <- lang_ru;; *);;
+	*);;

@@ -1,0 +1,420 @@
+subject_domain_of_soil_treatment_facilities
+
+=> nrel_main_idtf:
+    [Предметная область сооружений для очистки сточных вод в грунте](* <- lang_ru;; *);
+	<- subject_domain;
+	<- sc_node_structure;
+	
+-> rrel_maximum_studied_object_class:
+	concept_soil_treatment_facility
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[сооружение для очистки сточных вод в грунте] (* <- lang_ru;; *);;
+        <= nrel_sc_text_translation: ...
+	        (*
+	            <- concept_definition (*<- sc_node_class;;*);;
+	                ->[Сооружения для очистки сточных вод в грунте применяются после предварительного осветления сточных вод на сооружениях механической очистки.]
+	                (*<-lang_ru;;*);;
+                    ->[Следует обеспечивать равномерную подачу сточных вод на карты.]
+	                (*<-lang_ru;;*);;
+                    ->[Производить регулировку подачи сточных вод с помощью шиберов, устанавливаемых в распределительных колодцах оросительной сети.]
+	                (*<-lang_ru;;*);;
+                    ->[Производить регулярный осмотр распределительных колодцев на оросительной сети.]
+	                (*<-lang_ru;;*);;
+                    ->[Производить при необходимости очистку колодца, прочистку оросителей и их промывку раствором хлорсодержащих дезинфектантов с концентрацией активного хлора от 50 до 100 мг/дм3 и расходом от 3 до 6 дм3 на 1 м длины оросителя.]
+	                (*<-lang_ru;;*);;
+                    ->[Поддерживать в исправном состоянии колодцы, трубопроводы и лотки для подачи сточных вод в сооружения и отведения из них очищенных сточных вод.]
+	                (*<-lang_ru;;*);;
+                    ->[Поддерживать в исправном состоянии и производить техническое обслуживание насосных установок для подачи сточных вод на сооружения.]
+	                (*<-lang_ru;;*);;
+                    ->[При чрезмерном заиливании и кольматации загрузки ее объем промывают водой с содержанием взвешенных веществ, не превышающих 20 мг/дм3, или заменить закольматированный объем фильтрующей загрузки.]
+	                (*<-lang_ru;;*);;
+	        *);;
+        => nrel_inclusion:
+                concept_closed_type_underground_wastewater_treatment_facilities;
+                concept_filtration_fields;
+                concept_underground_filtration_fields;
+                concept_filtering_trenches;
+                concept_sand_and_gravel_filters;
+                concept_ventilated_underground_filtration_areas;
+                concept_soil_plant_areas;
+                concept_filtering_wells;
+                concept_ground_filtration_areas;;
+	*);
+
+-> rrel_not_maximum_studied_object_class:
+        concept_closed_type_underground_wastewater_treatment_facilities(*
+                <- sc_node_class;;
+                => nrel_main_idtf:[сооружения для очистки сточных вод в грунте закрытого типа](* <- lang_ru;; *);;
+                => nrel_inclusion:
+                       concept_filtering_wells;
+                       concept_underground_filtration_fields;
+                       concept_ventilated_underground_filtration_areas;;
+         *);
+	concept_filtration_fields
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[поля фильтрации] (* <- lang_ru;; *);;
+	*);
+	concept_underground_filtration_fields
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[поля подземной фильтрации] (* <- lang_ru;; *);;
+	*);
+	concept_filtering_trenches
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[фильтрующие траншеи] (* <- lang_ru;; *);;
+	*);
+	concept_sand_and_gravel_filters
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[песчано-гравийные фильтры] (* <- lang_ru;; *);;
+	*);
+	concept_ventilated_underground_filtration_areas
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[вентилируемые площадки подземной фильтрации] (* <- lang_ru;; *);;
+	*);
+	concept_soil_plant_areas
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[грунтово-растительные площадки] (* <- lang_ru;; *);;
+		=> nrel_inclusion:
+                       concept_soil_plant_areas_with_horizontal_flow;
+                       concept_soil_plant_areas_with_vertical_flow;;
+        <= nrel_sc_text_translation: ...
+	        (*
+	            <- concept_definition (*<- sc_node_class;;*);;
+	                ->[При эксплуатации грунтово-растительных площадок, дополнительно к требованиям по эксплуатации закрытых сооружений очистки сточных вод в естественных условиях, необходимо производить очистку площадки с удалением высохших и погибших растений.]
+	                (*<-lang_ru;;*);;
+                    ->[Для грунтово-растительных площадок с горизонтальным потоком нагрузка сточных вод по ХПКст не превышает 16 г/(м2·сут), гидравлическая нагрузка – 0,04 м3/(м2·сут).]
+	                (*<-lang_ru;;*);;
+                    ->[Для грунтово-растительных площадок с вертикальным потоком нагрузка по ХПКст не превышает 20 г/(м2·сут), гидравлическая нагрузка – 0,08 м3/(м2·сут).]
+	                (*<-lang_ru;;*);;
+                    ->[На грунтово-растительных площадках с горизонтальным потоком в сборном колодце проводятся наблюдения за уровнем воды дренажной сети и с обеспечением поддержания его на отметках, обеспечивающих нормальный режим фильтрования горизонтального потока на площадке.]
+	                (*<-lang_ru;;*);;
+	        *);;
+	*);
+	concept_filtering_wells
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[фильтрующие колодцы] (* <- lang_ru;; *);;
+        <= nrel_sc_text_translation: ...
+	        (*
+	            <- concept_definition (*<- sc_node_class;;*);;
+	                ->[При эксплуатации фильтрующих колодцев необходимо: обеспечивать предварительное осветление сточных вод; не допускать чрезмерной гидравлической нагрузки на сооружение, при которой появляется слой сточной воды над загрузкой; производить периодический осмотр и удаление крупноразмерных примесей с поверхности загрузки.]
+	                (*<-lang_ru;;*);;
+                    ->[В случае появления слоя сточной воды над загрузкой необходимо: откачать воду переносным насосом; промыть поверхность загрузки чистой водой с рыхлением верхнего слоя; обработать раствором хлорсодержащих дезинфектантов с концентрацией активного хлора от 75 до 100 мг/дм3 с расходом от 15 до 20 л на 1 м2 поверхности загрузки.]
+	                (*<-lang_ru;;*);;
+                    ->[Допускается удаление верхнего слоя загрузки с последующей отмывкой или заменой.]
+	                (*<-lang_ru;;*);;
+	        *);;
+	*);
+	concept_ground_filtration_areas
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[грунтовые фильтрационные площадки] (* <- lang_ru;; *);;
+        <= nrel_sc_text_translation: ...
+	        (*
+	            <- concept_definition (*<- sc_node_class;;*);;
+	                ->[При эксплуатации грунтовых фильтрационных площадок необходимо: осуществлять равномерное распределение сточных вод по картам, не допускать подтопления и кольматации фильтрующего основания; своевременно производить скашивание травянистой растительности; производить промывку дренажной системы.]
+	                (*<-lang_ru;;*);;
+                    ->[При снижении фильтрационной способности основания вследствие кольматации фильтрующего основания, подачу сточных вод на карты приостанавливают для произведения сработки уровня до полного опорожнения карт.]
+	                (*<-lang_ru;;*);;
+                    ->[После удаления воды, карты грунтовых фильтрационных площадок необходимо просушить в течение не менее 2 недель и после произвести декольматацию верхнего слоя фильтрующего основания рыхлением.]
+	                (*<-lang_ru;;*);;
+                    ->[При необходимости при длительных периодах эксплуатации грунтовых фильтрационных площадок производят снятие и замену верхнего закольматированного слоя.]
+	                (*<-lang_ru;;*);;
+                    ->[Подача сточных вод в период проведения работ по декольматации осуществляется на резервные свободные карты.]
+	                (*<-lang_ru;;*);;
+                    ->[Перед холодным периодом и после его окончания необходимо проводить работы по очистке распределительной сети, осмотр запорной арматуры и их утепление.]
+	                (*<-lang_ru;;*);;
+	        *);;
+	*);
+	concept_soil_plant_areas_with_horizontal_flow
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[грунтово-растительные площадки с горизонтальным потоком] (* <- lang_ru;; *);;
+	*);
+	concept_soil_plant_areas_with_vertical_flow
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[грунтово-растительные площадки с вертикальным потоком] (* <- lang_ru;; *);;
+	*);
+	concept_irrigator
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[ороситель] (* <- lang_ru;; *);;
+	*);
+	concept_loading_media_clogging
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[кольматация загрузки] (* <- lang_ru;; *);;
+	*);
+	concept_declogging
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[декольматация] (* <- lang_ru;; *);;
+	*);
+	concept_map_of_ground_filtration_areas
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[карта грунтовых фильтрационных площадок] (* <- lang_ru;; *);;
+	*);
+	concept_wastewater_clarification
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[осветление сточных вод] (* <- lang_ru;; *);;
+	*);
+	concept_evaluation_of_the_efficiency
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[оценка эффективности работы] (* <- lang_ru;; *);;
+	*);
+	concept_conducting_observations
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[проведение наблюдений] (* <- lang_ru;; *);;
+	*);
+	concept_content_of_easily_oxidizable_organic_substances_according_to_bod5
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[содержание легкоокисляемых органических веществ по БПК5] (* <- lang_ru;; *);;
+	*);
+	concept_concentrations_of_suspended_solids
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[концентрация взвешенных веществ] (* <- lang_ru;; *);;
+	*);
+	concept_presence_of_drainage_systems
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[наличие дренажных систем] (* <- lang_ru;; *);;
+	*);
+	concept_lack_of_drainage_systems
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[отсутствие дренажных систем] (* <- lang_ru;; *);;
+	*);
+	concept_monitoring_of_drainage_systems
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[проведение наблюдения дренажными системами] (* <- lang_ru;; *);;
+	*);
+	concept_drainage_system
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[дренажная система] (* <- lang_ru;; *);;
+	*);
+	concept_conducting_a_regular_inspection
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[проведение регулярного осмотра] (* <- lang_ru;; *);;
+	*);
+	concept_distribution_wells
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[распределительные колодцы] (* <- lang_ru;; *);;
+	*);
+	concept_irrigation_network
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[оросительная сеть] (* <- lang_ru;; *);;
+	*);
+	concept_rinsing_with_solution
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[промывка раствором] (* <- lang_ru;; *);;
+	*);
+	concept_solution_of_chlorine_containing_disinfectants
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[раствор хлорсодержащих дезинфектантов] (* <- lang_ru;; *);;
+	*);
+	concept_active_chlorine_concentration
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[концентрация активного хлора] (* <- lang_ru;; *);;
+	*);
+	concept_consumption_per_1_m_of_length
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[расход на 1 м длины] (* <- lang_ru;; *);;
+	*);
+	concept_consumption_per_1_square_meter_of_surface
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[расход на 1 метр квадратный поверхности] (* <- lang_ru;; *);;
+	*);
+	concept_maintenance_in_good_condition
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[поддержание в исправном состоянии] (* <- lang_ru;; *);;
+	*);
+	concept_pumping_installation
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[насосная установка] (* <- lang_ru;; *);;
+	*);
+	concept_tray
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[лоток] (* <- lang_ru;; *);;
+	*);
+	concept_siltation
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[заиливание] (* <- lang_ru;; *);;
+	*);
+	concept_loading_of_closed_type_wastewater_treatment_plants_in_the_ground
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[загрузка сооружений очистки сточных вод в грунте закрытого типа] (* <- lang_ru;; *);;
+	*);
+	concept_rinsing_loading_with_solution
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[промывка загрузки раствором] (* <- lang_ru;; *);;
+	*);
+	concept_aqueous_solution
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[водный раствор] (* <- lang_ru;; *);;
+	*);
+	concept_replacement_of_the_clogged_volume
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[замена закольматированного объема] (* <- lang_ru;; *);;
+	*);
+	concept_area
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[площадка грунтово-растительных площадок] (* <- lang_ru;; *);;
+	*);
+	concept_load_maintenance
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[поддержание нагрузки] (* <- lang_ru;; *);;
+	*);
+	concept_wastewater_load_for_cod
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[нагрузка сточных вод по ХПКCr] (* <- lang_ru;; *);;
+	*);
+	concept_wastewater_load_for_cod_level
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[уровень нагрузки сточных вод по ХПКCr] (* <- lang_ru;; *);;
+	*);
+	concept_monitoring_the_water_level
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[проведение наблюдения за уровнем воды] (* <- lang_ru;; *);;
+	*);
+	concept_drainage_network
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[дренажная сеть] (* <- lang_ru;; *);;
+	*);
+	concept_precast_well
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[сборный колодец] (* <- lang_ru;; *);;
+	*);
+	concept_maintaining_the_water_level_at_normal_levels
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[поддержание уровня воды на нормальных отметках] (* <- lang_ru;; *);;
+	*);
+	concept_ensuring_normal_filtration_mode
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[обеспечение нормального режима фильтрования] (* <- lang_ru;; *);;
+	*);
+	concept_horizontal_flow
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[горизонтальный поток] (* <- lang_ru;; *);;
+	*);
+	concept_large_sized_impurities
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[крупноразмерные примеси] (* <- lang_ru;; *);;
+	*);
+	concept_periodic_inspection_and_removal
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[периодический осмотр и удаление] (* <- lang_ru;; *);;
+	*);
+	concept_loading_of_the_filter_well
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[загрузка фильтрующего колодца] (* <- lang_ru;; *);;
+	*);
+	concept_top_loading_layer
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[верхний слой загрузки] (* <- lang_ru;; *);;
+	*);
+	concept_appearance_of_a_layer_of_wastewater_above_the_load
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[появление слоя сточной воды над загрузкой] (* <- lang_ru;; *);;
+	*);
+	concept_pumping_out_water
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[откачивание воды] (* <- lang_ru;; *);;
+	*);
+	concept_fresh_pump
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[пресный насос] (* <- lang_ru;; *);;
+	*);
+	concept_surface_washing
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[промывка поверхности] (* <- lang_ru;; *);;
+	*);
+	concept_clean_water
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[чистая вода] (* <- lang_ru;; *);;
+	*);
+	concept_loosening_the_top_layer
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[разрыхление верхнего слоя] (* <- lang_ru;; *);;
+	*);
+	concept_supply_of_wastewater_to_the_maps_during_the_cold_period
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[подача сточных вод на карты в холодный период] (* <- lang_ru;; *);;
+	*);
+	concept_supply_of_wastewater_to_the_maps_during_the_warm_period
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[подача сточных вод на карты в тёплый период] (* <- lang_ru;; *);;
+	*);
+	concept_presence_of_a_layer_of_water
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[наличие слоя воды] (* <- lang_ru;; *);;
+	*);
+	concept_warm
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[тёплый период] (* <- lang_ru;; *);;
+	*);
+	concept_operating_mode
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[рабочий режим] (* <- lang_ru;; *);;
+	*);
+	
+	concept_preventing_overload
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[предотвращение чрезмерной нагрузки] (* <- lang_ru;; *);;
+	*);;

@@ -1,0 +1,482 @@
+subject_domain_of_activated_sludge_facilities
+
+=> nrel_main_idtf:
+    [Предметная область сооружений биологической очистки активным илом](* <- lang_ru;; *);
+	<- subject_domain;
+	<- sc_node_structure;
+	
+-> rrel_maximum_studied_object_class:
+	concept_activated_sludge_facility
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[сооружение биологической очистки активным илом] (* <- lang_ru;; *);;
+		<= nrel_inclusion:
+        concept_biological_wastewater_treatment_facility;;
+        <= nrel_sc_text_translation: ...
+	        (*
+	            <- concept_definition (*<- sc_node_class;;*);;
+	                ->[Сооружения биологической очистки активным илом предназначены: для очистки сточных вод с использованием биоценоза свободноплавающих форм микроорганизмов; для удаления веществ, подверженных биохимическому разложению, нитрификации, денитрификации, удаления соединений фосфора, удаления специфических загрязняющих веществ.]
+	                (*<-lang_ru;;*);;
+                    ->[Обеспечивать параметры очистки: дозу и возраст ила, степень его рециркуляции, концентрацию растворенного кислорода в иловой смеси в зависимости от нагрузки по органическим веществам в исходной сточной воде и температуры иловой смеси.]
+	                (*<-lang_ru;;*);;
+                    ->[Поддерживать требуемую интенсивность аэрации в технологических емкостях с аэробными условиями для перемешивания иловой смеси с целью предотвращения отложений и обеспечения требуемой концентрации растворенного кислорода в ней, а также не допускать перерывов в подаче воздуха.]
+	                (*<-lang_ru;;*);;
+                    ->[Поддерживать требуемую интенсивность перемешивания иловой смеси механическими мешалками в технологических емкостях с анаэробными или аноксичными условиями, не допускать их отключения.]
+	                (*<-lang_ru;;*);;
+                    ->[Проводить наблюдения за состоянием ила по его биоценозу и иловому индексу и предотвращать вспухание активного ила.]
+	                (*<-lang_ru;;*);;
+                    ->[Осуществлять эксплуатацию насосного, аэрационного, перемешивающего оборудования, измерительных приборов в соответствии с инструкциями заводов изготовителей.]
+	                (*<-lang_ru;;*);;
+                    ->[При нормальном режиме эксплуатации значение илового индекса находится в пределах от 50 до 150 см3/г. При увеличении илового индекса более 200 см3/г устанавливаются причины вспухания ила с учетом исследования видового состава активного ила, и принять меры для восстановления режима нормальной эксплуатации.]
+	                (*<-lang_ru;;*);;
+                    ->[Эксплуатация аэрационного оборудования производится с учетом обеспечения требуемой интенсивности аэрации и предотвращения ее чрезмерности. Производительность воздуходувок регулируют с учетом изменения нагрузок и температуры иловой смеси, в том числе путем изменения частоты вращения электроприводов. При снижении проницаемости аэраторов для воздуха производят их регенерацию или очистку в соответствии с рекомендациями их изготовителей.]
+	                (*<-lang_ru;;*);;
+                    ->[При эксплуатации сооружений для удаления соединений азота биологическим способом концентрацию растворенного кислорода в иловой смеси в технологических емкостях нитрификаторах поддерживают не менее 2,0 мг/дм3. Режим окисления аммонийного азота до нитратов в нитрификаторах осуществляется в соответствии с технологической схемой, предусмотренной проектной документацией, с учетом данных, полученных при отработке процесса очистки при проведении пуско-наладочных работ. Возраст активного ила допускается принимать с учетом изменения температуры иловой смеси.]
+	                (*<-lang_ru;;*);;
+                    ->[При эксплуатации денитрификаторов обеспечивают в них аноксичные условия с минимальным содержанием растворенного кислорода в иловой смеси. Ограничивается поступление растворенного кислорода в денитрификатор с циркуляционным активным илом и рециркуляционным потоком иловой смеси из нитрификатора и предотвращать аэрацию иловой смеси в денитрификаторе.]
+	                (*<-lang_ru;;*);;
+                    ->[Для обеспечения надежности процесса денитрификации поддерживается соотношение между значениями БПК5 и нитрат-иона в иловой смеси в соответствии с проектной документацией путем регулирования степени осветления сточных вод при первичном отстаивании и (или) подачей внешнего субстрата.]
+	                (*<-lang_ru;;*);;
+                    ->[Подача иловой смеси, содержащей нитрат-ионы, осуществляется в соответствии с проектной документацией.]
+	                (*<-lang_ru;;*);;
+                    ->[При эксплуатации сооружений для удаления соединений фосфора биологическим способом сточную воду с рециркуляционным илом выдерживают в анаэробных условиях в течение периода, установленного в проектной документации, но не менее 30 мин. Принимаются меры по предотвращению поступления кислорода и нитрата в иловую смесь анаэробной технологической емкости. Для предотвращения поступления растворенного кислорода и нитратов с рециркуляционным илом его рекомендуется денитрифицировать.]
+	                (*<-lang_ru;;*);;
+                    ->[При эксплуатации реакторов последовательного действия (SBR-реакторов) параметры режима эксплуатации: общая продолжительность цикла обработки, продолжительность фаз (очистки в анаэробных условиях, очистки в аноксичных условиях, очистки в аэробных условиях, продолжительность фазы осаждения, продолжительность фазы декантации, продолжительность фазы наполнения, продолжительность откачки из реактора избыточного активного ила) устанавливаются с учетом данных проектной документации и уточняются при проведении пуско-наладочных работ. В процессе эксплуатации указанные параметры могут быть изменены с учетом полученных данных о режиме поступления сточных вод на очистку и эффективности их очистки.]
+	                (*<-lang_ru;;*);;
+	        *);;
+        => nrel_inclusion:
+                concept_aerator;
+                concept_nitrifier;
+                concept_denitrifier;
+                concept_sbr_reactor;
+                concept_facilities_for_the_removal_of_phosphorus_compounds_by_biological_means;;
+	*);
+
+-> rrel_not_maximum_studied_object_class:
+        concept_facilities_for_the_removal_of_phosphorus_compounds_by_biological_means
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[сооружения для удаления соединений фосфора биологическим способом] (* <- lang_ru;; *);;
+	*);
+        concept_aerator
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[аэратор] (* <- lang_ru;; *);;
+	*);
+	concept_aerotank
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[аэротэнк] (* <- lang_ru;; *);;
+	*);
+	concept_nitrifier
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[нитрификатор] (* <- lang_ru;; *);;
+	*);
+	concept_denitrifier
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[денитрификатор] (* <- lang_ru;; *);;
+	*);
+	concept_sbr_reactor
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[SBR-реактор] (* <- lang_ru;; *);;
+	*);
+	concept_sludge
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[ил] (* <- lang_ru;; *);;
+	*);
+	concept_activated_sludge
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[активный ил] (* <- lang_ru;; *);;
+	*);
+	concept_circulating_activated_sludge
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[циркуляционный активный ил] (* <- lang_ru;; *);;
+	*);
+	concept_recirculation_sludge
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[рециркуляционный ил] (* <- lang_ru;; *);;
+	*);
+	concept_mixed_liquor
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[иловая смесь] (* <- lang_ru;; *);;
+	*);
+	concept_sludge_mixture_recirculation_flow
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[рециркуляционный поток иловой смеси] (* <- lang_ru;; *);;
+	*);
+	concept_sludge_age
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[возраст ила] (* <- lang_ru;; *);;
+	*);
+	concept_activated_sludge_age
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[возраст активного ила] (* <- lang_ru;; *);;
+	*);
+	concept_sludge_dose
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[доза ила] (* <- lang_ru;; *);;
+	*);
+	concept_sludge_volume_index
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[иловый индекс] (* <- lang_ru;; *);;
+	*);
+	concept_bulking_of_activated_sludge
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[вспухание активного ила] (* <- lang_ru;; *);;
+	*);
+	concept_degree_of_sludge_recirculation
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[степень рециркуляции ила] (* <- lang_ru;; *);;
+	*);
+	concept_dissolved_oxygen
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[растворённый кислород] (* <- lang_ru;; *);;
+	*);
+	concept_dissolved_oxygen_concentration_in_sludge
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[концентрация растворённого кислорода в иле] (* <- lang_ru;; *);;
+	*);
+	concept_dissolved_oxygen_concentration_level
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[уровень концентрации растворённого кислорода в иле] (* <- lang_ru;; *);;
+	*);
+	concept_organic_matter_load
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[нагрузка по органическим веществам] (* <- lang_ru;; *);;
+	*);
+	concept_mechanical_mixer
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[механическая мешалка] (* <- lang_ru;; *);;
+	*);
+	concept_removal_process
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[процесс удаления] (* <- lang_ru;; *);;
+	*);
+	concept_phosphorus_compound
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[соединение фосфора] (* <- lang_ru;; *);;
+	*);
+	concept_substance
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[вещество] (* <- lang_ru;; *);;
+	*);
+	concept_biodegradable_substance
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[вещество, подверженное биохимическому разложению] (* <- lang_ru;; *);;
+	*);
+	concept_substance_subject_to_nitrification
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[вещество, подверженное нитрификации] (* <- lang_ru;; *);;
+	*);
+	concept_substance_subject_to_denitrification
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[вещество, подверженное денитрификации] (* <- lang_ru;; *);;
+	*);
+	concept_specific_pollutant
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[специфическое загрязняющее вещество] (* <- lang_ru;; *);;
+	*);
+	concept_wastewater_treatment_using_a_biocenosis_of_free_floating_forms_of_microorganisms
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[очистка сточных вод с использованием биоценоза свободноплавающих форм микроорганизмов] (* <- lang_ru;; *);;
+	*);
+	concept_providing_indicator
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[обеспечение показателя] (* <- lang_ru;; *);;
+	*);
+	concept_operation_of_pumping_equipment
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[эксплуатация насосного оборудования] (* <- lang_ru;; *);;
+	*);
+	concept_operation_of_aeration_equipment
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[эксплуатация аэрационного оборудования] (* <- lang_ru;; *);;
+	*);
+	concept_operation_of_mixing_equipment
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[эксплуатация перемешивающего оборудования] (* <- lang_ru;; *);;
+	*);
+	concept_operation_of_measuring_instruments
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[эксплуатация измерительных приборов] (* <- lang_ru;; *);;
+	*);
+	concept_preventing_swelling
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[предотвращение вспухания] (* <- lang_ru;; *);;
+	*);
+	concept_monitoring_the_state_of_the_biocenosis
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[наблюдение за состоянием по биоценозу] (* <- lang_ru;; *);;
+	*);
+	concept_shutdown_prevention
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[предотвращение отключения] (* <- lang_ru;; *);;
+	*);
+	concept_technological_tanks_with_aerobic_conditions
+        (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[технологические емкости с аэробными условиями] (* <- lang_ru;; *);;
+	*);
+	concept_process_tanks_with_anoxic_conditions
+        (*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[технологические емкости с аноксичными условиями] (* <- lang_ru;; *);;
+	*);
+	concept_air
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[воздух] (* <- lang_ru;; *);;
+	*);
+	concept_prevention_of_deposits
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[предотвращение отложений] (* <- lang_ru;; *);;
+	*);
+	concept_maintaining_the_required_mixing_intensity
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[поддержка требуемой интенсивности перемешивания] (* <- lang_ru;; *);;
+	*);
+	concept_manufacturers_instructions
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[инструкции заводов изготовителей] (* <- lang_ru;; *);;
+	*);
+	concept_establishing_causes
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[установление причин] (* <- lang_ru;; *);;
+	*);
+	concept_species_composition_study
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[исследование видового состава] (* <- lang_ru;; *);;
+	*);
+        concept_taking_measures_to_restore_the_norm
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[принятие мер к восстановлению нормы] (* <- lang_ru;; *);;
+	*);
+	concept_increase_in_indicator
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[увеличение показателя] (* <- lang_ru;; *);;
+	*);
+	concept_decreased_air_permeability
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[снижение проницаемости воздуха] (* <- lang_ru;; *);;
+	*);
+	concept_regeneration
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[регенерация] (* <- lang_ru;; *);;
+	*);
+	concept_cleaning
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[очистка] (* <- lang_ru;; *);;
+	*);
+	concept_manufacturers_recommendations
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[рекомендации изготовителей] (* <- lang_ru;; *);;
+	*);
+	concept_maintaining_the_required_aeration_intensity
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[поддержка требуемой интенсивности аэрации] (* <- lang_ru;; *);;
+	*);
+	concept_preventing_excessive_aeration_intensity
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[предотвращение чрезмерности интенсивности аэрации] (* <- lang_ru;; *);;
+	*);
+	concept_performance_adjustment
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[регулировка производительности] (* <- lang_ru;; *);;
+	*);
+	concept_blower
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[воздуходувка] (* <- lang_ru;; *);;
+	*);
+	concept_change_in_loads
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[изменение нагрузок] (* <- lang_ru;; *);;
+	*);
+	concept_speed_change
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[изменение частоты вращения] (* <- lang_ru;; *);;
+	*);
+	concept_electric_drive
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[электропривод] (* <- lang_ru;; *);;
+	*);
+	concept_technological_containers
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[технологические ёмкости] (* <- lang_ru;; *);;
+	*);
+	concept_technological_scheme
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[технологическая схема] (* <- lang_ru;; *);;
+	*);
+	concept_implementation_of_the_oxidation_mode_of_ammonium_nitrogen_to_nitrates
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[осуществление режима окисления аммонийного азота до нитратов] (* <- lang_ru;; *);;
+	*);
+	concept_commissioning_works
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[пуско-наладочные работы] (* <- lang_ru;; *);;
+	*);
+	concept_process_of_commissioning_works
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[проведение пуско-наладочных работ] (* <- lang_ru;; *);;
+	*);
+	concept_cleaning_process_processing
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[обработка процесса очистки] (* <- lang_ru;; *);;
+	*);
+	concept_data
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[данные] (* <- lang_ru;; *);;
+	*);
+	concept_limiting_the_receipt_of_the_indicator
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[ограничение поступления показателя] (* <- lang_ru;; *);;
+	*);
+	concept_primary_settling
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[первичное отстаивание] (* <- lang_ru;; *);;
+	*);
+	concept_regulation_of_the_degree_of_clarification
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[регулирования степени осветления] (* <- lang_ru;; *);;
+	*);
+	concept_ensuring_process_reliability
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[обеспечение надёжности процесса] (* <- lang_ru;; *);;
+	*);
+	concept_maintaining_the_relationship_between_indicators
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[поддержание соотношения между показателями] (* <- lang_ru;; *);;
+	*);
+	concept_preventing_aeration
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[предотвращение аэрации] (* <- lang_ru;; *);;
+	*);
+	concept_providing_anoxic_conditions
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[обеспечение аноксичных условий] (* <- lang_ru;; *);;
+	*);
+	concept_providing_anaerobic_conditions
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[обеспечение анаэробных условий] (* <- lang_ru;; *);;
+	*);
+	concept_ensure_minimum_content_of_the_indicator
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[обеспечение минимальное содержание показателя] (* <- lang_ru;; *);;
+	*);
+	concept_supply
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[подача] (* <- lang_ru;; *);;
+	*);
+	concept_project_documentation
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[проектная документация] (* <- lang_ru;; *);;
+	*);
+	concept_preventing_supply
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[предотвращение поступления] (* <- lang_ru;; *);;
+	*);
+	concept_parameter_setting
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[установка параметра] (* <- lang_ru;; *);;
+	*);
+	concept_parameter_clarification
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[уточнение параметра] (* <- lang_ru;; *);;
+	*);
+	concept_change_parameter
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[изменение параметра] (* <- lang_ru;; *);;
+	*);
+	concept_wastewater_inflow_regime
+	(*
+		<- sc_node_class;;
+		<= nrel_inclusion: concept_data;;
+		=> nrel_main_idtf:[режим поступления сточных вод] (* <- lang_ru;; *);;
+	*);
+	concept_wastewater_treatment_efficiency
+	(*
+		<- sc_node_class;;
+		<= nrel_inclusion: concept_data;;
+		=> nrel_main_idtf:[эффективности очистки сточных вод] (* <- lang_ru;; *);;
+	*);
+	concept_external_substrate
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[внешний субстрат] (* <- lang_ru;; *);;
+	*);;

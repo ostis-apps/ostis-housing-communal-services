@@ -1,0 +1,415 @@
+subject_domain_of_biofilters
+=> nrel_main_idtf:
+    [Предметная область биофильтров](* <- lang_ru;; *);
+	<- subject_domain;
+	<- sc_node_struct;
+	
+-> rrel_maximum_studied_object_class:
+	concept_biofilter
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[биологический фильтр] (* <- lang_ru;; *);;
+		<= nrel_inclusion:
+        concept_biological_wastewater_treatment_facility;;
+        <= nrel_sc_text_translation: ...
+	        (*
+	            <- concept_definition (*<- sc_node_class;;*);;
+	                ->[Биологические фильтры предназначены для очистки сточных вод с использованием биоценоза прикрепленных форм микроорганизмов.]
+	                (*<-lang_ru;;*);;
+                    ->[Поддерживать равномерной гидравлическую нагрузку и нагрузку по загрязняющим веществам путем изменения степени рециркуляции очищенной воды, если она предусмотрена проектной документацией, или организацией подачи сточной воды насосами с максимальной степенью равномерности при обеспечении непрерывности подачи сточных вод на фильтр.]
+	                (*<-lang_ru;;*);;
+                    ->[Очищать от механических примесей распределительную систему, спринклерные устройства, распределительные лотки, реактивные оросители.]
+	                (*<-lang_ru;;*);;
+                    ->[Не допускать чрезмерного заиливания биофильтра.]
+	                (*<-lang_ru;;*);;
+                    ->[Для предотвращения образования запаха, размножения насекомых и обеспечения надежной вентиляции периодически очищать и промывать пространство между дренажем и днищем биофильтра, вентиляционные отверстия и отводящие лотки от биопленки.]
+	                (*<-lang_ru;;*);;
+                    ->[Предотвращать попадание на загрузку биофильтра посторонних примесей.]
+	                (*<-lang_ru;;*);;
+                    ->[В осеннее время загрузку ограждают сеткой для предотвращения попадания листвы.]
+	                (*<-lang_ru;;*);;
+                    ->[При заиливании биофильтров отдельные заиленные участки разрыхляются и промываются водопроводной водой либо увеличенным расходом сточной воды из реактивного оросителя, со снижением частоты его вращения.]
+	                (*<-lang_ru;;*);;
+                    ->[В случае сплошного заиливания верхнего слоя биофильтра удаляют загрузочный материал на глубину от 20 до 30 см с последующей его промывкой и обратной укладкой или заменой новым загрузочным материалом.]
+	                (*<-lang_ru;;*);;
+                    ->[Для предотвращения заиливания допускается обрабатывать поверхность загрузки биофильтра нитратом натрия из расчета 0,4 кг/м2 загрузки.]
+	                (*<-lang_ru;;*);;
+                    ->[Для предотвращения размножения в загрузке насекомых допускается периодическое затопление загрузки фильтра через интервал времени от 10 до 15 суток, если это позволяет конструкция фильтра и (или) хлорирование поступающих сточных вод при содержании остаточного активного хлора от 3 до 5 мг/дм3.]
+	                (*<-lang_ru;;*);;
+                    ->[В холодный период для предотвращения обмерзания биофильтров их утепляют, образовавшийся на конструктивных элементах лед удаляют.]
+	                (*<-lang_ru;;*);;
+	        *);;
+        => nrel_inclusion:
+                concept_rotating_biological_contactor;;
+        => nrel_inclusion:
+                concept_submerged_biological_filter;;
+        => nrel_inclusion:
+                concept_trickling_filter;;     
+	*);
+
+-> rrel_not_maximum_studied_object_class:
+        concept_trickling_filter
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[орошаемый биофильтр] (* <- lang_ru;; *);;
+	*);
+	concept_rotating_biological_contactor
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[ротационный биологический фильтр] (* <- lang_ru;; *);;
+        <= nrel_sc_text_translation: ...
+	        (*
+	            <- concept_definition (*<- sc_node_class;;*);;
+	                ->[При эксплуатации ротационных биологических фильтров обеспечивается: поддержание равномерной гидравлической нагрузки путем обеспечения равномерности и непрерывности подачи сточных вод и предотвращения остановок привода дисков или барабана фильтра.]
+	                (*<-lang_ru;;*);;
+                    ->[Очистка подводящих, отводящих каналов, лотков, емкостей размещения дисков или барабана от плавающих примесей и осадка, отложений по мере необходимости, но не реже 1 раза в 2 недели.]
+	                (*<-lang_ru;;*);;
+                    ->[Исключение чрезмерного обрастания биофильтра. Чрезмерно обросшие части биофильтра промывают струей воды при отключенном приводе.]
+	                (*<-lang_ru;;*);;
+	        *);;
+	*);
+	concept_submerged_biological_filter
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[затопленный биологический фильтр] (* <- lang_ru;; *);;
+        <= nrel_sc_text_translation: ...
+	        (*
+	            <- concept_definition (*<- sc_node_class;;*);;
+	                ->[При эксплуатации затопленных биологических фильтров необходимо: поддерживать равномерной гидравлическую нагрузку путем регулирования подачи исходной сточной воды в подающем трубопроводе.]
+	                (*<-lang_ru;;*);;
+                    ->[Обеспечивать требуемую подачу воздуха в биофильтр для аэрации, в случае его эксплуатации в аэробном режиме.]
+	                (*<-lang_ru;;*);;
+                    ->[Обеспечивать периодическую промывку загрузки биофильтра. Отключение фильтра на промывку производится при превышении потерь напора, определяемом по увеличению давления в подающем трубопроводе или при снижении эффективности очистки.]
+	                (*<-lang_ru;;*);;
+	        *);;
+	*);
+	concept_biofilm
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[биопленка] (* <- lang_ru;; *);;
+	*);
+	concept_sprinkler
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[спринклерное устройство] (* <- lang_ru;; *);;
+	*);
+	concept_rotary_distributor
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[реактивный ороситель] (* <- lang_ru;; *);;
+	*);
+	concept_distribution_system
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[распределительная система] (* <- lang_ru;; *);;
+	*);
+	concept_distribution_tray
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[распределительный лоток] (* <- lang_ru;; *);;
+	*);
+	concept_uniform_load_of_pollutants
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[равномерная нагрузка по загрязняющим веществам] (* <- lang_ru;; *);;
+	*);
+	concept_concept_continuity_of_supply
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[непрерывность подачи] (* <- lang_ru;; *);;
+	*);
+	concept_provision_by_design_documentation
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[предусмотрение проектной документацией] (* <- lang_ru;; *);;
+	*);
+	cconcept_provision_by_the_organization_of_supply_of_wastewater_with_the_maximum_degree_of_uniformity
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[предусмотрение организацией подачи сточной воды с максимальной степенью равномерности] (* <- lang_ru;; *);;
+	*);
+	concept_pump
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[насос] (* <- lang_ru;; *);;
+	*);
+	concept_maintaining
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[поддержание] (* <- lang_ru;; *);;
+	*);
+	concept_cleaning_and_washing
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[очистка и промывка] (* <- lang_ru;; *);;
+	*);
+	concept_drainage
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[дренаж] (* <- lang_ru;; *);;
+	*);
+	concept_bottom
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[днище] (* <- lang_ru;; *);;
+	*);
+	concept_vent
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[вентиляционное отверстие] (* <- lang_ru;; *);;
+	*);
+	concept_discharge_tray
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[отводящий лоток] (* <- lang_ru;; *);;
+	*);
+	concept_ensuring_reliable_ventilation
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[обеспечение надежной вентиляции] (* <- lang_ru;; *);;
+	*);
+	concept_preventing_insect_reproduction
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[предотваращение размножения насекомых] (* <- lang_ru;; *);;
+	*);
+	concept_purification_from_foreign_impurities
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[очищение от посторонних примесей] (* <- lang_ru;; *);;
+	*);
+	concept_loading_the_biofilter
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[загрузка биофильтра] (* <- lang_ru;; *);;
+	*);
+	concept_subprocess_time_interval
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[временной интервал подпроцесса] (* <- lang_ru;; *);;
+	*);
+	concept_residual_active_chlorine_content
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[содержание остаточного активного хлора] (* <- lang_ru;; *);;
+	*);
+	concept_residual_active_chlorine
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[остаточный активный хлор] (* <- lang_ru;; *);;
+	*);
+	concept_mesh_fencing
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[ограждение сеткой] (* <- lang_ru;; *);;
+	*);
+	concept_preventing_foliage_from_falling
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[предотваращение попадания листвы] (* <- lang_ru;; *);;
+	*);
+	concept_autumn
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[осенний период] (* <- lang_ru;; *);;
+	*);
+	concept_prevention_of_siltation
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[предотвращение заиливания] (* <- lang_ru;; *);;
+	*);
+	concept_periodic_flooding
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[периодическое затопление] (* <- lang_ru;; *);;
+	*);
+	concept_loosening_and_rinsing_with_tap_water
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[разрыхление и промывка водопроводной водой] (* <- lang_ru;; *);;
+	*);
+	concept_separate_silted_areas
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[отдельные заиленные участки] (* <- lang_ru;; *);;
+	*);
+	concept_loosening_and_washing_with_increased_flow_of_wastewater
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[разрыхление и промывка увеличенным расходом сточной воды] (* <- lang_ru;; *);;
+	*);
+	concept_reduced_frequency
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[сниженная частота] (* <- lang_ru;; *);;
+	*);
+	concept_top_layer
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[верхний слой] (* <- lang_ru;; *);;
+	*);
+	concept_loading_material
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[загрузочный материал] (* <- lang_ru;; *);;
+	*);
+	concept_loading_material_depth
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[глубина загрузочного материала] (* <- lang_ru;; *);;
+	*);
+	concept_removal_washing_laying
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[удаление, промывка, укладка] (* <- lang_ru;; *);;
+	*);
+	concept_replacement
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[замена] (* <- lang_ru;; *);;
+	*);
+	concept_sodium_nitrate
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[нитрат натрия] (* <- lang_ru;; *);;
+	*);
+	concept_load_calculation
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[расчёт загрузки] (* <- lang_ru;; *);;
+	*);
+	concept_preventing_freezing
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[предотвращение обмерзания] (* <- lang_ru;; *);;
+	*);
+	concept_insulation
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[утепление] (* <- lang_ru;; *);;
+	*);
+	concept_structural_elements
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[конструктивные элементы] (* <- lang_ru;; *);;
+	*);
+	concept_deicing
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[удаление льда] (* <- lang_ru;; *);;
+	*);
+	concept_cold
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[холодный период] (* <- lang_ru;; *);;
+	*);
+	concept_removal_of_mechanical_impurities
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[очищение от механических примесей] (* <- lang_ru;; *);;
+	*);
+	concept_wastewater_treatment_using_a_biocenosis_of_attached_forms_of_microorganisms
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[очистка сточных вод с использованием биоценоза прикрепленных форм микроорганизмов] (* <- lang_ru;; *);;
+	*);
+	concept_preventing_excessive_fouling
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[предотвращение чрезмерного обрастания] (* <- lang_ru;; *);;
+	*);
+	concept_flushing_with_water_with_the_drive_turned_off
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[промывка водой при отключенном приводе] (* <- lang_ru;; *);;
+	*);
+	concept_excessively_overgrown_parts
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[чрезмерно обросшие части биофильтра] (* <- lang_ru;; *);;
+	*);
+	concept_biofilter_drum
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[барабан биофильтра] (* <- lang_ru;; *);;
+	*);
+	concept_biofilter_disk_drive
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[привод дисков биофильтра] (* <- lang_ru;; *);;
+	*);
+	concept_ensuring_continuity_of_supply
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[обеспечение непрерывности подачи] (* <- lang_ru;; *);;
+	*);
+	concept_ensuring_uniformity_of_supply
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[обеспечение равномерности подачи] (* <- lang_ru;; *);;
+	*);
+	concept_outlet_channel
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[отводящий канал] (* <- lang_ru;; *);;
+	*);
+	concept_inlet_channel
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[подводящий канал] (* <- lang_ru;; *);;
+	*);
+	concept_capacity_of_biofilter_disks
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[ёмкость размещения дисков биофильтра] (* <- lang_ru;; *);;
+	*);
+	concept_cleaning_from_floating_matter_and_sediment_deposits
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[очистка от плавающих примемей и осадка, отложений] (* <- lang_ru;; *);;
+	*);
+	concept_aerobic_operation
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[эксплуатация в аэробном режиме] (* <- lang_ru;; *);;
+	*);
+	concept_providing_air_supply
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[обеспечение подачи воздуха] (* <- lang_ru;; *);;
+	*);
+	concept_periodic_flushing
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[переодическая промывка] (* <- lang_ru;; *);;
+	*);
+	concept_supply_regulation
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[регулирование подачи] (* <- lang_ru;; *);;
+	*);
+	concept_excess_pressure_loss
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[превышение потерь напора] (* <- lang_ru;; *);;
+	*);
+	concept_increase_in_pressure
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[увеличение давления] (* <- lang_ru;; *);;
+	*);
+	concept_reduction_in_cleaning_efficiency
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[снижение эффективности очистки] (* <- lang_ru;; *);;
+	*);
+	concept_shutdown_for_flushing
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[отключение на промывку] (* <- lang_ru;; *);;
+	*);
+	concept_chlorination
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[хлорирование] (* <- lang_ru;; *);;
+	*);;

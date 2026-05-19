@@ -1,0 +1,73 @@
+subject_domain_of_soil_plant_areas
+
+=> nrel_main_idtf:
+    [Предметная область грунтово-растительных площадок](* <- lang_ru;; *);
+	<- subject_domain;
+	<- sc_node_structure;
+	
+-> rrel_maximum_studied_object_class:
+	concept_soil_plant_area
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[грунтово-растительная площадка] (* <- lang_ru;; *);;
+		<= nrel_inclusion:
+        concept_biological_wastewater_treatment_facility;;
+        <= nrel_sc_text_translation: ...
+	        (*
+	            <- concept_definition (*<- sc_node_class;;*);;
+	                ->[При эксплуатации грунтово-растительных площадок, дополнительно к требованиям по эксплуатации закрытых сооружений очистки сточных вод в естественных условиях, необходимо производить очистку площадки с удалением высохших и погибших растений.]
+	                (*<-lang_ru;;*);;
+                    ->[Для грунтово-растительных площадок с горизонтальным потоком нагрузка сточных вод по ХПКст не превышает 16 г/(м2·сут), гидравлическая нагрузка – 0,04 м3/(м2·сут).]
+	                (*<-lang_ru;;*);;
+                    ->[Для грунтово-растительных площадок с вертикальным потоком нагрузка по ХПКст не превышает 20 г/(м2·сут), гидравлическая нагрузка – 0,08 м3/(м2·сут).]
+	                (*<-lang_ru;;*);;
+                    ->[На грунтово-растительных площадках с горизонтальным потоком в сборном колодце проводятся наблюдения за уровнем воды дренажной сети и с обеспечением поддержания его на отметках, обеспечивающих нормальный режим фильтрования горизонтального потока на площадке.]
+	                (*<-lang_ru;;*);;
+	        *);;
+        <= nrel_subdividing:
+                concept_horizontal_flow_soil_plant_area;
+                concept_vertical_flow_soil_plant_area;;
+	*);
+
+-> rrel_not_maximum_studied_object_class:
+	concept_horizontal_flow_soil_plant_area
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[грунтово-растительная площадка с горизонтальным потоком] (* <- lang_ru;; *);;
+	*);
+	concept_vertical_flow_soil_plant_area
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[грунтово-растительная площадка с вертикальным потоком] (* <- lang_ru;; *);;
+	*);
+	concept_drainage_network
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[дренажная сеть] (* <- lang_ru;; *);;
+	*);
+	concept_collection_manhole
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[сборный колодец] (* <- lang_ru;; *);;
+	*);
+	concept_water_level
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[уровень воды] (* <- lang_ru;; *);;
+	*);
+	concept_hydraulic_load_value
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[гидравлическая нагрузка] (* <- lang_ru;; *);;
+	*);
+	concept_organic_load_by_CODCr
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[нагрузка по ХПКст] (* <- lang_ru;; *);;
+	*);
+	concept_dead_plants
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[высохшие и погибшие растения] (* <- lang_ru;; *);;
+	
+	*);;

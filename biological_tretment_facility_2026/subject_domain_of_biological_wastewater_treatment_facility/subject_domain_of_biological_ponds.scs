@@ -1,0 +1,236 @@
+subject_domain_of_biological_ponds
+=> nrel_main_idtf:
+    [Предметная область биологических прудов](* <- lang_ru;; *);
+	<- subject_domain;
+	<- sc_node_struct;
+
+-> rrel_maximum_studied_object_class:
+	concept_biological_pond
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[биологический пруд] (* <- lang_ru;; *);;
+		<= nrel_inclusion:
+	        concept_aerobic_treatment_facility;;
+	        => nrel_inclusion:
+	        concept_aerated_pond;;
+	        => nrel_inclusion:
+	        concept_oxidation_ditch;;
+        <= nrel_sc_text_translation: ...
+	        (*
+	            <- concept_definition (*<- sc_node_class;;*);;
+		        ->[Биологические пруды предназначены для очистки всех видов сточных вод, а также для глубокой очистки сточных вод после биологической очистки.]
+		        (*<-lang_ru;;*);;
+                ->[При эксплуатации биологических прудов необходимо: обеспечить заданный режим подачи сточных вод в биологические пруды, не допуская их переполнения и просачивания воды через ограждающие валики дамбы.]
+		        (*<-lang_ru;;*);;
+                ->[Проводить наблюдения за состоянием ограждающих валиков, откосов и обеспечивать своевременное исправление в них деформаций.]
+		        (*<-lang_ru;;*);;
+                ->[Проводить наблюдения за уровнем глубины отложений в биологических прудах и своевременно удалять накопленный осадок, плавающие примеси, остатки растений.]
+		        (*<-lang_ru;;*);;
+                ->[Поддерживать в исправном состоянии колодцы, трубопроводы и лотки для подачи сточных вод в биологические пруды и отведения очищенных сточных вод.]
+		        (*<-lang_ru;;*);;
+                ->[Осадок из биологических прудов удаляют при заполнении более 25 % от рабочего объема пруда. Осадок удаляется механическим или гидромеханическим способом.]
+		        (*<-lang_ru;;*);;
+                ->[При удалении осадка предварительно производят откачку сточной воды, находящейся в секции биологического пруда. Сточную воду перекачивают в другую секцию биологического пруда.]
+		        (*<-lang_ru;;*);;
+                ->[Для предотвращения чрезмерной нагрузки на секции биологических прудов, в которые направляются удаляемые сточные воды, их перекачивают в течение не менее 1 суток.]
+		        (*<-lang_ru;;*);;
+                ->[При удалении осадка из биологических прудов оставляют на дне прудов слой осадка толщиной от 0,05 до 0,1 м для обеспечения стабильности процесса биологической очистки сточных вод после включения биологических прудов в эксплуатацию.]
+		        (*<-lang_ru;;*);;
+                ->[Осадок из биологических прудов при необходимости подвергают обработке на иловых площадках и специальных площадках для хранения осадка.]
+		        (*<-lang_ru;;*);;
+	        *);;
+	*);
+
+-> rrel_not_maximum_studied_object_class:
+	concept_aerated_pond
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[аэрируемый пруд] (* <- lang_ru;; *);;
+		<= nrel_sc_text_translation: ...
+	        (*
+	            <- concept_definition (*<- sc_node_class;;*);;
+		        ->[При эксплуатации аэрируемых прудов и окислительных каналов необходимо: не допускать перерывов в работе аэраторов.]
+		        (*<-lang_ru;;*);;
+                ->[Поддерживать в исправном состоянии механизмы и оборудование, принимая меры к устранению всех замеченных неисправностей.]
+		        (*<-lang_ru;;*);;
+                ->[Не допускать обмерзания механических аэраторов, а также их деформаций в холодный период эксплуатации, связанных с ледовыми явлениями на биологических прудах.]
+		        (*<-lang_ru;;*);;
+                ->[Выключение аэраторов для осмотра и ремонта допускается на время не более 3 часов.]
+		        (*<-lang_ru;;*);;
+	        *);;
+	*);
+	concept_pond_aerator
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[аэратор биологического пруда] (* <- lang_ru;; *);;
+	*);
+	concept_mechanical_pond_aerator
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[механический аэратор биологического пруда] (* <- lang_ru;; *);;
+	*);
+	concept_oxidation_ditch
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[окислительный канал] (* <- lang_ru;; *);;
+	*);
+	concept_pond_embankment_roll
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[ограждающий валик дамбы] (* <- lang_ru;; *);;
+	*);
+	concept_pond_slope
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[откос биологического пруда] (* <- lang_ru;; *);;
+	*);
+	concept_pond_sediment
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[осадок биологического пруда] (* <- lang_ru;; *);;
+	*);
+	concept_mechanical_sludge_removal
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[механическое удаление осадка] (* <- lang_ru;; *);;
+	*);
+	concept_hydromechanical_sludge_removal
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[гидромеханическое удаление осадка] (* <- lang_ru;; *);;
+	*);
+	concept_sludge_bed
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[иловая площадка] (* <- lang_ru;; *);;
+	*);
+	concept_special_area_for_sediment_storage
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[специальная площадка для хранения осадка] (* <- lang_ru;; *);;
+	*);
+	concept_overflow_prevention
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[предотвращение переполнения] (* <- lang_ru;; *);;
+	*);
+	concept_preventing_leakage_through
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[предотвращение просачивания через] (* <- lang_ru;; *);;
+	*);
+	concept_monitoring_the_condition
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[проведение наблюдения за состоянием] (* <- lang_ru;; *);;
+	*);
+	concept_sediment_depth_level
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[уровнь глубины отложений] (* <- lang_ru;; *);;
+	*);
+	concept_sediment_monitoring
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[наблюдение за отложениями] (* <- lang_ru;; *);;
+	*);
+	concept_floating_impurities
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[плавающие примеси] (* <- lang_ru;; *);;
+	*);
+	concept_plant_remains
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[остатки растений] (* <- lang_ru;; *);;
+	*);
+	concept_removal_of_sediment_from_biological_ponds
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[удаление осадка из биологических прудов] (* <- lang_ru;; *);;
+	*);
+	concept_leaving_sediment
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[оставлять осадок на дне] (* <- lang_ru;; *);;
+	*);
+	concept_pond_sediment_left_behind
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[оставленный осадок пруда] (* <- lang_ru;; *);;
+	*);
+	concept_thickness_of_the_remaining_pond_sediment_layer
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[толщина слоя оставленного осадка пруда] (* <- lang_ru;; *);;
+	*);
+	concept_ensuring_the_biological_treatment_process
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[обеспечение процесса биологической очистки] (* <- lang_ru;; *);;
+	*);
+	concept_sediment_treatment_on_bed
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[обработка осадка на площадках] (* <- lang_ru;; *);;
+	*);
+	concept_accumulation_of_sediment_in_a_pond
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[накопление осадка в пруде] (* <- lang_ru;; *);;
+	*);
+	concept_accumulated_pond_sediment
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[накопленный осадок пруда] (* <- lang_ru;; *);;
+	*);
+	concept_percentage_of_accumulated_pond_sediment
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[процент накопленного осадка пруда] (* <- lang_ru;; *);;
+	*);
+	concept_wastewater_pumping_and_transfer
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[откачка и перекачка сточной воды] (* <- lang_ru;; *);;
+	*);
+	concept_section_of_the_biological_pond
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[секция биологического пруда] (* <- lang_ru;; *);;
+	*);
+	concept_time_interval_of_the_pumping_process
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[временной интервал процесса перекачки] (* <- lang_ru;; *);;
+	*);
+	concept_preventing_interruptions_in_work
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[предотвращение перерывов в работе] (* <- lang_ru;; *);;
+	*);
+	concept_mechanism
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[механизм] (* <- lang_ru;; *);;
+	*);
+	concept_equipment
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[оборудование] (* <- lang_ru;; *);;
+	*);
+	concept_turning_off_treatment
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[выключение оборудования] (* <- lang_ru;; *);;
+	*);
+	concept_time_interval_of_the_shutdown_process
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[временной интервал процесса отключения] (* <- lang_ru;; *);;
+	*);
+	concept_supply_to_biological_pond
+	(*
+		<- sc_node_class;;
+		=> nrel_main_idtf:[подача воды в биологические пруды] (* <- lang_ru;; *);;
+	*);;
