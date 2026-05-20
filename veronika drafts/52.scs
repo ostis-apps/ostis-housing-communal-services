@@ -1,0 +1,20 @@
+concept_total_coliform_bacteria_count
+=> nrel_main_idtf:
+   [содержание общих колиморфных бактерий]
+<- sc_node_superclass;
+<- rrel_explored_concept:
+   subject_domain_of_disinfection_facilities;;
+   
+concept_coliphage_count
+=> nrel_main_idtf:
+   [содержание колифагов]
+<- sc_node_superclass;
+<- rrel_explored_concept:
+   subject_domain_of_disinfection_facilities;;
+
+concept_wastewater_disinfection_facility
+=> nrel_main_idtf:
+   [сооружение дезинфекции сточных вод]
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_disinfection_facilities;;
