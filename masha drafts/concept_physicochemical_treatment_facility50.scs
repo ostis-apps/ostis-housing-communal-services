@@ -1,0 +1,521 @@
+concept_sorption_treatment_facilities
+=> nrel_main_idtf:
+   [сооружения сорбционной очистки]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_treatment_facility;
+-> rrel_example:
+   activated_carbon_filters;
+   adsorption_columns;
+   granular_sorption_filters;
+=> nrel_definition:
+   [Сооружения сорбционной очистки — технические объекты, предназначенные для глубокой очистки сточных вод с целью удаления из них растворенных органических веществ и тяжелых металлов методом сорбции.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_deep_wastewater_treatment
+=> nrel_main_idtf:
+   [глубокая очистка сточных вод]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_wastewater_treatment_process; //нету такого, есть concept_technological_process
+-> rrel_example:
+   tertiary_treatment;
+   polishing_treatment;
+=> nrel_definition:
+   [Глубокая очистка сточных вод — этап доочистки, обеспечивающий снижение концентрации загрязняющих веществ до значений, недостижимых при традиционной биологической или физико-химической очистке, в том числе удаление растворенных органических веществ и тяжелых металлов.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_dissolved_organic_substances_removal
+=> nrel_main_idtf:
+   [удаление растворенных органических веществ]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   adsorption_of_dissolved_organics;
+   removal_of_refractory_compounds;
+=> nrel_definition:
+   [Удаление растворенных органических веществ — процесс извлечения из сточной воды органических соединений, находящихся в растворенном состоянии (нефтепродукты, СПАВ, фенолы, пестициды, красители и др.), с помощью сорбционных материалов.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_heavy_metals_removal_by_sorption
+=> nrel_main_idtf:
+   [удаление тяжелых металлов из сточных вод методом сорбции]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   sorption_of_cadmium;
+   sorption_of_lead;
+   sorption_of_copper;
+   sorption_of_zinc;
+=> nrel_definition:
+   [Удаление тяжелых металлов — процесс извлечения из сточной воды ионов тяжелых металлов (кадмия, свинца, меди, цинка, никеля, хрома и др.) путем сорбции на активных углях, цеолитах, ионообменных смолах или других сорбентах.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_list_of_pollutants_for_sorption_treatment
+=> nrel_main_idtf:
+   [перечень загрязняющих веществ в составе сточных вод для сорбционной очистки]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   organic_pollutants_list;
+   heavy_metals_list;
+   specific_priority_pollutants;
+=> nrel_definition:
+   [Перечень загрязняющих веществ — установленный набор показателей качества сточной воды, определяемый с учетом целей сорбционной очистки, исходного содержания загрязняющих веществ и требований к очищенной сточной воде.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_sorption_treatment_goals //единственное число и наверное не то CHECK
+=> nrel_main_idtf:
+   [цели сорбционной очистки]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   reduction_of_cod_to_required_level;
+   removal_of_specific_toxicants;
+   polishing_for_reuse;
+=> nrel_definition:
+   [Цели сорбционной очистки — требуемые результаты обработки сточной воды на сорбционных сооружениях (снижение концентраций определенных загрязняющих веществ до нормативных значений), определяемые проектной документацией.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_influent_pollutants_content_for_sorption
+=> nrel_main_idtf:
+   [содержание загрязняющих веществ в сточной воде, поступающей на сорбционную очистку]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   initial_cod_concentration;
+   initial_heavy_metals_concentration;
+=> nrel_definition:
+   [Содержание загрязняющих веществ — концентрации целевых загрязнителей в сточной воде на входе в сорбционные сооружения, определяющие требуемую сорбционную емкость и периодичность замены сорбента.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_treated_water_quality_requirements_for_sorption //не уверена CHECK
+=> nrel_main_idtf:
+   [требования к очищенной сточной воде после сорбционной очистки]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   maximum_permissible_concentrations;
+   discharge_standards;
+   reuse_quality_requirements;
+=> nrel_definition:
+   [Требования к очищенной сточной воде — нормативные значения концентраций загрязняющих веществ, которые должны быть достигнуты после сорбционной очистки для сброса в водоём или повторного использования.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_pre_treatment_efficiency_before_sorption //тут тоже не уверена CHECK
+=> nrel_main_idtf:
+   [эффективность предварительной очистки сточных вод перед подачей на сорбционную очистку]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   removal_of_suspended_solids_before_adsorber;
+   reduction_of_oil_and_grease_before_sorption;
+=> nrel_definition:
+   [Эффективность предварительной очистки — степень удаления взвешенных веществ, нефтепродуктов и других загрязнений, способных забивать или загрязнять сорбционную загрузку, обеспечиваемая сооружениями, расположенными перед сорбционными фильтрами.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_sorbent_reloading
+=> nrel_main_idtf:
+   [дозагрузка сорбента для компенсации потерь вследствие измельчения и выноса]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   periodic_addition_of_fresh_sorbent;
+   make_up_of_granular_activated_carbon;
+=> nrel_definition:
+   [Дозагрузка сорбента — периодическое добавление свежего сорбционного материала в адсорбер для восполнения потерь, вызванных истиранием гранул, образованием мелочи и выносом частиц с промывной водой.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_sorbent_attrition_losses
+=> nrel_main_idtf:
+   [потери сорбента вследствие измельчения]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   abrasion_of_activated_carbon;
+   breakage_of_granules;
+=> nrel_definition:
+   [Потери сорбента вследствие измельчения — уменьшение массы и гранулометрического состава сорбционной загрузки из-за механического истирания гранул при промывках и гидравлических нагрузках, сопровождающееся образованием мелких фракций и пыли.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_sorbent_carryover_losses
+=> nrel_main_idtf:
+   [вынос сорбента]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   carbon_fines_in_effluent;
+   sorbent_particles_in_backwash_water;
+=> nrel_definition:
+   [Вынос сорбента — унос мелких частиц сорбента из адсорбера потоком воды (при фильтрации или промывке), приводящий к постепенному уменьшению объёма загрузки.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_sorbent_activity_control
+=> nrel_main_idtf:
+   [контроль сорбционной активности сорбента] //система контроля тогда уж
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   iodine_number_monitoring;
+   methylene_blue_adsorption_test;
+   breakthrough_curve_analysis;
+=> nrel_definition:
+   [Контроль сорбционной активности — система аналитических измерений (йодное число, адсорбция метиленового синего, феноловый индекс и др.), позволяющая оценить остаточную способность сорбента извлекать загрязняющие вещества.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_sorbent_activity_exhaustion
+=> nrel_main_idtf:
+   [исчерпание сорбционной активности сорбента]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   complete_saturation_of_adsorbent;
+   breakthrough_of_pollutants;
+=> nrel_definition:
+   [Исчерпание сорбционной активности — состояние сорбента, при котором его способность извлекать загрязняющие вещества снижается до уровня, не обеспечивающего требуемого качества очищенной воды (наступает проскок загрязнений).]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_sorbent_replacement
+=> nrel_main_idtf:
+   [замена сорбента новым или отрегенерированным]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   full_replacement_of_activated_carbon;
+   exchange_of_spent_sorbent_with_fresh;
+=> nrel_definition:
+   [Замена сорбента — технологическая операция удаления отработанного сорбента из адсорбера и загрузки нового (свежего) или регенерированного (восстановленного) сорбционного материала после исчерпания его активности.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_sorbent_regeneration
+=> nrel_main_idtf:
+   [регенерация сорбента]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   thermal_regeneration_of_activated_carbon;
+   chemical_regeneration;
+   steam_regeneration;
+=> nrel_definition:
+   [Регенерация сорбента — процесс восстановления сорбционной способности отработанного сорбента путем десорбции загрязняющих веществ (термическим, химическим, паровым или биологическим методами), выполняемый, если это предусмотрено проектной документацией.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_regeneration_in_design
+=> nrel_main_idtf:
+   [регенерация сорбента, предусмотренная проектной документацией] //я не уверена в чём разница с верхним CHECK
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   on_site_regeneration_unit;
+   off_site_regeneration_contract;
+=> nrel_definition:
+   [Регенерация, предусмотренная проектной документацией — наличие в проекте очистных сооружений оборудования или технологических решений для восстановления свойств отработанного сорбента, что определяет необходимость её выполнения при эксплуатации.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_adsorbers_with_dense_bed_of_activated_carbon
+=> nrel_main_idtf:
+   [адсорберы с плотным слоем загрузки активного угля]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   fixed_bed_adsorbers;
+   granular_activated_carbon_filters;
+   pressure_adsorbers;
+=> nrel_definition:
+   [Адсорберы с плотным слоем загрузки — сорбционные аппараты (фильтры), в которых гранулированный или дробленый активный уголь уложен в неподвижный слой, через который фильтруется сточная вода.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_periodic_backwashing_of_adsorbers
+=> nrel_main_idtf:
+   [периодическая промывка адсорберов для удаления задержанных нерастворимых примесей]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   hydraulic_backwash;
+   air_scour_followed_by_water_backwash;
+=> nrel_definition:
+   [Периодическая промывка адсорберов — регенерационная промывка сорбционной загрузки обратным током воды (с подачей воздуха или без) для удаления механически задержанных взвешенных веществ и предотвращения заиливания фильтрующего слоя.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_insoluble_impurities_in_sorbent_bed
+=> nrel_main_idtf:
+   [задержанные в загрузке нерастворимые примеси]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+   //включение в концепт загрязняющих веществ
+-> rrel_example:
+   suspended_solids_deposited;
+   colloidal_particles;
+   iron_and_manganese_precipitates;
+=> nrel_definition:
+   [Нерастворимые примеси — взвешенные и коллоидные частицы, задержанные в порах сорбционной загрузки в процессе фильтрации, снижающие эффективность сорбции и увеличивающие гидравлическое сопротивление.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_backwash_intensity
+=> nrel_main_idtf:
+   [интенсивность промывки адсорберов]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   10_to_15_dm3_per_cm2_for_activated_carbon;
+   specific_backwash_flow_rate;
+=> nrel_definition:
+   [Интенсивность промывки — расход промывной воды, отнесённый к единице площади поперечного сечения адсорбера (дм³/(см²·с) или м³/(м²·ч)), обеспечивающий расширение и взрыхление сорбционной загрузки для удаления задержанных примесей.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_backwash_intensity_range_for_activated_carbon
+=> nrel_main_idtf:
+   [интенсивность промывки для активных углей (от 10 до 15 дм³/см²)] //переделать
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_technological_norm;
+-> rrel_example:
+   recommended_backwash_intensity_10_to_15;
+=> nrel_definition:
+   [Интенсивность промывки от 10 до 15 дм³/см² — рекомендуемый диапазон удельного расхода промывной воды для активных углей, принимаемый при отсутствии проектных данных и уточняемый при пусконаладочных работах.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_backwash_duration
+=> nrel_main_idtf:
+   [продолжительность промывки адсорберов]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   8_to_10_minutes;
+   backwash_time;
+=> nrel_definition:
+   [Продолжительность промывки — время (в минутах), в течение которого осуществляется обратная промывка сорбционной загрузки для удаления задержанных нерастворимых примесей, составляющее от 8 до 10 минут для активных углей при отсутствии иных проектных данных.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_backwash_duration_range_8_10_min
+=> nrel_main_idtf:
+   [продолжительность промывки от 8 до 10 минут] //это просто снести
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_technological_norm;
+-> rrel_example:
+   typical_backwash_time_for_activated_carbon;
+=> nrel_definition:
+   [Продолжительность промывки от 8 до 10 минут — рекомендуемый диапазон времени обратной промывки для адсорберов с активным углём, принимаемый при отсутствии проектных данных и уточняемый в процессе эксплуатации.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_sorbent_operation_period_between_regenerations //не уверена CHECK
+=> nrel_main_idtf:
+   [продолжительность работы сорбента между регенерациями]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   time_to_breakthrough;
+   cycle_length_between_regenerations;
+=> nrel_definition:
+   [Продолжительность работы сорбента между регенерациями — время (в часах, сутках) непрерывной или циклической работы сорбционной загрузки от момента загрузки/регенерации до достижения предельного истощения активности, требующего очередной регенерации.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_sorbent_operation_period_between_replacement //не уверенна CHECK
+=> nrel_main_idtf:
+   [продолжительность работы сорбента между его заменой]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   service_life_of_adsorbent;
+   time_to_full_saturation;
+=> nrel_definition:
+   [Продолжительность работы сорбента между его заменой — суммарное время эксплуатации сорбционной загрузки (с учётом возможных регенераций) до полной утраты способности к восстановлению, после чего требуется замена на новый сорбент.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_operational_data_for_sorbent_life_determination
+=> nrel_main_idtf:
+   [эксплуатационные данные для определения продолжительности работы сорбента]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   historical_breakthrough_curves;
+   daily_effluent_quality_records;
+   pressure_drop_trends;
+=> nrel_definition:
+   [Эксплуатационные данные — фактические показатели работы сорбционных сооружений, накопленные в процессе эксплуатации (концентрации загрязняющих веществ в фильтрате, гидравлическое сопротивление, расход воды), используемые для определения периодичности регенерации или замены сорбента.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_pollutant_concentration_in_filtrate
+=> nrel_main_idtf:
+   [содержание загрязняющих веществ в фильтрате]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   cod_in_effluent_from_adsorber;
+   heavy_metals_concentration_after_sorption;
+=> nrel_definition:
+   [Содержание загрязняющих веществ в фильтрате — концентрации целевых загрязнителей в очищенной воде после сорбционного фильтра (адсорбера), по которым контролируется сорбционная активность загрузки и определяется момент необходимости регенерации или замены сорбента.]
+   (*
+       <- lang_ru;;
+   *);;

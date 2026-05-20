@@ -1,0 +1,83 @@
+concept_flotation_treatment_plant
+=> nrel_main_idtf:
+   [установка флотационной очистки]
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_flotation_facilities;;
+
+concept_uniform_distribution
+=> nrel_main_idtf:
+   [равномерное распределение]
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_flotation_facilities;
+<= nrel_inclusion:
+   concept_technological_process;;
+
+concept_removal
+=> nrel_main_idtf:
+   [удаление]
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_flotation_facilities;
+<= nrel_inclusion:
+   concept_technological_process;;
+
+concept_flotation_sludge
+=> nrel_main_idtf:
+   [флотошлам]
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_flotation_facilities;
+<= nrel_inclusion:
+   concept_sludge;;
+
+concept_sludge
+=> nrel_main_idtf:
+   [осадок]
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_physicochemical_treatment_facilities;;
+
+concept_inspection
+=> nrel_main_idtf:
+   [проверка]
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_physicochemical_treatment_facilities;;
+<= nrel_inclusion:
+   concept_technological_process;;
+
+concept_cleaning
+=> nrel_main_idtf:
+   [очистка]
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_physicochemical_treatment_facilities;;
+<= nrel_inclusion:
+   concept_technological_process;;
+
+concept_tray
+=> nrel_main_idtf:
+   [лоток]
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_physicochemical_treatment_facilities;;
+
+concept_structural_element
+=> nrel_main_idtf:
+   [конструкционный элемент]
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_physicochemical_treatment_facilities;;
+
+nrel_treatment_facility
+=> nrel_main_idtf:
+   [очистное сооружение*]
+<- sc_node_non_role_relation;
+<- rrel_explored_relation:
+   subject_domain_of_physicochemical_treatment_facilities;
+=> nrel_first_domain:
+   concept_technological_process;
+=> nrel_second_domain:
+   concept_treatment_facility;;

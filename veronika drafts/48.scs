@@ -1,0 +1,206 @@
+concept_monitoring
+=> nrel_main_idtf:
+   [система наблюдения]
+<- sc_node_class;
+<- rrel_maximum_studied_object_class:
+   subject_domain_of_physicochemical_treatment_facilities;
+<= nrel_inclusion:
+   concept_technological_process;;
+
+concept_reagent_supplying
+=> nrel_main_idtf:
+   [подача реагента]
+<- sc_node_class;
+<- rrel_maximum_studied_object_class:
+   subject_domain_of_reagent_household;
+<= nrel_inclusion:
+   concept_technological_process;;
+
+concept_neutralizing_reagent
+=> nrel_main_idtf:
+   [нейтрализующий реагент]
+<- sc_node_class;
+<- rrel_maximum_studied_object_class:
+   subject_domain_of_neutralization_facilities;
+<= nrel_inclusion:
+   concept_reagent;;
+
+concept_6_5_8_5
+=> nrel_main_idtf:
+   [6,5 - 8,5]
+<- sc_node_class;
+<- rrel_maximum_studied_object_class:
+   subject_domain_of_neutralization_facilities;
+<= nrel_inclusion:
+   concept_indicator;;
+
+concept_reagent_material
+=> nrel_main_idtf:
+   [реагентный материал]
+<- sc_node_class;
+<- rrel_maximum_studied_object_class:
+   subject_domain_of_reagent_household;
+<= nrel_inclusion:
+   concept_reagent;;
+
+concept_accounting
+=> nrel_main_idtf:
+   [учёт]
+<- sc_node_class;
+<- rrel_maximum_studied_object_class:
+   subject_domain_of_physicochemical_treatment_facilities;
+<= nrel_inclusion:
+   concept_technological_process;;
+
+concept_occupational_safety_documentation
+=> nrel_main_idtf:
+   [документация по охране труда]
+<- sc_node_class;
+<- rrel_maximum_studied_object_class:
+   subject_domain_of_physicochemical_treatment_facilities;
+<= nrel_inclusion:
+   concept_document;;
+
+concept_section_on_handling_acids_and_alkalis
+=> nrel_main_idtf:
+   [раздел об обращении с кислотами и щелочами]
+<- sc_node_class;
+<- rrel_maximum_studied_object_class:
+   subject_domain_of_neutralization_facilities;
+<= nrel_inclusion:
+   concept_document;;
+
+concept_wastewater_neutralization_plant
+=> nrel_main_idtf:
+   [установка нейтрализации сточных вод]
+<- sc_node_class;
+<- rrel_maximum_studied_object_class:
+   subject_domain_of_neutralization_facilities;
+<= nrel_inclusion:
+   subject_domain_of_neutralization_facilities;;
+
+nrel_reagent
+=> nrel_main_idtf:
+   [реагент*]
+<- sc_node_non_role_relation;
+<- rrel_explored_relation:
+   subject_domain_of_physicochemical_treatment_facilities;
+=> nrel_first_domain:
+   concept_technological_process;
+=> nrel_second_domain:
+   concept_reagent;;
+
+nrel_chapter
+=> nrel_main_idtf:
+   [раздел*]
+<- sc_node_non_role_relation;
+<- rrel_explored_relation:
+   subject_domain_of_physicochemical_treatment_facilities;
+=> nrel_first_domain:
+   concept_document;
+=> nrel_second_domain:
+   concept_section;;
+
+nrel_subprocess
+=> nrel_main_idtf:
+   [подпроцесс*]
+<- sc_node_non_role_relation;
+<- rrel_explored_relation:
+   subject_domain_of_physicochemical_treatment_facilities;
+=> nrel_first_domain:
+   concept_technological_process;
+=> nrel_second_domain:
+   concept_technological_process;;
+
+nrel_conformity_to_requirements
+=> nrel_main_idtf:
+   [соответствие требованиям*]
+<- sc_node_non_role_relation;
+<- rrel_explored_relation:
+   subject_domain_of_physicochemical_treatment_facilities;
+=> nrel_first_domain:
+   concept_technological_process;
+=> nrel_second_domain:
+   concept_document;;
+
+concept_facility_for_preparation_and_dosing_of_reagents
+=> nrel_main_idtf:
+   [сооружение для приготовления и дозирования реагентов]
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_reagent_household;;
+
+concept_manufacturer_instruction
+=> nrel_main_idtf:
+   [инструкция производителя]
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_physicochemical_treatment_facilities;
+<= nrel_inclusion:
+   concept_document;;
+
+concept_rules_for_technical_operation_of_treatment_facilities
+=> nrel_main_idtf:
+   [правила технической эксплуатации очистных сооружений]
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_physicochemical_treatment_facilities;
+<= nrel_inclusion:
+   concept_document;;
+
+concept_bed_of_neutralizing_material
+=> nrel_main_idtf:
+   [загрузка из нейтрализующего материала]
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_neutralization_facilities;;
+
+nrel_filter
+=> nrel_main_idtf:
+   [фильтр*]
+<- sc_node_non_role_relation;
+<- rrel_explored_relation:
+   subject_domain_of_neutralization_facilities;
+=> nrel_first_domain:
+   concept_filtration;
+=> nrel_second_domain:
+   concept_bed_of_neutralizing_material;;
+
+nrel_indicator
+=> nrel_main_idtf:
+   [параметр*]
+<- sc_node_non_role_relation;
+<- rrel_explored_relation:
+   subject_domain_of_physicochemical_treatment_facilities;
+=> nrel_first_domain:
+   concept_wastewater;
+=> nrel_second_domain:
+   concept_indicator;;
+
+concept_effectively
+=> nrel_main_idtf:
+   [эффективно]
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_physicochemical_treatment_facilities;;
+
+concept_grade
+=> nrel_main_idtf:
+   [оценка^]
+<- sc_node_superclass;
+<- rrel_explored_concept:
+   subject_domain_of_physicochemical_treatment_facilities;;
+
+concept_heavy_metal
+=> nrel_main_idtf:
+   [тяжёлый металл]
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_physicochemical_treatment_facilities;;
+
+concept_reagent_treatment
+=> nrel_main_idtf:
+   [реагентная обработка]
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_reagent_household;;

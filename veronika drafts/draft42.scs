@@ -1,0 +1,843 @@
+concept_reagent_facility
+=> nrel_main_idtf:
+   [реагентное хозяйство]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_physical_and_chemical_treatment_facility;
+=> nrel_definition:
+   [Реагентное хозяйство — это комплекс сооружений, оборудования и устройств, предназначенных для хранения, приготовления, подачи и дозирования реагентов, используемых при физико-химической очистке сточных вод и обработке осадка.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_technological_operation_mode
+=> nrel_main_idtf:
+   [технологический режим работы]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_technological_process;
+=> nrel_definition:
+   [Технологический режим работы — это совокупность установленных параметров и условий функционирования очистного сооружения или его элемента, обеспечивающих выполнение технологического процесса очистки сточных вод с заданной эффективностью.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_treatment_stage
+=> nrel_main_idtf:
+   [ступень очистки]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_treatment;
+-> rrel_example:
+   mechanical_treatment_stage;
+   biological_treatment_stage;
+   physico_chemical_treatment_stage;
+=> nrel_definition:
+   [Ступень очистки — это отдельный этап технологического процесса очистки сточных вод, характеризующийся применением определенного метода или группы методов очистки.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_reagent_consumption
+=> nrel_main_idtf:
+   [расход реагентов]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Расход реагентов — это количество реагента, используемого в процессе очистки сточных вод или обработки осадка за определенный промежуток времени либо на определенный объем обрабатываемой среды.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_reagent_dose
+=> nrel_main_idtf:
+   [дозы реагентов]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Доза реагента — это установленное количество реагента, вводимого в сточную воду или осадок для достижения требуемого технологического эффекта.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_coagulation_treatment_facility
+=> nrel_main_idtf:
+   [сооружение для обработки сточных вод коагуляцией]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_physical_and_chemical_treatment_facility;
+=> nrel_inclusion:
+   concept_electrocoagulator;
+   concept_galvanocoagulator;
+=> nrel_definition:
+   [Сооружение для обработки сточных вод коагуляцией — это сооружение, предназначенное для удаления загрязняющих веществ из сточных вод путем введения коагулянтов и образования агрегированных частиц.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_reagent_treatment
+=> nrel_main_idtf:
+   [реагентная обработка]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_technological_process;
+=> nrel_definition:
+   [Реагентная обработка — это технологический процесс обработки сточных вод или осадка с использованием химических реагентов.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_energy_consumption
+=> nrel_main_idtf:
+   [потребление электроэнергии]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Потребление электроэнергии — это количество электрической энергии, используемой оборудованием или сооружением в процессе очистки сточных вод.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_electrode_material_consumption
+=> nrel_main_idtf:
+   [расход электродных материалов]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Расход электродных материалов — это количество материала электродов, расходуемого в процессе электрохимической обработки сточных вод.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_electrode_reagent_consumption
+=> nrel_main_idtf:
+   [расход электродных реагентов]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Расход электродных реагентов — это количество реагентов, используемых совместно с электродными материалами в процессе электрохимической очистки сточных вод.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_coagulant_dose
+=> nrel_main_idtf:
+   [доза коагулянта]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Доза коагулянта — это количество коагулянта, вводимого в сточную воду для обеспечения процесса коагуляции.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_electrocoagulator
+=> nrel_main_idtf:
+   [электрокоагулятор]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_coagulation_treatment_facility;
+=> nrel_definition:
+   [Электрокоагулятор — это сооружение для обработки сточных вод, в котором коагуляция осуществляется за счет электрохимического растворения электродов.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_loading_electrode_material_consumption
+=> nrel_main_idtf:
+   [расход электродных материалов загрузки]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_electrode_material_consumption;
+=> nrel_definition:
+   [Расход электродных материалов загрузки — это количество электродного материала загрузки, расходуемого в процессе гальванокоагуляции.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_galvanocoagulator
+=> nrel_main_idtf:
+   [гальванокоагулятор]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_coagulation_treatment_facility;
+=> nrel_definition:
+   [Гальванокоагулятор — это сооружение для обработки сточных вод, в котором коагуляция осуществляется за счет взаимодействия материалов гальванической пары.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_wastewater_neutralization_facility
+=> nrel_main_idtf:
+   [сооружение для нейтрализации сточных вод]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_physical_and_chemical_treatment_facility;
+=> nrel_inclusion:
+   concept_filter_neutralizer;
+=> nrel_definition:
+   [Сооружение для нейтрализации сточных вод — это сооружение, предназначенное для изменения кислотно-щелочных свойств сточных вод до нормативных значений путем нейтрализации.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_ph
+=> nrel_main_idtf:
+   [водородный показатель]
+   (*
+      <- lang_ru;;
+   *);
+=> nrel_idtf:
+   [pH]
+   (*
+      <- lang_en;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Водородный показатель (pH) — это количественная характеристика кислотности или щелочности водной среды, определяемая концентрацией ионов водорода.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_raw_wastewater
+=> nrel_main_idtf:
+   [исходная сточная вода]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_wastewater;
+=> nrel_definition:
+   [Исходная сточная вода — это сточная вода, поступающая на очистку до прохождения технологических процессов обработки.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_treated_wastewater
+=> nrel_main_idtf:
+   [обработанная сточная вода]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_wastewater;
+=> nrel_definition:
+   [Обработанная сточная вода — это сточная вода, прошедшая один или несколько этапов очистки или обработки.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_neutralizing_filter_media_consumption
+=> nrel_main_idtf:
+   [расход фильтрующих материалов нейтрализующей загрузки]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Расход фильтрующих материалов нейтрализующей загрузки — это количество фильтрующего материала, расходуемого в процессе нейтрализации сточных вод в фильтре-нейтрализаторе.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_filter_neutralizer
+=> nrel_main_idtf:
+   [фильтр-нейтрализатор]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_wastewater_neutralization_facility;
+=> nrel_definition:
+   [Фильтр-нейтрализатор — это сооружение для нейтрализации сточных вод, в котором изменение кислотно-щелочных свойств достигается за счет прохождения воды через нейтрализующую загрузку.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_flotation_treatment_facility
+=> nrel_main_idtf:
+   [сооружение флотационной очистки]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_physical_and_chemical_treatment_facility;
+=> nrel_inclusion:
+   concept_electroflotator;
+   concept_flotator;
+=> nrel_definition:
+   [Сооружение флотационной очистки — это сооружение, предназначенное для удаления загрязняющих веществ из сточных вод методом флотации.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_air_consumption
+=> nrel_main_idtf:
+   [расход воздуха]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Расход воздуха — это количество воздуха, подаваемого в технологический процесс за определенный промежуток времени.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_electroflotator
+=> nrel_main_idtf:
+   [электрофлотатор]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_flotation_treatment_facility;
+=> nrel_definition:
+   [Электрофлотатор — это сооружение флотационной очистки, в котором образование пузырьков газа осуществляется электрохимическим способом.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_flotation_sludge_volume
+=> nrel_main_idtf:
+   [объём флотошлама]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Объём флотошлама — это количество флотошлама, образованного или накопленного в процессе флотационной очистки.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_sludge_volume
+=> nrel_main_idtf:
+   [объём осадка]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Объём осадка — это количество осадка, образующегося или накапливающегося в процессе очистки сточных вод.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_flotation_sludge_moisture
+=> nrel_main_idtf:
+   [влажность флотошлама]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Влажность флотошлама — это содержание воды во флотошламе, выраженное в относительных единицах.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_sludge_moisture
+=> nrel_main_idtf:
+   [влажность осадка]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Влажность осадка — это содержание воды в осадке, выраженное в относительных единицах.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_flotation_sludge_chemical_composition
+=> nrel_main_idtf:
+   [химический состав флотошлама]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Химический состав флотошлама — это совокупность химических компонентов, содержащихся во флотошламе.]
+   (*
+      <- lang_ru;;
+   *);;
+
+
+concept_sludge_chemical_composition
+=> nrel_main_idtf:
+   [химический состав осадка]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_technological_indicator;
+=> nrel_definition:
+   [Химический состав осадка — это совокупность химических компонентов, содержащихся в осадке.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_suspended_solids_content_in_raw_water
+=> nrel_main_idtf:
+   [содержание взвешенных веществ в исходной воде]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Содержание взвешенных веществ в исходной воде — это концентрация взвешенных веществ в сточной воде до очистки.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_suspended_solids_content_in_clarified_water
+=> nrel_main_idtf:
+   [содержание взвешенных веществ в осветлённой воде]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Содержание взвешенных веществ в осветлённой воде — это концентрация взвешенных веществ в воде после процесса осветления.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_wastewater_retention_time_in_flotator
+=> nrel_main_idtf:
+   [продолжительность пребывания сточных вод во флотаторе]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Продолжительность пребывания сточных вод во флотаторе — это время нахождения сточной воды внутри флотатора в процессе очистки.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_pressure_in_saturator
+=> nrel_main_idtf:
+   [давление в сатураторе]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Давление в сатураторе — это величина давления, поддерживаемая внутри сатуратора для растворения воздуха в жидкости.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_saturator
+=> nrel_main_idtf:
+   [сатуратор]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_flotation_treatment_facility;
+=> nrel_definition:
+   [Сатуратор — это устройство, предназначенное для насыщения жидкости воздухом или газом под давлением.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_flotator
+=> nrel_main_idtf:
+   [флотатор]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_flotation_treatment_facility;
+-> rrel_example:
+   dissolved_air_flotator;
+   pressure_flotator;
+=> nrel_definition:
+   [Флотатор — это сооружение или устройство, в котором осуществляется процесс флотационной очистки сточных вод.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_working_fluid_consumption
+=> nrel_main_idtf:
+   [расход рабочей жидкости]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Расход рабочей жидкости — это количество жидкости, используемой в технологическом процессе за определенный промежуток времени.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_sorption_treatment_facility
+=> nrel_main_idtf:
+   [сооружение сорбционной очистки сточных вод]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_physical_and_chemical_treatment_facility;
+=> nrel_definition:
+   [Сооружение сорбционной очистки сточных вод — это сооружение, предназначенное для удаления загрязняющих веществ из сточных вод путем их поглощения сорбентом.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_filtration_rate
+=> nrel_main_idtf:
+   [скорость фильтрования]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Скорость фильтрования — это объем жидкости, проходящий через единицу площади фильтрующей поверхности за единицу времени.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_head_loss
+=> nrel_main_idtf:
+   [потери напора]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Потери напора — это снижение давления или гидравлического напора жидкости при прохождении через оборудование или фильтрующую среду.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_backwash_water_volume
+=> nrel_main_idtf:
+   [объём промывной воды]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Объём промывной воды — это количество воды, используемое для промывки фильтрующего оборудования или загрузки.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_sorbent_loading_consumption
+=> nrel_main_idtf:
+   [расход загрузки сорбента]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Расход загрузки сорбента — это количество сорбента, расходуемого или заменяемого в процессе сорбционной очистки сточных вод.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_sorbent
+=> nrel_main_idtf:
+   [сорбент]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_material;
+-> rrel_example:
+   activated_carbon;
+   zeolite;
+   ion_exchange_resin;
+=> nrel_definition:
+   [Сорбент — это материал, способный поглощать, удерживать или концентрировать вещества из жидкой или газообразной среды.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_phosphorus_chemical_precipitation_facility
+=> nrel_main_idtf:
+   [сооружение для химического осаждения соединений фосфора]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_physical_and_chemical_treatment_facility;
+=> nrel_definition:
+   [Сооружение для химического осаждения соединений фосфора — это сооружение, предназначенное для удаления соединений фосфора из сточных вод путем введения реагентов с образованием нерастворимого осадка.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_chemical_precipitation_sludge_volume
+=> nrel_main_idtf:
+   [объём осадка химического осаждения]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_sludge_volume;
+   concept_indicator;
+=> nrel_definition:
+   [Объём осадка химического осаждения — это количество осадка, образующегося в процессе химического осаждения соединений из сточных вод.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_reagent_content_in_raw_wastewater
+=> nrel_main_idtf:
+   [содержание реагента в исходной сточной воде]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Содержание реагента в исходной сточной воде — это концентрация реагента в сточной воде до прохождения процессов очистки.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_reagent_content_in_treated_wastewater
+=> nrel_main_idtf:
+   [содержание реагента в очищенной сточной воде]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Содержание реагента в очищенной сточной воде — это концентрация реагента, оставшегося в сточной воде после прохождения очистки.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_treatment_facility_operation
+=> nrel_main_idtf:
+   [эксплуатация очистного сооружения]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_technological_process;
+-> rrel_example:
+   mechanical_treatment_facility_operation;
+   biological_treatment_facility_operation;
+   physico_chemical_treatment_facility_operation;
+=> nrel_definition:
+   [Эксплуатация очистного сооружения — это процесс функционирования, обслуживания и управления очистным сооружением, направленный на обеспечение его надежной работы и достижения требуемой эффективности очистки сточных вод.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_observation_scheme
+=> nrel_main_idtf:
+   [схема наблюдения]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+=> nrel_definition:
+   [Схема наблюдения — это установленная последовательность и структура проведения наблюдений, определяющая контролируемые показатели, точки контроля, периодичность и методы наблюдения.]
+   (*
+      <- lang_ru;;
+   *);;

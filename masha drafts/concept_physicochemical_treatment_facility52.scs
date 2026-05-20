@@ -1,0 +1,266 @@
+concept_disinfection_facilities_52
+=> nrel_main_idtf:
+   [сооружения обеззараживания]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_treatment_facility;
+-> rrel_example:
+   chlorination_units;
+   uv_disinfection_units;
+   ozonation_units;
+=> nrel_definition:
+   [Сооружения обеззараживания — технические объекты, обеспечивающие снижение микробиологических загрязнений в очищенной сточной воде до установленных нормативов.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_microbiological_pollutants_reduction
+=> nrel_main_idtf:
+   [снижение микробиологических загрязнений в очищенной сточной воде]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_wastewater_treatment_process;
+-> rrel_example:
+   reduction_of_total_coliform_bacteria;
+   reduction_of_coliphages;
+=> nrel_definition:
+   [Снижение микробиологических загрязнений — уменьшение концентрации патогенных и индикаторных микроорганизмов (бактерий, вирусов, простейших) в очищенной сточной воде в результате обработки на сооружениях обеззараживания.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_disinfection_efficiency
+=> nrel_main_idtf:
+   [эффективность работы сооружений обеззараживания]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   log_reduction_value;
+   percentage_removal_of_indicators;
+=> nrel_definition:
+   [Эффективность работы сооружений обеззараживания — количественная характеристика степени снижения микробиологических загрязнений, оцениваемая по индикаторным микробиологическим показателям (общие колиформные бактерии, колифаги).]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_indicator_microbiological_parameters
+=> nrel_main_idtf:
+   [индикаторные микробиологические показатели]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   total_coliform_bacteria;
+   coliphages;
+=> nrel_definition:
+   [Индикаторные микробиологические показатели — группа микроорганизмов, присутствие которых в воде свидетельствует о возможном фекальном загрязнении и вероятности наличия патогенных бактерий и вирусов, используемых для оценки эффективности обеззараживания.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_total_coliform_bacteria
+=> nrel_main_idtf:
+   [общие колиформные бактерии]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   thermotolerant_coliforms;
+   fecal_coliforms;
+   escherichia_coli;
+=> nrel_definition:
+   [Общие колиформные бактерии — группа грамотрицательных палочковидных бактерий (семейство Enterobacteriaceae), характеризующих уровень загрязнения сточных вод и вероятность присутствия возбудителей бактериальных кишечных инфекций.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_coliphages
+=> nrel_main_idtf:
+   [колифаги]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   somatic_coliphages;
+   f_specific_coliphages;
+=> nrel_definition:
+   [Колифаги — бактериальные вирусы, поражающие кишечную палочку (E. coli), используемые в качестве индикаторов вирусного загрязнения сточных вод для оценки эффективности обеззараживания в отношении энтеровирусов.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_contamination_level_indicator
+=> nrel_main_idtf:
+   [уровень загрязнения сточных вод (по общим колиформным бактериям)]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   low_contamination_level;
+   high_contamination_level;
+=> nrel_definition:
+   [Уровень загрязнения сточных вод — количественная характеристика содержания общих колиформных бактерий в сточной воде, позволяющая оценить степень фекального загрязнения и вероятность присутствия возбудителей бактериальных кишечных инфекций.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_presence_probability_of_bacterial_enteric_pathogens
+=> nrel_main_idtf:
+   [вероятность присутствия возбудителей бактериальных кишечных инфекций]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   risk_of_salmonella;
+   risk_of_shigella;
+   risk_of_pathogenic_escherichia;
+=> nrel_definition:
+   [Вероятность присутствия возбудителей бактериальных кишечных инфекций — риск обнаружения патогенных бактерий (сальмонелл, шигелл, патогенных эшерихий и др.) в сточной воде, коррелирующий с уровнем общих колиформных бактерий.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_viral_contamination_indicator
+=> nrel_main_idtf:
+   [индикаторы вирусного загрязнения сточных вод]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   coliphages_as_viral_indicators;
+   enterovirus_indicators;
+=> nrel_definition:
+   [Индикаторы вирусного загрязнения — микроорганизмы (в частности, колифаги), присутствие которых в сточной воде указывает на возможное наличие энтеровирусов и других патогенных вирусов, передающихся водным путём.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_operation_of_disinfection_facilities
+=> nrel_main_idtf:
+   [эксплуатация сооружений обеззараживания очищенных сточных вод]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   operation_of_chlorination_units;
+   operation_of_uv_disinfection_units;
+   operation_of_ozonation_units;
+=> nrel_definition:
+   [Эксплуатация сооружений обеззараживания — совокупность операций по управлению, контролю, техническому обслуживанию и ремонту сооружений обеззараживания, производимая с учётом способа обеззараживания, принятого в проектной документации.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_disinfection_method_in_design
+=> nrel_main_idtf:
+   [способ обеззараживания, принятый в проектной документации]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+-> rrel_example:
+   ozonation_as_design_method;
+   uv_irradiation_as_design_method;
+   chlorination_as_design_method;
+=> nrel_definition:
+   [Способ обеззараживания — технологический метод (озонирование, ультрафиолетовое облучение или хлорирование), выбранный при проектировании очистных сооружений и определяющий режимы эксплуатации оборудования.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_ozonation_method_52
+=> nrel_main_idtf:
+   [обеззараживание сточных вод методом озонирования]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_disinfection_method;
+-> rrel_example:
+   ozone_dosing_into_wastewater;
+   ozone_contact_treatment;
+=> nrel_definition:
+   [Озонирование — метод обеззараживания сточных вод путём введения озона (O₃), обладающего сильным окислительным и бактерицидным действием.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_uv_irradiation_method_52
+=> nrel_main_idtf:
+   [обеззараживание сточных вод методом ультрафиолетового облучения]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_disinfection_method;
+-> rrel_example:
+   uv_lamps_treatment;
+   uv_led_treatment;
+=> nrel_definition:
+   [Ультрафиолетовое облучение — метод обеззараживания сточных вод путём обработки ультрафиолетовым излучением с длиной волны 205-315 нм, вызывающим повреждение ДНК микроорганизмов.]
+   (*
+       <- lang_ru;;
+   *);;
+
+concept_chlorination_method_52
+=> nrel_main_idtf:
+   [обеззараживание сточных вод методом хлорирования]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_disinfection_method;
+-> rrel_example:
+   chlorination_with_chlorine_gas;
+   chlorination_with_sodium_hypochlorite;
+=> nrel_definition:
+   [Хлорирование — метод обеззараживания сточных вод путём введения хлорсодержащих реагентов (хлор, гипохлорит натрия, гипохлорит кальция, хлорная известь, диоксид хлора).]
+   (*
+       <- lang_ru;;
+   *);;

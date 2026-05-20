@@ -1,0 +1,186 @@
+concept_acidic_wastewater
+=> nrel_main_idtf:
+   [кислая сточная вода]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_wastewater;
+=> nrel_definition:
+   [Кислая сточная вода — это сточная вода, характеризующаяся значением водородного показателя (pH) ниже нейтрального.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_alkaline_wastewater
+=> nrel_main_idtf:
+   [щелочная сточная вода]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_wastewater;
+=> nrel_definition:
+   [Щелочная сточная вода — это сточная вода, характеризующаяся значением водородного показателя (pH) выше нейтрального.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_mixing
+=> nrel_main_idtf:
+   [смешение]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_technological_process;
+=> nrel_definition:
+   [Смешение — это процесс объединения двух или более потоков веществ с целью получения однородной среды.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_reagent_addition
+=> nrel_main_idtf:
+   [добавление реагентов]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_technological_process;
+=> nrel_definition:
+   [Добавление реагентов — это процесс введения химических реагентов в сточную воду или осадок для обеспечения требуемого технологического эффекта.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_filtration
+=> nrel_main_idtf:
+   [фильтрование]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_technological_process;
+=> nrel_definition:
+   [Фильтрование — это процесс разделения жидкой и твердой фаз путем пропускания жидкости через пористую среду.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_neutralizing_material
+=> nrel_main_idtf:
+   [нейтрализующий материал]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_material;
+=> nrel_definition:
+   [Нейтрализующий материал — это материал, используемый для изменения кислотно-щелочных свойств сточных вод путем нейтрализации.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_method_of_execution
+=> nrel_main_idtf:
+   [способ проведения]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_technological_process;
+=> nrel_definition:
+   [Способ проведения — это установленный метод или подход к выполнению технологического процесса или операции.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_design_documentation
+=> nrel_main_idtf:
+   [проектная документация]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+=> nrel_definition:
+   [Проектная документация — это совокупность документов, содержащих технические решения, схемы и требования к проектированию и эксплуатации очистных сооружений.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_wastewater_discharge_mode
+=> nrel_main_idtf:
+   [режим отведения сточных вод]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_technological_operation_mode;
+=> nrel_definition:
+   [Режим отведения сточных вод — это установленный порядок и параметры отвода сточных вод с очистного сооружения.]
+   (*
+      <- lang_ru;;
+   *);;
+
+
+concept_wastewater_composition
+=> nrel_main_idtf:
+   [состав сточных вод]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Состав сточных вод — это совокупность веществ и их концентраций, содержащихся в сточной воде.]
+   (*
+      <- lang_ru;;
+   *);;
+
+concept_wastewater_retention_time_in_device
+=> nrel_main_idtf:
+   [продолжительность пребывания сточных вод в установке]
+   (*
+      <- lang_ru;;
+   *);
+<- sc_node_class;
+<- rrel_explored_concept:
+   subject_domain_of_treatment_facilities;
+<= nrel_inclusion:
+   concept_indicator;
+=> nrel_definition:
+   [Продолжительность пребывания сточных вод в установке — это время нахождения сточной воды внутри установки очистки в процессе очистки.]
+   (*
+      <- lang_ru;;
+   *);;
+
